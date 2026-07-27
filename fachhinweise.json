@@ -1,0 +1,310 @@
+[
+  {
+    "ids": ["q009", "q188"],
+    "hinweis": "Die unbeschränkte persönliche Haftung des Einzelunternehmers ist richtig. „Gesamtschuldnerisch“ ist hier aber falsch, weil dafür mehrere Schuldner nötig wären.",
+    "quelle": "§ 421 BGB",
+    "url": "https://www.gesetze-im-internet.de/bgb/__421.html"
+  },
+  {
+    "ids": ["q012"],
+    "hinweis": "Bei der Partnerschaftsgesellschaft haften die Partner für gewöhnliche Verbindlichkeiten grundsätzlich gesamtschuldnerisch. Die Haftung ist nicht nur auf Büro- und Personalkosten beschränkt.",
+    "quelle": "§ 8 PartGG",
+    "url": "https://www.gesetze-im-internet.de/partgg/__8.html"
+  },
+  {
+    "ids": ["q018", "q186", "q289"],
+    "hinweis": "Eine normale Partnerschaftsgesellschaft hat keine allgemeine Haftungsbeschränkung. Sonderregeln gelten bei beruflichen Fehlern; eine weitergehende Beschränkung setzt insbesondere eine PartG mbB voraus.",
+    "quelle": "§ 8 PartGG",
+    "url": "https://www.gesetze-im-internet.de/partgg/__8.html"
+  },
+  {
+    "ids": ["q015"],
+    "hinweis": "„Relativ risikolos“ und „wenig Akquiseaufwand“ sind keine allgemeinen Eigenschaften einer Freelance-Tätigkeit. Das ist eine Einschätzung der Folie, keine belastbare Definition.",
+    "quelle": "Einordnung der Folienaussage"
+  },
+  {
+    "ids": ["q020"],
+    "hinweis": "Die Haftungsbeschränkung der GmbH gilt grundsätzlich. Persönliche Haftung kann jedoch etwa vor Eintragung, bei Pflichtverletzungen oder nicht erbrachten Einlagen entstehen.",
+    "quelle": "§ 13 GmbHG",
+    "url": "https://www.gesetze-im-internet.de/gmbhg/__13.html"
+  },
+  {
+    "ids": ["q023"],
+    "hinweis": "Ein Nutzungsrecht betrifft nicht zwingend ein Werk, das dem Urheber „gehört“. Präzise ist es die vom Urheber eingeräumte Befugnis, ein Werk auf bestimmte Art zu nutzen.",
+    "quelle": "§ 31 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__31.html"
+  },
+  {
+    "ids": ["q026", "q029", "q273"],
+    "hinweis": "Eigentum und Besitz sind rechtlich verschieden. Außerdem ist ein Patent keine „Sache“, weil Sachen nach dem BGB nur körperliche Gegenstände sind.",
+    "quelle": "§§ 90, 903 BGB",
+    "url": "https://www.gesetze-im-internet.de/bgb/__90.html"
+  },
+  {
+    "ids": ["q027"],
+    "hinweis": "Der Eigentümer darf nur verfahren, soweit Gesetze und Rechte Dritter nicht entgegenstehen. Verkaufen, vermieten oder zerstören ist daher keine schrankenlose Befugnis.",
+    "quelle": "§ 903 BGB",
+    "url": "https://www.gesetze-im-internet.de/bgb/__903.html"
+  },
+  {
+    "ids": ["q030", "q269"],
+    "hinweis": "Urheberrechtsschutz entsteht ohne Registrierung, aber nicht automatisch für jedes Arbeitsergebnis. Erforderlich ist ein schutzfähiges Werk als persönliche geistige Schöpfung.",
+    "quelle": "§ 2 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__2.html"
+  },
+  {
+    "ids": ["q034"],
+    "hinweis": "Eine inhaltliche Beschränkung regelt erlaubte Nutzungsarten oder Medien. Sie bedeutet nicht lediglich, dass eine bestimmte Anzahl von Medien festgelegt wird.",
+    "quelle": "§ 31 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__31.html"
+  },
+  {
+    "ids": ["q035"],
+    "hinweis": "Ein Nutzungsrecht kann ohne feste vertragliche Laufzeit eingeräumt werden, endet aber spätestens mit dem zugrunde liegenden Urheberrecht. „Zeitlich unbegrenzt“ ist deshalb missverständlich.",
+    "quelle": "§ 64 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__64.html"
+  },
+  {
+    "ids": ["q036", "q193", "q270"],
+    "hinweis": "Die Regelschutzfrist endet 70 Jahre nach dem Tod des Urhebers, nicht pauschal 70 Jahre nach Entstehung oder Veröffentlichung. Auch „Wissenschaft“ ist keine allgemeine Ausnahme, sondern nur im Rahmen konkreter gesetzlicher Schranken relevant.",
+    "quelle": "§§ 60a ff., 64 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__64.html"
+  },
+  {
+    "ids": ["q037"],
+    "hinweis": "Eine schriftliche Zustimmung sämtlicher Rechteinhaber ist nicht immer erforderlich. Nutzung kann bereits lizenziert, gesetzlich erlaubt oder wegen Gemeinfreiheit zustimmungsfrei sein; Nutzungsrechte können grundsätzlich auch formfrei eingeräumt werden.",
+    "quelle": "§§ 31, 44a ff. UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__31.html"
+  },
+  {
+    "ids": ["q038"],
+    "hinweis": "Nutzungsrecht und Verwertungsrecht sind keine Synonyme. Verwertungsrechte stehen dem Urheber zu; Nutzungsrechte werden einem Nutzer daran eingeräumt.",
+    "quelle": "§§ 15, 31 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__15.html"
+  },
+  {
+    "ids": ["q039"],
+    "hinweis": "Zitatrecht, Panoramafreiheit, Beiwerk und Wissenschaft gelten nur unter jeweils engen gesetzlichen Voraussetzungen. Sie sind keine pauschalen Freigaben für jede Nutzung.",
+    "quelle": "§§ 51, 57, 59, 60a ff. UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__51.html"
+  },
+  {
+    "ids": ["q041", "q195"],
+    "hinweis": "Ein ausschließliches Nutzungsrecht schließt den Urheber nicht zwingend vollständig aus. Die eigene Nutzung kann vertraglich vorbehalten werden.",
+    "quelle": "§ 31 Abs. 3 UrhG",
+    "url": "https://www.gesetze-im-internet.de/urhg/__31.html"
+  },
+  {
+    "ids": ["q050", "q204", "q254"],
+    "hinweis": "„Arbeitsamt“ ist eine veraltete Behördenbezeichnung. Heute sind je nach Aufgabe die Bundesagentur für Arbeit oder das Jobcenter zuständig; die Steuer-ID wird nur in steuerlich relevanten Verfahren benötigt.",
+    "quelle": "Bundesagentur für Arbeit",
+    "url": "https://www.arbeitsagentur.de/ueber-uns"
+  },
+  {
+    "ids": ["q055"],
+    "hinweis": "Die Definition ist stark verkürzt: Steuern sind Geldleistungen ohne Gegenleistung für eine besondere Leistung, die ein öffentlich-rechtliches Gemeinwesen zur Einnahmeerzielung auferlegt.",
+    "quelle": "§ 3 AO",
+    "url": "https://www.gesetze-im-internet.de/ao_1977/__3.html"
+  },
+  {
+    "ids": ["q056", "q205"],
+    "hinweis": "Eine deutsche Steuernummer hat nicht allgemein zehn Stellen. Das Format unterscheidet sich je nach Bundesland; im bundeseinheitlichen ELSTER-Schema hat sie 13 Stellen. Steuer-ID mit 11 und USt-IdNr. mit „DE“ plus 9 Ziffern sind dagegen stabil.",
+    "quelle": "ELSTER: Aufbau der Steuernummer",
+    "url": "https://www.elster.de/elsterweb/infoseite/steuernummer"
+  },
+  {
+    "ids": ["q057", "q087", "q211", "q284"],
+    "hinweis": "Auf einer normalen Rechnung ist nicht zwingend die Steuernummer erforderlich. Gesetzlich genügt alternativ die vom Bundeszentralamt erteilte Umsatzsteuer-Identifikationsnummer.",
+    "quelle": "§ 14 Abs. 4 Nr. 2 UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__14.html"
+  },
+  {
+    "ids": ["q058", "q255"],
+    "hinweis": "Die USt-IdNr. ist nicht einfach eine allgemeine Unternehmernummer für jeden Waren- oder Leistungsbezug. Ihre zentrale Funktion liegt in der umsatzsteuerlichen Identifikation, besonders im EU-Binnenmarkt.",
+    "quelle": "Bundeszentralamt für Steuern",
+    "url": "https://www.bzst.de/DE/Unternehmen/Identifikationsnummern/Umsatzsteuer-Identifikationsnummer/umsatzsteuer-identifikationsnummer_node.html"
+  },
+  {
+    "ids": ["q060", "q206"],
+    "hinweis": "Körperschaftsteuer ist nicht die Gewinnsteuer aller Unternehmen. Sie betrifft insbesondere Körperschaften wie GmbH und AG; Einzelunternehmer versteuern ihren Gewinn grundsätzlich über die Einkommensteuer.",
+    "quelle": "§ 1 KStG",
+    "url": "https://www.gesetze-im-internet.de/kstg_1977/__1.html"
+  },
+  {
+    "ids": ["q063", "q201", "q252"],
+    "hinweis": "Die Bezeichnungen der Folie sind veraltet: Die frühere Branntweinsteuer heißt seit 2018 Alkoholsteuer, die frühere Mineralölsteuer seit 2006 Energiesteuer.",
+    "quelle": "Alkoholsteuergesetz und Energiesteuergesetz",
+    "url": "https://www.gesetze-im-internet.de/alkstg/"
+  },
+  {
+    "ids": ["q068"],
+    "hinweis": "Der Kunde trägt die Umsatzsteuer wirtschaftlich. Rechtlich schuldet und führt sie grundsätzlich der leistende Unternehmer ab; „vom Kunden gezahlt“ allein beschreibt diesen Unterschied nicht vollständig.",
+    "quelle": "§ 13a UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__13a.html"
+  },
+  {
+    "ids": ["q070"],
+    "hinweis": "Die Künstlersozialkasse ist kein eigener Versicherungsträger. Sie führt das Künstlersozialversicherungsgesetz durch und koordiniert Beiträge zu Kranken-, Pflege- und Rentenversicherung.",
+    "quelle": "Künstlersozialkasse",
+    "url": "https://www.kuenstlersozialkasse.de/ueber-uns/die-kuenstlersozialkasse"
+  },
+  {
+    "ids": ["q071"],
+    "hinweis": "Die Antwort 25.000 Euro entspricht der seit 1. Januar 2025 geltenden Rechtslage. Die Wiederholungsfolie nennt noch die alte Grenze von 22.000 Euro und ist an dieser Stelle veraltet.",
+    "quelle": "§ 19 UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__19.html"
+  },
+  {
+    "ids": ["q072"],
+    "hinweis": "Die 100.000-Euro-Grenze im laufenden Kalenderjahr ist seit 2025 eine tatsächliche Umsatzgrenze und keine bloße Prognosegrenze. „Voraussichtlich“ ist daher falsch.",
+    "quelle": "§ 19 UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__19.html"
+  },
+  {
+    "ids": ["q073"],
+    "hinweis": "Kleinunternehmer sind nicht generell von jeder Umsatzsteuerpflicht befreit. Bestimmte eigene Umsätze sind nach § 19 UStG steuerfrei und auf diesen Rechnungen wird keine Umsatzsteuer ausgewiesen.",
+    "quelle": "§ 19 UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__19.html"
+  },
+  {
+    "ids": ["q075"],
+    "hinweis": "Die Empfangspflicht betrifft inländische Unternehmer im Rahmen der E-Rechnungsregeln für inländische B2B-Umsätze. „Alle Unternehmen“ ist ohne diesen Kontext zu weit formuliert.",
+    "quelle": "BMF: FAQ zur E-Rechnung",
+    "url": "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html"
+  },
+  {
+    "ids": ["q076", "q079", "q209", "q286"],
+    "hinweis": "Die Aussage „ab 2028 ohne Ausnahmen“ ist falsch. Dauerhafte Ausnahmen bestehen unter anderem für Kleinbetragsrechnungen, Fahrausweise, Leistungen von Kleinunternehmern und bestimmte steuerfreie Umsätze.",
+    "quelle": "BMF: FAQ zur E-Rechnung",
+    "url": "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html"
+  },
+  {
+    "ids": ["q077"],
+    "hinweis": "PDF-Rechnungen dürfen in der Übergangszeit grundsätzlich nur mit Zustimmung des Empfängers verwendet werden. Diese Voraussetzung fehlt in der Frage.",
+    "quelle": "BMF: FAQ zur E-Rechnung",
+    "url": "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html"
+  },
+  {
+    "ids": ["q078", "q080"],
+    "hinweis": "Maßgeblich ist der Gesamtumsatz des vorangegangenen Kalenderjahres bis einschließlich 800.000 Euro. „Unter 800.000 Euro“ und ein nicht näher bestimmter Jahresumsatz sind ungenau; für sonstige Formate ist zudem die Zustimmung des Empfängers relevant.",
+    "quelle": "BMF: FAQ zur E-Rechnung",
+    "url": "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html"
+  },
+  {
+    "ids": ["q081", "q208"],
+    "hinweis": "Das Leistungsdatum bezeichnet den Zeitpunkt der Lieferung oder sonstigen Leistung. Bei einer Designleistung kann stattdessen ein Leistungszeitraum angegeben werden; „Zeitraum der Erstellung“ ist kein allgemeiner Gesetzesbegriff.",
+    "quelle": "§ 14 Abs. 4 Nr. 6 UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__14.html"
+  },
+  {
+    "ids": ["q082", "q084"],
+    "hinweis": "Die Rechnungsangaben sind stärker differenziert: Erforderlich sind unter anderem das nach Steuersätzen aufgeschlüsselte Entgelt sowie Steuersatz und Steuerbetrag oder ein Befreiungshinweis. „Nettosumme“ beziehungsweise „Mehrwertsteuervermerk“ ist nur eine Kurzform.",
+    "quelle": "§ 14 Abs. 4 Nr. 7 und 8 UStG",
+    "url": "https://www.gesetze-im-internet.de/ustg_1980/__14.html"
+  },
+  {
+    "ids": ["q088"],
+    "hinweis": "Im Rechnungskontext bedeutet netto ohne Umsatzsteuer und brutto einschließlich Umsatzsteuer. „Vor und nach Abzügen oder Steuern“ vermischt Preis- und Lohnbegriffe und ist richtungsunklar.",
+    "quelle": "Fachliche Begriffsklärung"
+  },
+  {
+    "ids": ["q090"],
+    "hinweis": "Formfreiheit ist nur der Grundsatz. Für bestimmte Verträge gelten gesetzliche Formvorschriften; außerdem können Parteien selbst eine Form vereinbaren.",
+    "quelle": "§§ 125, 311b BGB",
+    "url": "https://www.gesetze-im-internet.de/bgb/__125.html"
+  },
+  {
+    "ids": ["q093", "q283"],
+    "hinweis": "„Dissens = kein Vertrag“ ist zu pauschal. Beim offenen Dissens kommt der Vertrag im Zweifel nicht zustande; beim versteckten Dissens kann der übrige Vertrag bestehen bleiben.",
+    "quelle": "§§ 154, 155 BGB",
+    "url": "https://www.gesetze-im-internet.de/bgb/__154.html"
+  },
+  {
+    "ids": ["q096"],
+    "hinweis": "Ein Akonto von 30 Prozent ist ein Beispiel beziehungsweise eine Empfehlung der Vorlesung, aber keine allgemeine rechtliche oder branchenweit verbindliche Vorgabe für Angebote.",
+    "quelle": "Einordnung der Folienaussage"
+  },
+  {
+    "ids": ["q101"],
+    "hinweis": "Leistung und Gegenleistung kennzeichnen entgeltliche Verträge. Nicht jeder Vertrag enthält zwingend eine Gegenleistung, etwa eine Schenkung.",
+    "quelle": "§ 516 BGB",
+    "url": "https://www.gesetze-im-internet.de/bgb/__516.html"
+  },
+  {
+    "ids": ["q104", "q220"],
+    "hinweis": "Zahlungsunfähigkeit ist ein gesetzlicher Insolvenzgrund. Ob nur eine Insolvenz „droht“ oder bereits ein Insolvenzantrag erforderlich ist, hängt insbesondere von Rechtsform und Umständen ab.",
+    "quelle": "§§ 17, 15a InsO",
+    "url": "https://www.gesetze-im-internet.de/inso/__17.html"
+  },
+  {
+    "ids": ["q107", "q108", "q218", "q295"],
+    "hinweis": "Honorare können auch pauschal oder fest vereinbart werden. Fremdkosten können klar mengenabhängig sein, etwa bei Druckauflage oder Material; variable Kosten sind definitionsgemäß nicht mengenunabhängig.",
+    "quelle": "Fachliche Kostenrechnung"
+  },
+  {
+    "ids": ["q109"],
+    "hinweis": "Die getrennte Ausweisung von Honorar und Fremdkosten ist sinnvolle Kalkulations- und Angebotspraxis, aber keine allgemeine gesetzliche Pflicht.",
+    "quelle": "Einordnung der Folienaussage"
+  },
+  {
+    "ids": ["q117"],
+    "hinweis": "B2C steht üblicherweise für „Business-to-Consumer“, nicht für „Business-to-Customer“. Die markierte Antwort übernimmt hier den fehlerhaften Folienbegriff.",
+    "quelle": "Etablierte Fachterminologie"
+  },
+  {
+    "ids": ["q139"],
+    "hinweis": "Das magische Dreieck wird je nach Modell als Zeit, Kosten und Leistung beziehungsweise Qualität dargestellt. „Inhalt“ ist eine spezielle Darstellung der Vorlesung, keine allgemein feste vierte Ecke.",
+    "quelle": "Einordnung des Projektmanagement-Modells"
+  },
+  {
+    "ids": ["q151"],
+    "hinweis": "„Ich habe gehört, dass du ...“ wird weiterhin direkt zur gelobten Person gesagt und ist deshalb kein eindeutiges Beispiel für indirektes Lob. Eindeutiger wäre Lob gegenüber einem Dritten, das weitergetragen wird.",
+    "quelle": "Didaktische Begriffsklärung"
+  },
+  {
+    "ids": ["q156"],
+    "hinweis": "Eine Mitarbeiter-des-Monats-Auszeichnung muss keine Trophäe oder Medaille sein. Sie kann symbolische beziehungsweise öffentliche Anerkennung sein; die Zuordnung ist zu konkret.",
+    "quelle": "Didaktische Begriffsklärung"
+  },
+  {
+    "ids": ["q161", "q237", "q274"],
+    "hinweis": "Üblicherweise werden drei Kernfunktionen unterschieden: Zahlungsmittel, Recheneinheit beziehungsweise Wertmesser und Wertaufbewahrungsmittel. „Wertübertragungsmittel“ kann daraus abgeleitet werden; „Freiheit“ ist keine eigenständige Standardfunktion.",
+    "quelle": "Deutsche Bundesbank",
+    "url": "https://www.bundesbank.de/de/aufgaben/themen/vertrauen-kern-des-geldes-663226"
+  },
+  {
+    "ids": ["q163", "q296"],
+    "hinweis": "Liquidität bedeutet die Fähigkeit, fällige Zahlungsverpflichtungen erfüllen zu können. „Planbarkeit und verfügbares Vermögen“ ist keine ausreichende fachliche Definition.",
+    "quelle": "Fachliche Liquiditätsdefinition"
+  },
+  {
+    "ids": ["q168"],
+    "hinweis": "Eine Dividende ist nicht zwingend jährlich und kein automatischer Anteil am Reingewinn. Die Hauptversammlung beschließt eine Ausschüttung aus dem Bilanzgewinn.",
+    "quelle": "§§ 58, 174 AktG",
+    "url": "https://www.gesetze-im-internet.de/aktg/__174.html"
+  },
+  {
+    "ids": ["q169", "q276"],
+    "hinweis": "ETF bedeutet Exchange Traded Fund, also börsengehandelter Fonds. Viele ETFs bilden passiv einen Index ab, aber es gibt auch aktiv verwaltete ETFs; „Indexfonds“ ist daher nicht Teil der allgemeinen Definition.",
+    "quelle": "BaFin: ETFs",
+    "url": "https://www.bafin.de/DE/Verbraucher/GeldanlageWertpapiere/Produkte/ETF/ETF_node.html"
+  },
+  {
+    "ids": ["q241"],
+    "hinweis": "Zwei Definitionen sind zu absolut: Ein ETF muss kein passiver Indexfonds sein, und eine Dividende wird nicht zwingend jährlich aus dem Reingewinn gezahlt, sondern aus dem Bilanzgewinn beschlossen.",
+    "quelle": "BaFin und § 174 AktG",
+    "url": "https://www.bafin.de/DE/Verbraucher/GeldanlageWertpapiere/Produkte/ETF/ETF_node.html"
+  },
+  {
+    "ids": ["q177", "q244"],
+    "hinweis": "Die Einnahmen-Überschuss-Rechnung ist eine steuerliche Gewinnermittlungsart und kein handelsrechtlicher Jahresabschluss. Präziser wäre „Formen der Gewinnermittlung beziehungsweise des Abschlusses“.",
+    "quelle": "§§ 242 HGB, 4 Abs. 3 EStG",
+    "url": "https://www.gesetze-im-internet.de/hgb/__242.html"
+  },
+  {
+    "ids": ["q178", "q243", "q305"],
+    "hinweis": "Der Lagebericht ist rechtlich kein Bestandteil des Jahresabschlusses. Bei Kapitalgesellschaften bilden Bilanz, GuV und Anhang eine Einheit; der Lagebericht wird separat aufgestellt und ist für kleine Kapitalgesellschaften nicht generell vorgeschrieben.",
+    "quelle": "§ 264 HGB",
+    "url": "https://www.gesetze-im-internet.de/hgb/__264.html"
+  }
+]

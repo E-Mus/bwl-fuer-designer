@@ -1,0 +1,1567 @@
+[
+ {
+  "thema": "Projektmanagement",
+  "frage": "Die Folie zählt auf, welche Tätigkeiten als Projektmanagement (PM) bezeichnet werden. Welche der folgenden Tätigkeiten gehören zu dieser Aufzählung?",
+  "optionen": [
+   "Organisieren",
+   "Initiieren",
+   "Steuern",
+   "Budgetieren",
+   "Kontrollieren",
+   "Umsetzen",
+   "Abschließen",
+   "Optimieren",
+   "Auswerten",
+   "Verwalten"
+  ],
+  "richtig": [
+   1,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Als **Projektmanagement** wird das **Initiieren**, das **Planen**, das **Steuern**, das **Kontrollieren**, das **Abschließen** und das **Auswerten** von Projekten bezeichnet (sechs Tätigkeiten; **Planen** stand hier nicht zur Auswahl).\n\n**Organisieren** und **Umsetzen** gehören dagegen zum Stichpunkt **Wozu?** der Wiederholungsfolie (*planen, organisieren, umsetzen und kontrollieren*). **Budgetieren** und **Verwalten** stammen aus den grundlegenden **BWL-Kenntnissen für Designer** (*die Planung und Budgetierung*, *die Verwaltung von Finanzen und Buchhaltung*). **Optimieren** gehört zum Nutzen der **Kalkulation** (*seine Arbeitsprozesse zu optimieren und effizienter zu arbeiten*).",
+  "quelle": "f07, f08, f43, f50",
+  "schwierigkeit": "schwer",
+  "familie": "pm-taetigkeiten"
+ },
+ {
+  "thema": "Projektmanagement",
+  "frage": "Die Projektdefinition nennt Ressourcen als eine der Vorgaben und führt dazu ausdrücklich Beispiele an. Welche der folgenden Begriffe stehen dort als Beispiele für Ressourcen?",
+  "optionen": [
+   "Gewinnmarge",
+   "Personal",
+   "Finanzierung bzw. Kosten",
+   "Zielgruppenanalyse",
+   "Betriebsmittel",
+   "Qualität",
+   "Stundensätze und Tagessätze",
+   "Produktions- und Arbeitsbedingungen",
+   "Quantitative und qualitative Marktforschung",
+   "Buchhaltung"
+  ],
+  "richtig": [
+   1,
+   2,
+   4,
+   7
+  ],
+  "erklaerung": "Die Projektdefinition nennt als Ressourcen ausdrücklich **Finanzierung bzw. Kosten**, **Produktions- und Arbeitsbedingungen**, **Personal** und **Betriebsmittel**.\n\n**Qualität** ist auf derselben Folie keine Ressource, sondern steht neben **Zeit** und **Ressourcen** als eigene der drei **Vorgaben**. **Gewinnmarge** sowie **Stundensätze und Tagessätze** gehören zur **Kalkulation**. **Zielgruppenanalyse** und **quantitative und qualitative Marktforschung** gehören zum **Marketing**. **Buchhaltung** gehört zu den **BWL-Grundkenntnissen** (*Verwaltung von Finanzen und Buchhaltung*).",
+  "quelle": "f05",
+  "schwierigkeit": "schwer",
+  "familie": "projekt-ressourcen"
+ },
+ {
+  "thema": "Projektmanagement",
+  "frage": "Welche der folgenden Verfahren zählen zu den Methoden des Projektmanagements?",
+  "optionen": [
+   "SWOT",
+   "Netzplantechnik",
+   "Projektstrukturplanung",
+   "Zielgruppenanalyse",
+   "Rebriefing",
+   "Critical Path Method",
+   "Positionierung",
+   "SEO",
+   "Risikoanalyse"
+  ],
+  "richtig": [
+   1,
+   2,
+   5,
+   8
+  ],
+  "erklaerung": "Als **PM Methoden** nennt die Wiederholungsfolie **Risikoanalyse**, **Critical Path Method**, **Projektstrukturplanung** und **Netzplantechnik**.\n\n**SWOT**, **Positionierung**, **Zielgruppenanalyse** und **SEO** stehen dagegen in der Marketing-Wiederholung unter **Methoden** (*Positionierung, SEO, SEM, Influencer Marketing, Zielgruppenanalyse, SWOT*). **Rebriefing** gehört zur **Kalkulation** (*Briefing > Rebriefing*).",
+  "quelle": "f08",
+  "schwierigkeit": "schwer",
+  "familie": "pm-methoden"
+ },
+ {
+  "thema": "Projektmanagement",
+  "frage": "Welche der folgenden Stichworte gehören zum Projektmanagement?",
+  "optionen": [
+   "Preisbildung",
+   "Ressourcennutzung",
+   "Risikomanagement",
+   "Gewinnmarge",
+   "Zeit- und Kostenkontrolle",
+   "Markenmanagement",
+   "Zielerreichung",
+   "Direkte Ansprache und Networking",
+   "Ausschreibungen",
+   "Teamarbeit und Koordination"
+  ],
+  "richtig": [
+   1,
+   2,
+   4,
+   6,
+   9
+  ],
+  "erklaerung": "Unter **Projekt Management** listet die Wiederholungsfolie **Ressourcennutzung**, **Zielerreichung**, **Zeit- und Kostenkontrolle**, **Risikomanagement** sowie **Teamarbeit und Koordination**.\n\n**Preisbildung** ist dagegen eine der Marketing-Aktivitäten (*Festlegung des Preises unter Berücksichtigung der Marktbedingungen*). **Markenmanagement** gehört zum **Branding**, **direkte Ansprache und Networking** zur **Akquise** und **Ausschreibungen** zum **Pitch** – alle drei aus der Marketing-Wiederholung. **Gewinnmarge** stammt aus der **Kalkulation** (*Fixkosten – variable Kosten – Gewinnmarge*).",
+  "quelle": "f08",
+  "schwierigkeit": "schwer",
+  "familie": "pm-stichworte-wiederholung",
+  "essential": true
+ },
+ {
+  "thema": "Projektmanagement",
+  "frage": "Welche der folgenden Größen nennt die Projektdefinition als Vorgaben, unter deren Berücksichtigung das Projektziel erreicht werden soll?",
+  "optionen": [
+   "Zeit",
+   "Gewinnmarge",
+   "Vertrieb",
+   "Ressourcen",
+   "Positionierung",
+   "Risikomanagement",
+   "Qualität",
+   "Buchhaltung",
+   "Marktforschung",
+   "Stundensätze"
+  ],
+  "richtig": [
+   0,
+   3,
+   6
+  ],
+  "erklaerung": "Ein Projekt ist ein zielgerichtetes, einmaliges Vorhaben aus gesteuerten Tätigkeiten, das unter Berücksichtigung von Vorgaben wie **Zeit**, **Ressourcen** und **Qualität** ein Ziel erreichen soll.\n\n**Risikomanagement** ist auf der Wiederholungsfolie ein Stichwort unter **Projekt Management** und keine Vorgabe der Definition. **Gewinnmarge** und **Stundensätze** gehören zur **Kalkulation**. **Positionierung** zählt zu den **Marketing-Methoden**, **Marktforschung** zu den Marketing-Aktivitäten. **Vertrieb** und **Buchhaltung** gehören zu den grundlegenden **BWL-Kenntnissen für Designer**.",
+  "quelle": "f05",
+  "schwierigkeit": "schwer",
+  "familie": "projektdefinition-vorgaben"
+ },
+ {
+  "thema": "Steuern",
+  "frage": "Welche der folgenden Steuern zählen zu den Substanzsteuern?",
+  "optionen": [
+   "Gewerbesteuer",
+   "Grundsteuer",
+   "Tabaksteuer",
+   "Vermögensteuer",
+   "Mehrwertsteuer",
+   "Einkommensteuer",
+   "Erbschaftsteuer",
+   "Mineralölsteuer",
+   "Körperschaftsteuer"
+  ],
+  "richtig": [
+   1,
+   3,
+   6
+  ],
+  "erklaerung": "Die Folie **STEUER-GRUPPEN** ordnet den **Substanzsteuern** genau drei Steuern zu: **Grundsteuer**, **Vermögensteuer** und **Erbschaftsteuer**.\n\nDie Ablenker stehen alle in anderen Zeilen derselben Tabelle bzw. auf einer anderen Folie:\n- **Einkommensteuer** und **Gewerbesteuer** gehören zu den **Gewinnsteuern**.\n- **Tabaksteuer** und **Mineralölsteuer** gehören (zusammen mit Strom- und Branntweinsteuer) zu den **Verbrauchssteuern**.\n- **Mehrwertsteuer** steht bei der **Verkehrsteuer** (Umsatzsteuer / Mehrwertsteuer).\n- **Körperschaftsteuer** kommt in der Gruppentabelle überhaupt nicht vor; sie wird nur auf der Folie **STEUERN** als Steuerart geführt (\"Einkommensteuer auf die Gewinne von Unternehmen\").",
+  "quelle": "f25",
+  "schwierigkeit": "schwer",
+  "familie": "steuergruppe-substanz"
+ },
+ {
+  "thema": "Steuern",
+  "frage": "Welche der folgenden Steuern zählen zu den Verbrauchssteuern?",
+  "optionen": [
+   "Stromsteuer",
+   "Gewerbesteuer",
+   "Tabaksteuer",
+   "Grundsteuer",
+   "Branntweinsteuer",
+   "Erbschaftsteuer",
+   "Mineralölsteuer",
+   "Einkommensteuer",
+   "Grunderwerbsteuer"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Bei den **Verbrauchssteuern** listet die Folie vier Steuern auf: **Strom-**, **Tabak-**, **Branntwein-** und **Mineralölsteuer**.\n\nDie Ablenker gehören zu anderen Gruppen bzw. zu einer anderen Folie:\n- **Einkommensteuer** und **Gewerbesteuer** bilden die Zeile **Gewinnsteuer**.\n- **Grundsteuer** und **Erbschaftsteuer** stehen (mit der Vermögensteuer) bei den **Substanzsteuern**.\n- **Grunderwerbsteuer** taucht in der Gruppentabelle gar nicht auf; sie wird nur auf der Folie **STEUERN** als Steuerart beim **Erwerb von Immobilien und Grundstücken** genannt.",
+  "quelle": "f25",
+  "schwierigkeit": "schwer",
+  "familie": "steuergruppe-verbrauch"
+ },
+ {
+  "thema": "Steuern",
+  "frage": "Welche der folgenden Steuern zählen zu den Gewinnsteuern oder zu den Verkehrsteuern?",
+  "optionen": [
+   "Einkommensteuer",
+   "Grundsteuer",
+   "Umsatzsteuer",
+   "Tabaksteuer",
+   "Gewerbesteuer",
+   "Vermögensteuer",
+   "Mehrwertsteuer",
+   "Stromsteuer",
+   "Erbschaftsteuer"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Die Folie ordnet der **Gewinnsteuer** die **Einkommensteuer** und die **Gewerbesteuer** zu, der **Verkehrsteuer** die **Umsatzsteuer / Mehrwertsteuer**.\n\nDie Ablenker stammen aus den beiden übrigen Zeilen derselben Tabelle:\n- **Grundsteuer**, **Vermögensteuer** und **Erbschaftsteuer** sind die **Substanzsteuern**.\n- **Tabaksteuer** und **Stromsteuer** gehören (mit Branntwein- und Mineralölsteuer) zu den **Verbrauchssteuern**.",
+  "quelle": "f25",
+  "schwierigkeit": "schwer",
+  "familie": "steuergruppe-gewinn-verkehr"
+ },
+ {
+  "thema": "Steuern",
+  "frage": "In welchen der folgenden Fälle wird die Steuer-ID und nicht die Steuer-Nr. bzw. die Umsatz-ID benötigt?",
+  "optionen": [
+   "Kindergeld",
+   "Rechnungsstellung",
+   "BAföG-Antrag",
+   "Unternehmer-Kennzeichnung",
+   "Arbeitsamt",
+   "Steuererklärung",
+   "Aktien",
+   "Geschäftlicher Warenbezug",
+   "Banken"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Die **Steuer-ID** dient laut Folie der **persönlichen Kennzeichnung** und der **Beantragung von steuerlichen Vergünstigungen** – konkret genannt werden **Banken, Arbeitsamt, Arbeitgeber, Aktien, Kindergeld und BAföG-Antrag**.\n\nDie Ablenker sind Verwendungszwecke der beiden anderen Nummern:\n- **Rechnungsstellung** und **Steuererklärung** stehen bei der **Steuer-Nr.** (\"für Rechnung und Steuererklärung, abhängig vom FA\").\n- **Unternehmer-Kennzeichnung** und **geschäftlicher Warenbezug** gehören zur **Umsatz-ID**, die Unternehmer kennzeichnet, die geschäftlich Waren oder Dienstleistungen erbringen oder beziehen.",
+  "quelle": "f22",
+  "schwierigkeit": "schwer",
+  "familie": "steuernummern-verwendung"
+ },
+ {
+  "thema": "Steuern",
+  "frage": "In welchen der folgenden Fälle werden die Steuer-Nr. bzw. die Umsatz-ID benötigt?",
+  "optionen": [
+   "Rechnung",
+   "Kindergeld",
+   "Steuererklärung",
+   "BAföG-Antrag",
+   "Kennzeichnung von Unternehmern",
+   "Aktien",
+   "Geschäftlicher Warenverkehr",
+   "Arbeitsamt",
+   "Steuerliche Vergünstigungen"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Die **Steuer-Nr.** wird laut Folie **für Rechnung und Steuererklärung** gebraucht (**abhängig vom FA**). Die **Umsatz-ID** dient **zur Kennzeichnung von Unternehmern, die geschäftlich Waren oder Dienstleistungen erbringen oder beziehen** – deshalb zählt auch der **geschäftliche Warenverkehr** hierher.\n\nAlle Ablenker gehören dagegen zur **Steuer-ID**: Sie ist die **persönliche Kennzeichnung** und dient **zur Beantragung von steuerlichen Vergünstigungen**; in ihrer Aufzählung stehen **Banken, Arbeitsamt, Arbeitgeber, Aktien, Kindergeld, BAföG-Antrag**. **Kindergeld**, **BAföG-Antrag**, **Aktien** und **Arbeitsamt** stammen also aus dieser Liste, die **steuerlichen Vergünstigungen** aus der Zeile direkt darüber.",
+  "quelle": "f22",
+  "schwierigkeit": "schwer",
+  "familie": "steuernummern-verwendung"
+ },
+ {
+  "thema": "Steuern",
+  "frage": "Welche der folgenden Bezeichnungen nennen die Folien als Steuer-Gruppen?",
+  "optionen": [
+   "Verkehrsteuer",
+   "Körperschaftsteuer",
+   "Verbrauchssteuer",
+   "Vorsteuer",
+   "Gewinnsteuer",
+   "Kapitalertragsteuer",
+   "Substanzsteuer",
+   "Mehrwertsteuer",
+   "Grunderwerbsteuer"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Die Folie **STEUER-GRUPPEN** nennt in der linken Spalte genau vier Gruppen: **Verkehrsteuer**, **Verbrauchssteuer**, **Gewinnsteuer** und **Substanzsteuer** – so auch auf der Wiederholungsfolie (\"Steuer-Gruppen – Verkehrs-, Verbrauchs-, Gewinn-, Substanzsteuern\").\n\nDie Ablenker sind keine Gruppen, sondern einzelne Steuern bzw. ein anderer Begriff:\n- **Körperschaftsteuer**, **Kapitalertragsteuer** und **Grunderwerbsteuer** stehen dagegen auf der Folie **STEUERN** in der Aufzählung der einzelnen Steuern, auf der Wiederholungsfolie als **Steuer-Arten** zusammengefasst.\n- **Mehrwertsteuer** steht in der rechten Tabellenspalte (\"Umsatzsteuer / Mehrwertsteuer\") als Steuer **innerhalb** der Gruppe Verkehrsteuer, nicht als Gruppe selbst.\n- **Vorsteuer** gehört zum Abschnitt **Umsatzsteuer – Vorsteuer**: die Umsatzsteuer, die man auf von anderen Unternehmen gekaufte Waren oder Dienstleistungen gezahlt hat.",
+  "quelle": "f25, f24, f23",
+  "schwierigkeit": "schwer",
+  "familie": "steuergruppen-bezeichnungen"
+ },
+ {
+  "thema": "Marketing",
+  "frage": "Welche der folgenden Bereiche gehören zum Marketing?",
+  "optionen": [
+   "Marktforschung",
+   "Executive Summary",
+   "Preisbildung",
+   "Netzplantechnik",
+   "Produktentwicklung",
+   "Risikomanagement",
+   "Stundensätze",
+   "Kundenbindung",
+   "Projektstrukturplanung",
+   "Eventmarketing"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   7,
+   9
+  ],
+  "erklaerung": "Die Folien zählen neun Bereiche zum Marketing: **Marktforschung**, **Produktentwicklung** und **Preisbildung** (f12), **Promotion**, **Vertrieb**, **Kundenbindung** und **Markenmanagement** (f11) sowie **Online-Marketing** und **Eventmarketing** (f10).\n\nDie übrigen Optionen stammen aus anderen Abschnitten: **Risikomanagement** gehört dagegen zur Aufzählung **Projekt Management** (Ressourcennutzung, Zielerreichung, Zeit- und Kostenkontrolle, Risikomanagement, Teamarbeit und Koordination), **Netzplantechnik** und **Projektstrukturplanung** gehören zu den **PM-Methoden** (Risikoanalyse, Critical Path Method, Projektstrukturplanung, Netzplantechnik). **Executive Summary** ist ein Bestandteil des **Businessplans**, **Stundensätze** gehören zur **Kalkulation** (Stundensätze – Tagessätze).",
+  "quelle": "f10, f11, f12",
+  "schwierigkeit": "schwer",
+  "familie": "marketing-bereiche"
+ },
+ {
+  "thema": "Marketing",
+  "frage": "Welche der folgenden Schritte gehören zur Positionierung?",
+  "optionen": [
+   "Botschaft definieren",
+   "Risikoanalyse durchführen",
+   "Kommunikationskanäle festlegen",
+   "Executive Summary verfassen",
+   "Netzplan erstellen",
+   "Positionierung überprüfen",
+   "Stundensätze kalkulieren",
+   "Projekt abschließen",
+   "Ausschreibungen prüfen"
+  ],
+  "richtig": [
+   0,
+   2,
+   5
+  ],
+  "erklaerung": "Die Folie **POSITIONIERUNG** nennt genau drei Schritte: **Botschaft definieren** (aus dem USP wird eine klare Botschaft formuliert, die den Nutzen für die Zielgruppe vermittelt), **Kommunikationskanäle festlegen** (Online- und Offline-Kanäle wie Social Media, Anzeigen oder Events) und **Positionierung überprüfen** (um sicherzustellen, dass sie noch relevant und wirksam ist).\n\nDie Ablenker gehören anderswo hin: **Risikoanalyse** und **Netzplantechnik** stehen bei den **PM-Methoden** (Risikoanalyse, Critical Path Method, Projektstrukturplanung, Netzplantechnik). **Abschließen** ist eine der sechs Tätigkeiten des **Projektmanagements** (Initiieren, Planen, Steuern, Kontrollieren, Abschließen, Auswerten). Die **Executive Summary** ist der Einstieg in die **Businessplan-Methode**, **Stundensätze** (– Tagessätze) gehören zur **Kalkulation** und **Ausschreibungen** zum Abschnitt **Pitch** (Rahmenbedingungen, Ausschreibungen, Pitchberater-Agenturen).",
+  "quelle": "f09",
+  "schwierigkeit": "schwer",
+  "familie": "positionierung-schritte"
+ },
+ {
+  "thema": "Marketing",
+  "frage": "Welche der folgenden Begriffe sind digitale Kanäle des Online-Marketings?",
+  "optionen": [
+   "Social Media",
+   "Networking",
+   "Suchmaschinenoptimierung (SEO)",
+   "SWOT",
+   "E-Mail-Marketing",
+   "Zielgruppenanalyse",
+   "Suchmaschinenmarketing (SEM)",
+   "Empfehlung",
+   "Netzplantechnik"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Unter **Online-Marketing** versteht die Folie die Nutzung digitaler Kanäle wie **Social Media**, **E-Mail-Marketing**, **Suchmaschinenoptimierung (SEO)** und **Suchmaschinenmarketing (SEM)**, um das Bewusstsein für Produkte und Dienstleistungen zu steigern.\n\n**Networking** und **Empfehlung** gehören dagegen zur **Akquise** (Direkte Ansprache, Networking, Empfehlung, Partnerschaften, Online-Marketing). **SWOT** und **Zielgruppenanalyse** stehen bei den **Marketing-Methoden** (Positionierung, SEO, SEM, Influencer Marketing, Zielgruppenanalyse, SWOT). **Netzplantechnik** gehört zu den **PM-Methoden** (Risikoanalyse, Critical Path Method, Projektstrukturplanung, Netzplantechnik).",
+  "quelle": "f10, f14, f08",
+  "schwierigkeit": "schwer",
+  "familie": "online-marketing-kanaele"
+ },
+ {
+  "thema": "Marketing",
+  "frage": "Welche der folgenden Punkte sind Formen der Akquise im Marketing?",
+  "optionen": [
+   "Networking",
+   "Markenkommunikation",
+   "Direkte Ansprache",
+   "Zielgruppenanalyse",
+   "Rebriefing",
+   "Empfehlung",
+   "Markendesign",
+   "Partnerschaften",
+   "Risikoanalyse",
+   "Online-Marketing"
+  ],
+  "richtig": [
+   0,
+   2,
+   5,
+   7,
+   9
+  ],
+  "erklaerung": "Als **Akquise** nennt die Wiederholungsfolie: **Direkte Ansprache**, **Networking**, **Empfehlung**, **Partnerschaften** und **Online-Marketing**.\n\n**Markenkommunikation** und **Markendesign** gehören dagegen zum **Branding** (Analyse, Markenstrategie, -kommunikation, -design, -management), **Zielgruppenanalyse** zu den **Marketing-Methoden** (Positionierung, SEO, SEM, Influencer Marketing, Zielgruppenanalyse, SWOT). **Rebriefing** stammt aus der **Kalkulation** (Briefing > Rebriefing), **Risikoanalyse** aus den **PM-Methoden**.",
+  "quelle": "f14",
+  "schwierigkeit": "schwer",
+  "familie": "akquise-formen"
+ },
+ {
+  "thema": "Marketing",
+  "frage": "Welche der folgenden Punkte sind Bestandteile des Brandings?",
+  "optionen": [
+   "Markenstrategie",
+   "Influencer Marketing",
+   "Analyse",
+   "Ausschreibungen",
+   "Markendesign",
+   "Direkte Ansprache",
+   "Markenkommunikation",
+   "Gewinnmarge",
+   "Projektstrukturplanung",
+   "Markenmanagement"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   9
+  ],
+  "erklaerung": "Zum **Branding** zählt die Wiederholungsfolie: **Analyse**, **Markenstrategie**, **Markenkommunikation**, **Markendesign** und **Markenmanagement**.\n\n**Influencer Marketing** gehört dagegen zu den **Marketing-Methoden** (Positionierung, SEO, SEM, Influencer Marketing, Zielgruppenanalyse, SWOT), **Direkte Ansprache** zur **Akquise** und **Ausschreibungen** zum **Pitch** (Rahmenbedingungen, Ausschreibungen, Pitchberater-Agenturen). **Gewinnmarge** stammt aus der **Kalkulation** (Fixkosten – variable Kosten – Gewinnmarge), **Projektstrukturplanung** aus den **PM-Methoden**.",
+  "quelle": "f14",
+  "schwierigkeit": "schwer",
+  "familie": "branding-bestandteile"
+ },
+ {
+  "thema": "Marketing",
+  "frage": "Welche der folgenden Punkte gehören zu den Marketing-Methoden?",
+  "optionen": [
+   "Influencer Marketing",
+   "Markenstrategie",
+   "SWOT",
+   "Rebriefing",
+   "Zielgruppenanalyse",
+   "Critical Path Method",
+   "Partnerschaften",
+   "Positionierung",
+   "Executive Summary"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   7
+  ],
+  "erklaerung": "Als **Methoden** des Marketings nennt die Wiederholungsfolie **Positionierung**, **SEO**, **SEM**, **Influencer Marketing**, **Zielgruppenanalyse** und **SWOT**.\n\n**Markenstrategie** gehört dagegen zum **Branding** (Analyse, Markenstrategie, -kommunikation, -design, -management), **Partnerschaften** zur **Akquise** (Direkte Ansprache, Networking, Empfehlung, Partnerschaften, Online-Marketing). **Critical Path Method** ist eine der **PM-Methoden** (Risikoanalyse, Critical Path Method, Projektstrukturplanung, Netzplantechnik), **Rebriefing** stammt aus der **Kalkulation** und die **Executive Summary** aus dem **Businessplan**.",
+  "quelle": "f14",
+  "schwierigkeit": "schwer",
+  "familie": "marketing-methoden",
+  "essential": true
+ },
+ {
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche der folgenden Beispiele gehören zum materiellen Lob?",
+  "optionen": [
+   "Kleine Geschenke",
+   "Sachprämien",
+   "Boni",
+   "Gehaltserhöhungen",
+   "Teamevents",
+   "Beförderungen",
+   "Weiterbildungsmöglichkeiten",
+   "Anerkennungszertifikate",
+   "Anerkennungsmauern",
+   "Dankesbriefe"
+  ],
+  "richtig": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "erklaerung": "Zum **materiellen Lob** zählt die Folie **Geschenke** (kleine Geschenke oder **Sachprämien** als Zeichen der Wertschätzung), **finanzielle Prämien** (**Boni** oder **Gehaltserhöhungen** als Anerkennung) sowie **Erlebnisse, Aktivitäten und Teamevents**. **Beförderungen** und **Weiterbildungsmöglichkeiten** gehören dagegen zur **professionellen Anerkennung**. **Anerkennungszertifikate** und **Anerkennungsmauern oder Tafeln** (Beispiel: eine „Wall of Fame“ im Bürogebäude) bilden die **symbolische Anerkennung**. **Dankesbriefe** stehen unter **schriftliches Lob** (Notizen und Briefe).",
+  "quelle": "f01, f02",
+  "schwierigkeit": "schwer",
+  "familie": "lobform-materiell"
+ },
+ {
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche der folgenden Punkte gehören zur symbolischen Anerkennung?",
+  "optionen": [
+   "Anerkennungsmauern oder Tafeln",
+   "„Wall of Fame“ im Bürogebäude",
+   "Anerkennungszertifikate",
+   "Beförderungen",
+   "Weiterbildungsmöglichkeiten",
+   "Boni und Gehaltserhöhungen",
+   "Teamevents",
+   "Dankesbriefe",
+   "Lob in Team-Meetings",
+   "Applaus und Daumen hoch"
+  ],
+  "richtig": [
+   0,
+   1,
+   2
+  ],
+  "erklaerung": "Die **symbolische Anerkennung** besteht auf der Folie aus zwei Unterpunkten: **Anerkennungsmauern oder Tafeln** – mit dem Beispiel einer **„Wall of Fame“ im Bürogebäude** – und **Anerkennungszertifikate**. **Beförderungen** und **Weiterbildungsmöglichkeiten** gehören dagegen zur **professionellen Anerkennung**, **Boni und Gehaltserhöhungen** (als finanzielle Prämien) sowie **Teamevents** zum **materiellen Lob**, **Dankesbriefe** zum **schriftlichen Lob** (Notizen und Briefe), **Lob in Team-Meetings** zum **öffentlichen Lob** und **Applaus bzw. Daumen hoch** zu den **Gesten** des **nonverbalen Lobs**.",
+  "quelle": "f01, f02, f03",
+  "schwierigkeit": "schwer",
+  "familie": "lobform-symbolisch"
+ },
+ {
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche der folgenden Beispiele gehören zum nonverbalen Lob?",
+  "optionen": [
+   "Lächeln",
+   "Daumen hoch",
+   "Applaus",
+   "Trophäen und Medaillen",
+   "Mitarbeiter-des-Monats-Auszeichnung",
+   "Direktes Lob",
+   "Indirektes Lob",
+   "Dankesbriefe",
+   "Anerkennung im Unternehmensnewsletter",
+   "Weiterbildungsmöglichkeiten"
+  ],
+  "richtig": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "erklaerung": "**Nonverbales Lob** gliedert sich laut Folie in **Gesten** – anerkennende Gesten wie ein **Lächeln**, ein **Daumen hoch** oder ein **Applaus** – und **Symbole** wie **Trophäen** und **Medaillen**, die Anerkennung darstellen, mit dem Beispiel einer **Mitarbeiter-des-Monats-Auszeichnung**. **Direktes Lob** und **indirektes Lob** sind dagegen die beiden Unterpunkte des **verbalen Lobs**, **Dankesbriefe** gehören unter Notizen und Briefe zum **schriftlichen Lob**, die **Anerkennung im Unternehmensnewsletter** zum **öffentlichen Lob** und **Weiterbildungsmöglichkeiten** zur **professionellen Anerkennung**.",
+  "quelle": "f01, f02, f03",
+  "schwierigkeit": "schwer",
+  "familie": "lobform-nonverbal"
+ },
+ {
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche der folgenden Beispiele zählen zum öffentlichen Lob?",
+  "optionen": [
+   "Lob in Team-Meetings",
+   "Lob in Abteilungsmeetings",
+   "Anerkennung im Unternehmensnewsletter",
+   "Anerkennung in Unternehmensberichten",
+   "Anerkennung auf der Firmenwebsite",
+   "Lob per E-Mail vom Vorgesetzten",
+   "Lob im Dankesbrief",
+   "Anerkennung durch Gesten",
+   "Anerkennung durch Zertifikate",
+   "Anerkennung durch Sachprämien"
+  ],
+  "richtig": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "erklaerung": "**Öffentliches Lob** gliedert die Folie in zwei Unterpunkte: **In Meetings** – Lob, das in **Team- oder Abteilungsmeetings** ausgesprochen wird (Beispiel: ein Manager lobt einen Mitarbeiter während eines Team-Meetings vor allen Kollegen) – und **In Newslettern oder Berichten** – Anerkennung in **Unternehmensnewslettern**, **Berichten** oder auf der **Firmenwebsite** (Beispiel: im Unternehmensnewsletter werden die Erfolge eines Mitarbeiters hervorgehoben). Die übrigen Optionen stehen zwar ebenfalls auf den Folien, gehören aber zu anderen Lobformen: die **E-Mail vom Vorgesetzten** und der **Dankesbrief** zählen zum **schriftlichen Lob** (Unterpunkte \"Notizen und Briefe\" bzw. \"E-Mails\"), **Gesten** wie ein Lächeln, ein Daumen hoch oder ein Applaus zum **nonverbalen Lob**, **Anerkennungszertifikate** zur **symbolischen Anerkennung** (neben Anerkennungsmauern und Tafeln) und **Sachprämien** zum **materiellen Lob** (Unterpunkt \"Geschenke\").",
+  "quelle": "f01, f02, f03",
+  "schwierigkeit": "schwer",
+  "familie": "lobform-oeffentlich"
+ },
+ {
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche der folgenden Punkte zählen zum schriftlichen Lob?",
+  "optionen": [
+   "Notizen",
+   "Dankesbriefe",
+   "E-Mails vom Vorgesetzten",
+   "Direktes Lob",
+   "Indirektes Lob",
+   "Applaus",
+   "Lob in Team-Meetings",
+   "Boni oder Gehaltserhöhungen",
+   "Beförderungen",
+   "Teamevents"
+  ],
+  "richtig": [
+   0,
+   1,
+   2
+  ],
+  "erklaerung": "**Schriftliches Lob** besteht auf der Folie aus **Notizen und Briefen** – Beispiel: ein **Dankesbrief** an jemanden für seine hervorragende Arbeit an einem Projekt – und aus **E-Mails**, Beispiel: eine **E-Mail vom Vorgesetzten**, die die Leistungen eines Mitarbeiters hervorhebt. **Direktes** und **indirektes Lob** bilden dagegen das **verbale Lob**, **Applaus** gehört zu den **Gesten** des **nonverbalen Lobs**, **Lob in Team-Meetings** zum **öffentlichen Lob**, **Boni oder Gehaltserhöhungen** (finanzielle Prämien) sowie **Teamevents** zum **materiellen Lob** und **Beförderungen** zur **professionellen Anerkennung**.",
+  "quelle": "f01, f02, f03",
+  "schwierigkeit": "schwer",
+  "familie": "lobform-schriftlich"
+ },
+ {
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche der folgenden Themen gehören zum Themenkomplex Lob, Anerkennung, Wertschätzung und Motivation?",
+  "optionen": [
+   "Lob – Warum wichtig für den Erfolg?",
+   "Lob – Formen und Wirkungsmechanismen",
+   "Motivation – intrinsisch und extrinsisch",
+   "Selbstmotivation",
+   "Maslowsche Bedürfnispyramide",
+   "Planung und Budgetierung",
+   "Marketing und Vertrieb",
+   "Management von Ressourcen und Team",
+   "Vor- und Nachteile der Rechtsformen",
+   "Kalkulation im Design"
+  ],
+  "richtig": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "erklaerung": "Die Wiederholungsfolie **„Lob, Anerkennung und Wertschätzung“** nennt sechs Punkte: **Lob – Warum wichtig für den Erfolg?**, **Lob – Formen und Wirkungsmechanismen**, **Motivation – intrinsisch und extrinsisch, verschiedene Typen**, **Selbstmotivation** (auf der Folie als „Sebstmotivation“ geschrieben), **Maslowsche Bedürfnispyramide** und **Feedback und Kritik**. **Planung und Budgetierung**, **Marketing und Vertrieb** sowie das **Management von Ressourcen und Mitarbeitern/Team** stammen dagegen von der Folie zu den **BWL-Grundkenntnissen für Designer**, die **Vor- und Nachteile der Rechtsformen** von den **Rechtsform-Folien** und die **Kalkulation im Design** von der Folie **„Wozu Kalkulation im Design?“**.",
+  "quelle": "f06, f50, f44, f45, f43",
+  "schwierigkeit": "schwer",
+  "familie": "wiederholung-themen"
+ },
+ {
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Vor welchen unbefugten Handlungen Dritter schützt das Urheberrecht ein Werk?",
+  "optionen": [
+   "Konsens",
+   "Verbreitung",
+   "Skonto",
+   "Vervielfältigung",
+   "Essentialia Negotii",
+   "Bearbeitung",
+   "Rebriefing",
+   "Öffentliche Wiedergabe",
+   "Dissens"
+  ],
+  "richtig": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "erklaerung": "Das **Urheberrecht** ist das Recht des Urhebers eines Werkes, dieses zu kontrollieren und zu nutzen. Es entsteht **automatisch**, wenn ein Werk geschaffen wird, und schützt das Werk vor unbefugter **Vervielfältigung**, **Verbreitung**, **öffentlicher Wiedergabe**, **Bearbeitung** und anderer Nutzung durch Dritte.\n\nDie übrigen Begriffe stammen aus anderen Abschnitten der Vorlesung:\n- **Konsens** und **Dissens** gehören zum **Vertragsschluss**: Einigung (+) = Konsens, ggf. Auslegung; Einigung (-) = Dissens = Vertrag (-).\n- **Essentialia Negotii** ist ebenfalls Vertragsrecht: der notwendige Mindestinhalt der Einigung.\n- **Skonto** gehört zur **Auftragsbestätigung** (Rabatt, Skonto, Reduktion, Pauschale, Paket, Retainer).\n- **Rebriefing** gehört zum Block **Angebote** (Briefing – Rebriefing).",
+  "quelle": "f32",
+  "schwierigkeit": "schwer",
+  "familie": "urheberrecht-schutzumfang"
+ },
+ {
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche der folgenden Punkte zählen zu den **Ausnahmen** von den Nutzungsrechten?",
+  "optionen": [
+   "Zitatrecht",
+   "Pacta sunt servanda",
+   "Wissenschaft",
+   "Vertragsfreiheit",
+   "Panoramafreiheit/Beiwerk",
+   "AGB",
+   "Auslegung",
+   "Gemeinfrei (70 Jahre)",
+   "Pauschale"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   7
+  ],
+  "erklaerung": "Die Wiederholungsfolie nennt unter **Ausnahmen** genau vier Punkte: **gemeinfrei (70 Jahre)** – **Wissenschaft** – **Zitatrecht** – **Panoramafreiheit/Beiwerk**.\n\nDie Ablenker gehören zu anderen Abschnitten:\n- **Pacta sunt servanda** und **Vertragsfreiheit** stehen bei der **Leistungsbeschreibung im Vertrag** (Grundsatz Vertragsfreiheit, aber: Pacta sunt servanda – Verträge sind einzuhalten – Verlässlichkeit).\n- **Auslegung** gehört zum **Vertragsschluss** (Einigung (+) = Konsens, ggf. Auslegung).\n- **AGB** gehört zur Wiederholung **Angebote** (Angebote – AGB; Inhalte).\n- **Pauschale** gehört zur **Auftragsbestätigung** (Rabatt, Skonto, Reduktion, Pauschale, Paket, Retainer).\n\nDie weiteren Stichpunkte der Nutzungsrechte-Folie – Definition, Arten (einfach/ausschließlich), Umfang, Bilder, Achtung, Kalkulation – sind eigene Punkte, keine Ausnahmen.",
+  "quelle": "f34",
+  "schwierigkeit": "schwer",
+  "familie": "nutzungsrechte-ausnahmen"
+ },
+ {
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche der folgenden Angaben sind Beispiele für die **räumliche** Beschränkung von Nutzungsrechten?",
+  "optionen": [
+   "International",
+   "5 Jahre",
+   "Weltweit",
+   "Anzahl der genutzten Medien",
+   "10 Jahre",
+   "Europaweit",
+   "Zeitlich unbegrenzt",
+   "70 Jahre",
+   "Nur regional"
+  ],
+  "richtig": [
+   0,
+   2,
+   5,
+   8
+  ],
+  "erklaerung": "Zur **räumlichen Nutzung** nennt die Folie: **international, weltweit, europaweit oder nur regional**.\n\nDie Ablenker gehören zu den beiden anderen Beschränkungsarten bzw. zu einem anderen Abschnitt:\n- **5 Jahre**, **10 Jahre** und **zeitlich unbegrenzt** gehören zur **zeitlichen Nutzung** (von 1 Jahr, 5 Jahre, 10 Jahre bis zeitlich unbegrenzt).\n- **Anzahl der genutzten Medien** gehört zur **inhaltlichen Nutzung** – sie beschreibt, für wie viele Medien das Werk genutzt wird, und definiert so das Ausmaß der Vervielfältigung.\n- **70 Jahre** ist die Frist, nach der ein Werk **gemeinfrei** wird, und steht bei den Ausnahmen.",
+  "quelle": "f33",
+  "schwierigkeit": "schwer",
+  "familie": "nutzungsrecht-raeumlich"
+ },
+ {
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Das Nutzungsrecht wird als Vereinbarung zwischen dem Inhaber des Urheberrechts und dem Nutzer des Werks festgelegt. Welche der folgenden Bedingungen werden dafür beispielhaft genannt?",
+  "optionen": [
+   "Rabatt und Skonto",
+   "Art und Weise der Nutzung",
+   "Essentialia Negotii",
+   "Pauschale oder Retainer",
+   "Dauer der Nutzung",
+   "Briefing und Rebriefing",
+   "Höhe der Vergütung",
+   "Konsens und Dissens",
+   "Pacta sunt servanda"
+  ],
+  "richtig": [
+   1,
+   4,
+   6
+  ],
+  "erklaerung": "Das **Nutzungsrecht** ist das Recht, ein Werk zu nutzen, das einem anderen gehört – in der Regel **für einen begrenzten Zeitraum** und unter bestimmten Bedingungen: **Art und Weise der Nutzung**, **Dauer der Nutzung** und **Höhe der Vergütung**.\n\nDie Ablenker gehören zum Themenblock Angebote und Verträge:\n- **Rabatt und Skonto** sowie **Pauschale oder Retainer** stehen bei der **Auftragsbestätigung** (Rabatt, Skonto, Reduktion, Pauschale, Paket, Retainer).\n- **Essentialia Negotii** sowie **Konsens und Dissens** gehören zum **Vertragsschluss** (2 Willenserklärungen: Angebot + Annahme; notwendiger Mindestinhalt der Einigung).\n- **Briefing und Rebriefing** ist ein eigener Punkt der Wiederholung **Angebote**.\n- **Pacta sunt servanda** steht beim Grundsatz der **Vertragsfreiheit** in der Leistungsbeschreibung.",
+  "quelle": "f30",
+  "schwierigkeit": "schwer",
+  "familie": "nutzungsrecht-bedingungen"
+ },
+ {
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche der folgenden Befugnisse gehören zum **Eigentum** und nicht zur Urheberschaft?",
+  "optionen": [
+   "Besitzen einer Sache",
+   "Schaffen kreativer Arbeit",
+   "Verkaufen der Sache",
+   "Bestimmen der Werknutzung",
+   "Kontrollieren einer Sache",
+   "Schützen des Werkes",
+   "Vermieten der Sache",
+   "Lizenzieren des Designs",
+   "Nutzen fremder Werke",
+   "Zerstören der Sache"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   9
+  ],
+  "erklaerung": "**Eigentum** ist laut Folie das Recht, eine „Sache\" zu **besitzen** und zu **kontrollieren** (z.B. Haus, Auto oder Patent). Das Eigentumsrecht gibt dem Eigentümer die Befugnis, mit der Sache nach Belieben zu verfahren, sie zu **verkaufen**, zu **vermieten** oder zu **zerstören**.\n\nDie Ablenker gehören zu anderen Abschnitten:\n- **Schaffen kreativer Arbeit**, **Bestimmen der Werknutzung** und **Schützen des Werkes** beschreiben die **Urheberschaft**: Sie ist das Recht, eine kreative Arbeit zu schaffen und darüber zu bestimmen, wie sie genutzt wird; das Urheberrecht schützt das geistige Eigentum eines Autors, Komponisten oder Künstlers und das Werk vor unbefugter Vervielfältigung, Verbreitung und Bearbeitung.\n- **Nutzen fremder Werke** gehört zum **Nutzungsrecht**: dem Recht, ein Werk zu nutzen, das einem anderen gehört – in der Regel für einen begrenzten Zeitraum und unter bestimmten Bedingungen.\n- **Lizenzieren des Designs** gehört zu den **Nutzungsarten**: nicht-exklusive (einfache) Rechte erlauben dem Designer, das Design auch an andere Kunden zu lizenzieren.",
+  "quelle": "f31",
+  "schwierigkeit": "schwer",
+  "familie": "eigentum-befugnisse"
+ },
+ {
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche der folgenden Begriffe zählen zu den Funktionen des Geldes?",
+  "optionen": [
+   "Wertmesser",
+   "Gewinnmarge",
+   "Zahlungsmittel",
+   "Lagebericht",
+   "Wertaufbewahrungsmittel",
+   "Dividende",
+   "Stundensätze",
+   "Wertübertragungsmittel",
+   "Markenregister",
+   "Freiheit"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   7,
+   9
+  ],
+  "erklaerung": "Die Wiederholungsfolie **Geld** nennt unter dem Stichpunkt **Funktion** genau fünf Punkte: **Zahlungsmittel**, **Wertmesser**, **Wertaufbewahrungsmittel**, **Wertübertragungsmittel** und **Freiheit**.\n\n**Dividende** steht zwar ebenfalls im Geld-Block, ist dort aber als *jährlich auf eine Aktie entfallender Anteil vom Reingewinn* erklärt und damit keine Geldfunktion. **Gewinnmarge** und **Stundensätze** gehören dagegen zur Wiederholung **Kalkulation**, **Lagebericht** zum **Jahresabschluss** und **Markenregister** zur **Unternehmensrecherche**.",
+  "quelle": "f20",
+  "schwierigkeit": "schwer",
+  "familie": "geldfunktionen"
+ },
+ {
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche der folgenden Punkte gehören zu den Grundsätzen der Vorsorgeplanung?",
+  "optionen": [
+   "Arbeitsprozesse optimieren",
+   "Budgetplanung und Sparen",
+   "Handelsregister einsehen",
+   "Frühzeitig mit der Planung beginnen",
+   "Stundensätze festlegen",
+   "Sparen zu Monatsbeginn",
+   "Preis rechtfertigen",
+   "Arbeitgeberleistungen nutzen",
+   "Kunden transparent informieren",
+   "Lagebericht erstellen"
+  ],
+  "richtig": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "erklaerung": "Die Folie **ALTERSVORSORGE** führt vier Grundsätze auf: **Frühzeitig mit der Planung beginnen** (mehr Zeit, Vermögen aufzubauen und von Zinseszinsen zu profitieren), **Budgetplanung und Sparen** (Haushaltsplan für Einnahmen und Ausgaben, regelmäßig Geld zur Seite legen), **Arbeitgeberleistungen nutzen** (betriebliche Altersvorsorgepläne bzw. betriebliche Rentenbeiträge) und **Sparen zu Monatsbeginn** (zu Beginn der Berufstätigkeit).\n\n**Kunden transparent informieren**, **Preis rechtfertigen** und **Arbeitsprozesse optimieren** gehören dagegen zur Folie *Wozu Kalkulation im Design?*. **Stundensätze festlegen** stammt aus der Wiederholung **Kalkulation**, **Handelsregister einsehen** und **Lagebericht erstellen** aus der Wiederholung **Unternehmensrecherche/Jahresabschluss**.",
+  "quelle": "f16, f18",
+  "schwierigkeit": "schwer",
+  "familie": "altersvorsorge-grundsaetze"
+ },
+ {
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche der folgenden Begriffe gehören zum Themenbereich Geld und private Geldanlage?",
+  "optionen": [
+   "Tagessätze",
+   "Zinses-Zins-Effekt",
+   "Bundesanzeiger",
+   "50-30-20-Regel",
+   "Rebriefing",
+   "Money Mindset",
+   "E/Ü-Rechnung",
+   "ETF",
+   "Kununu",
+   "Dividende"
+  ],
+  "richtig": [
+   1,
+   3,
+   5,
+   7,
+   9
+  ],
+  "erklaerung": "Der Block **Geld** der Wiederholungsfolie umfasst **Funktion**, **Money Mindset**, **Liquidität**, **Zinses-Zins-Effekt**, **50-30-20-Regel**, **Aktien**, **Dividende** und **ETF** (Exchange Traded Fund = börsengehandelter Indexfonds).\n\n**Tagessätze** und **Rebriefing** stehen dagegen in der Wiederholung **Kalkulation** (dort *Briefing > Rebriefing* und *Stundensätze – Tagessätze*). **Bundesanzeiger**, **E/Ü-Rechnung** und **Kununu** gehören zur Wiederholung **Unternehmensrecherche**, die E/Ü-Rechnung dort speziell zum **Jahresabschluss**.",
+  "quelle": "f20",
+  "schwierigkeit": "schwer",
+  "familie": "geld-wiederholung-begriffe"
+ },
+ {
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche der folgenden Angaben treffen auf das Altersvorsorge-Depot zu?",
+  "optionen": [
+   "Eigenbeitrag bis 360 Euro jährlich",
+   "50 % des Einkommens für Fixkosten",
+   "Start zum 1.1.2027",
+   "Betriebliche Rentenbeiträge",
+   "Grundzulage von 50 Cent je gespartem Euro",
+   "20 % des Einkommens sparen",
+   "Reform der geförderten privaten Altersvorsorge",
+   "30 % für Freizeit und Konsum",
+   "Sparen zu Monatsbeginn",
+   "25 Cent je Euro von 361 bis 1.800 Euro"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   9
+  ],
+  "erklaerung": "Die Folie nennt drei Punkte. Das **Altersvorsorge-Depot** ist eine **Reform der geförderten privaten Altersvorsorge** und eine renditeorientierte Vorsorgemöglichkeit. Bei den **staatlichen Zulagen** gilt: Bis zu einem jährlichen **Eigenbeitrag von 360 Euro** gibt der Staat für jeden gesparten Euro **50 Cent als Grundzulage** dazu; für weitere **1.440 Euro** jährlich (also von **361 bis 1.800 Euro**) sind es **25 Cent pro gespartem Euro**. Der **Start** erfolgt **zum 1.1.2027**.\n\n**50 % für Fixkosten**, **30 % für Freizeit | Konsum** und **20 % sparen** gehören dagegen zur **50-30-20-Regel** aus der Wiederholungsfolie **Geld**. **Sparen zu Monatsbeginn** und **betriebliche Rentenbeiträge** stammen von der Folie mit den vier **Altersvorsorge-Grundsätzen** (letzteres aus *Arbeitgeberleistungen nutzen*).",
+  "quelle": "f19",
+  "schwierigkeit": "schwer",
+  "familie": "altersvorsorge-depot-zulagen"
+ },
+ {
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche Posten nennt die 50-30-20-Regel aus der Wiederholung „Geld\"?",
+  "optionen": [
+   "Gewinnmarge",
+   "Fixkosten",
+   "Direkte Kosten",
+   "Freizeit und Konsum",
+   "Indirekte Kosten",
+   "Stundensätze",
+   "Sparen",
+   "Tagessätze",
+   "Risikotyp"
+  ],
+  "richtig": [
+   1,
+   3,
+   6
+  ],
+  "erklaerung": "Die **50-30-20-Regel** der Wiederholung **Geld** nennt drei Posten: **50 % für Fixkosten**, **30 % Freizeit | Konsum** und **20 % sparen**.\n\n**Gewinnmarge**, **direkte Kosten**, **indirekte Kosten**, **Stundensätze**, **Tagessätze** und **Risikotyp** stehen dagegen in der Wiederholung **Kalkulation** (dort in den Reihen *Fixkosten – variable Kosten – Gewinnmarge*, *direkte Kosten – indirekte Kosten*, *Risiko > Risikotyp* und *Stundensätze – Tagessätze*). Achtung: **Fixkosten** tauchen in beiden Blöcken auf, sind aber tatsächlich Bestandteil der 50-30-20-Regel.",
+  "quelle": "f20",
+  "schwierigkeit": "schwer",
+  "familie": "regel-50-30-20"
+ },
+ {
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche der folgenden Punkte sind Chancen des Rebriefings?",
+  "optionen": [
+   "Den Preis rechtfertigen",
+   "Missverständnisse ausräumen",
+   "Sich profilieren",
+   "Arbeitsprozesse optimieren",
+   "Lücken schließen",
+   "Kosten senken",
+   "Die Höhe der Vergütung festlegen",
+   "Das Briefing ergänzen",
+   "Ressourcen besser planen",
+   "Verständnis zeigen"
+  ],
+  "richtig": [
+   1,
+   2,
+   4,
+   7,
+   9
+  ],
+  "erklaerung": "Ein **Rebriefing ist keine Wiederholung** des Briefings, sondern eine **Zusammenfassung/Interpretation/Ergänzung** dessen, was der Kunde im Briefing wünscht. Die Folie nennt es **eine Chance**: für eine **Erweiterung (Lücken)**, für eine **Ergänzung**, um **Verständnis zu zeigen** (> Feedback), um **Missverständnisse auszuräumen** und um **sich zu profilieren** (mit dem Projekt identifizieren, Verbesserung = identifizieren und korrigieren).\n\n**Den Preis rechtfertigen**, **Arbeitsprozesse optimieren**, **Ressourcen besser planen** und **Kosten senken** gehören dagegen zur Liste **\"Wozu Kalkulation im Design?\"** – dort geht es zusätzlich darum, den Kunden transparent zu informieren und eine klare Grundlage für die Zusammenarbeit zu schaffen. Achtung bei der feinen Abgrenzung: Die **Kalkulation** soll Unklarheiten und Missverständnisse **vermeiden**, das **Rebriefing** dagegen bestehende Missverständnisse **ausräumen**.\n\n**Die Höhe der Vergütung** ist keine Chance des Rebriefings, sondern eine der Bedingungen, die beim **Nutzungsrecht** zwischen dem Inhaber des Urheberrechts und dem Nutzer vereinbart werden (neben der Art und Weise sowie der Dauer der Nutzung).",
+  "quelle": "f42",
+  "schwierigkeit": "schwer",
+  "familie": "rebriefing-chance"
+ },
+ {
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche der folgenden Aspekte konkretisieren die Detailgenauigkeit bei der Beschreibung der Leistung?",
+  "optionen": [
+   "Rahmenbedingungen",
+   "Nettosumme",
+   "Zeit",
+   "Höhe der Vergütung",
+   "Mehrwertsteuervermerk",
+   "Umfang",
+   "Skonto",
+   "Annahmen",
+   "Fremdkosten"
+  ],
+  "richtig": [
+   0,
+   2,
+   5,
+   7
+  ],
+  "erklaerung": "Die Beschreibung der Leistung ruht auf drei Merkmalen: **Schriftform**, **Detailgenauigkeit** und **Teil des Angebots** (= Potenzial für Missverständnisse). Die **Detailgenauigkeit** wird auf der Folie ausdrücklich aufgeschlüsselt in **Umfang, Rahmenbedingungen, Annahmen, Zeit**. Dahinter steht der Grundsatz der Vertragsfreiheit, aber: **Pacta sunt servanda** – Verträge sind einzuhalten (> Verlässlichkeit).\n\n**Nettosumme** und **Mehrwertsteuervermerk** sind dagegen Pflichtangaben der **Rechnung** (\"Was gehört rein?\", zusammen mit dem Leistungsdatum). **Fremdkosten** stammen aus dem Abschnitt **Honorare vs. Fremdkosten** (Ausgabenarten, die separat auszuweisen sind). Die **Höhe der Vergütung** ist eine Bedingung des **Nutzungsrechts**, und **Skonto** ist eines der Stichworte zur **Auftragsbestätigung**.",
+  "quelle": "f36",
+  "schwierigkeit": "schwer",
+  "familie": "leistungsbeschreibung-detailgenauigkeit"
+ },
+ {
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche der folgenden Positionen gehören zu den Bestandteilen eines Angebots?",
+  "optionen": [
+   "Essentialia Negotii",
+   "Detaillierte Leistungsübersicht",
+   "Nettosumme",
+   "Leistung und Gegenleistung",
+   "Zahlungsbedingungen",
+   "Leistungsdatum",
+   "Räumliche Nutzungsbeschränkung",
+   "30% Akonto",
+   "Mehrwertsteuervermerk"
+  ],
+  "richtig": [
+   1,
+   3,
+   4,
+   7
+  ],
+  "erklaerung": "Die Folie **ANGEBOT** nennt genau vier Punkte: **Zahlungsbedingungen**, **30% Akonto**, **detaillierte Leistungsübersicht** sowie **Leistung und Gegenleistung**. Letzteres greift den Merksatz auf: **There is no free Lunch!**\n\n**Leistungsdatum**, **Nettosumme** und **Mehrwertsteuervermerk** gehören dagegen zu den Pflichtangaben der **Rechnung** (\"Was gehört rein?\"). **Essentialia Negotii** ist der notwendige Mindestinhalt beim **Vertragsschluss** (Einigung). Die **räumliche Nutzungsbeschränkung** (international, weltweit, europaweit oder nur regional) stammt aus dem **Umfang der Nutzungsrechte**.",
+  "quelle": "f39",
+  "schwierigkeit": "schwer",
+  "familie": "angebot-bestandteile"
+ },
+ {
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche der folgenden Stichworte gehören zum Thema Auftragsbestätigung?",
+  "optionen": [
+   "Retainer",
+   "Nettosumme",
+   "Honorare",
+   "Skonto",
+   "Pauschale",
+   "Leistungsdatum",
+   "Rabatt",
+   "Fremdkosten",
+   "Mehrwertsteuervermerk",
+   "Reduktion"
+  ],
+  "richtig": [
+   0,
+   3,
+   4,
+   6,
+   9
+  ],
+  "erklaerung": "Die Folie **ZUR WIEDERHOLUNG** listet zum Punkt **Auftragsbestätigung** die Stichworte **Rabatt, Skonto, Reduktion, Pauschale, Paket und Retainer** – fünf davon stehen hier zur Auswahl. Die übrigen Punkte derselben Folie sind **Leistung – Gegenleistung**, **Vertrag** (Wer will was von wem?), **Briefing – Rebriefing** und **Angebote** (AGB; Inhalte).\n\n**Nettosumme**, **Leistungsdatum** und **Mehrwertsteuervermerk** sind dagegen Pflichtangaben der **Rechnung**. **Honorare** und **Fremdkosten** sind die beiden Ausgabenarten im Angebot: Honorare betreffen die eigene Dienstleistung, Fremdkosten den Kauf von Waren oder Dienstleistungen von Dritten – beide Positionen sind **separat auszuweisen**.",
+  "quelle": "f38",
+  "schwierigkeit": "schwer",
+  "familie": "auftragsbestaetigung-stichworte"
+ },
+ {
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche der folgenden Begriffe beschreiben das Zustandekommen und den Inhalt eines Vertrags?",
+  "optionen": [
+   "Konsens",
+   "Retainer",
+   "Angebot",
+   "Fremdkosten",
+   "Dissens",
+   "30% Akonto",
+   "Essentialia Negotii",
+   "Rebriefing",
+   "Nettosumme",
+   "Annahme"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   9
+  ],
+  "erklaerung": "Ein Vertrag kommt laut Folie durch **2 Willenserklärungen** zustande: **Angebot + Annahme** (BGB); die **Form** ist im **Grundsatz formfrei**. Inhaltlich gilt: **wer will was von wem?** Der notwendige Mindestinhalt sind die **Essentialia Negotii** – die **Einigung**. Einigung (+) bedeutet **Konsens**, ggf. per Auslegung; Einigung (-) bedeutet **Dissens** und damit: Vertrag (-).\n\n**Retainer** ist ein Stichwort der **Auftragsbestätigung**, **30% Akonto** eine Position der Folie **ANGEBOT**, **Nettosumme** eine Pflichtangabe der **Rechnung**, **Fremdkosten** eine Ausgabenart aus **Honorare vs. Fremdkosten**, und das **Rebriefing** gehört zur Kundenkommunikation vor dem Angebot (Zusammenfassung/Interpretation/Ergänzung des Briefings).",
+  "quelle": "f37",
+  "schwierigkeit": "schwer",
+  "familie": "vertragsschluss-begriffe"
+ },
+ {
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche der folgenden Angaben nennen die Folien als Bestandteile einer Rechnung?",
+  "optionen": [
+   "Schriftform",
+   "Rechnungsnummer",
+   "Nettosumme",
+   "Steuer-ID",
+   "Mehrwertsteuervermerk",
+   "Pacta sunt servanda",
+   "Unterschrift",
+   "Steuernummer",
+   "30 % Akonto",
+   "Leistungsdatum"
+  ],
+  "richtig": [
+   1,
+   2,
+   4,
+   7,
+   9
+  ],
+  "erklaerung": "Als Rechnungsbestandteile nennen die Folien: **Kontaktdaten, Rechnungsnummer (Re.Nr.), Steuernummer (Steuer.Nr.), Leistungszeitraum bzw. Leistungsdatum** (Zeitpunkt der Lieferung oder Zeitraum der Erstellung), **Frist, Datum, Leistung, Nettosumme** und **Mehrwertsteuervermerk** (anzuwendender Steuersatz oder im Fall einer Steuerbefreiung ein Hinweis darauf).\n\n**Schriftform** und **Pacta sunt servanda** stehen dagegen auf der Folie **LEISTUNG** (Beschreibung der Leistung im Vertrag, Grundsatz Vertragsfreiheit). **30 % Akonto** ist ein Punkt der Folie **ANGEBOT** neben den Zahlungsbedingungen. Die **Steuer-ID** dient laut Folie **STEUER-NUMMERN** der persönlichen Kennzeichnung (Banken, Arbeitsamt, Arbeitgeber, Aktien, Kindergeld, BAföG) – für die Rechnung ist die **Steuer-Nr.** vorgesehen. Eine **Unterschrift** gehört gerade nicht dazu: Die Definition lautet „Dokument zur Abrechnung einer Leistung | Lieferung > **keine Unterschrift**\".",
+  "quelle": "f28, f29",
+  "schwierigkeit": "schwer",
+  "familie": "rechnung-pflichtangaben"
+ },
+ {
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche der folgenden Punkte gehören in eine Rechnung?",
+  "optionen": [
+   "Kontaktdaten",
+   "Detailgenauigkeit",
+   "Rahmenbedingungen",
+   "Frist",
+   "Datum",
+   "Vertragsfreiheit",
+   "Leistungszeitraum",
+   "Steuer-Gruppen",
+   "Leistung",
+   "Annahmen"
+  ],
+  "richtig": [
+   0,
+   3,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Die Wiederholungsfolie führt unter **„Was gehört rein“** auf: **Kontaktdaten, Re.Nr., Steuer.Nr., Leistungszeitraum, Frist, Datum, Leistung** – ergänzt auf der ausführlichen Folie um **Nettosumme** und **Mehrwertsteuervermerk**.\n\n**Detailgenauigkeit, Rahmenbedingungen** und **Annahmen** gehören dagegen zur Folie **LEISTUNG**: Dort wird die Beschreibung der Leistung mit **Schriftform**, **Detailgenauigkeit (Umfang, Rahmenbedingungen, Annahmen, Zeit)** und **Teil des Angebots** gegliedert. Die **Vertragsfreiheit** steht ebenfalls dort (**Grundsatz Vertragsfreiheit, aber: Pacta sunt servanda – Verträge sind einzuhalten**). Die **Steuer-Gruppen** (Verkehrs-, Verbrauchs-, Gewinn-, Substanzsteuern) stammen aus der Wiederholungsfolie **Steuern**.",
+  "quelle": "f29",
+  "schwierigkeit": "schwer",
+  "familie": "rechnung-pflichtangaben"
+ },
+ {
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche der folgenden Regelungen und Fristen gehören zur E-Rechnungspflicht?",
+  "optionen": [
+   "Papier- und PDF-Versand noch bis Ende 2026",
+   "Kleinunternehmerregelung bis max. 22 TEUR",
+   "Empfangspflicht für alle Unternehmen ab 2025",
+   "Steuer-ID mit 11 Stellen zur persönlichen Kennzeichnung",
+   "Umsatzgrenze von unter 800.000 Euro",
+   "Keine Umsatzsteuerpflicht nach §19 UStG",
+   "Ausstellungspflicht ohne Ausnahmen ab 1.1.2028",
+   "Umsatzsteuer-ID mit 9 Stellen für Unternehmer",
+   "Übergangsfrist bis Ende 2027 für kleine Unternehmen",
+   "Steuer-Nr. mit 10 Stellen für die Steuererklärung"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Die Folie **E-RECHNUNG** nennt: Ab **2025** müssen alle Unternehmen in Deutschland **elektronische Rechnungen empfangen** können. **Übergangsfristen**: Bis **Ende 2026** dürfen Unternehmen noch **Papierrechnungen oder andere Formate (PDF)** versenden; bis **Ende 2027** ist dies noch für **kleine Unternehmen mit geringem Umsatz (unter 800.000 Euro)** möglich. Ohne Ausnahmen gilt die E-Rechnungspflicht für die **Ausstellung und Versendung ab 1.1.2028**.\n\nDie **Kleinunternehmerregelung bis max. 22 TEUR** und die **fehlende Umsatzsteuerpflicht nach §19 UStG** gehören dagegen zur **Kleinunternehmerregelung** auf der Wiederholungsfolie **Rechnungen** – nicht zur E-Rechnung, deren Umsatzgrenze ausdrücklich bei **800.000 Euro** liegt. **Steuer-ID (11 Stellen)**, **Steuer-Nr. (10 Stellen)** und **Umsatzsteuer-ID (9 Stellen)** stammen aus dem Abschnitt **Steuer-Nummern** der Wiederholungsfolie **Steuern**; ihre Verwendungszwecke (persönliche Kennzeichnung, Rechnung und Steuererklärung, Kennzeichnung von Unternehmern) stehen auf der Folie **STEUER-NUMMERN – Wofür?**.",
+  "quelle": "f27",
+  "schwierigkeit": "schwer",
+  "familie": "e-rechnung-fristen"
+ },
+ {
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche der folgenden Themen gehören zum Stichwort Rechnungen?",
+  "optionen": [
+   "KSK",
+   "Gutschrift",
+   "Mahnung",
+   "Steuer-Arten",
+   "elster.de",
+   "netto – brutto",
+   "Körperschaftsteuer",
+   "Vorsteuerabzug",
+   "Pacta sunt servanda",
+   "Rechnungsbeispiele"
+  ],
+  "richtig": [
+   1,
+   2,
+   5,
+   7,
+   9
+  ],
+  "erklaerung": "Die Wiederholungsfolie **Rechnungen** listet: **Definition** (Dokument zur Abrechnung einer Leistung | Lieferung > keine Unterschrift), **„Was gehört rein“**, **Rechnungsbeispiele**, **Kleinunternehmerregelung (§19 UStG)**, **netto – brutto**, **Mehrwert-Umsatz-Vor-Steuer**, **Vorsteuerabzug**, **Gutschrift** und **Mahnung**.\n\n**KSK** (Sozialversicherungseinrichtung für Künstler), **Steuer-Arten** und **elster.de** stehen dagegen auf der Wiederholungsfolie **Steuern**. Die **Körperschaftsteuer** (Einkommensteuer auf die Gewinne von Unternehmen) gehört zur Folie **STEUERN** mit den Steuerarten. **Pacta sunt servanda** stammt von der Folie **LEISTUNG** (Grundsatz Vertragsfreiheit, Verträge sind einzuhalten).",
+  "quelle": "f29",
+  "schwierigkeit": "schwer",
+  "familie": "wiederholung-rechnungen-themen"
+ },
+ {
+  "thema": "Rechtsformen",
+  "frage": "Welche der folgenden Vorteile hat die GmbH?",
+  "optionen": [
+   "sofortiger Start",
+   "eigene Anstellung",
+   "wenig Akquiseaufwand",
+   "geringe Gründungskosten",
+   "Haftungsbeschränkung",
+   "flexible Gestaltung",
+   "relativ risikolos",
+   "solider kreditwürdiger Auftritt",
+   "geringe Kosten"
+  ],
+  "richtig": [
+   1,
+   4,
+   7
+  ],
+  "erklaerung": "Die Folie **RECHTSFORM – Vorteile** ordnet der **GmbH** drei Vorteile zu: **Haftungsbeschränkung**, **solider kreditwürdiger Auftritt** und **eigene Anstellung**. Alle übrigen Optionen stehen zwar auf derselben Folie, aber in anderen Zeilen: **sofortiger Start** und **geringe Kosten** gehören zum **Einzelunternehmen**, **geringe Gründungskosten** zur **UG (haftungsbeschränkt)** – die GmbH teilt mit der UG nur die Haftungsbeschränkung, ihre **Gründungs- und Verwaltungskosten** stehen sogar auf der Nachteile-Folie. **Flexible Gestaltung** gehört zur **GbR** (flexible Gestaltung > Team) und zur **Partnerschaftsgesellschaft**, **relativ risikolos** und **wenig Akquiseaufwand** zum **Freelancer**.",
+  "quelle": "f45",
+  "schwierigkeit": "schwer",
+  "familie": "rechtsform-vorteile-gmbh"
+ },
+ {
+  "thema": "Rechtsformen",
+  "frage": "Bei welchen Rechtsformen nennt die Folie \"RECHTSFORM – Vorteile\" die Haftungsbeschränkung als Vorteil?",
+  "optionen": [
+   "Einzelunternehmen",
+   "UG (haftungsbeschränkt)",
+   "GbR",
+   "Freelancer",
+   "GmbH",
+   "Netzwerk / Bürogemeinschaft",
+   "Partnerschaftsgesellschaft",
+   "Aktiengesellschaft (AG)"
+  ],
+  "richtig": [
+   1,
+   4,
+   6
+  ],
+  "erklaerung": "Die Vorteile-Folie nennt **Haftungsbeschränkung** bei drei Einträgen: **UG (haftungsbeschränkt)** (geringe Gründungskosten, Haftungsbeschränkung), **Partnerschaftsgesellschaft** (Haftungsbeschränkung, flexible Gestaltung) und **GmbH** (Haftungsbeschränkung, solider kreditwürdiger Auftritt, eigene Anstellung). Beim **Einzelunternehmen** stehen dort sofortiger Start und geringe Kosten, bei der **GbR** flexible Gestaltung > Team – beide führt die Nachteile-Folie ausdrücklich mit **gesamtschuldnerischer unbeschränkter Haftung**. Beim **Freelancer** stehen relativ risikolos und wenig Akquiseaufwand. Zu **Netzwerk / Bürogemeinschaft** nennt die Folie überhaupt keinen Vorteil, die rechte Spalte ist dort leer. Die **Aktiengesellschaft (AG)** kommt auf der Vorteile-Folie gar nicht vor; sie steht auf der Folie zu den **Kapitalgesellschaften** neben der GmbH.",
+  "quelle": "f44, f45, f48",
+  "schwierigkeit": "schwer",
+  "familie": "rechtsform-vorteil-haftungsbeschraenkung"
+ },
+ {
+  "thema": "Rechtsformen",
+  "frage": "Welche der folgenden Nachteile hat die UG (haftungsbeschränkt)?",
+  "optionen": [
+   "Scheinselbstständigkeit",
+   "gesamtschuldnerische unbeschränkte Haftung",
+   "Verwaltungskosten",
+   "Gründungskosten",
+   "geringe Kreditwürdigkeit",
+   "gemeinsame Haftung für Büro und Personalkosten",
+   "Steuer",
+   "drohende Insolvenz"
+  ],
+  "richtig": [
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Die Folie **RECHTSFORM – Nachteile** nennt zur **UG (haftungsbeschränkt)**: **Verwaltungskosten**, **geringe Kreditwürdigkeit** und **Steuer**. **Gesamtschuldnerische unbeschränkte Haftung** ist dagegen der Nachteil von **Einzelunternehmen** und **GbR**, **Scheinselbstständigkeit** der des **Freelancers**, **gemeinsame Haftung für Büro und Personalkosten** der der **Partnerschaftsgesellschaft**. **Gründungskosten** stehen bei der **GmbH** (Gründungs- und Verwaltungskosten > Steuerproblematik) – bei der UG sind die **geringen Gründungskosten** laut der Folie **RECHTSFORM – Vorteile** umgekehrt ein Vorteil. **Drohende Insolvenz** stammt aus der **Liquiditätsdefinition** (zahlungsunfähig = droht eine Insolvenz = illiquide) und ist dort keiner Rechtsform zugeordnet.",
+  "quelle": "f44, f45, f40",
+  "schwierigkeit": "schwer",
+  "familie": "rechtsform-nachteile-ug"
+ },
+ {
+  "thema": "Rechtsformen",
+  "frage": "Welche der folgenden Nachteile hat die GmbH?",
+  "optionen": [
+   "geringe Kreditwürdigkeit",
+   "Gründungskosten",
+   "Scheinselbstständigkeit",
+   "Verwaltungskosten",
+   "gemeinsame Haftung für Büro- und Personalkosten",
+   "Steuerproblematik",
+   "Zahlungsunfähigkeit",
+   "gesamtschuldnerische unbeschränkte Haftung"
+  ],
+  "richtig": [
+   1,
+   3,
+   5
+  ],
+  "erklaerung": "Zur **GmbH** notiert die Nachteile-Folie **Gründungs- und Verwaltungskosten > Steuerproblematik**, also **Gründungskosten**, **Verwaltungskosten** und **Steuerproblematik**. **Geringe Kreditwürdigkeit** gehört dagegen zur **UG (haftungsbeschränkt)** – der GmbH schreibt die Vorteile-Folie gerade den **soliden kreditwürdigen Auftritt** zu. **Scheinselbstständigkeit** ist der Nachteil des **Freelancers**, **gemeinsame Haftung für Büro und Personalkosten** der der **Partnerschaftsgesellschaft**, **gesamtschuldnerische unbeschränkte Haftung** der von **Einzelunternehmen** und **GbR**. **Zahlungsunfähigkeit** stammt aus dem Abschnitt **Liquidität** und beschreibt dort ein Unternehmen, das seinen Zahlungsverpflichtungen nicht mehr nachkommen kann.",
+  "quelle": "f44, f45, f40",
+  "schwierigkeit": "schwer",
+  "familie": "rechtsform-nachteile-gmbh"
+ },
+ {
+  "thema": "Rechtsformen",
+  "frage": "Welche der folgenden Merkmale beschreiben den Aufbau der Aktiengesellschaft (AG)?",
+  "optionen": [
+   "Führung durch Geschäftsführer",
+   "eigene Anstellung",
+   "Aufteilung des Unternehmens in Aktien",
+   "geringe Gründungskosten",
+   "Aktien in der Hand von Aktionären",
+   "flexible Gestaltung",
+   "solider kreditwürdiger Auftritt",
+   "Stimmrecht der Aktionäre"
+  ],
+  "richtig": [
+   2,
+   4,
+   7
+  ],
+  "erklaerung": "Die Folie **RECHTSFORM – Kapitalgesellschaften (juristische Personen)** beschreibt die **AG** als Unternehmensform, bei der das Unternehmen **in Aktien aufgeteilt** ist, die **von Aktionären gehalten** werden, und bei der die **Aktionäre das Recht haben, über Angelegenheiten des Unternehmens abzustimmen**. Die **Führung von einem oder mehreren Geschäftsführern** steht auf derselben Folie dagegen in der Beschreibung der **GmbH**, ebenso wie der Hinweis, dass deren Gesellschafter nicht persönlich für die Schulden haften. **Solider kreditwürdiger Auftritt** und **eigene Anstellung** sind Vorteile der **GmbH** auf der Vorteile-Folie, **flexible Gestaltung** gehört dort zur **GbR** und zur **Partnerschaftsgesellschaft**, **geringe Gründungskosten** zur **UG (haftungsbeschränkt)**.",
+  "quelle": "f48, f45",
+  "schwierigkeit": "schwer",
+  "familie": "kapitalgesellschaft-ag"
+ },
+ {
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche der folgenden Punkte gehören zum Nutzen einer Kalkulation im Design?",
+  "optionen": [
+   "Den Kunden transparent informieren",
+   "Zinsen einer Geldanlage reinvestieren",
+   "Den Preis rechtfertigen",
+   "Das Handelsregister einsehen",
+   "Missverständnisse zwischen Designer und Kunde vermeiden",
+   "30 % Akonto vereinbaren",
+   "Eine klare Grundlage für die Zusammenarbeit schaffen",
+   "Die Arbeitsprozesse optimieren",
+   "Die 50-30-20-Regel anwenden"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   7
+  ],
+  "erklaerung": "Die Folie **WOZU KALKULATION IM DESIGN?** listet sechs Punkte: **den Kunden transparent zu informieren**, **den Preis zu rechtfertigen**, **Unklarheiten und Missverständnisse zwischen Designer und Kunde zu vermeiden**, **eine klare Grundlage für die Zusammenarbeit zu schaffen**, **seine Arbeitsprozesse zu optimieren und effizienter zu arbeiten** sowie **die Ressourcen besser zu planen und die Kosten zu senken**.\n\nDie Ablenker stammen aus anderen Abschnitten der Vorlesung: **Zinsen einer Geldanlage reinvestieren** beschreibt den **Zinses-Zins-Effekt** aus der Wiederholung zum Thema Geld. **Die 50-30-20-Regel** (50 % Fixkosten, 30 % Freizeit/Konsum, 20 % sparen) gehört ebenfalls dorthin. **Das Handelsregister** ist eine Quelle der **Unternehmensrecherche**. **30 % Akonto** ist ein Bestandteil des **Angebots**, nicht ein Zweck der Kalkulation.",
+  "quelle": "f43",
+  "schwierigkeit": "schwer",
+  "familie": "kalkulation-nutzen"
+ },
+ {
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche der folgenden Stichworte gehören zum Themenbereich Kalkulation?",
+  "optionen": [
+   "Gewinnmarge",
+   "Aktien und Dividende",
+   "Direkte und indirekte Kosten",
+   "Briefing und Rebriefing",
+   "Lagebericht und Anhang",
+   "Stundensätze und Tagessätze",
+   "Zinses-Zins-Effekt",
+   "Risiko und Risikotyp",
+   "Pacta sunt servanda",
+   "Handelsregister und Bundesanzeiger"
+  ],
+  "richtig": [
+   0,
+   2,
+   3,
+   5,
+   7
+  ],
+  "erklaerung": "Die Wiederholungsfolie **Kalkulation** nennt: **Calculatio = Berechnung**, **Historie**, **Zum Nutzen und Einsatz der Kalkulation**, **Fixkosten – variable Kosten – Gewinnmarge**, **direkte Kosten – indirekte Kosten**, **Briefing > Rebriefing**, **Kalkulation-Schwierigkeiten**, **Risiko > Risikotyp** sowie **Stundensätze – Tagessätze**.\n\nDie Ablenker gehören zu anderen Wiederholungsblöcken: **Aktien** (Beteiligung an Unternehmen) und **Dividende** (jährlich auf eine Aktie entfallender Anteil vom Reingewinn) sowie der **Zinses-Zins-Effekt** (Zinsen einer Geldanlage werden reinvestiert, mitverzinst und vermehren das Geld von selbst) stehen in der Wiederholung zum Thema **Geld**. **Lagebericht und Anhang** gehören dort zum **Jahresabschluss**, **Handelsregister und Bundesanzeiger** zu den Rechercheinstrumenten der Wiederholung **Unternehmensrecherche**. **Pacta sunt servanda** – \"Verträge sind einzuhalten\" – stammt von der Folie zur **Beschreibung der Leistung**.",
+  "quelle": "f46",
+  "schwierigkeit": "schwer",
+  "familie": "kalkulation-stichworte",
+  "essential": true
+ },
+ {
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche der folgenden Merkmale treffen auf Honorare zu?",
+  "optionen": [
+   "Betreffen die eigene Dienstleistung",
+   "Kauf von Waren von Dritten",
+   "Normalerweise variabel",
+   "Feste Kosten",
+   "Abhängig von der Art der Dienstleistung",
+   "Unabhängig von der gekauften Menge",
+   "Abhängig von der Dauer der Dienstleistung",
+   "Kauf von Dienstleistungen von Dritten",
+   "Anteil vom Reingewinn"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Laut Folie **HONORARE vs. FREMDKOSTEN** betreffen **Honorare die eigene Dienstleistung**, sie sind **normalerweise variabel** und hängen von **Art und Dauer der erbrachten Dienstleistungen** ab.\n\nAlles Übrige beschreibt dieselbe Folie auf der Gegenseite, den **Fremdkosten**: Sie fallen für den **Kauf von Waren oder Dienstleistungen von Dritten** an, sind **feste (oder variable) Kosten** und entstehen **unabhängig von der Menge der gekauften Waren oder Dienstleistungen**. Beide sind Arten von **Ausgaben**, die im Angebot stehen und für Designleistungen **separat ausgewiesen** werden sollen.\n\n**Anteil vom Reingewinn** gehört dagegen gar nicht auf diese Folie: So definiert die Wiederholung zum Thema **Geld** die **Dividende** – der jährlich auf eine Aktie entfallende Anteil vom Reingewinn.",
+  "quelle": "f41",
+  "schwierigkeit": "schwer",
+  "familie": "honorare-fremdkosten"
+ },
+ {
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche der folgenden Begriffe und Aussagen hängen mit der Liquidität eines Unternehmens zusammen?",
+  "optionen": [
+   "Erfüllen der Zahlungsverpflichtungen",
+   "Zinsen werden mitverzinst",
+   "Begleichen offener Rechnungen",
+   "Beteiligung an Unternehmen",
+   "Zahlungsunfähigkeit",
+   "Börsengehandelter Indexfonds",
+   "Drohende Insolvenz",
+   "Wertaufbewahrungsmittel",
+   "Planbarkeit und verfügbares Vermögen",
+   "Bundesanzeiger"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Die Folie **LIQUIDITÄT DEFINITION** sagt: Die Liquidität bestimmt, ob ein Unternehmen seinen **Zahlungsverpflichtungen** nachkommen kann. **Liquide** heisst, dass fällige Zahlungen wie **offene Rechnungen** beglichen werden können. Kann ein Unternehmen das nicht mehr, ist es **zahlungsunfähig = droht eine Insolvenz = illiquide**. Die Wiederholungsfolie zum Thema Geld ergänzt die Liquidität um **Planbarkeit** und **verfügbares Vermögen**.\n\nDie Ablenker stammen aus anderen Stichworten derselben Geld-Wiederholung: **Zinsen werden mitverzinst** beschreibt den **Zinses-Zins-Effekt**, **Beteiligung an Unternehmen** die **Aktie**, **börsengehandelter Indexfonds** den **ETF** und **Wertaufbewahrungsmittel** eine der **Funktionen des Geldes**. Der **Bundesanzeiger** gehört dagegen zur **Unternehmensrecherche**.",
+  "quelle": "f40, f20",
+  "schwierigkeit": "schwer",
+  "familie": "liquiditaet-definition"
+ },
+ {
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche der folgenden Punkte gehören zum Inhalt eines Businessplans?",
+  "optionen": [
+   "Executive Summary",
+   "Motivation",
+   "Arbeitsamt",
+   "Team/Netzwerk",
+   "Kontrolle",
+   "Geschäftsidee",
+   "Vertrieb",
+   "Finanzen",
+   "Investor"
+  ],
+  "richtig": [
+   0,
+   1,
+   3,
+   5,
+   7
+  ],
+  "erklaerung": "Die Wiederholungsfolie zum Businessplan listet unter **\"Was gehört rein?\"** genau sechs Bausteine: **Executive Summary, Idee (Geschäftsidee), Motivation, Team/Netzwerk, Finanzen und Marketing** (Marketing ist hier nicht als Option angeboten). **Arbeitsamt** und **Investor** gehören dagegen zur Liste **\"Wer?\"**, also zu den Adressaten des Businessplans (Bank, Arbeitsamt, Gründer, Investor, Finanzgeber). **Kontrolle** steht unter **\"Warum?\"** (Klärung, Planung, Kontrolle > Wirtschaftlichkeit). **Vertrieb** ist keiner der Bausteine, sondern zählt zu den **grundlegenden BWL-Kenntnissen für Designer** (Planung und Budgetierung, Management von Ressourcen und Mitarbeitern/Team, Verwaltung von Finanzen und Buchhaltung, Marketing, Vertrieb).",
+  "quelle": "f15, f17, f50",
+  "schwierigkeit": "schwer",
+  "familie": "businessplan-bestandteile"
+ },
+ {
+  "thema": "Businessplan und Gruendung",
+  "frage": "An welche der folgenden Adressaten richtet sich ein Businessplan?",
+  "optionen": [
+   "Bank",
+   "Konkurrenz",
+   "Gründer",
+   "Arbeitgeber",
+   "Investor",
+   "Pitchberater-Agenturen",
+   "Arbeitsamt",
+   "Partnerschaften",
+   "Finanzgeber"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Unter **\"Wer?\"** listet die Wiederholungsfolie **Bank, Arbeitsamt, Gründer, Investor und Finanzgeber** – mit dem Zusatz \"> für einen selbst!\". Die Folie **WER?** ergänzt, dass **Investoren und Kreditgeber** den Plan brauchen, um **Tragfähigkeit und Rentabilität** eines Geschäftsvorhabens zu beurteilen, und dass auch **etablierte Unternehmen** davon profitieren, wenn sie neue Geschäftsbereiche erschließen oder ihre Geschäftstätigkeit erweitern wollen. **Konkurrenz** stammt dagegen aus der **METHODE**, dort beim Punkt Geschäftsidee (\"Analysieren Sie den Markt und die Konkurrenz\"). **Arbeitgeber** gehört zu **\"Warum brauchen Designer BWL?\"** (\"um smart für/gegen Arbeitgeber zu agieren\") und ist dort kein Adressat eines Businessplans. **Pitchberater-Agenturen** gehören zum Stichwort **Pitch** (Rahmenbedingungen, Ausschreibungen, Pitchberater-Agenturen) und **Partnerschaften** zur **Akquise** (Direkte Ansprache, Networking, Empfehlung, Partnerschaften, Online-Marketing) – beides aus der Marketing-Wiederholung.",
+  "quelle": "f17, f21, f15, f14, f49",
+  "schwierigkeit": "schwer",
+  "familie": "businessplan-adressaten"
+ },
+ {
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche der folgenden Begriffe beschreiben den Zweck eines Businessplans bzw. das, was Kapitalgeber mit ihm beurteilen?",
+  "optionen": [
+   "Klärung",
+   "Positionierung",
+   "Planung",
+   "Kundenzufriedenheit",
+   "Tragfähigkeit",
+   "Buchhaltung",
+   "Kontrolle",
+   "Absatz",
+   "Rentabilität",
+   "Markenmanagement"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Unter **\"Warum?\"** steht auf der Wiederholungsfolie: **Klärung, Planung, Kontrolle > Wirtschaftlichkeit** (Wirtschaftlichkeit ist hier nicht als Option angeboten). Die Folie WER? ergänzt, dass Investoren und Kreditgeber den Businessplan brauchen, um **Tragfähigkeit und Rentabilität** eines Geschäftsvorhabens zu beurteilen; außerdem hilft er, Strategien zu planen und Ziele zu definieren und nachzuhalten bzw. zu kontrollieren. **Positionierung** ist dagegen eine der **Marketing-Methoden** (Positionierung, SEO, SEM, Influencer Marketing, Zielgruppenanalyse, SWOT). **Bestmöglicher Absatz** und **langfristige Kundenzufriedenheit** sind die **Ziele des Marketings**. **Markenmanagement** gehört zum **Branding** (Analyse, Markenstrategie, -kommunikation, -design, -management). **Buchhaltung** zählt zu den **BWL-Grundkenntnissen** (Verwaltung von Finanzen und Buchhaltung).",
+  "quelle": "f17, f21",
+  "schwierigkeit": "schwer",
+  "familie": "businessplan-zweck"
+ },
+ {
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche der folgenden Begriffe gehören zum Inhalt eines Businessplans?",
+  "optionen": [
+   "Marketing",
+   "Finanzgeber",
+   "Motivation",
+   "Wirtschaftlichkeit",
+   "Executive Summary",
+   "Rentabilität",
+   "Team/Netzwerk",
+   "Klärung",
+   "Bank"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Die vollständige Liste unter **\"Was gehört rein?\"** lautet: **Executive Summary, Idee, Motivation, Team/Netzwerk, Finanzen und Marketing** (Idee und Finanzen sind hier nicht als Option angeboten). **Marketing** ist also selbst ein Bestandteil des Businessplans. **Bank** und **Finanzgeber** stehen dagegen unter **\"Wer?\"** (Bank, Arbeitsamt, Gründer, Investor, Finanzgeber). **Klärung** und **Wirtschaftlichkeit** stehen unter **\"Warum?\"** (Klärung, Planung, Kontrolle > Wirtschaftlichkeit). **Rentabilität** stammt aus der Folie WER?: Investoren und Kreditgeber beurteilen damit **Tragfähigkeit und Rentabilität** des Vorhabens.",
+  "quelle": "f17, f21",
+  "schwierigkeit": "schwer",
+  "familie": "businessplan-bestandteile"
+ },
+ {
+  "thema": "Grundlagen der BWL",
+  "frage": "Welche der folgenden Punkte gehören zu den grundlegenden BWL-Kenntnissen, die für Designer nützlich sein können?",
+  "optionen": [
+   "Briefing und Rebriefing",
+   "Planung und Budgetierung",
+   "Handelsregister und Bundesanzeiger",
+   "Marketing",
+   "Risikotyp",
+   "Management von Ressourcen und Team",
+   "Stundensätze und Tagessätze",
+   "Vertrieb",
+   "Markenregister",
+   "Verwaltung von Finanzen und Buchhaltung"
+  ],
+  "richtig": [
+   1,
+   3,
+   5,
+   7,
+   9
+  ],
+  "erklaerung": "Die Folie **WARUM BRAUCHEN DESIGNER BWL?** (f50) zählt genau fünf grundlegende BWL-Kenntnisse auf: **die Planung und Budgetierung**, **das Management von Ressourcen und Mitarbeitern/Team**, **die Verwaltung von Finanzen und Buchhaltung**, **das Marketing** und **der Vertrieb**.\n\nDie Ablenker stammen aus anderen Abschnitten derselben Vorlesung: **Briefing > Rebriefing**, **Risiko > Risikotyp** und **Stundensätze – Tagessätze** stehen in der Wiederholungsliste **Kalkulation** (f46), zusammen mit Fixkosten – variablen Kosten – Gewinnmarge sowie direkten und indirekten Kosten. **Handelsregister und Bundesanzeiger** sowie das **Markenregister** gehören dagegen zur Wiederholung **Unternehmensrecherche** (f47), wo sie neben Kununu und sozialen Netzen als Recherchequellen zu Unternehmensaufbau, Unternehmensform und Jahresabschluss aufgeführt sind.",
+  "quelle": "f50",
+  "schwierigkeit": "schwer",
+  "familie": "bwl-grundkenntnisse"
+ },
+ {
+  "thema": "Grundlagen der BWL",
+  "frage": "Wozu brauchen Designer laut Vorlesung BWL-Kenntnisse? Welche der folgenden Begründungen werden dort genannt?",
+  "optionen": [
+   "Eigene Unternehmen oder Projekte leiten und verwalten",
+   "Den Preis gegenüber dem Kunden rechtfertigen",
+   "Effektiv planen, budgetieren, verwalten und vermarkten",
+   "Den Kunden transparent informieren",
+   "Smart für/gegen Arbeitgeber agieren",
+   "Missverständnisse zwischen Designer und Kunde vermeiden",
+   "Eine klare Grundlage für die Zusammenarbeit schaffen",
+   "Arbeitsprozesse optimieren und effizienter arbeiten"
+  ],
+  "richtig": [
+   0,
+   2,
+   4
+  ],
+  "erklaerung": "Die Folie **WARUM BRAUCHEN DESIGNER BWL?** nennt drei Begründungen für BWL-Kenntnisse: **um eigene Unternehmen oder Projekte zu leiten und zu verwalten**, **um effektiv zu planen, zu budgetieren, zu verwalten und zu vermarkten** und **um smart für/gegen Arbeitgeber zu agieren**. Ergänzend heißt es, BWL-Kenntnisse helfen Designern, ein **Verständnis dafür zu entwickeln, wie Unternehmen funktionieren**.\n\nAlle Ablenker sind echte Punkte, gehören aber zur Liste **WOZU KALKULATION IM DESIGN?** (f43): Dort hilft eine Kalkulation, **den Kunden transparent zu informieren**, **den Preis zu rechtfertigen**, **Unklarheiten und Missverständnisse zwischen Designer und Kunde zu vermeiden**, **eine klare Grundlage für die Zusammenarbeit zu schaffen** und **die Arbeitsprozesse zu optimieren und effizienter zu arbeiten**.",
+  "quelle": "f49",
+  "schwierigkeit": "schwer",
+  "familie": "warum-designer-bwl"
+ },
+ {
+  "thema": "Grundlagen der BWL",
+  "frage": "Welche der folgenden Punkte soll die BWL liefern, um Entscheidungen begründen und fällen zu können?",
+  "optionen": [
+   "Methoden",
+   "Gewinnmarge",
+   "Prozesse",
+   "Marktforschung",
+   "Stundensätze",
+   "Verständnis",
+   "Preisbildung",
+   "Lagebericht",
+   "Rebriefing"
+  ],
+  "richtig": [
+   0,
+   2,
+   5
+  ],
+  "erklaerung": "Die Folie **ZIEL DER BWL?** formuliert als Hauptziel, **Methoden, Prozesse und Verständnis** zu liefern, um **Entscheidungen** zu begründen bzw. zu fällen, die das Unternehmen in wirtschaftlicher Hinsicht weiterbringen; so werden die **ökonomischen Möglichkeiten ideal** ausgenutzt.\n\nDie Ablenker stehen an anderer Stelle der Vorlesung: **Marktforschung** und **Preisbildung** gehören dagegen zu den auf der Marketing-Folie genannten Bereichen (f12), zusammen mit der Produktentwicklung. **Gewinnmarge**, **Stundensätze** und **Rebriefing** gehören zur Wiederholungsliste **Kalkulation** (f46). Der **Lagebericht** gehört dagegen zum **Jahresabschluss** im Abschnitt Unternehmensrecherche (f47), neben Gewinn- & Verlustrechnung und Anhang.",
+  "quelle": "f51",
+  "schwierigkeit": "schwer",
+  "familie": "ziel-der-bwl"
+ },
+ {
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche der folgenden Anlaufstellen eignen sich für die Unternehmensrecherche?",
+  "optionen": [
+   "Bundesanzeiger",
+   "elster.de",
+   "Kununu",
+   "Arbeitsamt",
+   "Handelsregister",
+   "KSK",
+   "Markenregister",
+   "Banken",
+   "Soziale Netze"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6,
+   8
+  ],
+  "erklaerung": "Die Wiederholungsfolie **Unternehmensrecherche** listet als Rechercheorte auf: **Handelsregister**, **Bundesanzeiger**, **Kununu**, **Soziale Netze** und **Markenregister**.\n\nDie uebrigen Begriffe stehen an anderer Stelle:\n- **elster.de** gehoert zur Wiederholungsfolie **Steuern** (dort mit dem Hinweis auf das ELSTER Forum).\n- **KSK** steht ebenfalls auf der Steuern-Folie: Sozialversicherungseinrichtung fuer Kuenstler zur Absicherung ihrer sozialen Risiken.\n- **Arbeitsamt** und **Banken** gehoeren zur Aufzaehlung bei der **Steuer-ID** (Banken, Arbeitsamt, Arbeitgeber, Aktien, Kindergeld, BAfoeG-Antrag etc.) – das sind Stellen, die die Steuer-ID verlangen, keine Rechercheorte.",
+  "quelle": "f47, f22, f24",
+  "schwierigkeit": "schwer",
+  "familie": "rechercheorte-unternehmen"
+ },
+ {
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche der folgenden Bestandteile gehören neben der Bilanz zum Jahresabschluss?",
+  "optionen": [
+   "Lagebericht",
+   "Gutschrift",
+   "Anhang",
+   "E/UE-Rechnung",
+   "Gewinn- und Verlustrechnung",
+   "Mahnung",
+   "Dividende",
+   "Vorsteuerabzug"
+  ],
+  "richtig": [
+   0,
+   2,
+   4
+  ],
+  "erklaerung": "Beim **Jahresabschluss** stellt die Folie **E/UE-Rechnung vs. Bilanz** gegenueber. Unter der **Bilanz** stehen buendig: **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang**.\n\nDie uebrigen Begriffe gehoeren woanders hin:\n- Die **E/UE-Rechnung** ist gerade die Gegenseite des Vergleichs und damit kein Bestandteil der Bilanz-Seite.\n- **Gutschrift**, **Mahnung** und **Vorsteuerabzug** stehen auf der Wiederholungsfolie **Rechnungen**.\n- **Dividende** gehoert zur Wiederholungsfolie **Geld**: jaehrlich auf eine Aktie entfallender Anteil vom Reingewinn.",
+  "quelle": "f47, f29, f20",
+  "schwierigkeit": "schwer",
+  "familie": "bilanz-bestandteile"
+ },
+ {
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche der folgenden Begriffe gehören zum Themenblock Unternehmensrecherche?",
+  "optionen": [
+   "Unternehmensaufbau",
+   "Money Mindset",
+   "Jahresabschluss",
+   "Zinses-Zins-Effekt",
+   "Unternehmensform",
+   "Steuer-Gruppen",
+   "Selbststaendigkeit",
+   "Kleinunternehmerregelung",
+   "50-30-20-Regel"
+  ],
+  "richtig": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "erklaerung": "Die Wiederholungsfolie **Unternehmensrecherche** nennt als inhaltliche Stichpunkte **Unternehmensaufbau**, **Unternehmensform** (mit dem Verweis **> Selbststaendigkeit**) und **Jahresabschluss** (Einnahmen-Ueberschuss-Rechnung vs. Bilanz, Gewinn- & Verlustrechnung, Lagebericht, Anhang). Dazu kommen als Rechercheorte **Handelsregister**, **Bundesanzeiger**, **Kununu**, **Soziale Netze** und **Markenregister**.\n\nDie Ablenker stammen aus anderen Wiederholungsfolien:\n- **Money Mindset** (\"Ich bin finanziell erfolgreich!\"), **Zinses-Zins-Effekt** und die **50-30-20-Regel** (50 % Fixkosten, 30 % Freizeit | Konsum, 20 % sparen) gehoeren zur Folie **Geld**.\n- **Steuer-Gruppen** (Verkehrs-, Verbrauchs-, Gewinn-, Substanzsteuern) gehoert zur Folie **Steuern**.\n- **Kleinunternehmerregelung** (§19 UStG, bis max. 22 TEUR, keine Umsatzsteuerpflicht) gehoert zur Folie **Rechnungen**.",
+  "quelle": "f47, f20, f24, f29",
+  "schwierigkeit": "schwer",
+  "familie": "unternehmensrecherche-stichpunkte"
+ }
+]

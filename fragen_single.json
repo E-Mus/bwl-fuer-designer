@@ -1,0 +1,2810 @@
+[
+ {
+  "id": "q001",
+  "thema": "Grundlagen der BWL",
+  "frage": "Was liefert die Betriebswirtschaftslehre nach ihrem Hauptziel?",
+  "optionen": [
+   "Gesetze, Verordnungen und Vorschriften, um Betriebe rechtlich abzusichern",
+   "Kennzahlen, Bilanzen und Steuersätze, um Abschlüsse korrekt zu erstellen",
+   "Methoden, Prozesse und Verständnis, um Entscheidungen begründet zu fällen",
+   "Techniken, Werkzeuge und Materialien, um Produkte günstiger zu fertigen"
+  ],
+  "richtig": 2,
+  "erklaerung": "Hauptziel der BWL ist es, **Methoden, Prozesse und Verständnis** zu liefern, um Entscheidungen zu begründen bzw. zu fällen, die das Unternehmen wirtschaftlich weiterbringen. Rechtliche Vorgaben oder Fertigungstechniken sind nicht Gegenstand dieses Ziels.",
+  "quelle": "f51",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q002",
+  "thema": "Grundlagen der BWL",
+  "frage": "Worauf basieren Entscheidungen, die in einem Betrieb im Rahmen der BWL getroffen werden, in der Regel?",
+  "optionen": [
+   "Auf den persönlichen Erfahrungen der Führungskraft",
+   "Auf den klaren Prinzipien der Betriebswirtschaft",
+   "Auf den gesetzlichen Vorgaben des Handelsrechts",
+   "Auf den gestalterischen Vorlieben des Designteams"
+  ],
+  "richtig": 1,
+  "erklaerung": "Entscheidungen im Betrieb beruhen im Rahmen der BWL in der Regel auf **klaren betriebswirtschaftlichen Prinzipien**, damit die **ökonomischen Möglichkeiten ideal** ausgenutzt werden. Maßgeblich ist damit nicht persönliches Erfahrungswissen, nicht die rechtliche Vorgabe und nicht die gestalterische Präferenz.",
+  "quelle": "f51",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q003",
+  "thema": "Grundlagen der BWL",
+  "frage": "Welche Wirkung wird angestrebt, wenn betriebliche Entscheidungen auf betriebswirtschaftlichen Prinzipien beruhen?",
+  "optionen": [
+   "Die ökonomischen Möglichkeiten werden ideal ausgenutzt",
+   "Die rechtlichen Risiken werden vollständig ausgeschlossen",
+   "Die gestalterische Qualität wird dauerhaft gesichert",
+   "Die laufenden Personalkosten werden spürbar gesenkt"
+  ],
+  "richtig": 0,
+  "erklaerung": "Entscheidungen nach betriebswirtschaftlichen Prinzipien sollen dazu führen, dass die **ökonomischen Möglichkeiten ideal ausgenutzt** werden. Rechtssicherheit, Gestaltungsqualität oder Kostensenkung sind nicht die formulierte Zielwirkung.",
+  "quelle": "f51",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q004",
+  "thema": "Grundlagen der BWL",
+  "frage": "Welcher Bereich gehört zu den grundlegenden BWL-Kenntnissen, die für Designer_innen nützlich sind?",
+  "optionen": [
+   "Die Entwicklung von Produktionsanlagen und Maschinen",
+   "Die Programmierung von Datenbanken und Webshops",
+   "Die Prüfung von Verträgen und Urheberrechtsfragen",
+   "Die Verwaltung der Finanzen und die Buchhaltung"
+  ],
+  "richtig": 3,
+  "erklaerung": "Zu den grundlegenden BWL-Kenntnissen zählen die Planung und Budgetierung, das Management von Ressourcen und Mitarbeitern/Team, die **Verwaltung von Finanzen und Buchhaltung**, das Marketing und der Vertrieb. **Technische und juristische Aufgaben** gehören nicht zu dieser Aufzählung.",
+  "quelle": "f50",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q005",
+  "thema": "Grundlagen der BWL",
+  "frage": "Ein Designbüro legt fest, welche Mitarbeitenden welchen Projekten zugeteilt werden und welche Geräte diesen Projekten zur Verfügung stehen. Welchem grundlegenden BWL-Bereich entspricht diese Aufgabe?",
+  "optionen": [
+   "Dem Management von Ressourcen und Mitarbeitenden",
+   "Der Verwaltung von Finanzen und Buchhaltung",
+   "Dem Marketing der angebotenen Designleistungen",
+   "Dem Vertrieb der fertiggestellten Designarbeiten"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Zuteilung von Personen und Betriebsmitteln zu Projekten fällt unter das **Management von Ressourcen und Mitarbeitern/Team**. Finanzverwaltung, Marketing und Vertrieb sind eigene, davon abgegrenzte Bereiche.",
+  "quelle": "f50",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q006",
+  "thema": "Grundlagen der BWL",
+  "frage": "Welchen Nutzen haben BWL-Kenntnisse für Designer_innen im Verhältnis zu Arbeitgebern?",
+  "optionen": [
+   "Sie ermöglichen es, Tarifverträge eigenständig mit Arbeitgebern auszuhandeln",
+   "Sie ermöglichen es, die Bilanzen von Arbeitgebern rechtlich zu prüfen",
+   "Sie ermöglichen es, smart für oder gegen Arbeitgeber zu agieren",
+   "Sie ermöglichen es, Urheberrechte gegenüber Arbeitgebern durchzusetzen"
+  ],
+  "richtig": 2,
+  "erklaerung": "BWL-Kenntnisse sollen Designer_innen befähigen, **smart für bzw. gegen Arbeitgeber zu agieren**. Tarif-, Prüfungs- oder Urheberrechtsfragen werden als Nutzen nicht genannt.",
+  "quelle": "f49",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q007",
+  "thema": "Grundlagen der BWL",
+  "frage": "Welches Verständnis sollen BWL-Kenntnisse Designer_innen vermitteln?",
+  "optionen": [
+   "Ein Verständnis dafür, wie Märkte staatlich reguliert werden",
+   "Ein Verständnis dafür, wie Unternehmen grundsätzlich funktionieren",
+   "Ein Verständnis dafür, wie Gesetze für Betriebe entstehen",
+   "Ein Verständnis dafür, wie Kundschaft psychologisch entscheidet"
+  ],
+  "richtig": 1,
+  "erklaerung": "BWL-Kenntnisse helfen Designer_innen, ein Verständnis dafür zu entwickeln, **wie Unternehmen funktionieren** und wie sie ihr eigenes Unternehmen oder Projekt erfolgreich betreiben können.",
+  "quelle": "f49",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q008",
+  "thema": "Grundlagen der BWL",
+  "frage": "Wozu sollen BWL-Kenntnisse Designer_innen im Betriebsalltag befähigen?",
+  "optionen": [
+   "Effektiv zu entwerfen, zu produzieren, zu lagern und zu liefern",
+   "Effektiv zu forschen, zu gestalten, zu dokumentieren und zu präsentieren",
+   "Effektiv zu kalkulieren, zu verhandeln, zu exportieren und zu beraten",
+   "Effektiv zu planen, zu budgetieren, zu verwalten und zu vermarkten"
+  ],
+  "richtig": 3,
+  "erklaerung": "BWL-Kenntnisse dienen dazu, effektiv zu **planen, zu budgetieren, zu verwalten und zu vermarkten** sowie eigene Unternehmen oder Projekte zu leiten und zu verwalten. Gestalterische oder produktionsnahe Tätigkeiten sind damit nicht gemeint.",
+  "quelle": "f49",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q009",
+  "thema": "Rechtsformen",
+  "frage": "Welcher Nachteil wird dem Einzelunternehmen zugeordnet?",
+  "optionen": [
+   "Die gesamtschuldnerische unbeschränkte Haftung",
+   "Das Risiko der Scheinselbstständigkeit",
+   "Die hohen Gründungs- und Verwaltungskosten",
+   "Die geringe Kreditwürdigkeit gegenüber Banken"
+  ],
+  "richtig": 0,
+  "erklaerung": "Beim Einzelunternehmen wird als Nachteil die **gesamtschuldnerische unbeschränkte Haftung** genannt. Scheinselbstständigkeit gilt als Nachteil des Freelancers, hohe Gründungs- und Verwaltungskosten als Nachteil der GmbH.",
+  "quelle": "f44",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q010",
+  "thema": "Rechtsformen",
+  "frage": "Welcher Nachteil wird der Tätigkeit als Freelancer zugeordnet?",
+  "optionen": [
+   "Die gemeinsame Haftung für Büro- und Personalkosten",
+   "Das Risiko der Scheinselbstständigkeit",
+   "Die hohen Gründungs- und Verwaltungskosten",
+   "Die gesamtschuldnerische unbeschränkte Haftung"
+  ],
+  "richtig": 1,
+  "erklaerung": "Als Nachteil des Freelancers wird ausschließlich die **Scheinselbstständigkeit** aufgeführt. Die gemeinsame Haftung für Büro- und Personalkosten gehört zur Partnerschaftsgesellschaft.",
+  "quelle": "f44",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q011",
+  "thema": "Rechtsformen",
+  "frage": "Welche Nachteile werden der UG (haftungsbeschränkt) zugeordnet?",
+  "optionen": [
+   "Verwaltungskosten, geringe Kreditwürdigkeit und Steuer",
+   "Scheinselbstständigkeit, Akquiseaufwand und Steuer",
+   "Gründungskosten, unbeschränkte Haftung und Steuer",
+   "Verwaltungskosten, gemeinsame Personalkosten und Haftung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für die UG (haftungsbeschränkt) werden **Verwaltungskosten, geringe Kreditwürdigkeit und Steuer** als Nachteile genannt. Geringe Gründungskosten zählen bei der UG dagegen zu den Vorteilen.",
+  "quelle": "f44",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q012",
+  "thema": "Rechtsformen",
+  "frage": "Welche Rechtsform hat den Nachteil, dass gemeinsam für Büro- und Personalkosten gehaftet wird?",
+  "optionen": [
+   "UG (haftungsbeschränkt)",
+   "Einzelunternehmen",
+   "Partnerschaftsgesellschaft",
+   "Freelancer"
+  ],
+  "richtig": 2,
+  "erklaerung": "Die **gemeinsame Haftung für Büro- und Personalkosten** ist der Nachteil, der der Partnerschaftsgesellschaft zugeordnet wird. Beim Einzelunternehmen steht dagegen die gesamtschuldnerische unbeschränkte Haftung.",
+  "quelle": "f44",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q013",
+  "thema": "Rechtsformen",
+  "frage": "Welcher Nachteil wird der GmbH zugeordnet?",
+  "optionen": [
+   "Geringe Kreditwürdigkeit sowie hoher Akquiseaufwand",
+   "Gemeinsame Haftung für Büro- sowie Personalkosten",
+   "Gesamtschuldnerische Haftung sowie Scheinselbstständigkeit",
+   "Gründungs- und Verwaltungskosten sowie Steuerproblematik"
+  ],
+  "richtig": 3,
+  "erklaerung": "Als Nachteil der GmbH werden **Gründungs- und Verwaltungskosten sowie die Steuerproblematik** genannt. Geringe Kreditwürdigkeit ist dagegen ein Nachteil der UG (haftungsbeschränkt).",
+  "quelle": "f44",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q014",
+  "thema": "Rechtsformen",
+  "frage": "Welcher Vorteil wird dem Einzelunternehmen zugeordnet?",
+  "optionen": [
+   "Sofortiger Start bei geringen Kosten",
+   "Flexible Gestaltung der Zusammenarbeit im Team",
+   "Haftungsbeschränkung bei geringen Gründungskosten",
+   "Wenig Akquiseaufwand bei geringem Risiko"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für das Einzelunternehmen werden **sofortiger Start und geringe Kosten** als Vorteile genannt. Eine Haftungsbeschränkung besteht hier gerade nicht, da die Haftung unbeschränkt ist.",
+  "quelle": "f45",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q015",
+  "thema": "Rechtsformen",
+  "frage": "Welche Vorteile werden der Tätigkeit als Freelancer zugeordnet?",
+  "optionen": [
+   "Relativ risikolos und wenig Akquiseaufwand",
+   "Relativ risikolos und stark begrenzte Haftung",
+   "Sofortiger Start und flexible Gestaltung im Team",
+   "Geringe Gründungskosten und eigene Anstellung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Freelancer gilt als **relativ risikolos** und mit **wenig Akquiseaufwand** verbunden. Eine Haftungsbeschränkung oder eigene Anstellung wird ihm nicht zugeschrieben.",
+  "quelle": "f45",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q016",
+  "thema": "Rechtsformen",
+  "frage": "Welche Vorteile werden der UG (haftungsbeschränkt) zugeordnet?",
+  "optionen": [
+   "Geringe Verwaltungskosten und hohe Kreditwürdigkeit",
+   "Geringe Gründungskosten und Haftungsbeschränkung",
+   "Sofortiger Start und wenig Akquiseaufwand",
+   "Eigene Anstellung und flexible Gestaltung"
+  ],
+  "richtig": 1,
+  "erklaerung": "Die UG (haftungsbeschränkt) bietet **geringe Gründungskosten und eine Haftungsbeschränkung**. Verwaltungskosten und geringe Kreditwürdigkeit stehen bei ihr umgekehrt auf der Nachteilsseite.",
+  "quelle": "f45",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q017",
+  "thema": "Rechtsformen",
+  "frage": "Welcher Vorteil wird der GbR zugeordnet?",
+  "optionen": [
+   "Haftungsbeschränkung für alle Gesellschafter",
+   "Solider und kreditwürdiger Auftritt",
+   "Flexible Gestaltung im Team",
+   "Sofortiger Start bei geringen Kosten"
+  ],
+  "richtig": 2,
+  "erklaerung": "Der GbR wird als Vorteil die **flexible Gestaltung im Team** zugeschrieben. Eine Haftungsbeschränkung gibt es bei ihr nicht, denn ihr Nachteil ist die gesamtschuldnerische unbeschränkte Haftung.",
+  "quelle": "f45",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q018",
+  "thema": "Rechtsformen",
+  "frage": "Welche Vorteile werden der Partnerschaftsgesellschaft zugeordnet?",
+  "optionen": [
+   "Sofortiger Start und geringe Gründungskosten",
+   "Kreditwürdiger Auftritt und geringes Risiko",
+   "Wenig Akquiseaufwand und eigene Anstellung",
+   "Haftungsbeschränkung und flexible Gestaltung"
+  ],
+  "richtig": 3,
+  "erklaerung": "Die Partnerschaftsgesellschaft verbindet **Haftungsbeschränkung und flexible Gestaltung**. Der solide kreditwürdige Auftritt und die eigene Anstellung werden dagegen der GmbH zugeordnet.",
+  "quelle": "f45",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q019",
+  "thema": "Rechtsformen",
+  "frage": "Welche Rechtsformen werden als Kapitalgesellschaften und damit als juristische Personen eingeordnet?",
+  "optionen": [
+   "GbR und Partnerschaftsgesellschaft",
+   "Einzelunternehmen und Freelancer",
+   "GmbH und Aktiengesellschaft",
+   "Freelancer und Partnerschaftsgesellschaft"
+  ],
+  "richtig": 2,
+  "erklaerung": "Als Kapitalgesellschaften und damit als juristische Personen gelten die **GmbH** und die **Aktiengesellschaft (AG)**. Einzelunternehmen, GbR, Freelancer und Partnerschaftsgesellschaft zaehlen nicht zu dieser Gruppe.",
+  "quelle": "f48",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q020",
+  "thema": "Rechtsformen",
+  "frage": "Was gilt bei einer GmbH für die Gesellschafter beziehungsweise Eigentümer?",
+  "optionen": [
+   "Sie haften persönlich und unbeschränkt für die Schulden des Unternehmens.",
+   "Sie haften nicht persönlich für die Schulden des Unternehmens.",
+   "Sie haften gesamtschuldnerisch für die Büro- und Personalkosten.",
+   "Sie haften anteilig mit ihrem Privatvermögen für offene Schulden."
+  ],
+  "richtig": 1,
+  "erklaerung": "Die GmbH ist eine rechtliche Entität, bei der die Gesellschafter beziehungsweise Eigentümer **nicht persönlich für die Schulden des Unternehmens haften**. Geführt wird sie von einem oder mehreren Geschäftsführern.",
+  "quelle": "f48",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q021",
+  "thema": "Rechtsformen",
+  "frage": "Wodurch ist die Aktiengesellschaft (AG) gekennzeichnet?",
+  "optionen": [
+   "Das Unternehmen wird von einem oder mehreren Geschäftsführern geführt.",
+   "Das Unternehmen gehört einer Person, die unbeschränkt für Schulden haftet.",
+   "Das Unternehmen ist in Aktien aufgeteilt, die von Aktionären gehalten werden.",
+   "Das Unternehmen wird von Partnern getragen, die gemeinsam für Kosten haften."
+  ],
+  "richtig": 2,
+  "erklaerung": "Bei der AG ist das Unternehmen **in Aktien aufgeteilt, die von Aktionären gehalten werden**; die Aktionäre haben das Recht, über Angelegenheiten des Unternehmens abzustimmen. Die Führung durch **einen oder mehrere Geschäftsführer** beschreibt dagegen die GmbH.",
+  "quelle": "f48",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q022",
+  "thema": "Rechtsformen",
+  "frage": "Ein Designbüro sucht eine Rechtsform, die Haftungsbeschränkung, einen soliden kreditwürdigen Auftritt und die eigene Anstellung ermöglicht. Welche Rechtsform passt zu diesen Vorteilen?",
+  "optionen": [
+   "GbR",
+   "UG (haftungsbeschränkt)",
+   "Einzelunternehmen",
+   "GmbH"
+  ],
+  "richtig": 3,
+  "erklaerung": "Nur der GmbH werden **Haftungsbeschränkung, solider kreditwürdiger Auftritt und eigene Anstellung** gemeinsam als Vorteile zugeordnet. Die UG bietet zwar Haftungsbeschränkung, hat aber gerade eine geringe Kreditwürdigkeit als Nachteil.",
+  "quelle": "f44, f45",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q023",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Was bezeichnet das Nutzungsrecht?",
+  "optionen": [
+   "Das Recht, ein Werk zu nutzen, das einem anderen gehört",
+   "Das Recht, ein selbst geschaffenes Werk zu veröffentlichen",
+   "Das Recht, ein fremdes Werk dauerhaft zu besitzen",
+   "Das Recht, ein fremdes Werk nach Belieben zu verändern"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das **Nutzungsrecht** ist das Recht, **ein Werk zu nutzen oder zu verwenden, das einem anderen gehört**. Es verschafft keinen Besitz am Werk, sondern nur eine Nutzungsbefugnis.",
+  "quelle": "f30",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q024",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Zwischen welchen Parteien wird ein Nutzungsrecht festgelegt?",
+  "optionen": [
+   "Zwischen dem Inhaber des Urheberrechts und dem Nutzer des Werks",
+   "Zwischen dem Eigentümer des Werkstücks und dem Urheber des Werks",
+   "Zwischen dem Nutzer des Werks und einer staatlichen Registerstelle",
+   "Zwischen dem Auftraggeber des Werks und dem Käufer des Werkstücks"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Nutzungsrecht ist eine **Vereinbarung zwischen dem Inhaber des Urheberrechts und dem Nutzer des Werks**. Es entsteht also vertraglich zwischen diesen beiden Seiten.",
+  "quelle": "f30",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q025",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche Bedingungen werden beim Erwerb eines Nutzungsrechts typischerweise geregelt?",
+  "optionen": [
+   "Art und Weise der Nutzung, Dauer der Nutzung und Höhe der Vergütung",
+   "Art und Weise der Nutzung, Ort der Herstellung und Höhe der Steuerlast",
+   "Anzahl der Miturheber, Dauer der Nutzung und Höhe der Herstellkosten",
+   "Ort der Veröffentlichung, Anzahl der Abnehmer und Höhe des Gewinns"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein Nutzungsrecht wird in der Regel unter bestimmten Bedingungen eingeräumt, nämlich **Art und Weise der Nutzung, Dauer der Nutzung und Höhe der Vergütung**.",
+  "quelle": "f30",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q026",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Worauf bezieht sich das Eigentum?",
+  "optionen": [
+   "Auf das Recht, eine Sache zu besitzen und zu kontrollieren",
+   "Auf das Recht, eine kreative Arbeit zu schaffen und zu gestalten",
+   "Auf das Recht, ein fremdes Werk fuer begrenzte Zeit zu nutzen",
+   "Auf das Recht, ein geschütztes Werk öffentlich wiederzugeben"
+  ],
+  "richtig": 0,
+  "erklaerung": "**Eigentum** bezieht sich auf das Recht, **eine Sache zu besitzen und zu kontrollieren**, etwa ein Haus, ein Auto oder ein Patent. Das Schaffen einer kreativen Arbeit und das Bestimmen über deren Nutzung gehört dagegen zur **Urheberschaft**, die befristete Nutzung eines fremden Werks zum **Nutzungsrecht**.",
+  "quelle": "f31",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q027",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche Befugnisse gibt das Eigentumsrecht dem Eigentümer?",
+  "optionen": [
+   "Die Sache zu verkaufen, zu vermieten und auch zu zerstören",
+   "Die Sache zu verkaufen und zu vermieten, nicht aber zu zerstören",
+   "Die Sache zu vermieten und zu zerstören, nicht aber zu verkaufen",
+   "Die Sache zu verkaufen und zu zerstören, nicht aber zu vermieten"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Eigentumsrecht gibt dem Eigentümer die Befugnis, **mit der Sache nach Belieben zu verfahren: sie zu verkaufen, zu vermieten oder zu zerstören**. Keine dieser drei Handlungen ist ausgenommen – abzugrenzen davon ist die **Urheberschaft**, die das geistige Eigentum an einer kreativen Arbeit schützt.",
+  "quelle": "f31",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q028",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Was schützt das Urheberrecht?",
+  "optionen": [
+   "Das geistige Eigentum eines Autors, Komponisten oder Künstlers",
+   "Das Sacheigentum eines Käufers, Händlers oder Sammlers",
+   "Das Betriebsvermögen eines Verlags, Studios oder Labels",
+   "Das Kapitaleigentum eines Auftraggebers, Kunden oder Investors"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Urheberrecht schützt das **geistige Eigentum eines Autors, Komponisten oder Künstlers** und gibt dem Urheber das Recht zu entscheiden, wer sein Werk nutzen darf und wer dafür bezahlen muss.",
+  "quelle": "f31",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q029",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche Aufzählung nennt Beispiele für Eigentum und nicht für Urheberschaft?",
+  "optionen": [
+   "Haus, Auto und Patent",
+   "Roman, Musikstück und Bild",
+   "Logo, Illustration und Foto",
+   "Drehbuch, Gedicht und Song"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zum **Eigentum** zählen **Haus, Auto und Patent** – Sachen, die man besitzen und kontrollieren kann. Die übrigen Aufzählungen bestehen aus kreativen Arbeiten und gehören damit zur **Urheberschaft**.",
+  "quelle": "f31",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q030",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Wann entsteht das Urheberrecht an einem Werk?",
+  "optionen": [
+   "Automatisch, sobald das Werk geschaffen wird",
+   "Erst mit der Eintragung des Werks in ein Register",
+   "Erst mit der ersten Veröffentlichung des Werks",
+   "Automatisch, sobald ein Nutzungsvertrag geschlossen wird"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Urheberrecht entsteht **automatisch, wenn ein Werk geschaffen wird**. Weder Registrierung noch Veröffentlichung oder Vertrag sind dafür erforderlich.",
+  "quelle": "f32",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q031",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Wovor schützt das Urheberrecht ein Werk?",
+  "optionen": [
+   "Vor unbefugter Vervielfältigung, Verbreitung und öffentlicher Wiedergabe",
+   "Vor unbefugter Beschädigung, Entwendung und Weiterveräußerung",
+   "Vor unbefugter Nachahmung von Marken, Namen und Firmenzeichen",
+   "Vor unbefugter Preisgestaltung, Vermietung und Verpfändung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Urheberrecht schützt das Werk vor **unbefugter Vervielfältigung, Verbreitung, öffentlicher Wiedergabe, Bearbeitung und anderer Nutzung durch Dritte**. Es schützt damit die Verwendung des Werks, nicht die körperliche Sache.",
+  "quelle": "f32",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q032",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "In welchen drei Dimensionen können Nutzungsrechte beschränkt übertragen werden?",
+  "optionen": [
+   "Räumlich, zeitlich und inhaltlich",
+   "Räumlich, zeitlich und personell",
+   "Formal, zeitlich und inhaltlich",
+   "Räumlich, finanziell und inhaltlich"
+  ],
+  "richtig": 0,
+  "erklaerung": "Nutzungsrechte können **räumlich, zeitlich und inhaltlich** beschränkt übertragen werden. Diese drei Dimensionen bestimmen den Umfang der Rechteübertragung.",
+  "quelle": "f33, f34",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q033",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche Angaben beschreiben die räumliche Beschränkung eines Nutzungsrechts?",
+  "optionen": [
+   "International, weltweit, europaweit oder nur regional",
+   "Einmalig, mehrfach, seriell oder dauerhaft wiederholt",
+   "Für ein Jahr, fünf Jahre, zehn Jahre oder unbegrenzt",
+   "Für ein Medium, zwei Medien, mehrere Medien oder alle"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die **räumliche Nutzung** wird mit Angaben wie **international, weltweit, europaweit oder nur regional** festgelegt. Jahresangaben betreffen die zeitliche, Medienangaben die inhaltliche Beschränkung.",
+  "quelle": "f33",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q034",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Was legt die inhaltliche Beschränkung eines Nutzungsrechts fest?",
+  "optionen": [
+   "Für wie viele Medien das Werk genutzt werden darf",
+   "Für wie viele Jahre das Werk genutzt werden darf",
+   "In welchen Ländern das Werk genutzt werden darf",
+   "Von wie vielen Kunden das Werk genutzt werden darf"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die **inhaltliche Nutzung** beschreibt, **für wie viele Medien das Werk genutzt wird**, und definiert damit das Ausmaß der Vervielfältigung.",
+  "quelle": "f33",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q035",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche Zeitspannen können bei der zeitlichen Beschränkung eines Nutzungsrechts vereinbart werden?",
+  "optionen": [
+   "Von einem Jahr über fünf und zehn Jahre bis zeitlich unbegrenzt",
+   "Von einem Jahr über fünf und zehn Jahre bis höchstens 30 Jahre",
+   "Von drei Monaten über ein Jahr und drei Jahre bis höchstens fünf Jahre",
+   "Von fünf Jahren über zehn und zwanzig Jahre bis höchstens 70 Jahre"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die **zeitliche Nutzung** kann von **1 Jahr, 5 Jahren und 10 Jahren bis zeitlich unbegrenzt** vereinbart werden, eine feste Höchstgrenze gibt es nicht. Die **70 Jahre** betreffen dagegen die **Gemeinfreiheit** und nicht die Dauer eines Nutzungsrechts.",
+  "quelle": "f33",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q036",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Nach welchem Zeitraum gilt ein Werk als gemeinfrei?",
+  "optionen": [
+   "Nach 70 Jahren",
+   "Nach 50 Jahren",
+   "Nach 30 Jahren",
+   "Nach 100 Jahren"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Ausnahme vom Schutz gilt die **Gemeinfreiheit nach 70 Jahren**. Erst danach ist eine Nutzung ohne Rechteeinräumung möglich.",
+  "quelle": "f34",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q037",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Was ist vor der Nutzung eines Bildes erforderlich?",
+  "optionen": [
+   "Die schriftliche Zustimmung sämtlicher Rechteinhaber",
+   "Die mündliche Zustimmung des wichtigsten Rechteinhabers",
+   "Die schriftliche Anzeige bei einer zuständigen Verwertungsstelle",
+   "Die nachträgliche Vergütung an den bekannten Rechteinhaber"
+  ],
+  "richtig": 0,
+  "erklaerung": "Vor der Nutzung von Bildern braucht es die **schriftliche Zustimmung sämtlicher Rechteinhaber**. Eine mündliche oder nur teilweise Zustimmung reicht nicht aus.",
+  "quelle": "f34",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q038",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welcher Begriff wird mit dem Nutzungsrecht gleichgesetzt?",
+  "optionen": [
+   "Verwertungsrecht",
+   "Eigentumsrecht",
+   "Urheberrecht",
+   "Urheberschaft"
+  ],
+  "richtig": 0,
+  "erklaerung": "Es gilt: **Nutzungsrecht = Verwertungsrecht**, und dieses ist ausdrücklich **nicht** mit dem Eigentumsrecht bzw. Urheberrecht gleichzusetzen.",
+  "quelle": "f34",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q039",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welche der genannten Konstellationen ist eine Ausnahme, bei der ein Werk auch ohne eingeräumtes Nutzungsrecht verwendet werden kann?",
+  "optionen": [
+   "Zitatrecht und Panoramafreiheit",
+   "Markenschutz und Firmenrecht",
+   "Vertragsstrafe und Gewährleistung",
+   "Wettbewerbsrecht und Preisbindung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Ausnahmen werden **Gemeinfreiheit, Wissenschaft, Zitatrecht sowie Panoramafreiheit/Beiwerk** genannt. Marken-, Wettbewerbs- oder Vertragsfragen gehören nicht dazu.",
+  "quelle": "f34",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q040",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Welcher Zusammenhang gilt bei der Kalkulation von Nutzungsrechten?",
+  "optionen": [
+   "Eingeschränkte Honorierung bedeutet eingeschränkte Übertragung",
+   "Eingeschränkte Honorierung bedeutet unbeschränkte Übertragung",
+   "Umfassende Honorierung bedeutet eingeschränkte Übertragung",
+   "Eingeschränkte Übertragung bedeutet umfassende Honorierung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für die Kalkulation gilt: **eingeschränkte Honorierung = eingeschränkte Übertragung**. Umfang des Honorars und Umfang der eingeräumten Rechte entsprechen sich.",
+  "quelle": "f34",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q041",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Was bedeuten exklusive (ausschließliche) Nutzungsrechte?",
+  "optionen": [
+   "Der Kunde erhält das alleinige Recht, das Design zu nutzen",
+   "Der Kunde erhält das Recht, das Design an Dritte zu verkaufen",
+   "Der Designer erhält das Recht, das Design weiter zu lizenzieren",
+   "Der Designer erhält das alleinige Recht, das Design zu verändern"
+  ],
+  "richtig": 0,
+  "erklaerung": "**Exklusive (ausschließliche) Rechte** geben dem Kunden das **alleinige Recht, das Design zu nutzen**. Eine Weiterlizenzierung durch den Designer ist damit ausgeschlossen.",
+  "quelle": "f35",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q042",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Was kennzeichnet nicht-exklusive (einfache) Nutzungsrechte?",
+  "optionen": [
+   "Der Designer darf das Design auch an andere Kunden lizenzieren",
+   "Der Kunde darf das Design auch an andere Kunden weitergeben",
+   "Der Designer darf das Design nach der Übergabe nicht mehr nutzen",
+   "Der Kunde darf das Design nur einmalig und regional einsetzen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Bei **nicht-exklusiven (einfachen) Rechten** darf der Kunde das Design nutzen, **der Designer darf es aber zusätzlich an andere Kunden lizenzieren**.",
+  "quelle": "f35",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q043",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Eine Illustration wird einem Verlag für die europaweite Nutzung, für die Dauer von fünf Jahren und für nur ein einziges Medium überlassen. Wie ist dieses Nutzungsrecht beschränkt?",
+  "optionen": [
+   "Räumlich beschränkt, zeitlich beschränkt, inhaltlich beschränkt",
+   "Räumlich beschränkt, zeitlich beschränkt, inhaltlich unbeschränkt",
+   "Räumlich unbeschränkt, zeitlich beschränkt, inhaltlich beschränkt",
+   "Räumlich beschränkt, zeitlich unbeschränkt, inhaltlich beschränkt"
+  ],
+  "richtig": 0,
+  "erklaerung": "Nutzungsrechte können **räumlich**, **zeitlich** und **inhaltlich** beschränkt übertragen werden: \"europaweit\" betrifft den Raum, \"fünf Jahre\" die Zeit, die Begrenzung auf ein einziges Medium den Inhalt (Anzahl der Medien). Damit greifen hier alle drei Beschränkungsarten gleichzeitig.",
+  "quelle": "f33",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q044",
+  "thema": "Urheber- und Nutzungsrecht",
+  "frage": "Eine Designerin überlässt dieselbe Bildserie mehreren Kunden gleichzeitig und darf sie weiterhin an weitere Kunden vergeben. Welche Art von Nutzungsrecht liegt vor?",
+  "optionen": [
+   "Ein einfaches, also nicht-exklusives Nutzungsrecht",
+   "Ein ausschließliches, also exklusives Nutzungsrecht",
+   "Ein vollständig übertragenes Urheberrecht an der Bildserie",
+   "Ein zeitlich unbeschränktes Eigentumsrecht an der Bildserie"
+  ],
+  "richtig": 0,
+  "erklaerung": "Weil die Designerin die Bildserie weiterhin an andere Kunden lizenzieren darf, handelt es sich um ein **einfaches (nicht-exklusives) Nutzungsrecht**. Ein exklusives Recht gäbe einem einzigen Kunden das alleinige Nutzungsrecht.",
+  "quelle": "f35",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q045",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Mit welchem Bestandteil beginnt ein Businessplan?",
+  "optionen": [
+   "Mit der Executive Summary, einer kurzen Zusammenfassung der Geschäftsidee",
+   "Mit der Zielgruppe, einer genauen Beschreibung der Kundenbedürfnisse",
+   "Mit der Marktanalyse, einer Bewertung der wichtigsten Konkurrenzbetriebe",
+   "Mit der Finanzplanung, einer Übersicht der erwarteten Kosten und Erlöse"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein Businessplan beginnt mit der **Executive Summary**: einer kurzen Zusammenfassung der Geschäftsidee, die die wichtigsten Punkte des gesamten Plans umfasst. Die Analyse von Markt und Konkurrenz gehört erst zum nachfolgenden Punkt **Geschäftsidee**, die Zielgruppe folgt danach.",
+  "quelle": "f15",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q046",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche vier Säulen des Geschäftsmodells werden unterschieden?",
+  "optionen": [
+   "Wer, was, wie und wie viel",
+   "Wer, wann, wo und wie viel",
+   "Was, wann, wie und wie oft",
+   "Wer, was, warum und wie oft"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die vier Säulen des Geschäftsmodells lauten **wer, was, wie und wie viel**. Fragen nach Zeitpunkt, Ort oder Häufigkeit gehören nicht zu diesen vier Säulen.",
+  "quelle": "f17",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q047",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche Bestandteile gehören in einen Businessplan?",
+  "optionen": [
+   "Executive Summary, Idee, Motivation, Team/Netzwerk, Finanzen, Marketing",
+   "Executive Summary, Idee, Satzung, Gesellschaftsvertrag, Finanzen, Vertrieb",
+   "Deckblatt, Idee, Motivation, Handelsregisterauszug, Steuern, Marketing",
+   "Executive Summary, Bilanz, Motivation, Team/Netzwerk, Steuern, Vertrieb"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Inhalte eines Businessplans werden **Executive Summary, Idee, Motivation, Team/Netzwerk, Finanzen und Marketing** genannt. Dokumente wie Satzung, Gesellschaftsvertrag oder Handelsregisterauszug zählen nicht dazu.",
+  "quelle": "f17",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q048",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Wozu benötigen Investoren und Kreditgeber häufig einen Businessplan?",
+  "optionen": [
+   "Um die Tragfähigkeit und Rentabilität des Geschäftsvorhabens zu beurteilen",
+   "Um die Haftungsverhältnisse und die Rechtsform des Vorhabens zu prüfen",
+   "Um die Steuerlast und die Abschreibungen des Vorhabens zu ermitteln",
+   "Um die Mitarbeiterzahl und die Personalkosten des Vorhabens zu planen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Investoren und Kreditgeber verlangen einen Businessplan, um **Tragfähigkeit und Rentabilität** eines Geschäftsvorhabens beurteilen zu können. Rechtsform, Steuern oder Personalplanung sind nicht der genannte Zweck.",
+  "quelle": "f21",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q049",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Aus welchem Grund wird ein Businessplan erstellt?",
+  "optionen": [
+   "Zur Klärung, Planung und Kontrolle des Vorhabens",
+   "Zur Werbung, Verkaufsförderung und Kundenbindung",
+   "Zur Buchführung, Bilanzierung und Steuererklärung",
+   "Zur Anmeldung, Genehmigung und Eintragung des Betriebs"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Gründe für einen Businessplan werden **Klärung, Planung und Kontrolle** genannt, mit Blick auf die Wirtschaftlichkeit. Werbung, Buchführung oder behördliche Anmeldungen sind nicht der Zweck des Businessplans.",
+  "quelle": "f17",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q050",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche Stelle gehört zu den möglichen Adressaten eines Businessplans?",
+  "optionen": [
+   "Das Arbeitsamt",
+   "Das Finanzamt",
+   "Die Handelskammer",
+   "Die Berufsgenossenschaft"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zu den möglichen Adressaten zählen Bank, **Arbeitsamt**, Gründer, Investor und Finanzgeber. Finanzamt, Handelskammer und Berufsgenossenschaft gehören nicht zu diesem Kreis.",
+  "quelle": "f17",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q051",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Für wen ist ein Businessplan in erster Linie gedacht?",
+  "optionen": [
+   "In erster Linie für die Gründerin oder den Gründer selbst",
+   "In erster Linie für die kreditgebende Bank des Unternehmens",
+   "In erster Linie für das zuständige Arbeitsamt der Region",
+   "In erster Linie für externe Investoren und Finanzgeber"
+  ],
+  "richtig": 0,
+  "erklaerung": "Auch wenn Bank, Arbeitsamt, Investoren und Finanzgeber als Adressaten in Frage kommen, ist der Businessplan **vor allem für einen selbst** gedacht. Die externen Adressaten sind nachrangig.",
+  "quelle": "f17",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q052",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Was verlangt der Businessplan im Kapitel zur Geschäftsidee?",
+  "optionen": [
+   "Den Markt und die Konkurrenz analysieren und die Abgrenzung erläutern",
+   "Die Bedürfnisse und Wünsche der künftigen Kundschaft beschreiben",
+   "Die wichtigsten Punkte des gesamten Businessplans zusammenfassen",
+   "Die Kosten und die erwarteten Umsätze der ersten Jahre aufstellen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Im Kapitel Geschäftsidee werden die Produkte oder Dienstleistungen beschrieben sowie **Markt und Konkurrenz analysiert** und erläutert, wie man sich von anderen Unternehmen unterscheiden möchte. Kundenbedürfnisse gehören zur Zielgruppe, die Zusammenfassung zur Executive Summary.",
+  "quelle": "f15",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q053",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Welche Aufgabe hat das Kapitel Zielgruppe in einem Businessplan?",
+  "optionen": [
+   "Die Zielgruppe identifizieren, ihre Bedürfnisse beschreiben und deren Erfüllung erklären",
+   "Die Konkurrenz analysieren, ihre Produkte beschreiben und die eigene Abgrenzung erklären",
+   "Das Team vorstellen, seine Aufgaben beschreiben und die Rollenverteilung erklären",
+   "Den Standort auswählen, seine Vorteile beschreiben und die laufenden Kosten erklären"
+  ],
+  "richtig": 0,
+  "erklaerung": "Im Kapitel Zielgruppe wird die Zielgruppe identifiziert, es werden **deren Bedürfnisse und Wünsche** beschrieben und es wird erklärt, wie die eigenen Produkte oder Dienstleistungen diese Bedürfnisse erfüllen. Die Analyse von **Markt und Konkurrenz** samt Abgrenzung gehört dagegen in das Kapitel Geschäftsidee.",
+  "quelle": "f15",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q054",
+  "thema": "Businessplan und Gruendung",
+  "frage": "Ein seit Jahren bestehendes Designbüro möchte zusätzlich einen Bereich für Fotografie aufbauen. Wie ist ein Businessplan hier einzuordnen?",
+  "optionen": [
+   "Er ist sinnvoll, weil auch etablierte Unternehmen bei neuen Geschäftsbereichen profitieren",
+   "Er ist entbehrlich, weil ein Businessplan nur bei der erstmaligen Gründung nötig ist",
+   "Er ist vorgeschrieben, weil bestehende Unternehmen ihn jährlich neu erstellen müssen",
+   "Er ist verzichtbar, weil ein Businessplan ausschließlich für Kapitalgeber gedacht ist"
+  ],
+  "richtig": 0,
+  "erklaerung": "Auch **etablierte Unternehmen** profitieren von einem Businessplan, wenn sie neue Geschäftsbereiche erschließen oder ihre Geschäftstätigkeit erweitern wollen. Er ist damit weder auf Neugründungen noch auf externe Kapitalgeber beschränkt.",
+  "quelle": "f21",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q055",
+  "thema": "Steuern",
+  "frage": "Wie werden Steuern definiert?",
+  "optionen": [
+   "Als Geldleistung an den Staat ohne Anspruch auf eine Gegenleistung",
+   "Als Geldleistung an den Staat mit Anspruch auf eine konkrete Gegenleistung",
+   "Als Beitrag an den Staat für die Nutzung bestimmter öffentlicher Einrichtungen",
+   "Als freiwillige Zahlung an den Staat zur Förderung öffentlicher Aufgaben"
+  ],
+  "richtig": 0,
+  "erklaerung": "Steuern sind definiert als **Geldleistung an den Staat ohne Anspruch auf eine Gegenleistung**. Entscheidend ist damit, dass der Zahlung **keine konkrete Gegenleistung** gegenübersteht und sie auch nicht freiwillig erfolgt.",
+  "quelle": "f24",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q056",
+  "thema": "Steuern",
+  "frage": "Wie viele Ziffern haben Steuer-ID, Steuer-Nr. und Umsatzsteuer-ID jeweils?",
+  "optionen": [
+   "Steuer-ID 11, Steuer-Nr. 10, Umsatzsteuer-ID 9",
+   "Steuer-ID 10, Steuer-Nr. 11, Umsatzsteuer-ID 9",
+   "Steuer-ID 9, Steuer-Nr. 10, Umsatzsteuer-ID 11",
+   "Steuer-ID 11, Steuer-Nr. 9, Umsatzsteuer-ID 10"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Ziffernzahlen lauten **Steuer-ID 11**, **Steuer-Nr. 10** und **Umsatzsteuer-ID 9**. Die längste Nummer ist damit die persönliche Steuer-ID, die kürzeste die Umsatzsteuer-ID.",
+  "quelle": "f24",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q057",
+  "thema": "Steuern",
+  "frage": "Wofür wird die Steuer-Nr. verwendet?",
+  "optionen": [
+   "Für Rechnungen und die Steuererklärung; sie ist vom zuständigen Finanzamt abhängig",
+   "Für die persönliche Kennzeichnung; sie wird für Kindergeld und BAföG benötigt",
+   "Für die Kennzeichnung von Unternehmern im geschäftlichen Waren- und Leistungsverkehr",
+   "Für die Beantragung steuerlicher Vergünstigungen bei Banken und beim Arbeitsamt"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Steuer-Nr. wird **für Rechnung und Steuererklärung** genutzt und ist **abhängig vom Finanzamt**. Die persönlichen Zwecke wie Kindergeld oder BAföG gehören dagegen zur Steuer-ID, die Kennzeichnung von Unternehmern zur Umsatzsteuer-ID.",
+  "quelle": "f22",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q058",
+  "thema": "Steuern",
+  "frage": "Wozu dient die Umsatzsteuer-ID?",
+  "optionen": [
+   "Zur Kennzeichnung von Unternehmern, die geschäftlich Waren oder Dienstleistungen erbringen oder beziehen",
+   "Zur Kennzeichnung von Privatpersonen, die Waren oder Dienstleistungen für den eigenen Bedarf beziehen",
+   "Zur Beantragung steuerlicher Vergünstigungen bei Banken, beim Arbeitsamt und beim Arbeitgeber",
+   "Zur Abgabe der jährlichen Steuererklärung beim jeweils zuständigen örtlichen Finanzamt"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Umsatz-ID dient der **Kennzeichnung von Unternehmern**, die geschäftlich Waren oder Dienstleistungen **erbringen oder beziehen**. Sie ist damit eine reine Unternehmerkennzeichnung, keine persönliche Nummer.",
+  "quelle": "f22",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q059",
+  "thema": "Steuern",
+  "frage": "Welche Steuernummer wird für den Kindergeld- und den BAföG-Antrag benötigt?",
+  "optionen": [
+   "Die Steuer-ID, die der persönlichen Kennzeichnung einer Person dient",
+   "Die Steuer-Nr., die für Rechnung und Steuererklärung genutzt wird",
+   "Die Umsatzsteuer-ID, die Unternehmer im Geschäftsverkehr kennzeichnet",
+   "Die Steuer-Nr., die vom jeweils zuständigen Finanzamt abhängig ist"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die **Steuer-ID** dient der persönlichen Kennzeichnung und wird unter anderem bei Banken, Arbeitsamt, Arbeitgeber, Aktien sowie für **Kindergeld und den BAföG-Antrag** verwendet. Die **Steuer-Nr.** ist davon abzugrenzen: Sie wird für Rechnung und Steuererklärung genutzt und hängt vom zuständigen Finanzamt ab.",
+  "quelle": "f22",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q060",
+  "thema": "Steuern",
+  "frage": "Wie wird die Körperschaftsteuer beschrieben?",
+  "optionen": [
+   "Als Einkommensteuer auf die Gewinne von Unternehmen",
+   "Als Steuer auf den Verkauf von Waren und Dienstleistungen",
+   "Als Steuer auf das Vermögen von einzelnen Privatpersonen",
+   "Als Einkommensteuer auf Zinsen und Erträge aus Wertpapieren"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Körperschaftsteuer ist eine **Einkommensteuer auf die Gewinne von Unternehmen**. Die Einkommensteuer im engeren Sinn betrifft dagegen das Einkommen von Einzelpersonen.",
+  "quelle": "f23",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q061",
+  "thema": "Steuern",
+  "frage": "Worauf wird die Kapitalertragsteuer erhoben?",
+  "optionen": [
+   "Auf Zinsen und Erträge aus Wertpapieren",
+   "Auf die erzielten Gewinne von Unternehmen",
+   "Auf das Vermögen von einzelnen Personen",
+   "Auf den Wert von Immobilien und Grundstücken"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Kapitalertragsteuer ist eine Einkommensteuer auf **Zinsen und Erträge aus Wertpapieren**. Auf den Wert von Immobilien und Grundstücken wird dagegen die Grundsteuer erhoben.",
+  "quelle": "f23",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q062",
+  "thema": "Steuern",
+  "frage": "Wodurch unterscheidet sich die Grunderwerbsteuer von der Grundsteuer?",
+  "optionen": [
+   "Die Grunderwerbsteuer fällt beim Erwerb von Immobilien und Grundstücken an, die Grundsteuer auf deren Wert",
+   "Die Grunderwerbsteuer fällt auf den Wert von Immobilien und Grundstücken an, die Grundsteuer beim Erwerb",
+   "Die Grunderwerbsteuer fällt beim Erwerb von Wertpapieren an, die Grundsteuer beim Erwerb von Grundstücken",
+   "Die Grunderwerbsteuer fällt auf geerbte Immobilien an, die Grundsteuer auf den Verkauf von Grundstücken"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Grunderwerbsteuer entsteht **beim Erwerb** von Immobilien und Grundstücken, die Grundsteuer bemisst sich dagegen **am Wert** von Immobilien und Grundstücken. Für Erbschaften ist die Erbschaftsteuer zuständig.",
+  "quelle": "f23",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q063",
+  "thema": "Steuern",
+  "frage": "Welche Steuern werden den Verbrauchssteuern zugeordnet?",
+  "optionen": [
+   "Strom-, Tabak-, Branntwein- und Mineralölsteuer",
+   "Umsatz-, Mehrwert-, Einkommen- und Gewerbesteuer",
+   "Grund-, Vermögen-, Erbschaft- und Gewerbesteuer",
+   "Einkommen-, Gewerbe-, Grund- und Umsatzsteuer"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zu den Verbrauchssteuern zählen **Strom-, Tabak-, Branntwein- und Mineralölsteuer**. Umsatz- und Mehrwertsteuer gehören zu den Verkehrsteuern, Einkommen- und Gewerbesteuer zu den Gewinnsteuern.",
+  "quelle": "f25",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q064",
+  "thema": "Steuern",
+  "frage": "Zu welcher Steuergruppe zählt die Umsatzsteuer?",
+  "optionen": [
+   "Zu den Verkehrsteuern",
+   "Zu den Verbrauchssteuern",
+   "Zu den Gewinnsteuern",
+   "Zu den Substanzsteuern"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Umsatzsteuer bzw. Mehrwertsteuer gehört zur Gruppe der **Verkehrsteuern**. Verbrauchssteuern sind zum Beispiel Strom- und Tabaksteuer.",
+  "quelle": "f25",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q065",
+  "thema": "Steuern",
+  "frage": "Welche Steuer zählt zu den Substanzsteuern?",
+  "optionen": [
+   "Die Erbschaftsteuer",
+   "Die Gewerbesteuer",
+   "Die Tabaksteuer",
+   "Die Mehrwertsteuer"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zu den Substanzsteuern gehören Grundsteuer, Vermögensteuer und **Erbschaftsteuer**. Die Gewerbesteuer ist eine Gewinnsteuer, die Tabaksteuer eine Verbrauchssteuer.",
+  "quelle": "f25",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q066",
+  "thema": "Steuern",
+  "frage": "Welche beiden Steuern werden der Gruppe der Gewinnsteuern zugeordnet?",
+  "optionen": [
+   "Einkommensteuer und Gewerbesteuer",
+   "Einkommensteuer und Erbschaftsteuer",
+   "Gewerbesteuer und Umsatzsteuer",
+   "Grundsteuer und Vermögensteuer"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Gewinnsteuern werden **Einkommensteuer und Gewerbesteuer** genannt. Grund-, Vermögen- und Erbschaftsteuer bilden dagegen die Substanzsteuern.",
+  "quelle": "f25",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q067",
+  "thema": "Steuern",
+  "frage": "Wie lauten die vier Steuer-Gruppen?",
+  "optionen": [
+   "Verkehrs-, Verbrauchs-, Gewinn- und Substanzsteuern",
+   "Verkehrs-, Verbrauchs-, Einkommens- und Vermögensteuern",
+   "Erwerbs-, Verbrauchs-, Gewinn- und Ertragsteuern",
+   "Verkehrs-, Vermögens-, Gewinn- und Erbschaftsteuern"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die vier Steuer-Gruppen sind **Verkehrs-, Verbrauchs-, Gewinn- und Substanzsteuern**. Einkommen-, Vermögen- oder Erbschaftsteuer sind dagegen einzelne Steuerarten innerhalb dieser Gruppen.",
+  "quelle": "f24",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q068",
+  "thema": "Steuern",
+  "frage": "Welche Aussage beschreibt die Umsatzsteuer zutreffend?",
+  "optionen": [
+   "Sie wird auf die von einem Unternehmen erbrachten Lieferungen und Dienstleistungen erhoben und vom Kunden gezahlt",
+   "Sie wird auf die von einem Unternehmen erbrachten Lieferungen und Dienstleistungen erhoben und vom Lieferanten gezahlt",
+   "Sie wird auf die erzielten Gewinne eines Unternehmens erhoben und mit der jährlichen Steuererklärung abgeführt",
+   "Sie wird auf das gesamte Betriebsvermögen eines Unternehmens erhoben und jedes Geschäftsjahr neu berechnet"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Umsatzsteuer wird auf die **von einem Unternehmen erbrachten Lieferungen und Dienstleistungen** erhoben und **vom Kunden gezahlt**. Die Steuer auf gekaufte Leistungen anderer Unternehmen ist dagegen die Vorsteuer.",
+  "quelle": "f24",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q069",
+  "thema": "Steuern",
+  "frage": "Ein Designbüro kauft bei einem anderen Unternehmen eine Software und zahlt dabei Umsatzsteuer. Wie ist dieser Steuerbetrag aus Sicht des Designbüros einzuordnen?",
+  "optionen": [
+   "Als Vorsteuer, weil das Büro sie für einen Einkauf bei einem anderen Unternehmen gezahlt hat",
+   "Als Umsatzsteuer, weil das Büro sie auf eine selbst erbrachte Leistung erhoben hat",
+   "Als Vorsteuer, weil das Büro sie auf eine selbst erbrachte Leistung erhoben hat",
+   "Als Umsatzsteuer, weil das Büro sie von seinen eigenen Kunden erhalten hat"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die **Vorsteuer** ist die Umsatzsteuer, die auf **von anderen Unternehmen gekaufte Waren oder Dienstleistungen gezahlt** wurde. Umsatzsteuer im eigentlichen Sinn ist dagegen der Betrag, den das Büro auf seine **eigenen erbrachten Leistungen** erhebt und vom Kunden erhält.",
+  "quelle": "f24",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q070",
+  "thema": "Steuern",
+  "frage": "Was ist die KSK?",
+  "optionen": [
+   "Eine Sozialversicherungseinrichtung, die Künstler gegen soziale Risiken absichert",
+   "Eine Behörde, die Künstlern die Steuernummer für ihre Rechnungen zuteilt",
+   "Ein Verband, der Künstler bei Preisverhandlungen mit Auftraggebern vertritt",
+   "Eine Einrichtung, die Künstlern Zuschüsse für Material und Atelier gewährt"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die KSK ist eine **Sozialversicherungseinrichtung für Künstler** zur **Absicherung ihrer sozialen Risiken**. Sie vergibt dagegen keine Steuernummern – die Steuer-Nr. für Rechnung und Steuererklärung hängt vom **Finanzamt** ab.",
+  "quelle": "f24",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q071",
+  "thema": "Steuern",
+  "frage": "Bis zu welchem Umsatz im vorigen Geschäftsjahr kann die Kleinunternehmerregelung genutzt werden?",
+  "optionen": [
+   "25.000 €",
+   "17.500 €",
+   "35.000 €",
+   "50.000 €"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Kleinunternehmerregelung kann nutzen, wer im vorigen Geschäftsjahr **maximal 25.000 € Umsatz** erwirtschaftet hat. **Achtung:** Die Wiederholungsfolie nennt abweichend 22.000 € (22 TEUR) – dieser Widerspruch sollte in der Vorlesung geklärt werden.",
+  "quelle": "f26",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q072",
+  "thema": "Steuern",
+  "frage": "Welchen Umsatz darf ein Kleinunternehmen im laufenden Geschäftsjahr voraussichtlich nicht überschreiten?",
+  "optionen": [
+   "100.000 €",
+   "50.000 €",
+   "75.000 €",
+   "125.000 €"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Umsatz im laufenden Geschäftsjahr darf voraussichtlich **100.000 €** nicht überschreiten. Diese Grenze gilt zusätzlich zur Umsatzgrenze des Vorjahres.",
+  "quelle": "f26",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q073",
+  "thema": "Steuern",
+  "frage": "Welche Aussage trifft auf Kleinunternehmen zu?",
+  "optionen": [
+   "Sie unterliegen keiner Umsatzsteuerpflicht auf ihre Leistungen",
+   "Sie müssen keine jährliche Steuererklärung beim Finanzamt abgeben",
+   "Sie zahlen einen ermäßigten Umsatzsteuersatz auf ihre Leistungen",
+   "Sie sind von der Einkommensteuer auf ihre erzielten Gewinne befreit"
+  ],
+  "richtig": 0,
+  "erklaerung": "Kleinunternehmen haben **keine Umsatzsteuerpflicht**: Nach § 19 UStG enthält der ausgewiesene Betrag keine Umsatzsteuer. Entscheidend ist die Abgrenzung, dass es sich nicht um einen **ermäßigten Satz** handelt, sondern um den vollständigen Wegfall der Umsatzsteuer; andere Steuerarten sind von der Regelung nicht erfasst.",
+  "quelle": "f26",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q074",
+  "thema": "Steuern",
+  "frage": "Eine Selbstständige nutzt die Kleinunternehmerregelung und schreibt eine Rechnung. Welcher Hinweis gehört auf diese Rechnung?",
+  "optionen": [
+   "Im Sinne der Kleinunternehmerregelung nach § 19 UStG enthält der ausgewiesene Betrag keine Umsatzsteuer.",
+   "Im Sinne der Kleinunternehmerregelung nach § 13 UStG enthält der ausgewiesene Betrag keine Umsatzsteuer.",
+   "Im Sinne der Kleinunternehmerregelung nach § 19 EStG enthält der ausgewiesene Betrag keine Umsatzsteuer.",
+   "Im Sinne der Kleinunternehmerregelung nach § 19 UStG enthält der ausgewiesene Betrag die ermäßigte Umsatzsteuer."
+  ],
+  "richtig": 0,
+  "erklaerung": "Der vorgegebene Rechnungshinweis lautet: Im Sinne der Kleinunternehmerregelung nach **§ 19 UStG** enthält der ausgewiesene Betrag **keine Umsatzsteuer**. Entscheidend sind sowohl der richtige Paragraf im Umsatzsteuergesetz als auch der vollständige Wegfall der Umsatzsteuer.",
+  "quelle": "f26",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q075",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Ab welchem Jahr müssen in Deutschland alle Unternehmen elektronische Rechnungen empfangen können?",
+  "optionen": [
+   "Ab 2025",
+   "Ab 2026",
+   "Ab 2027",
+   "Ab 2028"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Empfangspflicht für E-Rechnungen im Geschäftsverkehr gilt **ab 2025**. Die späteren Jahreszahlen betreffen ausschließlich die Übergangsfristen für den **Versand**.",
+  "quelle": "f27",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q076",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche Verpflichtung trifft Unternehmen im Geschäftsverkehr seit 2025 im Zusammenhang mit der E-Rechnung?",
+  "optionen": [
+   "Sie müssen elektronische Rechnungen anderer Unternehmen empfangen können.",
+   "Sie müssen alle eigenen Ausgangsrechnungen elektronisch versenden.",
+   "Sie müssen alle Rechnungen elektronisch beim Finanzamt einreichen.",
+   "Sie müssen sämtliche Rechnungen an Privatkunden elektronisch ausstellen."
+  ],
+  "richtig": 0,
+  "erklaerung": "Ab 2025 müssen alle Unternehmen lediglich in der Lage sein, E-Rechnungen im Geschäftsverkehr zu **empfangen**. Die Pflicht zur **Ausstellung und Versendung** gilt ausnahmslos erst ab dem **1.1.2028**, denn Papier- und PDF-Rechnungen bleiben übergangsweise bis Ende 2026 zulässig.",
+  "quelle": "f27",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q077",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Bis wann dürfen Unternehmen allgemein noch Papierrechnungen oder andere Formate wie PDF versenden?",
+  "optionen": [
+   "Bis Ende 2026",
+   "Bis Ende 2025",
+   "Bis Ende 2027",
+   "Bis Ende 2028"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die allgemeine Übergangsfrist für den Versand von Papierrechnungen oder anderen Formaten läuft **bis Ende 2026**. Nur für kleine Unternehmen verlängert sie sich darüber hinaus.",
+  "quelle": "f27",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q078",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Bis zu welchem Umsatz können kleine Unternehmen die verlängerte Übergangsfrist für den Versand von Papier- und PDF-Rechnungen nutzen?",
+  "optionen": [
+   "Unter 800.000 Euro",
+   "Unter 500.000 Euro",
+   "Unter 100.000 Euro",
+   "Unter 22.000 Euro"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die verlängerte Übergangsfrist bis Ende 2027 gilt für kleine Unternehmen mit geringem Umsatz **unter 800.000 Euro**. Andere Umsatzgrenzen spielen für diese Frist keine Rolle.",
+  "quelle": "f27",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q079",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Ab wann gilt die E-Rechnungspflicht für die Ausstellung und Versendung ohne Ausnahmen?",
+  "optionen": [
+   "Ab dem 1.1.2028",
+   "Ab dem 1.1.2026",
+   "Ab dem 1.1.2027",
+   "Ab dem 1.7.2028"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ohne Ausnahmen gilt die Pflicht zur Ausstellung und Versendung von E-Rechnungen **ab dem 1.1.2028**. Bis dahin greifen die gestaffelten Übergangsfristen.",
+  "quelle": "f27",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q080",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Ein Designstudio mit 400.000 Euro Jahresumsatz möchte im Jahr 2027 eine Rechnung als PDF per E-Mail versenden. Wie ist das zu bewerten?",
+  "optionen": [
+   "Zulässig, da die Übergangsfrist für Unternehmen unter 800.000 Euro Umsatz bis Ende 2027 läuft",
+   "Zulässig, da die Übergangsfrist für sämtliche Unternehmen bis Ende 2027 verlängert worden ist",
+   "Unzulässig, da der Versand anderer Formate für alle Unternehmen bereits Ende 2026 geendet hat",
+   "Unzulässig, da der Versand anderer Formate schon mit dem Jahr 2025 untersagt worden ist"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für kleine Unternehmen mit einem Umsatz **unter 800.000 Euro** verlängert sich die Übergangsfrist **bis Ende 2027**. Für alle übrigen Unternehmen endet der Versand von Papier- und PDF-Rechnungen bereits Ende 2026.",
+  "quelle": "f27",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q081",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Was ist mit dem Leistungsdatum auf einer Rechnung gemeint?",
+  "optionen": [
+   "Der Zeitpunkt der Lieferung oder der Zeitraum der Erstellung",
+   "Der Zeitpunkt der Rechnungserstellung oder der Verbuchung",
+   "Der Zeitpunkt des Zahlungseingangs oder der Zahlungsfrist",
+   "Der Zeitpunkt der Auftragserteilung oder der Angebotsabgabe"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Leistungsdatum bezeichnet den **Zeitpunkt der Lieferung** oder den **Zeitraum der Erstellung**. Es ist damit klar zu unterscheiden vom Datum der Rechnungserstellung und vom Zeitpunkt der Zahlung.",
+  "quelle": "f28",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q082",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Was gibt der Mehrwertsteuervermerk auf einer Rechnung an?",
+  "optionen": [
+   "Den auf die Leistung anzuwendenden Steuersatz",
+   "Die Steuernummer des zuständigen Finanzamts",
+   "Den Betrag der bereits gezahlten Vorsteuer",
+   "Die Höhe des steuerpflichtigen Vorjahresumsatzes"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Mehrwertsteuervermerk nennt den **anzuwendenden Steuersatz**. Nur wenn eine Steuerbefreiung vorliegt, tritt an dessen Stelle ein entsprechender Hinweis.",
+  "quelle": "f28",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q083",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche Angabe tritt im Mehrwertsteuervermerk einer Rechnung an die Stelle des Steuersatzes, wenn die Lieferung steuerbefreit ist?",
+  "optionen": [
+   "Ein Hinweis darauf, dass für die Lieferung eine Steuerbefreiung gilt",
+   "Eine Bestätigung der Steuerbefreiung durch das zuständige Finanzamt",
+   "Ein Vermerk über die im Vorjahr abgeführte Umsatzsteuer",
+   "Eine Aufstellung der abziehbaren Vorsteuerbeträge des Auftrags"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der **Mehrwertsteuervermerk** nennt normalerweise den anzuwendenden Steuersatz; bei einer Steuerbefreiung tritt an dessen Stelle ein **Hinweis darauf, dass für die Lieferung eine Steuerbefreiung gilt**. Eine behördliche Bestätigung oder Angaben zu Vorsteuer und Vorjahresumsatzsteuer gehören nicht zu den Pflichtangaben.",
+  "quelle": "f28",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q084",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche Betragsangabe gehört zu den erforderlichen Bestandteilen einer Rechnung?",
+  "optionen": [
+   "Die Nettosumme der abgerechneten Leistung",
+   "Der Gesamtumsatz des laufenden Geschäftsjahres",
+   "Der im Angebot kalkulierte Stundensatz",
+   "Die Summe der offenen Forderungen der Kundschaft"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zu den Pflichtangaben zählt die **Nettosumme**. Interne Kalkulations- oder Umsatzgrößen gehören nicht auf die Rechnung.",
+  "quelle": "f28",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q085",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Wie wird eine Rechnung definiert?",
+  "optionen": [
+   "Ein Dokument zur Abrechnung einer erbrachten Leistung oder Lieferung",
+   "Ein Dokument zur verbindlichen Zusage eines Preises vor Auftragsbeginn",
+   "Ein Dokument zur Zahlungsaufforderung nach Ablauf der Zahlungsfrist",
+   "Ein Dokument zur Bestätigung eines bereits eingegangenen Zahlbetrags"
+  ],
+  "richtig": 0,
+  "erklaerung": "Eine Rechnung ist ein **Dokument zur Abrechnung einer Leistung oder Lieferung** und benötigt **keine Unterschrift**. Die Zahlungsaufforderung nach Ablauf der Frist ist dagegen eine **Mahnung**.",
+  "quelle": "f29",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q086",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche Aussage trifft auf die Unterschrift bei Rechnungen zu?",
+  "optionen": [
+   "Eine Rechnung benötigt keine Unterschrift, um gültig zu sein.",
+   "Eine Rechnung muss vom Rechnungssteller unterschrieben werden.",
+   "Eine Rechnung muss von beiden Seiten unterschrieben werden.",
+   "Eine Rechnung wird erst mit der Unterschrift der Kundschaft wirksam."
+  ],
+  "richtig": 0,
+  "erklaerung": "Für eine Rechnung ist **keine Unterschrift** erforderlich. Sie ist ein Abrechnungsdokument und kein zu unterzeichnender Vertrag.",
+  "quelle": "f29",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q087",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Welche Angabe gehört zu den erforderlichen Bestandteilen einer Rechnung?",
+  "optionen": [
+   "Die Steuernummer des Rechnungsstellers",
+   "Die Bankverbindung der Kundschaft",
+   "Der Umsatz des vergangenen Geschäftsjahres",
+   "Eine Kopie des zugrunde liegenden Angebots"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zu den Rechnungsbestandteilen zählen unter anderem Kontaktdaten, Rechnungsnummer, **Steuernummer**, Leistungszeitraum, Frist, Datum und die Leistung selbst.",
+  "quelle": "f29",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q088",
+  "thema": "Rechnungen und E-Rechnung",
+  "frage": "Was beschreibt das Begriffspaar netto und brutto?",
+  "optionen": [
+   "Den Betrag vor und nach Abzügen oder Steuern",
+   "Den Betrag vor und nach Ablauf der Zahlungsfrist",
+   "Den Betrag mit und ohne Berücksichtigung von Mahngebühren",
+   "Den Betrag vor und nach Eingang der Zahlung"
+  ],
+  "richtig": 0,
+  "erklaerung": "netto und brutto bezeichnen den Betrag **vor und nach Abzügen oder Steuern**. Zahlungsfristen, Mahngebühren oder der Zahlungseingang betreffen den Ablauf der Bezahlung und haben mit dieser Unterscheidung nichts zu tun.",
+  "quelle": "f29",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q089",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Wodurch kommt ein Vertrag zustande?",
+  "optionen": [
+   "Durch zwei Willenserklärungen: Angebot und Annahme",
+   "Durch eine Willenserklärung des Auftraggebers",
+   "Durch die Unterschrift beider Seiten unter ein Schriftstück",
+   "Durch die Zahlung eines Akontos an den Auftragnehmer"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein Vertrag entsteht nach dem BGB durch **zwei Willenserklärungen: Angebot + Annahme**. Weder Unterschrift noch Zahlung sind für das Zustandekommen erforderlich.",
+  "quelle": "f37",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q090",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welcher Grundsatz gilt für die Form eines Vertrags?",
+  "optionen": [
+   "Formfreiheit – eine bestimmte Form ist nicht erforderlich",
+   "Schriftform – ein unterschriebenes Dokument ist erforderlich",
+   "Notarielle Beurkundung – ein Termin beim Notar ist erforderlich",
+   "Textform – eine Bestätigung per E-Mail ist erforderlich"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für die Form gilt der **Grundsatz: formfrei** – der Vertrag kommt bereits durch **zwei Willenserklärungen** (Angebot + Annahme) zustande. Schriftform wird für die Leistungsbeschreibung zwar empfohlen, ist aber keine Voraussetzung für den Vertragsschluss.",
+  "quelle": "f37",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q091",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Was bezeichnet der Begriff Essentialia Negotii?",
+  "optionen": [
+   "Den notwendigen Mindestinhalt der Einigung",
+   "Die freiwilligen Zusatzabreden neben der Einigung",
+   "Die allgemeinen Geschäftsbedingungen eines Angebots",
+   "Die Auslegungsregeln bei unklaren Willenserklärungen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Essentialia Negotii sind der **notwendige Mindestinhalt** der Einigung, also das, worüber sich die Parteien zwingend verständigen müssen.",
+  "quelle": "f37",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q092",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Liegt zwischen den Parteien eine Einigung vor, spricht man von …",
+  "optionen": [
+   "Konsens",
+   "Dissens",
+   "Auslegung",
+   "Essentialia Negotii"
+  ],
+  "richtig": 0,
+  "erklaerung": "Einigung (+) bedeutet **Konsens**; bei Unklarheiten kann zusätzlich eine Auslegung nötig sein. Dissens bezeichnet dagegen die fehlende Einigung.",
+  "quelle": "f37",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q093",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche Folge hat ein Dissens beim Vertragsschluss?",
+  "optionen": [
+   "Der Vertrag kommt in diesem Fall nicht zustande",
+   "Der Vertrag kommt mit dem Inhalt des Angebots zustande",
+   "Der Vertrag kommt zustande, ist aber formunwirksam",
+   "Der Vertrag kommt zustande und wird ausgelegt"
+  ],
+  "richtig": 0,
+  "erklaerung": "Fehlt die **Einigung**, liegt **Dissens** vor und damit **kein Vertrag**. Die **Auslegung** greift nur bei bestehendem Konsens mit unklarem Inhalt.",
+  "quelle": "f37",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q094",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Was besagt der Grundsatz „Pacta sunt servanda“?",
+  "optionen": [
+   "Verträge sind einzuhalten und schaffen damit Verlässlichkeit",
+   "Verträge dürfen inhaltlich frei gestaltet werden",
+   "Verträge müssen schriftlich geschlossen werden",
+   "Verträge können jederzeit einseitig geändert werden"
+  ],
+  "richtig": 0,
+  "erklaerung": "„Pacta sunt servanda“ heißt **Verträge sind einzuhalten** und begründet die Verlässlichkeit. Die freie inhaltliche Gestaltung ist dagegen die Vertragsfreiheit.",
+  "quelle": "f36",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q095",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Mit welcher Leitfrage lässt sich der Inhalt eines Vertrags bestimmen?",
+  "optionen": [
+   "Wer will was von wem?",
+   "Wer zahlt wann an wen?",
+   "Wer haftet wofür gegenüber wem?",
+   "Wer entscheidet was mit wem?"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Vertragsinhalt wird über die Frage **„Wer will was von wem?“** bestimmt – sie klärt Parteien und geschuldete Leistung.",
+  "quelle": "f37, f38",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q096",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welcher Anteil ist im Angebot als Akonto vorgesehen?",
+  "optionen": [
+   "30 %",
+   "10 %",
+   "20 %",
+   "50 %"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zu den Zahlungsbedingungen eines Angebots gehört ein Akonto von **30 %**.",
+  "quelle": "f39",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q097",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Worauf bezieht sich die geforderte Detailgenauigkeit bei der Beschreibung der Leistung?",
+  "optionen": [
+   "Auf Umfang, Rahmenbedingungen, Annahmen und Zeit",
+   "Auf Rabatt, Skonto, Pauschale und Retainer",
+   "Auf Angebot, Annahme, Konsens und Dissens",
+   "Auf Zielgruppe, Wettbewerb, Budget und Medien"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Detailgenauigkeit der Leistungsbeschreibung umfasst **Umfang, Rahmenbedingungen, Annahmen und Zeit**. Rabatt, Skonto, Pauschale und Retainer gehören dagegen zur Auftragsbestätigung.",
+  "quelle": "f36",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q098",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Die Leistungsbeschreibung ist Teil des Angebots. Welche Konsequenz ist damit verbunden?",
+  "optionen": [
+   "Sie birgt das Potenzial für Missverständnisse in sich",
+   "Sie ersetzt die Annahmeerklärung des Kunden vollständig",
+   "Sie macht eine Einigung über den Inhalt entbehrlich",
+   "Sie begründet einen Anspruch auf eine Akontozahlung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Weil die Leistungsbeschreibung Teil des Angebots ist, birgt sie ein **Potenzial für Missverständnisse** – deshalb die Anforderungen **Schriftform** und **Detailgenauigkeit** (Umfang, Rahmenbedingungen, Annahmen, Zeit). Die **Einigung** über den Inhalt wird dadurch nicht entbehrlich, denn ohne sie liegt Dissens und damit kein Vertrag vor.",
+  "quelle": "f36",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q099",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Wie ist ein Rebriefing zu verstehen?",
+  "optionen": [
+   "Als Zusammenfassung, Interpretation und Ergänzung der Kundenwünsche",
+   "Als wortgetreue Wiederholung des Briefings gegenüber dem Kunden",
+   "Als schriftliche Auftragsbestätigung mit den Zahlungsbedingungen",
+   "Als erstes Angebot mit einer detaillierten Leistungsübersicht"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein Rebriefing ist **keine Wiederholung** des Briefings, sondern eine **Zusammenfassung, Interpretation und Ergänzung** dessen, was der Kunde wünscht.",
+  "quelle": "f42",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q100",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Welche Chance bietet das Rebriefing?",
+  "optionen": [
+   "Missverständnisse auszuräumen und Lücken zu ergänzen",
+   "Die Vorgaben aus dem Briefing wortgleich zu wiederholen",
+   "Die Zahlungsbedingungen des Angebots festzulegen",
+   "Den Vertrag allein durch eine Willenserklärung zu schließen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Rebriefing ist eine Chance, **Missverständnisse auszuräumen**, **Lücken zu erweitern und zu ergänzen**, Verständnis zu zeigen und sich zu profilieren. Entscheidend ist die Abgrenzung: Es ist **keine Wiederholung** des Briefings, sondern Zusammenfassung, Interpretation und Ergänzung dessen, was der Kunde wünscht.",
+  "quelle": "f42",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q101",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Wofür steht der Merksatz „There is no free Lunch“?",
+  "optionen": [
+   "Dass jeder Leistung eine Gegenleistung gegenübersteht",
+   "Dass jedes Angebot kostenlos erstellt werden muss",
+   "Dass jede Zusatzleistung pauschal abgerechnet wird",
+   "Dass jede Erstberatung unentgeltlich angeboten wird"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Merksatz steht für das Prinzip **Leistung – Gegenleistung**: Keine Leistung wird ohne Gegenwert erbracht.",
+  "quelle": "f38",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q102",
+  "thema": "Angebot, Vertrag und Briefing",
+  "frage": "Nach dem Briefing fasst ein Studio die Wünsche des Kunden zusammen, benennt offene Lücken und schlägt eigene Ergänzungen vor. Wie wird dieser Schritt bezeichnet?",
+  "optionen": [
+   "Rebriefing",
+   "Briefing",
+   "Angebot",
+   "Auftragsbestätigung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein **Rebriefing** ist keine Wiederholung des Briefings, sondern die Zusammenfassung, Interpretation und Ergänzung der Kundenwünsche und damit die Chance, Lücken zu schließen und Missverständnisse auszuräumen. Das Briefing selbst stammt vom Kunden, Angebot und Auftragsbestätigung regeln dagegen Leistung und Vergütung.",
+  "quelle": "f42",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q103",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Was sagt die Liquidität über ein Unternehmen aus?",
+  "optionen": [
+   "Ob es in der Lage ist, seinen Zahlungsverpflichtungen nachzukommen",
+   "Ob es am Ende des Geschäftsjahres einen Gewinn erwirtschaftet hat",
+   "Ob es seine Angebote mit Stundensätzen oder mit Tagessätzen kalkuliert",
+   "Ob es seine Fremdkosten unterhalb der eigenen Honorare halten kann"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Liquidität eines Unternehmens bestimmt, ob es seinen **Zahlungsverpflichtungen** nachkommen kann. Sie sagt nichts über Gewinn oder die Art der Kalkulation aus.",
+  "quelle": "f40",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q104",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche Aussage beschreibt ein illiquides Unternehmen zutreffend?",
+  "optionen": [
+   "Es kann seinen Zahlungsverpflichtungen nicht mehr nachkommen, und es droht eine Insolvenz.",
+   "Es kann seine Zahlungsverpflichtungen erfüllen, erzielt dabei aber keinen ausreichenden Gewinn.",
+   "Es kann seine Zahlungen leisten, hat aber die eigenen Honorare deutlich zu niedrig kalkuliert.",
+   "Es kann seine Rechnungen begleichen, weist im Angebot aber keine Fremdkosten gesondert aus."
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein Unternehmen, das seinen Zahlungsverpflichtungen nicht mehr nachkommen kann, ist **zahlungsunfähig = illiquide**, und es **droht eine Insolvenz**. Fehlender Gewinn oder eine schlechte Kalkulation bedeuten für sich genommen noch keine Illiquidität.",
+  "quelle": "f40",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q105",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Woran zeigt sich, dass ein Unternehmen liquide ist?",
+  "optionen": [
+   "Es kann fällige Zahlungen wie offene Rechnungen begleichen.",
+   "Es kann im Angebot Honorare und Fremdkosten separat ausweisen.",
+   "Es kann jeden erteilten Auftrag mit einem festen Tagessatz abrechnen.",
+   "Es kann seine Arbeitsprozesse ohne eine Kalkulation optimieren."
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein **liquides** Unternehmen ist dadurch gekennzeichnet, dass die **fälligen Zahlungen**, zum Beispiel offene Rechnungen, beglichen werden können. Die anderen Punkte betreffen die Kalkulation und das Angebot, nicht die Zahlungsfähigkeit.",
+  "quelle": "f40",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q106",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Worin besteht der Hauptunterschied zwischen Honoraren und Fremdkosten?",
+  "optionen": [
+   "Honorare betreffen die eigene Dienstleistung, Fremdkosten den Kauf von Waren oder Dienstleistungen Dritter.",
+   "Honorare betreffen den Kauf von Waren oder Dienstleistungen Dritter, Fremdkosten die eigene Dienstleistung.",
+   "Honorare betreffen die laufenden Kosten des Büros, Fremdkosten die einmaligen Kosten eines Projekts.",
+   "Honorare betreffen Leistungen für Bestandskunden, Fremdkosten Leistungen für neu gewonnene Auftraggeber."
+  ],
+  "richtig": 0,
+  "erklaerung": "Honorare betreffen die **eigene Dienstleistung**, während Fremdkosten für den **Kauf von Waren oder Dienstleistungen Dritter** anfallen. Beide Positionen sind im Angebot **separat auszuweisen**.",
+  "quelle": "f41",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q107",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Wie sind Honorare in der Regel ausgestaltet?",
+  "optionen": [
+   "Sie sind variabel und hängen von Art und Dauer der erbrachten Dienstleistung ab.",
+   "Sie sind fest und hängen von der Menge der bei Dritten eingekauften Waren ab.",
+   "Sie sind variabel und hängen von der Anzahl der am Projekt beteiligten Auftraggeber ab.",
+   "Sie sind fest und hängen von der Höhe der im Angebot ausgewiesenen Fremdkosten ab."
+  ],
+  "richtig": 0,
+  "erklaerung": "Honorare betreffen die **eigene Dienstleistung** und sind normalerweise **variabel**, also abhängig von **Art und Dauer** der erbrachten Dienstleistungen. **Fremdkosten** entstehen dagegen beim Kauf von Waren oder Dienstleistungen **Dritter** und fallen unabhängig von der gekauften Menge an.",
+  "quelle": "f41",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q108",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche Aussage über Fremdkosten trifft zu?",
+  "optionen": [
+   "Sie sind feste oder variable Kosten und fallen unabhängig von der eingekauften Menge an.",
+   "Sie sind variable Kosten und hängen von der Dauer der eigenen erbrachten Dienstleistung ab.",
+   "Sie sind feste Kosten und sinken mit der Menge der bei Dritten eingekauften Leistungen.",
+   "Sie sind variable Kosten und richten sich nach dem vereinbarten Stundensatz des Designbüros."
+  ],
+  "richtig": 0,
+  "erklaerung": "Fremdkosten fallen für den Kauf von Waren oder Dienstleistungen **Dritter** an; sie sind **feste (oder variable) Kosten**, die **unabhängig von der Menge** der gekauften Waren oder Dienstleistungen anfallen. Eine Abhängigkeit von **Art und Dauer** der eigenen erbrachten Dienstleistung kennzeichnet dagegen das **Honorar**.",
+  "quelle": "f41",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q109",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Wie sollten Honorare und Fremdkosten in einem Angebot für Designleistungen dargestellt werden?",
+  "optionen": [
+   "Als zwei getrennt voneinander ausgewiesene Positionen",
+   "Als eine gemeinsame Summe ohne weitere Aufschlüsselung",
+   "Als Positionen, die erst nach Projektabschluss genannt werden",
+   "Als Anlage, die nur auf ausdrückliche Nachfrage erstellt wird"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für Designleistungen und Angebote sollten Honorare und Fremdkosten **separat ausgewiesen** werden. Eine zusammengefasste Gesamtsumme widerspricht dieser Vorgabe.",
+  "quelle": "f41",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q110",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Ein Designbüro kauft für ein Projekt Bildlizenzen bei einer Fotoagentur ein und stellt zusätzlich die eigene Gestaltungsarbeit in Rechnung. Wie sind die beiden Positionen im Angebot einzuordnen?",
+  "optionen": [
+   "Die Bildlizenzen zählen zu den Fremdkosten, die Gestaltungsarbeit zählt zum Honorar.",
+   "Die Bildlizenzen zählen zum Honorar, die Gestaltungsarbeit zählt zu den Fremdkosten.",
+   "Beide Positionen zählen zu den Fremdkosten und werden gemeinsam als ein Posten ausgewiesen.",
+   "Beide Positionen zählen zum Honorar und werden gemeinsam als ein Posten ausgewiesen."
+  ],
+  "richtig": 0,
+  "erklaerung": "Fremdkosten entstehen beim Kauf von Waren oder Dienstleistungen **Dritter** – hier die Lizenzen der Fotoagentur –, während das Honorar die **eigene Dienstleistung** abdeckt, also die Gestaltungsarbeit. Beide Positionen müssen im Angebot **separat** ausgewiesen werden.",
+  "quelle": "f41",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q111",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welchen Nutzen hat eine Kalkulation im Umgang mit der Kundschaft?",
+  "optionen": [
+   "Sie informiert transparent und hilft dabei, den geforderten Preis zu rechtfertigen.",
+   "Sie verpflichtet die Kundschaft dazu, sämtliche Fremdkosten im Voraus zu bezahlen.",
+   "Sie sichert zu, dass der genannte Preis während des Projekts unverändert bleiben muss.",
+   "Sie ersetzt das Angebot und macht eine schriftliche Vereinbarung dadurch überflüssig."
+  ],
+  "richtig": 0,
+  "erklaerung": "Eine Kalkulation hilft, den Kunden **transparent zu informieren** und den **Preis zu rechtfertigen**. Eine Zahlungspflicht im Voraus oder eine Preisgarantie ergibt sich daraus nicht.",
+  "quelle": "f43",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q112",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welche Wirkung hat eine Kalkulation auf das Verhältnis zwischen Designer und Kunde?",
+  "optionen": [
+   "Sie vermeidet Missverständnisse und schafft eine klare Grundlage für die Zusammenarbeit.",
+   "Sie überträgt das gesamte wirtschaftliche Risiko des Projekts auf die auftraggebende Seite.",
+   "Sie legt fest, dass Änderungswünsche während des laufenden Projekts nicht mehr möglich sind.",
+   "Sie regelt, in welchen Fristen offene Rechnungen nach dem Projektende zu begleichen sind."
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Kalkulation soll **Unklarheiten und Missverständnisse** zwischen Designer und Kunde vermeiden und eine klare **Grundlage für die Zusammenarbeit** schaffen. Zahlungsfristen, die Verteilung des wirtschaftlichen Risikos oder der Ausschluss von Änderungswünschen gehören dagegen nicht zu ihren Zwecken.",
+  "quelle": "f43",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q113",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Welchen Nutzen hat eine Kalkulation für die eigenen Abläufe im Betrieb?",
+  "optionen": [
+   "Arbeitsprozesse werden optimiert, Ressourcen besser geplant und Kosten gesenkt.",
+   "Steuerzahlungen werden gestundet, Rücklagen gebildet und Gewinne ausgeschüttet.",
+   "Aufträge werden schneller vergeben, Personal aufgebaut und Fremdkosten vermieden.",
+   "Honorare werden festgeschrieben, Tagessätze ersetzt und Projektrisiken beseitigt."
+  ],
+  "richtig": 0,
+  "erklaerung": "Nach innen hilft die Kalkulation, die **Arbeitsprozesse zu optimieren**, effizienter zu arbeiten sowie die **Ressourcen besser zu planen und die Kosten zu senken**. Steuerliche oder personelle Effekte werden nicht genannt.",
+  "quelle": "f43",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q114",
+  "thema": "Kalkulation und Liquiditaet",
+  "frage": "Das Wort Kalkulation geht auf den Begriff \"calculatio\" zurück. Welche Bedeutung hat dieser Begriff?",
+  "optionen": [
+   "\"calculatio\" bedeutet so viel wie Berechnung",
+   "\"calculatio\" bedeutet so viel wie Schätzung",
+   "\"calculatio\" bedeutet so viel wie Vereinbarung",
+   "\"calculatio\" bedeutet so viel wie Bewertung"
+  ],
+  "richtig": 0,
+  "erklaerung": "**calculatio** wird mit **Berechnung** übersetzt, darauf geht der Begriff Kalkulation zurück. Schätzung, Vereinbarung oder Bewertung geben die Wortbedeutung nicht korrekt wieder.",
+  "quelle": "f46",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q115",
+  "thema": "Marketing",
+  "frage": "Was umfasst Marketing im Kern?",
+  "optionen": [
+   "Aktivitäten und Strategien, um die Herstellungskosten von Produkten zu senken und die Fertigung zu beschleunigen",
+   "Aktivitäten und Strategien, um die Buchführung zu ordnen und den Jahresabschluss des Unternehmens zu erstellen",
+   "Aktivitäten und Strategien, um die Bedürfnisse und Wünsche potenzieller Kunden zu identifizieren und zu befriedigen",
+   "Aktivitäten und Strategien, um geeignete Mitarbeitende zu finden und dauerhaft an das Unternehmen zu binden"
+  ],
+  "richtig": 2,
+  "erklaerung": "Marketing umfasst Aktivitäten und Strategien, die dazu dienen, die **Bedürfnisse und Wünsche potenzieller Kunden zu identifizieren und zu befriedigen**. Fertigung, Buchführung und Personalgewinnung gehören zu anderen betrieblichen Funktionen.",
+  "quelle": "f12",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q116",
+  "thema": "Marketing",
+  "frage": "Welches Ziel verfolgt Marketing neben dem bestmöglichen Absatz von Produkten und Dienstleistungen besonders?",
+  "optionen": [
+   "Die kurzfristige Steigerung des Quartalsgewinns",
+   "Die langfristige Zufriedenheit der Kunden",
+   "Die dauerhafte Senkung der Produktionskosten",
+   "Die schnelle Vergrößerung der Produktpalette"
+  ],
+  "richtig": 1,
+  "erklaerung": "Marketing beschäftigt sich nicht nur mit dem bestmöglichen Absatz, sondern besonders mit der **langfristigen Kundenzufriedenheit**. Kosten- und Sortimentsfragen sind nicht als Marketingziel genannt.",
+  "quelle": "f13, f14",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q117",
+  "thema": "Marketing",
+  "frage": "Wofür stehen die Kürzel B2C und B2B?",
+  "optionen": [
+   "brand to customer und brand to business",
+   "business to company und business to broker",
+   "buyer to customer und buyer to business",
+   "business to customer und business to business"
+  ],
+  "richtig": 3,
+  "erklaerung": "**B2C steht für business to customer**, **B2B für business to business**. Beide Bereiche beschreiben die Relation zwischen Unternehmen und Empfänger.",
+  "quelle": "f13",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q118",
+  "thema": "Marketing",
+  "frage": "Welcher Marketingbereich analysiert die Bedürfnisse, Einstellungen und Verhaltensweisen der Kunden?",
+  "optionen": [
+   "Marktforschung",
+   "Preisbildung",
+   "Markenmanagement",
+   "Eventmarketing"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die **Marktforschung** analysiert Bedürfnisse, Einstellungen und Verhaltensweisen der Kunden, um darauf passende Produkte und Dienstleistungen zu entwickeln.",
+  "quelle": "f12",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q119",
+  "thema": "Marketing",
+  "frage": "Was beschreibt der Marketingbereich Produktentwicklung?",
+  "optionen": [
+   "Die Festlegung des Preises für Produkte und Dienstleistungen unter Berücksichtigung der Marktlage",
+   "Die Entwicklung von Vertriebsstrategien und Vertriebskanälen für den Verkauf an die Kunden",
+   "Die Gestaltung und Entwicklung von Produkten und Dienstleistungen, die den Bedürfnissen der Kunden entsprechen",
+   "Die Analyse der Einstellungen und Verhaltensweisen der Kunden als Grundlage für Entscheidungen"
+  ],
+  "richtig": 2,
+  "erklaerung": "Produktentwicklung meint die **Gestaltung und Entwicklung von Produkten und Dienstleistungen, die den Bedürfnissen der Kunden entsprechen**. Preisfestlegung gehört zur Preisbildung, die Analyse der Kunden zur Marktforschung.",
+  "quelle": "f12",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q120",
+  "thema": "Marketing",
+  "frage": "Was wird bei der Preisbildung berücksichtigt?",
+  "optionen": [
+   "Die Lagerbestände und die üblichen Lieferzeiten",
+   "Die Markenidentität und die Loyalität der Kunden",
+   "Die Personalkosten und die geltenden Arbeitszeiten",
+   "Die Marktbedingungen und die Wettbewerbsfähigkeit"
+  ],
+  "richtig": 3,
+  "erklaerung": "Die Preisbildung legt den Preis für Produkte und Dienstleistungen unter Berücksichtigung der **Marktbedingungen und der Wettbewerbsfähigkeit** fest. Markenidentität und Kundenloyalität gehören dagegen zum **Markenmanagement**.",
+  "quelle": "f12",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q121",
+  "thema": "Marketing",
+  "frage": "Welche Kanäle werden dem Online-Marketing zugeordnet?",
+  "optionen": [
+   "Printanzeigen, Plakatwerbung, Messeauftritte und Produktproben im Handel",
+   "Social Media, E-Mail-Marketing, Suchmaschinenoptimierung und Suchmaschinenmarketing",
+   "Außendienst, Telefonverkauf, Katalogversand und Verkauf in eigenen Filialen",
+   "Sponsoring, Rabattaktionen, Gewinnspiele und Empfehlungen von Bestandskunden"
+  ],
+  "richtig": 1,
+  "erklaerung": "Online-Marketing ist die Nutzung **digitaler Kanäle wie Social Media, E-Mail-Marketing, SEO und SEM**, um das Bewusstsein für Produkte und Dienstleistungen zu steigern.",
+  "quelle": "f10",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q122",
+  "thema": "Marketing",
+  "frage": "Wofür steht die Abkürzung SEO?",
+  "optionen": [
+   "Suchmaschinenmarketing",
+   "Suchmaschinenwerbung",
+   "Suchmaschinenoptimierung",
+   "Suchmaschinenanalyse"
+  ],
+  "richtig": 2,
+  "erklaerung": "**SEO steht für Suchmaschinenoptimierung**. Davon zu unterscheiden ist SEM, das für Suchmaschinenmarketing steht.",
+  "quelle": "f10, f14",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q123",
+  "thema": "Marketing",
+  "frage": "Woraus wird bei der Positionierung die klare Botschaft formuliert?",
+  "optionen": [
+   "Aus dem USP des Unternehmens",
+   "Aus der SWOT-Analyse des Marktes",
+   "Aus der Preisbildung des Produkts",
+   "Aus der Vertriebsstrategie der Marke"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Botschaft wird **aus dem USP** formuliert und vermittelt, was das Unternehmen oder die Marke ausmacht und welchen Nutzen es für die Zielgruppe bietet.",
+  "quelle": "f09",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q124",
+  "thema": "Marketing",
+  "frage": "Welchem Zweck dient die Überprüfung der Positionierung?",
+  "optionen": [
+   "Um sicherzustellen, dass die Produktionskosten weiter sinken",
+   "Um sicherzustellen, dass die Positionierung noch relevant und wirksam ist",
+   "Um sicherzustellen, dass die Lieferzeiten eingehalten werden",
+   "Um sicherzustellen, dass die Zahl der Mitarbeitenden ausreicht"
+  ],
+  "richtig": 1,
+  "erklaerung": "Nach dem Definieren der Botschaft und dem Festlegen der Kommunikationskanäle wird die Positionierung überprüft, um sicherzustellen, dass sie noch **relevant und wirksam** ist. Kosten, Lieferzeiten oder Personalbestand sind ausdrücklich **nicht** Gegenstand dieser Überprüfung.",
+  "quelle": "f09",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q125",
+  "thema": "Marketing",
+  "frage": "Welche beiden Formen der Marktforschung werden unterschieden?",
+  "optionen": [
+   "Interne und externe Marktforschung",
+   "Strategische und operative Marktforschung",
+   "Direkte und indirekte Marktforschung",
+   "Quantitative und qualitative Marktforschung"
+  ],
+  "richtig": 3,
+  "erklaerung": "Unterschieden werden die **quantitative und die qualitative Marktforschung**, etwa in Form von Interviews.",
+  "quelle": "f14",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q126",
+  "thema": "Marketing",
+  "frage": "Was umfasst der Marketingbereich Promotion?",
+  "optionen": [
+   "Die Entwicklung und Umsetzung von Werbe- und Verkaufsförderungsmaßnahmen",
+   "Die Entwicklung und Umsetzung von Vertriebsstrategien und Vertriebskanälen",
+   "Die Entwicklung und Pflege einer starken Markenidentität und Markenbekanntheit",
+   "Die Gestaltung und Entwicklung bedürfnisgerechter Produkte und Dienstleistungen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Promotion meint die Entwicklung und Umsetzung von **Werbe- und Verkaufsförderungsmaßnahmen**, um das Bewusstsein für Produkte zu steigern. Die übrigen Beschreibungen gehören zu Vertrieb, Markenmanagement und Produktentwicklung.",
+  "quelle": "f11, f12",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q127",
+  "thema": "Marketing",
+  "frage": "Welches Ziel verfolgt das Markenmanagement mit der Entwicklung und Pflege einer starken Markenidentität?",
+  "optionen": [
+   "Die Wettbewerbsfähigkeit des Preises dauerhaft zu sichern",
+   "Das Interesse an Veranstaltungen des Unternehmens zu wecken",
+   "Das Vertrauen und die Loyalität der Kunden zu gewinnen",
+   "Die Verhaltensweisen der Kunden systematisch zu analysieren"
+  ],
+  "richtig": 2,
+  "erklaerung": "Markenmanagement entwickelt und pflegt eine starke Markenidentität und -bekanntheit, um **Vertrauen und Loyalität der Kunden** zu gewinnen. Preisfragen gehören zur Preisbildung, Veranstaltungen zum Eventmarketing.",
+  "quelle": "f11",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q128",
+  "thema": "Marketing",
+  "frage": "Welche Kanäle werden bei der Positionierung genutzt, um die Botschaft an die Zielgruppe zu vermitteln?",
+  "optionen": [
+   "Ausschließlich digitale Kanäle wie Social Media, SEO oder SEM",
+   "Online- und Offline-Kanäle wie Social Media, Anzeigen oder Events",
+   "Ausschließlich klassische Kanäle wie Anzeigen, Plakate oder Messen",
+   "Vorrangig interne Kanäle wie Intranet, Meetings oder Rundschreiben"
+  ],
+  "richtig": 1,
+  "erklaerung": "Bei der Positionierung werden passende **Online- und Offline-Kanäle wie Social Media, Anzeigen oder Events** festgelegt. Eine Beschränkung auf nur digitale oder nur klassische Kanäle ist nicht vorgesehen.",
+  "quelle": "f09",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q129",
+  "thema": "Marketing",
+  "frage": "Welche Elemente gehören zum Branding?",
+  "optionen": [
+   "Analyse, Preisstrategie, Vertriebskommunikation, Produktdesign und Qualitätsmanagement",
+   "Ausschreibung, Markenstrategie, Networking, Eventdesign und Projektmanagement",
+   "Zielgruppenanalyse, Empfehlung, Partnerschaft, Markendesign und Kostenmanagement",
+   "Analyse, Markenstrategie, Markenkommunikation, Markendesign und Markenmanagement"
+  ],
+  "richtig": 3,
+  "erklaerung": "Zum Branding zählen **Analyse, Markenstrategie, Markenkommunikation, Markendesign und Markenmanagement**. Empfehlung und Partnerschaft gehören dagegen zur Akquise.",
+  "quelle": "f14",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q130",
+  "thema": "Marketing",
+  "frage": "Welche Vorgehensweisen zählen zur Akquise?",
+  "optionen": [
+   "Markenstrategie, Markenkommunikation, Markendesign und Analyse",
+   "Quantitative Befragungen, qualitative Interviews und deren Auswertung",
+   "Direkte Ansprache, Networking, Empfehlung und Partnerschaften",
+   "Rahmenbedingungen, Ausschreibungen und Beratung durch Pitchagenturen"
+  ],
+  "richtig": 2,
+  "erklaerung": "Zur Akquise gehören **direkte Ansprache, Networking, Empfehlung, Partnerschaften und Online-Marketing**. Die anderen Aufzählungen beschreiben Branding, Marktforschung und den Pitch.",
+  "quelle": "f14",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q131",
+  "thema": "Marketing",
+  "frage": "Ein Designbüro betreut seine bisherigen Auftraggeber mit festen Ansprechpersonen und jährlichen Treueleistungen, damit sie dem Büro dauerhaft erhalten bleiben. Welchem Marketingbereich entspricht das?",
+  "optionen": [
+   "Promotion",
+   "Kundenbindung",
+   "Marktforschung",
+   "Vertrieb"
+  ],
+  "richtig": 1,
+  "erklaerung": "**Kundenbindung** umfasst Strategien zur Bindung von Kunden an das Unternehmen und seine Produkte oder Dienstleistungen. Entscheidend ist hier die dauerhafte Bindung bestehender Kunden, nicht die Werbung oder der Verkaufsvorgang.",
+  "quelle": "f11",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q132",
+  "thema": "Marketing",
+  "frage": "Ein Möbelhersteller veranstaltet eine Showroom-Eröffnung mit Vorführungen, um Interesse an seinen Produkten zu wecken und neue Kunden zu gewinnen. Welchem Marketingbereich entspricht das?",
+  "optionen": [
+   "Online-Marketing",
+   "Markenmanagement",
+   "Marktforschung",
+   "Eventmarketing"
+  ],
+  "richtig": 3,
+  "erklaerung": "**Eventmarketing** ist die Organisation und Durchführung von Events, um das Interesse an Produkten und Dienstleistungen zu wecken und Kunden zu gewinnen. Online-Marketing nutzt dagegen digitale Kanäle.",
+  "quelle": "f10",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q133",
+  "thema": "Projektmanagement",
+  "frage": "Wie wird ein Projekt definiert?",
+  "optionen": [
+   "Als zielgerichtetes, einmaliges Vorhaben aus abgestimmten, gesteuerten Tätigkeiten",
+   "Als zielgerichtetes, unbefristetes Vorhaben aus eigenständigen, ungesteuerten Tätigkeiten",
+   "Als regelmäßig wiederkehrendes Vorhaben aus standardisierten, routinierten Tätigkeiten",
+   "Als einmaliges, ergebnisoffenes Vorhaben aus spontanen, unabgestimmten Tätigkeiten"
+  ],
+  "richtig": 0,
+  "erklaerung": "Ein Projekt ist ein **zielgerichtetes, einmaliges Vorhaben**, das aus einem Satz von abgestimmten, **gesteuerten Tätigkeiten** besteht. Entscheidend sind damit die Einmaligkeit und die Steuerung der Tätigkeiten.",
+  "quelle": "f05, f08",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q134",
+  "thema": "Projektmanagement",
+  "frage": "Unter Berücksichtigung welcher drei Vorgaben soll in einem Projekt das Ziel erreicht werden?",
+  "optionen": [
+   "Zeit, Ressourcen und Qualität",
+   "Zeit, Ressourcen und Rentabilität",
+   "Zeit, Umfang und Qualität",
+   "Kosten, Personal und Qualität"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Definition nennt als Vorgaben ausdrücklich **Zeit, Ressourcen und Qualität**. Kosten und Personal sind keine eigenständigen Vorgaben, sondern Bestandteile der Ressourcen.",
+  "quelle": "f05",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q135",
+  "thema": "Projektmanagement",
+  "frage": "Welche Beispiele werden in der Projektdefinition den Ressourcen zugeordnet?",
+  "optionen": [
+   "Finanzierung bzw. Kosten, Produktions- und Arbeitsbedingungen, Personal und Betriebsmittel",
+   "Finanzierung bzw. Umsatz, Absatz- und Marktbedingungen, Kunden und Lieferanten",
+   "Terminplanung bzw. Fristen, Prüf- und Abnahmebedingungen, Normen und Standards",
+   "Rechtsform bzw. Haftung, Steuer- und Bilanzbedingungen, Eigen- und Fremdkapital"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Ressourcen werden **Finanzierung bzw. Kosten, Produktions- und Arbeitsbedingungen sowie Personal und Betriebsmittel** genannt. Kosten sind also ein Unterpunkt der Ressourcen und keine eigene Vorgabe.",
+  "quelle": "f05",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q136",
+  "thema": "Projektmanagement",
+  "frage": "Welche Tätigkeit zählt zum Projektmanagement?",
+  "optionen": [
+   "Das Auswerten von Projekten",
+   "Das Kalkulieren von Projekten",
+   "Das Zertifizieren von Projekten",
+   "Das Delegieren von Projekten"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zum Projektmanagement zählen das Initiieren, Planen, Steuern, Kontrollieren, Abschließen und das **Auswerten** von Projekten. Kalkulieren, Zertifizieren und Delegieren gehören nicht zu diesen sechs Tätigkeiten.",
+  "quelle": "f07",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q137",
+  "thema": "Projektmanagement",
+  "frage": "Welche Aufzählung gibt die Tätigkeiten des Projektmanagements vollständig wieder?",
+  "optionen": [
+   "Initiieren, Planen, Steuern, Kontrollieren, Abschließen, Auswerten",
+   "Initiieren, Planen, Steuern, Kontrollieren, Abschließen, Archivieren",
+   "Analysieren, Planen, Steuern, Überwachen, Abschließen, Auswerten",
+   "Initiieren, Organisieren, Steuern, Kontrollieren, Umsetzen, Auswerten"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als Projektmanagement wird das **Initiieren, Planen, Steuern, Kontrollieren, Abschließen und Auswerten** von Projekten bezeichnet. Begriffe wie Archivieren, Analysieren oder Umsetzen gehören nicht zu dieser sechsteiligen Aufzählung.",
+  "quelle": "f07",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q138",
+  "thema": "Projektmanagement",
+  "frage": "Welche drei Größen bilden das magische Dreieck des Projektmanagements?",
+  "optionen": [
+   "Zeit, Kosten und Qualität",
+   "Zeit, Kosten und Ressourcen",
+   "Zeit, Qualität und Risiko",
+   "Kosten, Qualität und Personal"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das magische Dreieck besteht aus **Zeit, Kosten und Qualität**. Ressourcen, Risiko und Personal sind keine Ecken dieses Dreiecks.",
+  "quelle": "f08",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q139",
+  "thema": "Projektmanagement",
+  "frage": "Welcher Begriff wird im magischen Dreieck ergänzend zu Zeit, Kosten und Qualität genannt?",
+  "optionen": [
+   "Inhalt",
+   "Risiko",
+   "Aufwand",
+   "Nutzen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das magische Dreieck wird als Zeit – Kosten – Qualität ergänzt um den **Inhalt**. Risiko, Aufwand und Nutzen erscheinen dort nicht.",
+  "quelle": "f08",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q140",
+  "thema": "Projektmanagement",
+  "frage": "Welche vier Aufgaben beschreiben, wozu Projektmanagement dient?",
+  "optionen": [
+   "Planen, organisieren, umsetzen und kontrollieren",
+   "Planen, kalkulieren, verkaufen und abrechnen",
+   "Analysieren, organisieren, dokumentieren und archivieren",
+   "Beauftragen, organisieren, umsetzen und bilanzieren"
+  ],
+  "richtig": 0,
+  "erklaerung": "Auf die Frage nach dem Zweck des Projektmanagements lautet die Antwort **planen, organisieren, umsetzen und kontrollieren**. Kaufmännische Tätigkeiten wie Abrechnen oder Bilanzieren gehören nicht dazu.",
+  "quelle": "f08",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q141",
+  "thema": "Projektmanagement",
+  "frage": "Risikoanalyse, Critical Path Method und Projektstrukturplanung zählen zu den Methoden des Projektmanagements. Welches Verfahren gehört ebenfalls dazu?",
+  "optionen": [
+   "Deckungsbeitragsrechnung",
+   "Break-Even-Analyse",
+   "Netzplantechnik",
+   "Nutzwertanalyse"
+  ],
+  "richtig": 2,
+  "erklaerung": "Neben Risikoanalyse, Critical Path Method und Projektstrukturplanung zählt die **Netzplantechnik** zu den vier Methoden des Projektmanagements. Deckungsbeitragsrechnung, Break-Even-Analyse und Nutzwertanalyse gehören nicht zu dieser Aufzählung.",
+  "quelle": "f08",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q142",
+  "thema": "Projektmanagement",
+  "frage": "Welcher Punkt zählt zu den typischen Fehlern im Projektmanagement?",
+  "optionen": [
+   "Unklare oder unrealistische Ziele",
+   "Detaillierte Zeit- und Kostenplanung",
+   "Engmaschige Überwachung und Kontrolle",
+   "Standardisierte Begriffe und Verfahren"
+  ],
+  "richtig": 0,
+  "erklaerung": "Als PM-Fehler gelten **unklare oder unrealistische Ziele**, mangelnde Planung sowie mangelnde Überwachung und Kontrolle. Die Fehler liegen also in **zu wenig** Planung und Kontrolle, nicht in deren sorgfältiger Ausführung.",
+  "quelle": "f08",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q143",
+  "thema": "Projektmanagement",
+  "frage": "Welche Beschreibung gehört zum Projektprozess?",
+  "optionen": [
+   "Effektive Planung, Überwachung und Anpassung",
+   "Ressourcennutzung, Zielerreichung und Risikomanagement",
+   "Unklare Ziele, mangelnde Planung und fehlende Kontrolle",
+   "Zeit, Kosten und Qualität als zentrale Zielgrößen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Projektprozess wird mit **effektiver Planung, Überwachung und Anpassung** beschrieben. Ressourcennutzung und Risikomanagement gehören zum Projektmanagement, unklare Ziele zu den PM-Fehlern und Zeit/Kosten/Qualität zum magischen Dreieck.",
+  "quelle": "f08",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q144",
+  "thema": "Projektmanagement",
+  "frage": "Ein Designbüro bearbeitet mehrere Aufträge. Welches Vorhaben erfüllt die Merkmale eines Projekts?",
+  "optionen": [
+   "Die Gestaltung eines Messeauftritts mit festem Endtermin, Budget und Qualitätsvorgabe",
+   "Die monatliche Betreuung der Social-Media-Kanäle eines Kunden mit festem Leistungsumfang",
+   "Die laufende Bearbeitung eingehender Druckanfragen im alltäglichen Tagesgeschäft",
+   "Die jährlich wiederkehrende Aktualisierung der eigenen Preisliste zum Jahresbeginn"
+  ],
+  "richtig": 0,
+  "erklaerung": "Nur der Messeauftritt ist ein **zielgerichtetes, einmaliges Vorhaben**, das unter den Vorgaben **Zeit, Ressourcen und Qualität** ein Ziel erreicht. Die übrigen Aufgaben laufen dauerhaft oder wiederholen sich und erfüllen damit das Merkmal der **Einmaligkeit** nicht.",
+  "quelle": "f05",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q145",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Boni und Gehaltserhöhungen als Anerkennung für gute Leistungen zählen zu welcher Form von Lob?",
+  "optionen": [
+   "Materielles Lob",
+   "Symbolische Anerkennung",
+   "Professionelle Anerkennung",
+   "Nonverbales Lob"
+  ],
+  "richtig": 0,
+  "erklaerung": "Finanzielle Prämien wie Boni oder Gehaltserhöhungen gehören zum **materiellen Lob**, ebenso wie kleine Geschenke, Sachprämien und Teamevents. Abzugrenzen ist die **professionelle Anerkennung**, die Beförderungen und Weiterbildungen umfasst.",
+  "quelle": "f01",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q146",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Zu welcher Form von Lob zählt eine Beförderung?",
+  "optionen": [
+   "Symbolische Anerkennung",
+   "Materielles Lob",
+   "Professionelle Anerkennung",
+   "Schriftliches Lob"
+  ],
+  "richtig": 2,
+  "erklaerung": "Beförderungen zählen zusammen mit Weiterbildungsmöglichkeiten zur **professionellen Anerkennung**. Sie setzen an der beruflichen Entwicklung an, während **materielles Lob** Geschenke, Prämien oder Erlebnisse umfasst und **symbolische Anerkennung** etwa Anerkennungstafeln und Zertifikate.",
+  "quelle": "f01",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q147",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Was zählt neben Anerkennungsmauern und -tafeln zur symbolischen Anerkennung?",
+  "optionen": [
+   "Anerkennungszertifikate für erbrachte Leistungen",
+   "Sachprämien für erbrachte Leistungen",
+   "Weiterbildungsangebote für erbrachte Leistungen",
+   "Bonuszahlungen für erbrachte Leistungen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zur **symbolischen Anerkennung** gehören Anerkennungsmauern beziehungsweise Tafeln sowie **Anerkennungszertifikate**. Sachprämien und Bonuszahlungen sind materielles Lob, Weiterbildungsangebote professionelle Anerkennung.",
+  "quelle": "f01",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q148",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Eine „Wall of Fame“ im Bürogebäude ist ein Beispiel für welche Form von Lob?",
+  "optionen": [
+   "Professionelle Anerkennung",
+   "Symbolische Anerkennung",
+   "Öffentliches Lob",
+   "Materielles Lob"
+  ],
+  "richtig": 1,
+  "erklaerung": "Die „Wall of Fame“ ist das Beispiel für Anerkennungsmauern oder Tafeln und zählt damit zur **symbolischen Anerkennung**. **Öffentliches Lob** meint dagegen Anerkennung in Meetings sowie in Newslettern oder Berichten.",
+  "quelle": "f01",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q149",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche Maßnahme wird dem materiellen Lob zugeordnet?",
+  "optionen": [
+   "Beförderung in eine höhere Position im Unternehmen",
+   "Gemeinsame Erlebnisse, Aktivitäten und Teamevents",
+   "Anerkennungszertifikate und Tafeln im Bürogebäude",
+   "Applaus und anerkennende Gesten im Teammeeting"
+  ],
+  "richtig": 1,
+  "erklaerung": "Neben Geschenken und finanziellen Prämien werden **Erlebnisse, Aktivitäten und Teamevents** ausdrücklich als materielles Lob geführt. Zertifikate zählen zur symbolischen Anerkennung, Applaus zum nonverbalen Lob.",
+  "quelle": "f01",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q150",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Wie wird direktes Lob beschrieben?",
+  "optionen": [
+   "Eine beiläufige, subtile Aussage, die eine Leistung nur andeutet",
+   "Eine klare, direkte Aussage, die eine bestimmte Leistung anerkennt",
+   "Eine schriftliche Notiz, die eine bestimmte Leistung würdigt",
+   "Eine Geste ohne Worte, die eine bestimmte Leistung würdigt"
+  ],
+  "richtig": 1,
+  "erklaerung": "**Direktes Lob** ist eine direkte und klare Aussage, die eine bestimmte Leistung anerkennt. Die beiläufige und subtile Form ist dagegen das **indirekte Lob**; beide gehören zum verbalen Lob.",
+  "quelle": "f02",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q151",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche Aussage ist ein Beispiel für indirektes Lob?",
+  "optionen": [
+   "„Großartige Arbeit bei der Präsentation heute, das war richtig stark!“",
+   "„Ich habe gehört, dass du heute eine tolle Präsentation gehalten hast.“",
+   "„Deine Präsentation heute war fachlich wirklich überzeugend aufgebaut.“",
+   "„Vielen Dank für deine klar strukturierte Präsentation von heute früh.“"
+  ],
+  "richtig": 1,
+  "erklaerung": "Die Formulierung „Ich habe gehört, dass …“ ist eine **beiläufige, subtile Anerkennung** und damit **indirektes Lob**. Die übrigen Aussagen wenden sich unmittelbar an die gelobte Person und benennen deren Leistung klar – das ist **direktes Lob**.",
+  "quelle": "f02",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q152",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Ein Dankesbrief für die hervorragende Arbeit an einem Projekt ist ein Beispiel für welche Lobform?",
+  "optionen": [
+   "Verbales Lob",
+   "Öffentliches Lob",
+   "Schriftliches Lob",
+   "Symbolische Anerkennung"
+  ],
+  "richtig": 2,
+  "erklaerung": "Notizen und Briefe bilden neben E-Mails die beiden Unterformen des **schriftlichen Lobes**. Verbales Lob wird gesprochen, öffentliches Lob richtet sich an ein Publikum wie ein Meeting oder einen Newsletter.",
+  "quelle": "f02",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q153",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Ein Manager lobt einen Mitarbeiter während eines Team-Meetings vor allen Kolleginnen und Kollegen. Um welche Lobform handelt es sich?",
+  "optionen": [
+   "Öffentliches Lob",
+   "Indirektes verbales Lob",
+   "Nonverbales Lob",
+   "Professionelle Anerkennung"
+  ],
+  "richtig": 0,
+  "erklaerung": "Lob, das in Team- oder Abteilungsmeetings vor anderen ausgesprochen wird, ist **öffentliches Lob**. Kennzeichnend ist das anwesende Publikum, nicht die Wortwahl oder eine berufliche Weiterentwicklung.",
+  "quelle": "f03",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q154",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Welche Kanäle zählen neben Meetings zum öffentlichen Lob?",
+  "optionen": [
+   "Unternehmensnewsletter, Berichte und die Firmenwebsite",
+   "Persönliche Dankesbriefe, Notizen und interne E-Mails",
+   "Anerkennungszertifikate, Wandtafeln und Ehrenurkunden",
+   "Trophäen, Medaillen und anerkennende Gesten im Alltag"
+  ],
+  "richtig": 0,
+  "erklaerung": "**Öffentliches Lob** erfolgt in Team- oder Abteilungsmeetings sowie als Anerkennung in **Unternehmensnewslettern, Berichten oder auf der Firmenwebsite**. Dankesbriefe und E-Mails gehören zum schriftlichen Lob, Zertifikate und Anerkennungstafeln zur symbolischen Anerkennung, Trophäen und Gesten zum nonverbalen Lob.",
+  "quelle": "f03",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q155",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Ein Lächeln, ein Daumen hoch oder Applaus zählen zu welcher Lobform?",
+  "optionen": [
+   "Verbales Lob",
+   "Öffentliches Lob",
+   "Symbolische Anerkennung",
+   "Nonverbales Lob"
+  ],
+  "richtig": 3,
+  "erklaerung": "Anerkennende Gesten wie Lächeln, Daumen hoch oder Applaus sind die Unterform „Gesten“ des **nonverbalen Lobes**. Verbales Lob wird ausgesprochen, symbolische Anerkennung arbeitet mit Tafeln und Zertifikaten.",
+  "quelle": "f03",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q156",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Zu welcher Unterform des nonverbalen Lobs zählt eine Mitarbeiter-des-Monats-Auszeichnung?",
+  "optionen": [
+   "Zu den Gesten, also anerkennenden Bewegungen und Mimiken",
+   "Zu den Symbolen, also Trophäen und Medaillen als Anerkennung",
+   "Zu den Notizen, also kurzen schriftlichen Anerkennungen",
+   "Zu den Meetings, also Anerkennung vor dem versammelten Team"
+  ],
+  "richtig": 1,
+  "erklaerung": "Nonverbales Lob gliedert sich in Gesten und **Symbole**; Trophäen und Medaillen sind Symbole, und die Mitarbeiter-des-Monats-Auszeichnung ist genau dafür das Beispiel. **Gesten** sind dagegen Lächeln, Daumen hoch oder Applaus.",
+  "quelle": "f03",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q157",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Wie wird intrinsische Motivation beschrieben?",
+  "optionen": [
+   "Sie erfolgt von innen heraus und beruht auf persönlichen Interessen und Vergnügen an der Aufgabe",
+   "Sie erfolgt durch äußere Anreize wie Belohnungen und Anerkennung durch andere Personen",
+   "Sie erfolgt durch Vorgaben von Vorgesetzten und die Kontrolle der erbrachten Arbeitsleistung",
+   "Sie erfolgt durch den Wettbewerb mit Kolleginnen und Kollegen um bessere Arbeitsergebnisse"
+  ],
+  "richtig": 0,
+  "erklaerung": "**Intrinsische Motivation** erfolgt von innen heraus und basiert auf persönlichen Interessen und dem Vergnügen an der Aufgabe selbst. Von außen wirkende Anreize wie Belohnungen kennzeichnen dagegen die **extrinsische Motivation**.",
+  "quelle": "f04",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q158",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Wie wird Lob im Rahmen der extrinsischen Motivation eingeordnet?",
+  "optionen": [
+   "Als innerer Antrieb, der aus dem Interesse an der Aufgabe stammt",
+   "Als externer Anreiz, der von außen auf die Motivation wirkt",
+   "Als Ersatz für alle materiellen Belohnungen im Arbeitsalltag",
+   "Als Ergebnis der eigenen Zielsetzung der Mitarbeitenden"
+  ],
+  "richtig": 1,
+  "erklaerung": "Bei der extrinsischen Motivation gilt Lob als **externer Anreiz**, also als Anerkennung von außen neben Belohnungen. Bei der intrinsischen Motivation wirkt Lob hingegen lediglich **verstärkend**.",
+  "quelle": "f04",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q159",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Eine Designerin arbeitet an einem Entwurf weiter, weil ihr die gestalterische Aufgabe selbst Freude bereitet. Ihre Vorgesetzte lobt sie zusätzlich dafür. Wie ist die Situation einzuordnen?",
+  "optionen": [
+   "Intrinsische Motivation; das Lob wirkt hier verstärkend",
+   "Extrinsische Motivation; das Lob wirkt hier verstärkend",
+   "Intrinsische Motivation; das Lob ist der auslösende äußere Anreiz",
+   "Extrinsische Motivation; das Lob ist der auslösende äußere Anreiz"
+  ],
+  "richtig": 0,
+  "erklaerung": "Da die Motivation aus dem Vergnügen an der Aufgabe selbst entsteht, liegt **intrinsische Motivation** vor; Lob **wirkt hier verstärkend**. Als auslösender externer Anreiz gilt Lob nur bei extrinsischer Motivation.",
+  "quelle": "f04",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q160",
+  "thema": "Personal, Motivation und Lob",
+  "frage": "Ein Mitarbeiter übernimmt eine zusätzliche Aufgabe vor allem deshalb, weil ihm dafür eine Bonuszahlung zugesagt wurde. Welche Motivationsform liegt vor und warum?",
+  "optionen": [
+   "Intrinsische Motivation, da die Motivation aus persönlichem Interesse von innen entsteht",
+   "Intrinsische Motivation, da das Vergnügen an der Aufgabe selbst im Vordergrund steht",
+   "Extrinsische Motivation, da die Motivation durch äußere Anreize wie Belohnungen entsteht",
+   "Extrinsische Motivation, da das persönliche Interesse an der Aufgabe im Vordergrund steht"
+  ],
+  "richtig": 2,
+  "erklaerung": "Die zugesagte Bonuszahlung ist ein **äußerer Anreiz**, damit liegt **extrinsische Motivation** vor. Intrinsische Motivation läge nur vor, wenn die Aufgabe selbst aus persönlichem Interesse heraus angegangen würde.",
+  "quelle": "f04",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q161",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche Bezeichnung zählt zu den Funktionen des Geldes?",
+  "optionen": [
+   "Wertschöpfungsmittel",
+   "Wertverrechnungsmittel",
+   "Wertübertragungsmittel",
+   "Wertberichtigungsmittel"
+  ],
+  "richtig": 2,
+  "erklaerung": "Zu den Funktionen des Geldes zählen Zahlungsmittel, Wertmesser, Wertaufbewahrungsmittel, **Wertübertragungsmittel** und Freiheit. Die übrigen Begriffe gehören nicht zu dieser Aufzählung.",
+  "quelle": "f20",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q162",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Was ist mit dem Begriff Money Mindset gemeint?",
+  "optionen": [
+   "Die Denkweise \"Ich bin finanziell erfolgreich!\"",
+   "Die feste Aufteilung des Einkommens in Sparquoten",
+   "Die Übersicht über Einnahmen und Ausgaben im Haushalt",
+   "Die Verteilung des Vermögens auf mehrere Anlagen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Money Mindset bezeichnet die **Denkweise** \"Ich bin finanziell erfolgreich!\". Es geht also um die innere Haltung zum Geld, nicht um eine konkrete Spar- oder Anlagetechnik.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q163",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Womit wird Liquidität beschrieben?",
+  "optionen": [
+   "Mit Planbarkeit und verfügbarem Vermögen",
+   "Mit Renditechancen und langfristigem Wertzuwachs",
+   "Mit Zinserträgen und deren erneuter Anlage",
+   "Mit Beteiligungen und jährlichen Gewinnanteilen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Liquidität steht für **Planbarkeit** und **verfügbares Vermögen**, also für Geld, über das man tatsächlich verfügen kann. Rendite und Zinserträge beschreiben dagegen den Ertrag einer Anlage.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q164",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Was beschreibt der Zinses-Zins-Effekt?",
+  "optionen": [
+   "Zinsen einer Geldanlage werden wieder angelegt und mitverzinst",
+   "Zinsen einer Geldanlage werden jährlich ausgezahlt und verbraucht",
+   "Zinssätze steigen mit zunehmender Laufzeit einer Geldanlage",
+   "Zinserträge werden regelmäßig an die Inflationsrate angepasst"
+  ],
+  "richtig": 0,
+  "erklaerung": "Beim Zinses-Zins-Effekt werden die Zinsen einer Geldanlage **wieder reinvestiert und mitverzinst**, sodass sich das Geld von selbst vermehrt. Ausgezahlte und verbrauchte Zinsen erzeugen diesen Effekt gerade nicht.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q165",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Wie teilt die 50-30-20-Regel das Geld auf?",
+  "optionen": [
+   "50 % Fixkosten, 30 % Freizeit/Konsum, 20 % sparen",
+   "50 % Fixkosten, 30 % sparen, 20 % Freizeit/Konsum",
+   "50 % Freizeit/Konsum, 30 % Fixkosten, 20 % sparen",
+   "50 % sparen, 30 % Fixkosten, 20 % Freizeit/Konsum"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die 50-30-20-Regel sieht **50 % für Fixkosten**, **30 % für Freizeit und Konsum** und **20 % zum Sparen** vor. Entscheidend ist die Reihenfolge der drei Kategorien.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q166",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Bei einem monatlichen Betrag von 2.000 Euro: Welche Aufteilung ergibt sich nach der 50-30-20-Regel?",
+  "optionen": [
+   "1.000 Euro Fixkosten, 600 Euro Freizeit/Konsum, 400 Euro sparen",
+   "1.000 Euro Fixkosten, 400 Euro Freizeit/Konsum, 600 Euro sparen",
+   "600 Euro Fixkosten, 1.000 Euro Freizeit/Konsum, 400 Euro sparen",
+   "800 Euro Fixkosten, 700 Euro Freizeit/Konsum, 500 Euro sparen"
+  ],
+  "richtig": 0,
+  "erklaerung": "50 % von 2.000 Euro sind **1.000 Euro Fixkosten**, 30 % sind **600 Euro für Freizeit und Konsum**, 20 % sind **400 Euro zum Sparen**.",
+  "quelle": "f20",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q167",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Was ist eine Aktie?",
+  "optionen": [
+   "Eine Beteiligung an einem Unternehmen",
+   "Ein Anteil am jährlichen Reingewinn eines Unternehmens",
+   "Ein börsengehandelter Fonds auf einen Index",
+   "Ein verzinstes Darlehen an ein Unternehmen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Aktien sind eine **Beteiligung an Unternehmen**. Der jährliche Gewinnanteil je Aktie heißt dagegen Dividende, und ein börsengehandelter Indexfonds ist ein ETF.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q168",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Was bezeichnet die Dividende?",
+  "optionen": [
+   "Den jährlich auf eine Aktie entfallenden Anteil vom Reingewinn",
+   "Den Kursgewinn, der beim Verkauf einer Aktie erzielt wird",
+   "Den Anteil am Unternehmen, den eine Aktie insgesamt verbrieft",
+   "Den jährlich auf ein Sparguthaben gezahlten Zinsbetrag"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Dividende ist der **jährlich auf eine Aktie entfallende Anteil vom Reingewinn**. Die Beteiligung am Unternehmen selbst ist die Aktie, nicht die Dividende.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q169",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Wofür steht die Abkürzung ETF und was bezeichnet sie?",
+  "optionen": [
+   "Exchange Traded Fund – ein börsengehandelter Indexfonds",
+   "Equity Trading Fund – ein außerbörslich gehandelter Aktienfonds",
+   "European Trust Fonds – ein staatlich geförderter Rentenfonds",
+   "Exchange Transfer Fund – ein börsengehandelter Mischfonds"
+  ],
+  "richtig": 0,
+  "erklaerung": "ETF steht für **Exchange Traded Fund** und bezeichnet einen **börsengehandelten Indexfonds**. Die anderen Auflösungen der Abkürzung gibt es in dieser Form nicht.",
+  "quelle": "f20",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q170",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Worum handelt es sich beim Altersvorsorge-Depot?",
+  "optionen": [
+   "Um eine Reform der geförderten privaten Altersvorsorge mit renditeorientierter Ausrichtung",
+   "Um eine Reform der gesetzlichen Rentenversicherung mit garantierter Mindestverzinsung",
+   "Um eine Ergänzung der betrieblichen Altersvorsorge mit verpflichtendem Arbeitgeberanteil",
+   "Um eine Neuregelung der privaten Krankenvorsorge mit fest vorgegebener Sparquote"
+  ],
+  "richtig": 0,
+  "erklaerung": "Das Altersvorsorge-Depot ist eine **Reform der geförderten privaten Altersvorsorge** und stellt eine **renditeorientierte** Vorsorgemöglichkeit dar. Entscheidend ist die Abgrenzung: Es verändert weder die gesetzliche Rentenversicherung noch die betriebliche Altersvorsorge.",
+  "quelle": "f19",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q171",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Zu welchem Zeitpunkt startet das Altersvorsorge-Depot?",
+  "optionen": [
+   "Zum 1.1.2027",
+   "Zum 1.1.2026",
+   "Zum 1.7.2027",
+   "Zum 1.1.2028"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Start des Altersvorsorge-Depots ist für den **1.1.2027** vorgesehen.",
+  "quelle": "f19",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q172",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Wie hoch ist die staatliche Grundzulage beim Altersvorsorge-Depot?",
+  "optionen": [
+   "50 Cent je gespartem Euro bis zu einem Eigenbeitrag von 360 Euro jährlich",
+   "25 Cent je gespartem Euro bis zu einem Eigenbeitrag von 360 Euro jährlich",
+   "50 Cent je gespartem Euro bis zu einem Eigenbeitrag von 600 Euro jährlich",
+   "75 Cent je gespartem Euro bis zu einem Eigenbeitrag von 180 Euro jährlich"
+  ],
+  "richtig": 0,
+  "erklaerung": "Bis zu einem jährlichen Eigenbeitrag von **360 Euro** gibt der Staat für jeden gesparten Euro **50 Cent** als Grundzulage dazu.",
+  "quelle": "f19",
+  "schwierigkeit": "leicht"
+ },
+ {
+  "id": "q173",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Wie werden jährliche Eigenbeiträge von 361 bis 1.800 Euro bezuschusst?",
+  "optionen": [
+   "Mit 25 Cent je gespartem Euro für weitere 1.440 Euro",
+   "Mit 50 Cent je gespartem Euro für weitere 1.440 Euro",
+   "Mit 25 Cent je gespartem Euro für weitere 1.800 Euro",
+   "Mit 10 Cent je gespartem Euro für weitere 1.440 Euro"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für die **weiteren 1.440 Euro** (also von 361 bis 1.800 Euro) gibt es **25 Cent pro gespartem Euro**. Die höhere Förderung von 50 Cent gilt nur für die ersten 360 Euro.",
+  "quelle": "f19",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q174",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Wie hoch ist die staatliche Zulage beim Altersvorsorge-Depot insgesamt, wenn jährlich 1.800 Euro eigene Beiträge eingezahlt werden?",
+  "optionen": [
+   "540 Euro",
+   "450 Euro",
+   "720 Euro",
+   "900 Euro"
+  ],
+  "richtig": 0,
+  "erklaerung": "Für die ersten 360 Euro gibt es 50 Cent je Euro (**180 Euro**), für die weiteren 1.440 Euro je 25 Cent (**360 Euro**). Zusammen ergeben sich **540 Euro** Zulage.",
+  "quelle": "f19",
+  "schwierigkeit": "schwer"
+ },
+ {
+  "id": "q175",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche Altersvorsorgeangebote stellen viele Unternehmen ihren Beschäftigten zur Verfügung?",
+  "optionen": [
+   "Betriebliche Altersvorsorgepläne und betriebliche Rentenbeiträge",
+   "Staatlich geförderte Zulagendepots und jährliche Grundzulagen",
+   "Zinsgarantierte Sparbücher und betriebliche Bausparverträge",
+   "Unternehmenseigene Indexfonds und jährliche Dividendenzahlungen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Viele Unternehmen bieten **betriebliche Altersvorsorgepläne oder betriebliche Rentenbeiträge** an, die zum Aufbau zusätzlicher Ersparnisse genutzt werden sollten.",
+  "quelle": "f16, f18",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q176",
+  "thema": "Geld, Finanzen und Altersvorsorge",
+  "frage": "Welche Empfehlung wird für den Zeitpunkt des Sparens gegeben?",
+  "optionen": [
+   "Zu Monatsbeginn sparen, und das schon zu Beginn der Berufstätigkeit",
+   "Am Monatsende sparen, was von den Einnahmen übrig geblieben ist",
+   "Erst ab der Mitte des Berufslebens regelmäßig Beträge zurücklegen",
+   "Nur in Monaten sparen, in denen keine größeren Fixkosten anfallen"
+  ],
+  "richtig": 0,
+  "erklaerung": "Empfohlen wird das Sparen **zu Monatsbeginn**, und zwar bereits **zu Beginn der Berufstätigkeit**. Das Sparen soll also nicht davon abhängen, was am Monatsende noch übrig ist.",
+  "quelle": "f16, f18",
+  "schwierigkeit": "mittel"
+ },
+ {
+  "id": "q177",
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche beiden Varianten werden beim Jahresabschluss einander gegenuebergestellt?",
+  "optionen": [
+   "Einnahmen-Ueberschuss-Rechnung und Bilanz",
+   "Einnahmen-Ueberschuss-Rechnung und Inventur",
+   "Kostenrechnung und Bilanz",
+   "Kostenrechnung und Inventur"
+  ],
+  "richtig": 0,
+  "erklaerung": "Beim Jahresabschluss stehen sich **E/Ue-Rechnung** (Einnahmen-Ueberschuss-Rechnung) und **Bilanz** als die beiden Varianten gegenueber. **Inventur** und **Kostenrechnung** gehoeren nicht zu diesem Gegensatzpaar.",
+  "quelle": "f47",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q178",
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche Bestandteile werden neben der Bilanz als Teile des Jahresabschlusses aufgefuehrt?",
+  "optionen": [
+   "Gewinn- und Verlustrechnung, Lagebericht und Anhang",
+   "Gewinn- und Verlustrechnung, Lagebericht und Inventurliste",
+   "Gewinn- und Verlustrechnung, Pruefbericht und Anhang",
+   "Kapitalflussrechnung, Lagebericht und Anhang"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zum Jahresabschluss werden **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang** genannt. Inventurliste, Pruefbericht und Kapitalflussrechnung zaehlen nicht zu den aufgefuehrten Bestandteilen.",
+  "quelle": "f47",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q179",
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche drei inhaltlichen Schwerpunkte werden fuer die Unternehmensrecherche genannt?",
+  "optionen": [
+   "Unternehmensaufbau, Unternehmensform und Jahresabschluss",
+   "Unternehmensaufbau, Unternehmensform und Marktanteil",
+   "Unternehmensleitbild, Unternehmensform und Jahresabschluss",
+   "Unternehmensaufbau, Unternehmensgroesse und Jahresabschluss"
+  ],
+  "richtig": 0,
+  "erklaerung": "Die Unternehmensrecherche gliedert sich in **Unternehmensaufbau**, **Unternehmensform** und **Jahresabschluss**. Marktanteil, Unternehmensleitbild und Unternehmensgroesse werden als eigene Schwerpunkte nicht aufgefuehrt.",
+  "quelle": "f47",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q180",
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welches Stichwort wird bei der Unternehmensrecherche unmittelbar dem Punkt Unternehmensform zugeordnet?",
+  "optionen": [
+   "Selbststaendigkeit",
+   "Haftungssumme",
+   "Mitarbeiterzahl",
+   "Betriebsergebnis"
+  ],
+  "richtig": 0,
+  "erklaerung": "Der Punkt Unternehmensform wird direkt mit dem Stichwort **Selbststaendigkeit** verknuepft. Haftungssumme, Mitarbeiterzahl und Betriebsergebnis gehoeren nicht zu den genannten Stichworten der Unternehmensrecherche.",
+  "quelle": "f47",
+  "schwierigkeit": "leicht",
+  "essential": true
+ },
+ {
+  "id": "q181",
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Welche Zusammenstellung besteht ausschliesslich aus Anlaufstellen der Unternehmensrecherche?",
+  "optionen": [
+   "Handelsregister, Bundesanzeiger und Kununu",
+   "Handelsregister, Grundbuch und Kununu",
+   "Vereinsregister, Bundesanzeiger und Kununu",
+   "Handelsregister, Bundesanzeiger und Schufa"
+  ],
+  "richtig": 0,
+  "erklaerung": "Zur Unternehmensrecherche dienen **Handelsregister**, **Bundesanzeiger**, **Kununu**, soziale Netze und Markenregister. **Grundbuch**, **Vereinsregister** und **Schufa** zaehlen nicht zu diesen Anlaufstellen und machen die uebrigen Zusammenstellungen falsch.",
+  "quelle": "f47",
+  "schwierigkeit": "mittel",
+  "essential": true
+ },
+ {
+  "id": "q182",
+  "thema": "Unternehmensrecherche und Jahresabschluss",
+  "frage": "Fuer ein neues Unternehmen soll geprueft werden, ob ein geplanter Name bereits als Marke eingetragen ist. Welcher der genannten Rechercheorte ist dafuer vorgesehen?",
+  "optionen": [
+   "Markenregister",
+   "Handelsregister",
+   "Bundesanzeiger",
+   "Kununu"
+  ],
+  "richtig": 0,
+  "erklaerung": "Fuer eingetragene Marken ist das **Markenregister** der vorgesehene Rechercheort. Handelsregister, Bundesanzeiger und Kununu werden als eigenstaendige Anlaufstellen mit anderem Gegenstand genannt.",
+  "quelle": "f47",
+  "schwierigkeit": "leicht",
+  "essential": true
+ }
+]

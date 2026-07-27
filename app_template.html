@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BWL für Designer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial' font-size='42' font-weight='900' fill='%23fff'%3EB%3C/text%3E%3C/svg%3E">
+<style id="base">
+/* ═══ NUR LAYOUT — jede Optik kommt aus den Stil-Bloecken darunter ═══ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;height:100%}
+body{height:100%;display:grid;place-items:center;background:#e7e7e3;
+  -webkit-tap-highlight-color:transparent;overscroll-behavior:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;touch-action:manipulation;
+  -webkit-user-select:none;user-select:none;text-align:left}
+svg{display:block}
+
+.app{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.view{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+.screen{padding:14px 14px 18px;display:flex;flex-direction:column;gap:11px;min-height:100%}
+.screen.pad-top{padding-top:calc(14px + env(safe-area-inset-top))}
+/* Restplatz gleichmaessig zwischen die Bloecke - aber nur auf Telefonhoehe.
+   Auf hohen Schirmen wuerden die Abstaende sonst auseinanderfallen. */
+.screen.verteilt{justify-content:space-between}
+@media (min-height:880px){ .screen.verteilt{justify-content:flex-start} }
+
+/* Tab-Leiste */
+.tabbar{flex:none;display:flex;gap:6px;
+  padding-bottom:env(safe-area-inset-bottom)}
+.tab{flex:1;display:flex;align-items:center;justify-content:center;
+  padding:11px 6px;min-height:46px;text-align:center}
+.tab-t{display:block;line-height:1}
+/* Antippbares traegt rechts ein Chevron - sonst sieht man Zeilen nicht an, dass sie Knoepfe sind */
+.tapp{position:relative}
+.tapp::after{content:'\203A';position:absolute;right:14px;top:50%;transform:translateY(-52%);
+  line-height:1;pointer-events:none}
+.tapp:disabled::after{opacity:.35}
+
+/* Kopf */
+.shead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex:none}
+.stitle{line-height:1.05}
+.ssub{line-height:1.2}
+
+/* Statistik-Streifen */
+.statstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;flex:none}
+.statcell{display:flex;flex-direction:column;gap:2px;padding:10px 11px;min-width:0}
+.statnum{line-height:1;font-variant-numeric:tabular-nums}
+.statlab{line-height:1.1}
+
+/* Kacheln */
+.hero{display:block;width:100%;padding:16px 17px;flex:none}
+.hero-t{display:block;line-height:1.1}
+.hero-s{display:block;line-height:1.3;margin-top:4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;flex:none}
+.tile{display:flex;flex-direction:column;justify-content:space-between;gap:5px;padding:13px 14px;min-height:78px}
+.tile-t{display:block;line-height:1.15}
+.tile-s{display:block;line-height:1.25}
+.tile-b{display:block;line-height:1;font-variant-numeric:tabular-nums}
+.tile:disabled{opacity:.4;cursor:not-allowed}
+
+/* XP-Leiste */
+.xpbar{display:flex;align-items:center;gap:9px;padding:9px 12px;flex:none}
+.xptrack{flex:1;height:8px;overflow:hidden;position:relative}
+.xpfill{height:100%;width:0;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.xplvl{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Diagramm-Karten */
+.chartcard{padding:13px 14px;flex:none}
+.chart-t{display:block;line-height:1;margin-bottom:10px}
+.ringwrap{display:flex;align-items:center;gap:15px}
+.ringtxt{display:flex;flex-direction:column;gap:2px}
+.ringnum{line-height:1;font-variant-numeric:tabular-nums}
+
+/* Balkenzeilen */
+.barrow{display:grid;grid-template-columns:1fr 72px 34px;align-items:center;gap:9px;padding:4px 0}
+.barlab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.bartrack{height:8px;overflow:hidden;position:relative}
+.barfill{height:100%;width:0;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.barval{text-align:right;font-variant-numeric:tabular-nums}
+
+/* Karteikasten-Faecher */
+.boxes{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.boxcol{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 2px}
+.boxn{line-height:1;font-variant-numeric:tabular-nums}
+.boxl{line-height:1}
+
+/* Heatmap */
+.heat{display:grid;grid-template-columns:repeat(14,1fr);gap:4px}
+.heatd{aspect-ratio:1}
+
+/* Chips */
+.chips{display:flex;gap:7px;flex-wrap:wrap;flex:none}
+.chip{padding:7px 13px;line-height:1.1;min-height:34px}
+
+/* Themenliste */
+.tlist{display:flex;flex-direction:column;gap:2px}
+.trow{display:grid;grid-template-columns:1fr 60px 40px;align-items:center;gap:9px;padding:9px 2px;width:100%}
+
+/* Stil-Auswahl */
+.styles{display:flex;flex-direction:column;gap:9px}
+.stylecard{display:flex;align-items:center;gap:13px;padding:12px 13px;width:100%}
+.styleprev{flex:none;width:52px;height:52px;display:grid;place-items:center;overflow:hidden;position:relative}
+.styletxt{flex:1;min-width:0}
+.style-t{display:block;line-height:1.15}
+.style-d{display:block;line-height:1.25;margin-top:2px}
+
+/* ═══ QUIZ (Vollbild, ohne Tab-Leiste) ═══ */
+.quiz{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.qtop{flex:none;display:flex;align-items:center;gap:11px;padding:calc(11px + env(safe-area-inset-top)) 14px 11px}
+.qprog{flex:1;height:7px;overflow:hidden;position:relative}
+.qprogfill{height:100%;transition:width .3s}
+.qprog.time .qprogfill{transition:width 1s linear}
+.qcount{font-variant-numeric:tabular-nums;white-space:nowrap}
+.qbody{flex:1;min-height:0;overflow-y:auto;padding:0 14px 8px;display:flex;flex-direction:column;gap:10px}
+.qmeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;flex:none}
+.qtag{padding:3px 9px;line-height:1.2;white-space:nowrap}
+.qtext{line-height:1.35}
+.qhint{line-height:1.3}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{display:flex;gap:11px;align-items:center;width:100%;padding:12px 13px;min-height:46px}
+.opts.dense .opt{padding:9px 12px;min-height:38px;gap:9px}
+.opt-k{flex:none;width:25px;height:25px;display:grid;place-items:center;line-height:1}
+.opts.dense .opt-k{width:22px;height:22px}
+.opt-t{flex:1;min-width:0;line-height:1.25}
+.fb{padding:12px 13px}
+.fb-v{display:block;line-height:1.2;margin-bottom:4px}
+.fb-p{line-height:1.35}
+.fb-q{display:block;margin-top:6px;line-height:1.2}
+.qact{flex:none;display:flex;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+.btn{flex:1;padding:14px;text-align:center;min-height:48px}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.btn.narrow{flex:0 0 auto;padding-left:19px;padding-right:19px}
+
+/* Ergebnis */
+.res-hero{padding:20px 16px;text-align:center;flex:none}
+.res-num{line-height:1;font-variant-numeric:tabular-nums}
+.res-sub{line-height:1.3;margin-top:6px}
+.rev{display:flex;flex-direction:column}
+.rev details{padding:9px 0}
+.rev summary{cursor:pointer;list-style:none;display:flex;gap:9px;align-items:flex-start;line-height:1.3}
+.rev summary::-webkit-details-marker{display:none}
+.rev-b{padding:8px 0 2px 20px;display:flex;flex-direction:column;gap:4px;line-height:1.35}
+
+/* Spielereien */
+.toast{position:fixed;left:50%;top:14%;transform:translateX(-50%) scale(.85);opacity:0;
+  padding:10px 18px;pointer-events:none;z-index:60;white-space:nowrap;
+  transition:opacity .18s, transform .18s cubic-bezier(.2,1.6,.4,1)}
+.toast.show{opacity:1;transform:translateX(-50%) scale(1)}
+#konfetti{position:fixed;inset:0;pointer-events:none;z-index:70;overflow:hidden}
+.kf{position:absolute;width:9px;height:14px;will-change:transform,opacity}
+@keyframes kfall{
+  0%{transform:translate3d(0,0,0) rotate(0);opacity:1}
+  100%{transform:translate3d(var(--dx),105vh,0) rotate(var(--rot));opacity:.15}
+}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.22)}100%{transform:scale(1)}}
+.pulse{animation:pop .34s cubic-bezier(.2,1.4,.4,1)}
+@media (prefers-reduced-motion:reduce){
+  .kf,.pulse{animation:none!important}
+  .xpfill,.barfill,.qprogfill{transition:none}
+}
+</style>
+<style id="stile">__STILE__</style>
+</head>
+<body>
+<div class="app" id="app" data-style="editorial">
+  <div id="konfetti"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script id="fragen-data" type="application/json">__FRAGEN__</script>
+<script>
+"use strict";
+
+const FRAGEN = JSON.parse(document.getElementById('fragen-data').textContent);
+const PRUEFUNGS_LAENGE = 40, PRUEFUNGS_ZEIT = 40*60, BLITZ_ZEIT = 60;
+const LS='bwl-v3', LS_SET='bwl-einstellungen';
+const LS_WILLKOMMEN='bwl-willkommen-v1';
+const TAG=86400000;
+// Sofort-Wiedervorlage: falsch beantwortete Fragen kommen im SELBEN Durchgang wieder.
+// Beim Pauken bringt das mehr als Tagesintervalle - die greifen vor der Pruefung nicht mehr.
+const WV_ABSTAND=[6,12];              // erste Wiederholung nach 6, zweite nach 12 Fragen
+const WV_MODI=new Set(['fehler','thema','alle']);
+
+// Globale Einstellungen - gelten fuer ALLE Uebungsmodi
+const EINST_VERSION = 2;
+const EINST_STD = {
+  schwierigkeit:'essential',
+  zeitlimit:true,
+  pruefung:'2026-07-29',
+  version:EINST_VERSION
+};
+let einst = (()=>{
+  let gespeichert={};
+  try{ gespeichert=JSON.parse(localStorage.getItem(LS_SET))||{}; }catch(e){}
+  if(gespeichert.version!==EINST_VERSION){
+    gespeichert.schwierigkeit='essential';
+    gespeichert.version=EINST_VERSION;
+  }
+  const wert=Object.assign({}, EINST_STD, gespeichert);
+  try{localStorage.setItem(LS_SET,JSON.stringify(wert))}catch(e){}
+  return wert;
+})();
+function setzeEinst(k,v){ einst[k]=v; try{localStorage.setItem(LS_SET,JSON.stringify(einst))}catch(e){} }
+
+const stil='editorial';
+function setzeStil(){
+  document.getElementById('app').dataset.style=stil;
+}
+
+let willkommenOffen=(()=>{
+  try{
+    return !localStorage.getItem(LS_WILLKOMMEN);
+  }catch(e){ return true }
+})();
+let onboardingRecht=null;
+
+FRAGEN.forEach(f=>{
+  f.multi=Array.isArray(f.richtig);
+  f.richtigSet=new Set(f.multi?f.richtig:[f.richtig]);
+  f.strikt=f.schwierigkeit==='schwer';
+});
+
+/* ───────── Speicher ───────── */
+function laden(){
+  try{const s=JSON.parse(localStorage.getItem(LS));
+    if(s&&s.stats) return Object.assign({stats:{},versuche:[],rekorde:{},tage:{},xp:0},s);
+  }catch(e){}
+  return {stats:{},versuche:[],rekorde:{},tage:{},xp:0};
+}
+function sichern(){try{localStorage.setItem(LS,JSON.stringify(stand))}catch(e){}}
+let stand=laden();
+
+const datumLokal=d=>{
+  const z=n=>String(n).padStart(2,'0');
+  return `${d.getFullYear()}-${z(d.getMonth()+1)}-${z(d.getDate())}`;
+};
+const heute=()=>datumLokal(new Date());
+function statFuer(id){
+  if(!stand.stats[id]) stand.stats[id]={gesehen:0,richtig:0,falsch:0,zuletzt:null};
+  return stand.stats[id];
+}
+// Vier Zustaende statt Karteikasten-Faecher
+function status(f){
+  const s=stand.stats[f.id];
+  if(!s||!s.gesehen) return 'neu';
+  if(s.zuletzt==='falsch') return 'falsch';
+  return (s.richtig>=2 && s.falsch===0) ? 'sitzt' : 'wackelig';
+}
+function merkeAntwort(id,punkte,schwierigkeit){
+  const st=statFuer(id), voll=punkte>=1;
+  st.gesehen++;
+  if(voll){st.richtig++;st.zuletzt='richtig';}
+  else{st.falsch++;st.zuletzt='falsch';}
+  const d=heute();
+  if(!stand.tage[d]) stand.tage[d]={n:0,ok:0};
+  stand.tage[d].n++; if(voll) stand.tage[d].ok++;
+  stand.xp=(stand.xp||0)+Math.round(punkte*(schwierigkeit==='schwer'?18:schwierigkeit==='mittel'?12:8));
+  sichern();
+}
+const LVL=xp=>Math.floor(Math.sqrt((xp||0)/40))+1;
+const LVL_XP=l=>Math.pow(l-1,2)*40;
+function fehlerIds(){return basis().filter(f=>stand.stats[f.id]&&stand.stats[f.id].zuletzt==='falsch').map(f=>f.id)}
+const ungesehen=()=>basis().filter(f=>status(f)==='neu');
+const luecken=()=>basis().filter(f=>{const st=status(f);return st==='falsch'||st==='wackelig'});
+function statusVerteilung(pool=basis()){
+  const v={neu:0,falsch:0,wackelig:0,sitzt:0};
+  pool.forEach(f=>v[status(f)]++);
+  return v;
+}
+function statusTabelle(v){
+  return `<div class="boxes status-boxes" style="grid-template-columns:repeat(4,1fr)">
+    <div class="boxcol" data-state="falsch"><span class="boxn">${v.falsch}</span><span class="boxl">Falsch</span></div>
+    <div class="boxcol" data-state="wackelig"><span class="boxn">${v.wackelig}</span><span class="boxl">Wackelt</span></div>
+    <div class="boxcol" data-state="neu"><span class="boxn">${v.neu}</span><span class="boxl">Neu</span></div>
+    <div class="boxcol" data-state="sitzt"><span class="boxn">${v.sitzt}</span><span class="boxl">Sitzt</span></div>
+  </div>`;
+}
+function statusBalken(v,{kompakt=false}={}){
+  const ges=v.falsch+v.wackelig+v.neu+v.sitzt||1;
+  const segment=(status,n)=>`<span class="status-segment" data-state="${status}"
+    style="width:${(n/ges*100).toFixed(4)}%" title="${n}"></span>`;
+  return `<div class="status-progress${kompakt?' compact':''}" role="img"
+      aria-label="${v.falsch} falsch, ${v.wackelig} wackelt, ${v.neu} neu, ${v.sitzt} sitzt">
+      ${segment('falsch',v.falsch)}${segment('wackelig',v.wackelig)}
+      ${segment('sitzt',v.sitzt)}${segment('neu',v.neu)}
+    </div>`;
+}
+function rekord(k,w){
+  if(!stand.rekorde) stand.rekorde={};
+  if(!stand.rekorde[k]||w>stand.rekorde[k]){stand.rekorde[k]=w;sichern();return true}
+  return false;
+}
+function beherrscht(){return basis().filter(f=>status(f)==='sitzt').length}
+function gesehenZahl(){return basis().filter(f=>status(f)!=='neu').length}
+// Tage bis zur Pruefung
+function tageBis(){
+  if(!einst.pruefung) return null;
+  const heut=new Date(); heut.setHours(0,0,0,0);
+  const p=new Date(einst.pruefung+'T00:00:00');
+  return Math.round((p-heut)/TAG);
+}
+
+/* ───────── Hilfen ───────── */
+function mische(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function entdoppleFamilien(pool){
+  const g=new Set();
+  return pool.filter(f=>{if(!f.familie)return true;if(g.has(f.familie))return false;g.add(f.familie);return true});
+}
+function gewichtet(pool,n){
+  const b=pool.map(f=>{
+    const s=stand.stats[f.id]; let g=1;
+    if(!s||s.gesehen===0)g=3; else if(s.zuletzt==='falsch')g=4; else if(s.richtig>=2)g=.45;
+    return{f,s:Math.random()/g};
+  });
+  b.sort((x,y)=>x.s-y.s);
+  return b.slice(0,n).map(x=>x.f);
+}
+function themen(pool=FRAGEN){
+  const m=new Map();pool.forEach(f=>m.set(f.thema,(m.get(f.thema)||0)+1));
+  return [...m.entries()].sort((a,b)=>a[0].localeCompare(b[0],'de'));
+}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const mmss=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+function bewerte(f,gew){
+  const g=new Set(gew);
+  if(!f.multi) return g.has(f.richtig)?1:0;
+  let t=0,x=0; g.forEach(i=>f.richtigSet.has(i)?t++:x++);
+  const alle=t===f.richtigSet.size&&x===0;
+  if(f.strikt) return alle?1:0;
+  if(alle) return 1;
+  return Math.max(0,Math.min(1,(t-x)/f.richtigSet.size));
+}
+function themaQuote(t,pool=FRAGEN){
+  const ids=pool.filter(f=>f.thema===t);
+  const ok=ids.filter(f=>{const s=stand.stats[f.id];return s&&s.zuletzt==='richtig'}).length;
+  return {ok,n:ids.length,pct:ids.length?Math.round(ok/ids.length*100):0};
+}
+
+/* ───────── Spielereien ───────── */
+let toastTimer=null;
+function toast(txt){
+  const el=document.getElementById('toast');
+  el.textContent=txt; el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.classList.remove('show'),1100);
+}
+function konfetti(n=70){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  const box=document.getElementById('konfetti');
+  const cs=getComputedStyle(document.getElementById('app'));
+  const farben=['--kf1','--kf2','--kf3','--kf4'].map(v=>cs.getPropertyValue(v).trim()||'#888');
+  for(let i=0;i<n;i++){
+    const d=document.createElement('i');
+    d.className='kf';
+    d.style.left=Math.random()*100+'vw';
+    d.style.top=(-12-Math.random()*22)+'vh';
+    d.style.background=farben[i%farben.length];
+    d.style.setProperty('--dx',(Math.random()*230-115)+'px');
+    d.style.setProperty('--rot',(Math.random()*900-450)+'deg');
+    d.style.animation=`kfall ${1.5+Math.random()*1.3}s cubic-bezier(.25,.6,.5,1) ${Math.random()*.35}s forwards`;
+    box.appendChild(d);
+    setTimeout(()=>d.remove(),3400);
+  }
+}
+function zaehlHoch(el,ziel,dauer=650){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=ziel;return}
+  const start=performance.now(), von=0;
+  const eins=Number.isInteger(ziel);
+  (function tick(t){
+    const p=Math.min(1,(t-start)/dauer), e=1-Math.pow(1-p,3);
+    const w=von+(ziel-von)*e;
+    el.textContent=eins?Math.round(w):(Math.round(w*10)/10).toString().replace('.',',');
+    if(p<1) requestAnimationFrame(tick);
+  })(start);
+}
+
+/* ───────── Diagramme (reines SVG) ───────── */
+function ring(pct,size=76){
+  const r=size/2-3, c=2*Math.PI*r, off=c*(1-pct/100);
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" class="ringsvg"
+    aria-hidden="true" focusable="false">
+    <circle class="ringbg" cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke-width="2"/>
+    <circle class="ringfg" cx="${size/2}" cy="${size/2}" r="${r}" fill="none" stroke-width="2"
+      stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"
+      transform="rotate(-90 ${size/2} ${size/2})" stroke-linecap="butt"/>
+  </svg>`;
+}
+function verlauf(werte,w=280,h=54){
+  if(werte.length<2) return `<div class="leer">Noch keine abgeschlossenen Lernrunden.</div>`;
+  const max=100, dx=w/(werte.length-1);
+  const pts=werte.map((v,i)=>[i*dx, h-4-(v/max)*(h-10)]);
+  const d=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const flaeche=d+` L ${w} ${h} L 0 ${h} Z`;
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="none"
+    class="linesvg" aria-hidden="true" focusable="false">
+    <path class="linefill" d="${flaeche}"/>
+    <path class="linestroke" d="${d}" fill="none" stroke-width="2" stroke-linejoin="miter" stroke-linecap="square"/>
+    ${pts.slice(-1).map(p=>`<circle class="linedot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4"/>`).join('')}
+  </svg>`;
+}
+function heatmap(){
+  const tage=[];
+  for(let i=13;i>=0;i--){
+    const d=datumLokal(new Date(Date.now()-i*TAG));
+    const e=stand.tage[d];
+    tage.push({d,n:e?e.n:0});
+  }
+  const max=Math.max(1,...tage.map(t=>t.n));
+  return `<div class="heat">${tage.map(t=>{
+    const lv=t.n===0?0:Math.min(4,Math.ceil(t.n/max*4));
+    return `<div class="heatd" data-lv="${lv}" title="${t.d}: ${t.n} Fragen"></div>`;
+  }).join('')}</div>`;
+}
+
+/* ───────── Zustand ───────── */
+let tab='ueben', sitzung=null, ticker=null, zettel=false, zettelOffen=true;
+const app=document.getElementById('app');
+function stopTicker(){if(ticker){clearInterval(ticker);ticker=null}}
+const istEssential = f => f.essential===true;
+// Die global eingestellte Schwierigkeit gilt fuer JEDEN Uebungsmodus.
+function basis(){
+  const u=einst.schwierigkeit;
+  if(u==='alle') return FRAGEN.slice();
+  if(u==='essential') return FRAGEN.filter(istEssential);
+  return FRAGEN.filter(f=>f.schwierigkeit===u);
+}
+const stufeName = s => s==='alle'
+  ? 'Alles'
+  : s==='essential'
+    ? 'Essential'
+    : s[0].toUpperCase()+s.slice(1);
+
+function starte(modus,opt={}){
+  stopTicker();
+  let pool,titel='',endlos=false,zeit=0;
+  const B=basis();
+  if(modus==='pruefung'){
+    const p=entdoppleFamilien(mische(B));
+    pool=gewichtet(p,Math.min(PRUEFUNGS_LAENGE,p.length)); titel='Prüfung';
+    if(einst.zeitlimit) zeit=PRUEFUNGS_ZEIT;
+  }else if(modus==='lernen'){
+    const neu=mische(B.filter(f=>status(f)==='neu'));
+    const luecke=mische(B.filter(f=>{const s=status(f);return s==='falsch'||s==='wackelig'}));
+    const sicher=mische(B.filter(f=>status(f)==='sitzt'));
+    pool=entdoppleFamilien(neu.concat(luecke,sicher)).slice(0,10); titel='Lernen';
+  }else if(modus==='thema'){
+    pool=mische(B.filter(f=>f.thema===opt.thema)); titel=opt.thema;
+  }else if(modus==='fehler'){
+    const ids=new Set(fehlerIds()); pool=mische(B.filter(f=>ids.has(f.id))); titel='Fehler';
+  }else if(modus==='fehlerAlle'){
+    pool=mische(luecken()); titel='Lücken';
+  }else if(modus==='blitz'){
+    pool=mische(B); titel='Blitz'; zeit=BLITZ_ZEIT; endlos=true;
+  }else{pool=mische(B); titel='Alle'}
+
+  if(!pool.length){toast('Keine Fragen für diese Auswahl');return}
+  sitzung={modus,titel,endlos,fragen:pool.map(f=>({frage:f,reihenfolge:mische(f.optionen.map((_,i)=>i)),noetig:0})),
+    i:0,gewaehlt:new Set(),aufgedeckt:false,punkte:0,antworten:[],serie:0,besteSerie:0,
+    zeitGesamt:zeit,zeitRest:zeit,fertig:false,xpVor:stand.xp||0,erstmalig:pool.length,wdh:0};
+  if(zeit){
+    ticker=setInterval(()=>{
+      if(!sitzung||sitzung.fertig){stopTicker();return}
+      sitzung.zeitRest--;
+      if(sitzung.zeitRest<=0){zeitAbgelaufen();return}
+      uhrAktualisieren();
+    },1000);
+  }
+  zeichne();
+}
+const sofort=()=>sitzung.modus!=='pruefung';
+const aktuelle=()=>sitzung.fragen[sitzung.i%sitzung.fragen.length];
+
+function waehle(pos){
+  if(sitzung.aufgedeckt)return;
+  const f=aktuelle().frage;
+  if(f.multi){
+    sitzung.gewaehlt.has(pos)?sitzung.gewaehlt.delete(pos):sitzung.gewaehlt.add(pos);
+    zeichne();
+  }else{
+    sitzung.gewaehlt=new Set([pos]);
+    sofort()?decke():zeichne();
+  }
+}
+// Falsche Frage kommt im selben Durchgang wieder - erst nach 6, dann nach 12 Fragen.
+function wiedervorlage(e,p){
+  if(!WV_MODI.has(sitzung.modus)) return;
+  let noetig = e.noetig||0;
+  if(p<1) noetig = 2;                 // falsch: muss zweimal sitzen
+  else if(noetig>0) noetig -= 1;      // Wiederholung richtig: einmal weniger noetig
+  else return;
+  if(noetig<=0) return;
+  const abstand = WV_ABSTAND[noetig===2?0:1];
+  const pos = Math.min(sitzung.i+abstand, sitzung.fragen.length);
+  sitzung.fragen.splice(pos,0,{
+    frage:e.frage, reihenfolge:mische(e.frage.optionen.map((_,k)=>k)), noetig, wdh:true
+  });
+  sitzung.wdh++;
+}
+
+function decke(){
+  const e=aktuelle(), echt=[...sitzung.gewaehlt].map(p=>e.reihenfolge[p]);
+  const p=bewerte(e.frage,echt);
+  sitzung.aufgedeckt=true; sitzung.punkte+=p;
+  sitzung.antworten.push({id:e.frage.id,punkte:p,gewaehlt:echt,wdh:!!e.wdh});
+  merkeAntwort(e.frage.id,p,e.frage.schwierigkeit);
+  wiedervorlage(e,p);
+  if(p>=1){
+    sitzung.serie++; sitzung.besteSerie=Math.max(sitzung.besteSerie,sitzung.serie);
+    if(sitzung.serie>0&&sitzung.serie%5===0) toast('🔥 '+sitzung.serie+' in Folge');
+  }else sitzung.serie=0;
+  if(sitzung.modus==='blitz'){zeichne();setTimeout(()=>{if(sitzung&&!sitzung.fertig)weiter()},680);return}
+  zeichne();
+}
+function zeitAbgelaufen(){
+  if(!sitzung||sitzung.fertig)return;
+  sitzung.zeitRest=0;
+  // Eine im Moment des Timeouts gewaehlte Antwort zaehlt noch zur Pruefung.
+  if(sitzung.modus==='pruefung'&&!sitzung.aufgedeckt&&sitzung.gewaehlt.size){
+    const e=aktuelle(), echt=[...sitzung.gewaehlt].map(p=>e.reihenfolge[p]);
+    const p=bewerte(e.frage,echt);
+    sitzung.punkte+=p;
+    sitzung.antworten.push({id:e.frage.id,punkte:p,gewaehlt:echt,wdh:false});
+    merkeAntwort(e.frage.id,p,e.frage.schwierigkeit);
+  }
+  ergebnis();
+}
+function weiter(){
+  if(!sitzung.aufgedeckt){
+    if(!sitzung.gewaehlt.size)return;
+    decke();
+    if(sofort())return;
+  }
+  if(!sitzung.endlos&&sitzung.i>=sitzung.fragen.length-1){ergebnis();return}
+  sitzung.i++;
+  if(sitzung.endlos&&sitzung.i>=sitzung.fragen.length){
+    sitzung.fragen=mische(basis()).map(f=>({frage:f,reihenfolge:mische(f.optionen.map((_,i)=>i))}));
+    sitzung.i=0;
+  }
+  sitzung.gewaehlt=new Set(); sitzung.aufgedeckt=false;
+  zeichne();
+}
+function ergebnis(){
+  stopTicker(); sitzung.fertig=true;
+  // Gewertet wird der ERSTE Versuch je Frage - Wiedervorlagen wuerden die Quote sonst schoenrechnen
+  const erst=sitzung.antworten.filter(a=>!a.wdh);
+  const n=erst.length, gesamt=sitzung.modus==='pruefung'?sitzung.erstmalig:n;
+  const voll=erst.filter(a=>a.punkte>=1).length;
+  if(sitzung.modus==='blitz') sitzung.neu=rekord('blitz',voll);
+  sitzung.serieRekord=rekord('serie',sitzung.besteSerie);
+  const pErst=erst.reduce((x,a)=>x+a.punkte,0);
+  if(gesamt) stand.versuche.push({modus:sitzung.modus,punkte:Math.round(pErst*10)/10,gesamt,ts:Date.now()});
+  if(stand.versuche.length>80) stand.versuche=stand.versuche.slice(-80);
+  sichern();
+  zeichne();
+  const quote=gesamt?pErst/gesamt:0;
+  if(sitzung.neu||sitzung.serieRekord||quote>=.9) setTimeout(()=>konfetti(sitzung.neu?110:70),260);
+}
+
+/* ───────── Zeichnen ───────── */
+// Toast und Konfetti liegen in .app (damit die Stil-Selektoren greifen),
+// duerfen beim Neuzeichnen aber nicht mitgeloescht werden.
+const OVERLAY = ['konfetti','toast'].map(id=>document.getElementById(id));
+function setzeInhalt(html){
+  app.innerHTML=html;
+  OVERLAY.forEach(el=>app.appendChild(el));
+}
+function zeichne(){
+  if(willkommenOffen) return onboardingRecht?zeichneOnboardingRecht():zeichneWillkommen();
+  if(sitzung) return sitzung.fertig?zeichneErgebnis():zeichneFrage();
+  if(zettel) return zeichneZettel();
+  setzeInhalt(`<main class="view" id="view">${ansicht()}</main>${tabbar()}`);
+  bindeStart();
+  animiereBalken();
+}
+function tabbar(){
+  const icons={
+    ueben:`<path d="M3 10 12 3l9 7v11h-6v-7H9v7H3z"/>`,
+    themen:`<path d="M3 4h7l2 2 2-2h7v16h-7l-2 2-2-2H3z"/><path d="M12 6v16"/>`,
+    statistik:`<path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>`,
+    einstellungen:`<path d="M3 5h5m4 0h9M3 12h10m4 0h4M3 19h3m4 0h11"/>
+      <path d="M8 2h4v6H8zM13 9h4v6h-4zM6 16h4v6H6z"/>`
+  };
+  const T=[
+    ['ueben','Start'],
+    ['themen','Themen'],
+    ['statistik','Statistik'],
+    ['einstellungen','Einstellungen'],
+  ];
+  return `<nav class="tabbar" aria-label="Hauptnavigation">${T.map(([id,t])=>
+    `<button class="tab${tab===id?' is-on':''}" data-tab="${id}" aria-label="${t}" title="${t}"
+      ${tab===id?'aria-current="page"':''}>
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"
+        aria-hidden="true" focusable="false">${icons[id]}</svg></button>`
+  ).join('')}</nav>`;
+}
+function ansicht(){
+  if(tab==='datenschutz') return viewDatenschutz();
+  if(tab==='impressum') return viewImpressum();
+  if(tab==='statistik') return viewStatistik();
+  if(tab==='themen') return viewThemen();
+  if(tab==='einstellungen') return viewEinstellungen();
+  return viewUeben();
+}
+
+function ubenDaten(){
+  const B=basis(), offen=ungesehen().length, ges=gesehenZahl(), luk=luecken().length;
+  const sitzt=beherrscht();
+  const v=statusVerteilung(B);
+  const fehler=fehlerIds().length, r=stand.rekorde||{}, d=stand.tage[heute()];
+  const tage=tageBis();
+  const ziel=(tage!==null&&tage>0&&offen>0)?Math.ceil(offen/tage):0;
+  const heuteN=d?d.n:0;
+  const tagesBasis=ziel||Math.max(1,B.length);
+  return {B,offen,ges,luk,sitzt,v,fehler,r,heuteN,tage,ziel,
+    tagesPct:Math.min(100,Math.round(heuteN/tagesBasis*100)),
+    countdown: tage===null?'LVL '+LVL(stand.xp||0)
+      : tage>1?'NOCH '+tage+' TAGE' : tage===1?'MORGEN' : tage===0?'HEUTE' : 'LVL '+LVL(stand.xp||0)};
+}
+function viewUeben(){
+  const D=ubenDaten();
+  const weiterText=D.offen
+    ? '10 Fragen · '+D.offen+' neu'
+    : D.luk
+      ? '10 Fragen · '+D.luk+' wiederholen'
+      : '10 gemeisterte Fragen wiederholen';
+  return `<div class="screen pad-top home">
+    <header class="brandhead">
+      <h1 class="brand">BWL für Designer</h1>
+      <span class="brand-sub">Klausurvorbereitung</span>
+    </header>
+
+    <section class="home-progress" aria-label="Lernstatus">
+      ${statusTabelle(D.v)}
+      ${statusBalken(D.v)}
+    </section>
+
+    <button class="primary-row" data-go="lernen">
+      <span class="primary-copy"><span class="primary-title">Lernen</span>
+        <span class="primary-sub">${weiterText}</span></span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+
+    <div class="mode-list">
+      <button class="mode-row" data-go="pruefung">
+        <span><span class="mode-title">Prüfung</span>
+          <span class="mode-sub">${Math.min(PRUEFUNGS_LAENGE,D.B.length)} Fragen · ${einst.zeitlimit?'40 Minuten':'ohne Zeitlimit'}</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="mode-row" data-go="blitz">
+        <span><span class="mode-title">Blitz</span>
+          <span class="mode-sub">60 Sekunden${D.r.blitz?' · Rekord '+D.r.blitz:''}</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    <div class="compact-modes">
+      <button class="compact-mode" data-go="fehler" ${D.fehler?'':'disabled'}>
+        <span class="mode-title">Fehler</span>
+        <span class="mode-sub">${D.fehler?D.fehler+' offen':'keine offenen Fehler'}</span>
+      </button>
+      <button class="compact-mode" data-zettel ${D.luk?'':'disabled'}>
+        <span class="mode-title">Spickzettel</span>
+        <span class="mode-sub">${D.luk?(D.luk===1?'1 Lücke':D.luk+' Lücken'):'noch leer'}</span>
+      </button>
+    </div>
+  </div>`;
+}
+
+function viewStatistik(){
+  const B=basis(), ges=B.length, sitzt=beherrscht();
+  const pct=ges?Math.round(sitzt/ges*100):0;
+  const v=statusVerteilung();
+  const letzte=stand.versuche.slice(-12).map(x=>Math.round(x.punkte/x.gesamt*100));
+  const gesehen=gesehenZahl();
+
+  return `<div class="screen pad-top">
+    <div class="shead"><div><div class="stitle">Statistik</div>
+      <div class="ssub">${gesehen}/${ges} bearbeitet · ${stufeName(einst.schwierigkeit)}</div></div></div>
+
+    <div class="chartcard">
+      <div class="ringwrap">
+        ${ring(pct)}
+        <div class="ringtxt">
+          <span class="ringnum" data-count="${pct}">0</span>
+          <span class="statlab">gemeistert<br>(zweimal richtig, kein Fehler)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Lernstatus</span>
+      ${statusTabelle(v)}
+      ${statusBalken(v)}
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Letzte Durchgänge</span>
+      ${verlauf(letzte)}
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Letzte 14 Tage</span>
+      ${heatmap()}
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Nach Thema</span>
+      ${themen(B).map(([t])=>{const pool=B.filter(f=>f.thema===t), q=themaQuote(t,B), tv=statusVerteilung(pool);return `<div class="topic-stat">
+        <div class="topic-stat-head"><span class="barlab">${esc(t)}</span>
+          <span class="barval">${tv.sitzt}/${q.n}</span></div>
+        ${statusBalken(tv,{kompakt:true})}
+      </div>`}).join('')}
+    </div>
+  </div>`;
+}
+
+function viewThemen(){
+  const B=basis();
+  const T=themen(B);
+  return `<div class="screen pad-top">
+    <div class="shead"><div><div class="stitle">Themen</div>
+      <div class="ssub">${T.length} Blöcke · ${stufeName(einst.schwierigkeit)}</div></div></div>
+    <div class="tlist">${T.map(([t,n])=>{
+      const q=themaQuote(t,B);
+      return `<button class="trow tapp" data-thema="${esc(t)}">
+        <span class="barlab">${esc(t)}</span>
+        <div class="bartrack"><div class="barfill" data-w="${q.pct}"></div></div>
+        <span class="barval">${n}</span>
+      </button>`;
+    }).join('')}</div>
+  </div>`;
+}
+
+function viewEinstellungen(){
+  const zahl = s => s==='alle'
+    ? FRAGEN.length
+    : s==='essential'
+      ? FRAGEN.filter(istEssential).length
+      : FRAGEN.filter(f=>f.schwierigkeit===s).length;
+  return `<div class="screen pad-top">
+    <div class="shead"><div><div class="stitle">Einstellungen</div><div class="ssub">gelten für alle Modi</div></div></div>
+
+    <div class="chartcard">
+      <span class="chart-t">Umfang</span>
+      <div class="chips scope-grid">${['alle','leicht','mittel','schwer','essential'].map(s=>
+        `<button class="chip${einst.schwierigkeit===s?' is-on':''}" data-schwer="${s}"
+          aria-pressed="${einst.schwierigkeit===s}">${stufeName(s)} ${zahl(s)}</button>`).join('')}</div>
+      <div class="setting-note">${
+        einst.schwierigkeit==='alle'
+          ? 'Der ganze Stoff. Ein Durchgang dauert rund zwei Stunden.'
+          : einst.schwierigkeit==='essential'
+            ? 'Die wichtigsten Fragen aus den elf Wiederholungsfolien, unabhängig von ihrer normalen Schwierigkeitsstufe.'
+            : 'Diese Auswahl deckt nicht den gesamten Stoff ab und eignet sich für gezieltes Training.'
+      }</div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Prüfungstermin</span>
+      <div class="chips">
+        <button class="chip is-on" data-termin>${einst.pruefung?new Date(einst.pruefung+'T00:00:00').toLocaleDateString('de-DE',{weekday:'short',day:'2-digit',month:'2-digit',year:'numeric'}):'kein Termin'}</button>
+        ${einst.pruefung?`<button class="chip" data-termin-weg>löschen</button>`:''}
+      </div>
+      <div class="setting-note">${(()=>{
+        const t=tageBis();
+        if(t===null) return 'Ohne Termin gibt es kein Tagesziel.';
+        if(t<0) return 'Termin liegt in der Vergangenheit.';
+        if(t===0) return 'Heute ist es soweit.';
+        const offen=ungesehen().length;
+        return offen ? `Noch ${t} Tag${t===1?'':'e'}. Um alles einmal zu sehen: ${Math.ceil(offen/t)} Fragen pro Tag.`
+                     : `Noch ${t} Tag${t===1?'':'e'}. Du hast schon alles einmal gesehen.`;
+      })()}</div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Zeitlimit in der Prüfung</span>
+      <div class="chips">
+        <button class="chip${einst.zeitlimit?' is-on':''}" data-zeit="1"
+          aria-pressed="${einst.zeitlimit}">40 Minuten</button>
+        <button class="chip${einst.zeitlimit?'':' is-on'}" data-zeit="0"
+          aria-pressed="${!einst.zeitlimit}">ohne Uhr</button>
+      </div>
+      <div class="setting-note">${einst.zeitlimit
+        ? '40 Fragen in 40 Minuten, wie in der Klausur.'
+        : 'Die Prüfung läuft ohne Zeitdruck.'}</div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Fortschritt</span>
+      <div class="chips"><button class="chip" data-reset>Alles zurücksetzen</button></div>
+    </div>
+
+    <div class="legal-links" aria-label="Rechtliche Informationen">
+      <button data-tab-jump="datenschutz">Datenschutz</button>
+      <span aria-hidden="true">·</span>
+      <button data-tab-jump="impressum">Impressum</button>
+    </div>
+  </div>`;
+}
+
+function viewDatenschutz(){
+  return `<div class="screen pad-top legal-page">
+    <div class="shead"><div><div class="stitle">Datenschutz</div>
+      <div class="ssub">Stand: Juli 2026</div></div></div>
+
+    <section>
+      <h2>Lokale Speicherung</h2>
+      <p>Diese Lernapp hat kein Benutzerkonto und kein eigenes Backend. Lernfortschritt,
+        Statistiken, Einstellungen und der Status der Startseite werden ausschließlich
+        im lokalen Speicher dieses Browsers gespeichert.</p>
+      <p>Die App übermittelt diese Daten nicht an Erasmus. Es gibt keinen automatischen
+        Sync und kein Backup. Werden Browser- oder Website-Daten gelöscht, geht der
+        gespeicherte Fortschritt verloren.</p>
+    </section>
+
+    <section>
+      <h2>Technische Zugriffsdaten</h2>
+      <p>Die Website wird über GitHub Pages bereitgestellt. Beim Abruf kann GitHub
+        technisch notwendige Zugriffsdaten verarbeiten, zum Beispiel IP-Adresse,
+        Zeitpunkt und angeforderte Datei. Einzelheiten beschreibt die
+        <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
+          target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub ↗</a>.</p>
+    </section>
+
+    <section>
+      <h2>Keine Analyse</h2>
+      <p>Die App verwendet keine Analyse-, Werbe- oder Trackingdienste und lädt keine
+        externen Inhalte automatisch. Externe Quellen werden erst aufgerufen, wenn ein
+        Quellenlink aktiv geöffnet wird.</p>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>Erasmus Schmidt<br>
+        Slabystr. 23<br>
+        12459 Berlin<br>
+        Telefon: <a href="tel:+4917661115400">0176 61115400</a><br>
+        <span class="legal-missing">E-Mail-Adresse noch zu ergänzen</span></p>
+    </section>
+
+    <button class="btn btn-primary legal-back" data-tab-jump="einstellungen">Zurück</button>
+  </div>`;
+}
+
+function viewImpressum(){
+  return `<div class="screen pad-top legal-page">
+    <div class="shead"><div><div class="stitle">Impressum</div>
+      <div class="ssub">Anbieterkennzeichnung</div></div></div>
+
+    <section>
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>Erasmus Schmidt<br>
+        Slabystr. 23<br>
+        12459 Berlin<br>
+        Deutschland<br>
+        Telefon: <a href="tel:+4917661115400">0176 61115400</a><br>
+        <span class="legal-missing">E-Mail-Adresse noch zu ergänzen</span></p>
+    </section>
+
+    <section>
+      <h2>Projekt</h2>
+      <p>Private, nicht-kommerzielle Lernapp zur Klausurvorbereitung. Die Fragen wurden
+        mithilfe von KI aus Vorlesungsfolien erstellt und anschließend fachlich
+        gegengeprüft. Es besteht keine Gewähr für Richtigkeit oder Vollständigkeit.</p>
+    </section>
+
+    <section>
+      <h2>Hinweis</h2>
+      <p>Für eine vollständige Anbieterkennzeichnung muss noch eine E-Mail-Adresse
+        ergänzt werden.</p>
+    </section>
+
+    <button class="btn btn-primary legal-back" data-tab-jump="einstellungen">Zurück</button>
+  </div>`;
+}
+
+function zeichneWillkommen(){
+  setzeInhalt(`<main class="view welcome-view">
+    <div class="welcome-screen">
+      <header>
+        <h1>Hello.</h1>
+        <span>Kurz bevor es losgeht</span>
+      </header>
+
+      <div class="welcome-copy">
+        <p>Alle Fragen wurden aus den Vorlesungsfolien dieses Kurses mithilfe von KI
+          in Lernfragen umgewandelt und anschließend gegengecheckt.</p>
+        <p>Manche Lehrinhalte sind tatsächlich fachlich veraltet. Diese Stellen sind
+          in der App mit einem roten Sternchen gekennzeichnet.</p>
+        <p>KI und Gegencheck hin oder her: Es gibt logischerweise keine Gewähr für
+          Richtigkeit oder Vollständigkeit. In der App stecken sicherlich noch Fehler.</p>
+      </div>
+
+      <div class="welcome-storage">
+        <span>Nur lokal gespeichert</span>
+        <p>Da ich hier kein krasses Backend gebaut habe, werden dein Lernfortschritt
+          und deine Einstellungen nur lokal in diesem Browser gespeichert. Es gibt
+          keinen Sync und kein Backup. Löschst du die Browserdaten, ist der Fortschritt weg.</p>
+      </div>
+
+      <div class="welcome-copy welcome-last">
+        <p>Die App ist nicht perfekt und nur entstanden, weil ich Lust hatte, eine
+          App zu bauen. lol</p>
+        <p class="welcome-signoff">Grüße<br>Erasmus</p>
+      </div>
+
+      <button class="btn btn-primary welcome-close" type="button">App starten</button>
+      <div class="legal-links" aria-label="Rechtliche Informationen">
+        <button data-onboarding-legal="datenschutz">Datenschutz</button>
+        <span aria-hidden="true">·</span>
+        <button data-onboarding-legal="impressum">Impressum</button>
+      </div>
+    </div>
+  </main>`);
+
+  const button=app.querySelector('.welcome-close');
+  button.onclick=()=>{
+    try{localStorage.setItem(LS_WILLKOMMEN,'1')}catch(e){}
+    willkommenOffen=false;
+    zeichne();
+  };
+  app.querySelectorAll('[data-onboarding-legal]').forEach(link=>link.onclick=()=>{
+    onboardingRecht=link.dataset.onboardingLegal;
+    zeichne();
+  });
+  requestAnimationFrame(()=>button.focus());
+}
+
+function zeichneOnboardingRecht(){
+  const inhalt=onboardingRecht==='datenschutz'?viewDatenschutz():viewImpressum();
+  setzeInhalt(`<main class="view">${inhalt}</main>`);
+  const back=app.querySelector('.legal-back');
+  back.onclick=()=>{
+    onboardingRecht=null;
+    zeichne();
+  };
+}
+
+// Kurze Kernaussage; die vollstaendige Begruendung bleibt ueber den Info-Button erreichbar.
+function kernsatz(t){
+  const sauber=String(t).replace(/\s+/g,' ').trim();
+  const m=sauber.match(/^(.{0,120}?[.!?])(\s|$)/);
+  if(m) return m[1];
+  if(sauber.length<=120) return sauber;
+  return sauber.slice(0,117).replace(/\s+\S*$/,'').trim()+'…';
+}
+function zeichneZettel(){
+  const liste=luecken().map(f=>{
+    const st=stand.stats[f.id]||{};
+    return {f, falsch:st.falsch||0, status:status(f)};
+  }).sort((a,b)=> b.falsch-a.falsch || a.f.thema.localeCompare(b.f.thema,'de'));
+
+  const proThema={};
+  liste.forEach(x=>(proThema[x.f.thema]=proThema[x.f.thema]||[]).push(x));
+
+  setzeInhalt(`<div class="quiz">
+    <div class="qtop">
+      <button class="qx" data-ab aria-label="Spickzettel schließen">✕</button>
+      <div class="qprog" role="progressbar" aria-label="Spickzettel"
+        aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+        <div class="qprogfill" style="width:100%"></div></div>
+      <span class="qcount">${liste.length}</span>
+    </div>
+    <div class="qbody">
+      <div class="res-hero" style="padding-top:0">
+        <div class="res-num">${liste.length}</div>
+        <div class="res-sub">${liste.length===1?'Lücke':'Lücken'} · nur deine Fehler, nicht der ganze Stoff</div>
+      </div>
+      <div class="chips">
+        <button class="chip${zettelOffen?' is-on':''}" data-zauf="1"
+          aria-pressed="${zettelOffen}">Antworten zeigen</button>
+        <button class="chip${zettelOffen?'':' is-on'}" data-zauf="0"
+          aria-pressed="${!zettelOffen}">abdecken</button>
+      </div>
+      ${liste.length===0?`<div class="leer">Keine Lücken. Mach einen Durchgang, dann füllt sich das hier.</div>`:''}
+      ${Object.entries(proThema).sort((a,b)=>a[0].localeCompare(b[0],'de')).map(([t,xs])=>`
+        <div class="chartcard rev">
+          <span class="chart-t">${esc(t)} · ${xs.length}</span>
+          ${xs.map(x=>{
+            const rt=[...x.f.richtigSet].map(i=>x.f.optionen[i]);
+            return `<details${zettelOffen?' open':''}>
+              <summary><span class="mark" data-t="${x.status==='falsch'?'bad':'teil'}">${x.status==='falsch'?'✕':'~'}</span><span>${md(x.f.frage)}${x.f.fachhinweis?` <span class="fact-inline" title="Fachlicher Hinweis">*</span>`:''}</span></summary>
+              <div class="rev-b">
+                <span><b>${rt.map(md).join(' · ')}</b></span>
+                <span>${md(kernsatz(x.f.erklaerung))}</span>
+                ${x.f.fachhinweis?`<span class="fact-review"><b>* Fachlicher Hinweis:</b> ${md(x.f.fachhinweis.hinweis)}</span>`:''}
+                ${x.falsch>1?`<span class="fb-q">${x.falsch}× falsch</span>`:''}
+              </div>
+            </details>`;
+          }).join('')}
+        </div>`).join('')}
+    </div>
+    <div class="qact">
+      ${liste.length?`<button class="btn btn-ghost narrow" data-luecken>Üben</button>`:''}
+      <button class="btn btn-primary" data-ab2>Zurück</button>
+    </div>
+  </div>`);
+  app.querySelectorAll('[data-zauf]').forEach(b=>b.onclick=()=>{
+    zettelOffen=b.dataset.zauf==='1';
+    const y=app.querySelector('.qbody').scrollTop;
+    zeichne(); app.querySelector('.qbody').scrollTop=y;
+  });
+  const zu=()=>{zettel=false;zeichne()};
+  app.querySelector('[data-ab]').onclick=zu;
+  app.querySelector('[data-ab2]').onclick=zu;
+  const u=app.querySelector('[data-luecken]');
+  if(u) u.onclick=()=>{zettel=false;starte('fehlerAlle')};
+}
+
+function zeichneFrage(){
+  const e=aktuelle(), f=e.frage, n=sitzung.fragen.length;
+  const bodyVorher=app.querySelector('.qbody');
+  const scrollVorher=bodyVorher?bodyVorher.scrollTop:0;
+  const gleicheAnzeige=sitzung.anzeigeIndex===sitzung.i&&sitzung.anzeigeId===f.id;
+  const gew=[...sitzung.gewaehlt].map(p=>e.reihenfolge[p]);
+  const p=sitzung.aufgedeckt?bewerte(f,gew):0;
+  const zeig=sitzung.aufgedeckt&&sofort();
+  const prog=sitzung.zeitGesamt?(sitzung.zeitRest/sitzung.zeitGesamt*100):(sitzung.endlos?100:sitzung.i/n*100);
+  let btn='Weiter';
+  if(sitzung.aufgedeckt) btn=(!sitzung.endlos&&sitzung.i>=n-1)?'Auswerten':'Weiter';
+  else if(sofort()&&f.multi) btn='Prüfen';
+  else if(!sofort()&&sitzung.i>=n-1) btn='Auswerten';
+
+  setzeInhalt(`<div class="quiz">
+    <div class="qtop">
+      <button class="qx" data-ab aria-label="Training beenden">✕</button>
+      <div class="qprog${sitzung.zeitGesamt?' time':''}" role="progressbar"
+        aria-label="${sitzung.zeitGesamt?'Verbleibende Zeit':'Fortschritt'}"
+        aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(prog)}">
+        <div class="qprogfill" id="pf" style="width:${prog}%"></div></div>
+      ${sitzung.zeitGesamt?`<span class="qcount" id="uhr">${mmss(sitzung.zeitRest)}</span>`:
+        sitzung.endlos?`<span class="qcount">🔥 ${sitzung.serie}</span>`:`<span class="qcount">${sitzung.i+1}/${n}</span>`}
+    </div>
+    <div class="qbody">
+      <div class="qmeta">
+        <span class="qtag">${esc(f.thema)}</span>
+        <span class="qtag diff" data-d="${f.schwierigkeit}">${stufeName(f.schwierigkeit)}</span>
+        ${e.wdh?`<span class="qtag">nochmal</span>`:''}
+        ${f.fachhinweis?`<button class="fact-flag" data-fact aria-label="Fachlichen Hinweis anzeigen"
+          aria-controls="fact-note" aria-expanded="${sitzung.fachhinweisId===f.id}"
+          title="Fachlicher Hinweis">*</button>`:''}
+      </div>
+      <div class="qtext">${md(f.frage)}</div>
+      ${f.fachhinweis?`<aside class="fact-note" id="fact-note"${sitzung.fachhinweisId===f.id?'':' hidden'}>
+        <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
+        <span>${md(f.fachhinweis.hinweis)}</span>
+        ${f.fachhinweis.quelle?f.fachhinweis.url
+          ? `<a href="${esc(f.fachhinweis.url)}" target="_blank" rel="noopener noreferrer">${esc(f.fachhinweis.quelle)} ↗</a>`
+          : `<span class="fact-source">${esc(f.fachhinweis.quelle)}</span>`
+        : ''}
+      </aside>`:''}
+      <div class="qhint${f.multi?' multi':''}">${f.multi
+        ? `${f.richtigSet.size} von ${f.optionen.length} ankreuzen · ${f.strikt?'alles oder nichts':'Teilpunkte'}`
+        : 'Eine Antwort ist richtig'}</div>
+      <div class="opts${f.optionen.length>6?' dense':''}">
+        ${e.reihenfolge.map((echt,pos)=>{
+          let cls='';
+          const g=sitzung.gewaehlt.has(pos);
+          if(sitzung.aufgedeckt){
+            if(f.richtigSet.has(echt)) cls=g?' is-right':' is-missed';
+            else if(g) cls=' is-wrong';
+          }else if(g) cls=' is-sel';
+          const z=sitzung.aufgedeckt?(f.richtigSet.has(echt)?'✓':(g?'✕':(pos===9?'0':pos+1)))
+                                    :(f.multi&&g?'✓':(pos===9?'0':pos+1));
+          return `<button class="opt${cls}${f.multi?' multi':' single'}" data-pos="${pos}"
+            ${f.multi?`aria-pressed="${g}"`:''} ${sitzung.aufgedeckt?'disabled':''}>
+            <span class="opt-k">${z}</span><span class="opt-t">${md(f.optionen[echt])}</span></button>`;
+        }).join('')}
+      </div>
+    </div>
+    ${zeig?`<div class="answer-feedback" role="status" data-r="${p>=1?'ok':p>0?'teil':'bad'}">
+      <span class="fb-v">${p>=1?'Richtig':p>0?`Teilweise · ${Math.round(p*100)} %`:'Falsch'}</span>
+      <span class="fb-p">${md(kernsatz(f.erklaerung))}</span>
+      ${f.fachhinweis?`<div class="fact-feedback">
+        <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
+        <span>${md(f.fachhinweis.hinweis)}</span>
+        ${f.fachhinweis.quelle?f.fachhinweis.url
+          ? `<a href="${esc(f.fachhinweis.url)}" target="_blank" rel="noopener noreferrer">${esc(f.fachhinweis.quelle)} ↗</a>`
+          : `<span class="fact-source">${esc(f.fachhinweis.quelle)}</span>`
+        : ''}
+      </div>`:''}
+      <div class="answer-detail" id="answer-detail" hidden>
+        <span class="answer-detail-title">Erklärung</span>
+        <span>${md(f.erklaerung)}</span>
+        ${f.quelle?`<span class="fb-q">Folie ${esc(f.quelle)}</span>`:''}
+      </div>
+    </div>`:''}
+    <div class="qact">
+      ${zeig?`<button class="btn btn-info" data-info aria-label="Vollständige Erklärung anzeigen"
+        aria-controls="answer-detail" aria-expanded="false" title="Vollständige Erklärung"><span aria-hidden="true">i</span></button>`:''}
+      <button class="btn btn-primary" data-weiter ${(!sitzung.aufgedeckt&&!sitzung.gewaehlt.size)?'disabled':''}>${btn}</button>
+    </div>
+  </div>`);
+
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>waehle(+b.dataset.pos));
+  app.querySelector('[data-weiter]').onclick=weiter;
+  app.querySelector('[data-ab]').onclick=()=>{stopTicker();sitzung=null;zeichne()};
+  const info=app.querySelector('[data-info]');
+  if(info) info.onclick=()=>{
+    const detail=app.querySelector('#answer-detail'), offen=detail.hidden;
+    detail.hidden=!offen;
+    info.setAttribute('aria-expanded',String(offen));
+    info.classList.toggle('is-on',offen);
+  };
+  const fact=app.querySelector('[data-fact]');
+  if(fact) fact.onclick=()=>{
+    const note=app.querySelector('#fact-note'), offen=note.hidden;
+    note.hidden=!offen;
+    sitzung.fachhinweisId=offen?f.id:null;
+    fact.setAttribute('aria-expanded',String(offen));
+  };
+  const body=app.querySelector('.qbody');
+  body.scrollTop=gleicheAnzeige?scrollVorher:0;
+  sitzung.anzeigeIndex=sitzung.i;
+  sitzung.anzeigeId=f.id;
+}
+
+function uhrAktualisieren(){
+  const u=document.getElementById('uhr'), pf=document.getElementById('pf');
+  if(!u||!sitzung)return;
+  u.textContent=mmss(sitzung.zeitRest);
+  u.classList.toggle('low',sitzung.zeitRest<=60);
+  if(pf){
+    const pct=sitzung.zeitRest/sitzung.zeitGesamt*100;
+    pf.style.width=pct+'%';
+    pf.parentElement.setAttribute('aria-valuenow',Math.round(pct));
+  }
+}
+
+function zeichneErgebnis(){
+  const erst=sitzung.antworten.filter(a=>!a.wdh);
+  const n=erst.length, gesamt=sitzung.modus==='pruefung'?sitzung.erstmalig:n;
+  const offen=Math.max(0,gesamt-n), voll=erst.filter(a=>a.punkte>=1).length;
+  const pErst=erst.reduce((x,a)=>x+a.punkte,0);
+  const pkt=Math.round(pErst*10)/10, pct=gesamt?Math.round(pErst/gesamt*100):0;
+  const xpNeu=(stand.xp||0)-sitzung.xpVor;
+  let gross,unter;
+  if(sitzung.modus==='blitz'){gross=voll;unter=`in 60 Sekunden${sitzung.neu?' · NEUER REKORD':' · Rekord '+stand.rekorde.blitz}`}
+  else{gross=pkt+' / '+gesamt;unter=`${pct} % · ${voll} vollständig richtig${offen?' · '+offen+' offen':''}`}
+
+  const proThema={};
+  erst.forEach(a=>{
+    const f=FRAGEN.find(x=>x.id===a.id);
+    const t=proThema[f.thema]||(proThema[f.thema]={p:0,n:0});
+    t.n++;t.p+=a.punkte;
+  });
+  const falsch=erst.filter(a=>a.punkte<1);
+
+  setzeInhalt(`<div class="quiz">
+    <div class="qbody" aria-live="polite" style="padding-top:calc(14px + env(safe-area-inset-top))">
+      <div class="res-hero">
+        <div class="res-num">${gross}</div>
+        <div class="res-sub">${unter}</div>
+        <div class="res-sub">+${xpNeu} XP${sitzung.besteSerie>1?` · Serie ${sitzung.besteSerie}`:''}${sitzung.wdh?` · ${sitzung.wdh} Wiedervorlagen`:''}</div>
+      </div>
+      <div class="chartcard">
+        <span class="chart-t">Nach Thema</span>
+        ${Object.entries(proThema).sort((a,b)=>a[0].localeCompare(b[0],'de')).map(([t,v])=>{
+          const q=Math.round(v.p/v.n*100);
+          return `<div class="topic-stat">
+            <div class="topic-stat-head"><span class="barlab">${esc(t)}</span>
+              <span class="barval">${Math.round(v.p*10)/10}/${v.n}</span></div>
+            <div class="bartrack"><div class="barfill" data-w="${q}"></div></div>
+          </div>`;
+        }).join('')}
+      </div>
+      ${falsch.length?`<div class="chartcard rev">
+        <span class="chart-t">Zu wiederholen (${falsch.length})</span>
+        ${falsch.map(a=>{
+          const f=FRAGEN.find(x=>x.id===a.id);
+          const rt=[...f.richtigSet].map(i=>f.optionen[i]);
+          const dein=a.gewaehlt.length?a.gewaehlt.map(i=>f.optionen[i]):['nichts gewählt'];
+          return `<details><summary><span class="mark" data-t="${a.punkte>0?'teil':'bad'}">${a.punkte>0?'~':'✕'}</span><span>${md(f.frage)}${f.fachhinweis?` <span class="fact-inline" title="Fachlicher Hinweis">*</span>`:''}</span></summary>
+            <div class="rev-b">
+              <span>Deine Antwort: ${dein.map(md).join(' · ')}</span>
+              <span>Richtig: <b>${rt.map(md).join(' · ')}</b></span>
+              <span>${md(f.erklaerung)}</span>
+              ${f.fachhinweis?`<span class="fact-review"><b>* Fachlicher Hinweis:</b> ${md(f.fachhinweis.hinweis)}</span>`:''}
+            </div></details>`;
+        }).join('')}
+      </div>`:''}
+    </div>
+    <div class="qact">
+      ${falsch.length?`<button class="btn btn-ghost narrow" data-fehler>Fehler üben</button>`:''}
+      <button class="btn btn-primary" data-home>Fertig</button>
+    </div>
+  </div>`);
+
+  app.querySelector('[data-home]').onclick=()=>{sitzung=null;tab='ueben';zeichne()};
+  const fb=app.querySelector('[data-fehler]');
+  if(fb) fb.onclick=()=>starte('fehler');
+  animiereBalken();
+  const rn=app.querySelector('.res-num');
+  if(rn&&typeof gross==='number') zaehlHoch(rn,gross);
+}
+
+function bindeStart(){
+  app.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;zeichne()});
+  app.querySelectorAll('[data-tab-jump]').forEach(b=>b.onclick=()=>{tab=b.dataset.tabJump;zeichne()});
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>starte(b.dataset.go));
+  const z=app.querySelector('[data-zettel]');
+  if(z) z.onclick=()=>{zettel=true;zeichne()};
+  app.querySelectorAll('[data-thema]').forEach(b=>b.onclick=()=>starte('thema',{thema:b.dataset.thema}));
+  app.querySelectorAll('[data-schwer]').forEach(b=>b.onclick=()=>{
+    setzeEinst('schwierigkeit',b.dataset.schwer); zeichne(); toast(stufeName(einst.schwierigkeit));
+  });
+  app.querySelectorAll('[data-zeit]').forEach(b=>b.onclick=()=>{
+    setzeEinst('zeitlimit',b.dataset.zeit==='1'); zeichne();
+  });
+  const tm=app.querySelector('[data-termin]');
+  if(tm) tm.onclick=()=>{
+    const v=prompt('Prüfungstermin (JJJJ-MM-TT)', einst.pruefung||'');
+    const wert=v&&v.trim(), datum=wert&&new Date(wert+'T00:00:00');
+    if(wert && /^\d{4}-\d{2}-\d{2}$/.test(wert) && !Number.isNaN(datum.getTime()) && datumLokal(datum)===wert){
+      setzeEinst('pruefung',wert); zeichne();
+    }
+    else if(v!==null) toast('Format: 2026-07-29');
+  };
+  const tw=app.querySelector('[data-termin-weg]');
+  if(tw) tw.onclick=()=>{ setzeEinst('pruefung',''); zeichne(); };
+  const r=app.querySelector('[data-reset]');
+  if(r) r.onclick=()=>{
+    if(confirm('Allen Fortschritt löschen? Auch Rekorde, XP und Karteikasten.')){
+      stand={stats:{},versuche:[],rekorde:{},tage:{},xp:0}; sichern(); zeichne();
+    }
+  };
+  const rn=app.querySelector('[data-count]');
+  if(rn) zaehlHoch(rn,+rn.dataset.count);
+}
+function animiereBalken(){
+  requestAnimationFrame(()=>{
+    app.querySelectorAll('[data-w]').forEach(el=>{el.style.width=el.dataset.w+'%'});
+  });
+}
+
+document.addEventListener('keydown',ev=>{
+  if(!sitzung||sitzung.fertig)return;
+  const f=aktuelle().frage;
+  if(/^[0-9]$/.test(ev.key)){
+    const pos=ev.key==='0'?9:+ev.key-1;
+    if(pos<f.optionen.length){ev.preventDefault();waehle(pos)}
+  }else if(ev.key==='Enter'||ev.key===' '){
+    if(sitzung.gewaehlt.size||sitzung.aufgedeckt){ev.preventDefault();weiter()}
+  }else if(ev.key==='Escape'){stopTicker();sitzung=null;zeichne()}
+});
+
+setzeStil();
+zeichne();
+</script>
+</body>
+</html>
