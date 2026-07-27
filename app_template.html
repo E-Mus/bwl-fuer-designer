@@ -375,15 +375,20 @@ const BWL_STUFEN=[
   {rolle:'Head of Synergy',   kurz:'Head of'},
   {rolle:'Chief Value Officer', kurz:'C-Level'}
 ];
-const BWL_SCHWELLEN=[0,.06,.18,.36,.58,.82];
+const BWL_SCHWELLEN=[0,.03,.10,.22,.38,.58];
 const BWL_MAX=BWL_STUFEN.length-1;
+// Der Aufstieg soll waehrend einer Lernsitzung spuerbar sein, nicht erst nach
+// Tagen: die Menge richtiger Antworten traegt den Grossteil und ist schon bei
+// RICHTIG_VOLL ausgereizt. Der Anteil gemeisterter Fragen bleibt beigemischt,
+// damit die letzte Stufe nicht durch blosses Durchklicken faellt.
+const RICHTIG_VOLL=50;
 function bwlWert(){
   const pool=basis();
   const anteil=pool.length?pool.filter(f=>status(f)==='sitzt').length/pool.length:0;
   let richtigGesamt=0;
   for(const id in stand.stats) richtigGesamt+=stand.stats[id].richtig||0;
-  const menge=Math.min(1,richtigGesamt/150);
-  return Math.max(0,Math.min(1,anteil*.65+menge*.35));
+  const menge=Math.min(1,richtigGesamt/RICHTIG_VOLL);
+  return Math.max(0,Math.min(1,menge*.55+anteil*.45));
 }
 function bwlStufeAuto(w=bwlWert()){
   let s=0;
