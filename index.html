@@ -989,7 +989,7 @@ svg{display:block}
   text-transform:uppercase;
 }
 [data-style="editorial"] .meme-media{
-  display:grid;
+  position:relative;
   height:min(160px,20dvh);
   min-height:112px;
   overflow:hidden;
@@ -998,13 +998,14 @@ svg{display:block}
 }
 [data-style="editorial"] .meme-media img,
 [data-style="editorial"] .meme-fallback{
+  position:absolute;
+  inset:0;
   width:100%;
   height:100%;
-  grid-area:1 / 1;
 }
 [data-style="editorial"] .meme-media img{
   display:block;
-  object-fit:cover;
+  object-fit:contain;
 }
 [data-style="editorial"] .meme-reaction img[hidden],
 [data-style="editorial"] .meme-fallback[hidden]{
@@ -1021,12 +1022,6 @@ svg{display:block}
   line-height:1.35;
   text-align:center;
   text-transform:uppercase;
-}
-[data-style="editorial"] .meme-reaction figcaption{
-  padding-top:7px;
-  font-size:12px;
-  font-weight:800;
-  line-height:1.35;
 }
 [data-style="editorial"] .answer-detail{
   display:flex;
@@ -2520,7 +2515,6 @@ function zeichneFrage(){
             loading="eager" decoding="async">
           <span class="meme-fallback" hidden>Marktreaktion derzeit nicht handelbar.</span>
         </div>
-        <figcaption>${esc(meme.caption)}</figcaption>
       </figure>`:''}
       <span class="fb-p">${md(kernsatz(f.erklaerung))}</span>
       ${f.fachhinweis?`<div class="fact-feedback">
