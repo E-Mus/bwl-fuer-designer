@@ -1318,30 +1318,20 @@
   color:var(--ink);
 }
 
-[data-style="editorial"] .kursticker{
-  margin-top:12px;
-}
-[data-style="editorial"] .kurskopf{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:8px;
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-size:9px;
-  font-weight:900;
-  text-transform:uppercase;
-}
-[data-style="editorial"] .kurs-fiktiv{
-  padding:2px 6px;
+[data-style="editorial"] .tabbar-wrap{
   background:var(--ink);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+[data-style="editorial"] .tabbar-wrap .tabbar{
+  padding-bottom:0;
+}
+[data-style="editorial"] .kursticker{
+  border-top:1px solid #3a3a38;
   color:var(--white);
 }
 [data-style="editorial"] .kurslauf{
   overflow:hidden;
-  margin-top:7px;
   padding:6px 0;
-  border-top:1px solid var(--soft);
-  border-bottom:1px solid var(--soft);
 }
 [data-style="editorial"] .kursband{
   display:flex;
@@ -1368,16 +1358,10 @@
   font-style:normal;
 }
 [data-style="editorial"] .kurs i[data-t="up"]{
-  color:var(--ok);
+  color:#7bd9a9;
 }
 [data-style="editorial"] .kurs i[data-t="down"]{
-  color:var(--bad);
-}
-[data-style="editorial"] .kursfuss{
-  margin-top:6px;
-  color:var(--muted);
-  font-size:10px;
-  line-height:1.35;
+  color:#f0a19a;
 }
 
 /* Auf der Endstufe schreit die Typografie mit. */
@@ -1445,4 +1429,14 @@
 [data-style="editorial"] .res-hero .geldzitat{
   margin-top:18px;
   text-align:center;
+}
+
+/* Zitat auf dem Startbildschirm: gleiche Form wie im Quiz, nur leiser. */
+[data-style="editorial"] .geldzitat.klein{
+  margin-top:12px;
+  padding-top:10px;
+}
+[data-style="editorial"] .geldzitat.klein blockquote{
+  font-size:12px;
+  line-height:1.45;
 }
