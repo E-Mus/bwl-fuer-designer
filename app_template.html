@@ -1214,7 +1214,6 @@ function zeichneFrage(){
       <span class="fb-v">${p>=1?'Richtig':p>0?`Teilweise · ${Math.round(p*100)} %`:'Falsch'}</span>
       <span class="satire-feedback">${esc(feedbackSatire(p,f))}</span>
       ${meme?`<figure class="meme-reaction">
-        <div class="meme-kicker">Marktreaktion: ${esc(meme.title)}</div>
         <div class="meme-media">
           <img src="${esc(meme.url)}" alt="Reaction-GIF zu ${esc(meme.title)}"
             loading="eager" decoding="async">
