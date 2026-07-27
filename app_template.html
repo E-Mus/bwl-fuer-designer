@@ -163,7 +163,7 @@ svg{display:block}
 </head>
 <body>
 <div class="app" id="app" data-style="editorial">
-  <div id="konfetti"></div>
+  <div id="konfetti" aria-hidden="true"></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </div>
 <script id="fragen-data" type="application/json">__FRAGEN__</script>
@@ -353,23 +353,76 @@ function toast(txt){
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>el.classList.remove('show'),1100);
 }
-function konfetti(n=70){
+const SATIRE={
+  markt:[
+    'Halbwissen ist nicht durch die Zentralbank gedeckt.',
+    'Die Wissensmärkte reagieren weiterhin nervös.',
+    'Vergangene Lernerfolge sind kein verlässlicher Renditeindikator.',
+    'Kognitive Liquidität bleibt ein knappes Gut.',
+    'Wissensdividenden können im Wert steigen oder fallen.',
+    'Die Einlagensicherung greift bei Prüfungswissen ausdrücklich nicht.'
+  ],
+  richtig:[
+    'Wissensdividende gutgeschrieben.',
+    'Kognitives Eigenkapital gestärkt.',
+    'Die Lernrendite liegt über Plan.',
+    'Diese Position ist vollständig gedeckt.'
+  ],
+  teilweise:[
+    'Das Portfolio ist nur teilweise gedeckt.',
+    'Die Bilanz enthält noch Restunsicherheit.',
+    'Teilrendite verbucht, Nachkauf empfohlen.'
+  ],
+  falsch:[
+    'Die Bilanz weist Klärungsbedarf auf.',
+    'Diese Position muss wertberichtigt werden.',
+    'Die Wissensreserve ist vorübergehend illiquide.',
+    'Keine Deckung durch vorhandenes Eigenwissen.'
+  ]
+};
+function satireAuswahl(liste,schluessel=''){
+  const n=String(schluessel).split('').reduce((sum,c)=>sum+c.charCodeAt(0),0);
+  return liste[n%liste.length];
+}
+function marktMeldung(){
+  return satireAuswahl(SATIRE.markt,heute()+(stand.xp||0));
+}
+function feedbackSatire(p,f){
+  const liste=p>=1?SATIRE.richtig:p>0?SATIRE.teilweise:SATIRE.falsch;
+  return satireAuswahl(liste,f.id);
+}
+function banknoteFlug(){
+  const box=document.getElementById('konfetti');
+  if(!box) return;
+  const note=document.createElement('div');
+  note.className='flying-note';
+  note.setAttribute('aria-hidden','true');
+  note.innerHTML='<span>100</span><b>WISSEN</b><small>NICHT ÜBERTRAGBAR</small>';
+  box.appendChild(note);
+  setTimeout(()=>note.remove(),3300);
+}
+function monetenregen(n=70,{banknote=false}={}){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
   const box=document.getElementById('konfetti');
   const cs=getComputedStyle(document.getElementById('app'));
   const farben=['--kf1','--kf2','--kf3','--kf4'].map(v=>cs.getPropertyValue(v).trim()||'#888');
+  const waehrungen=['€','$','£','¥','₹','₩','₺'];
   for(let i=0;i<n;i++){
     const d=document.createElement('i');
     d.className='kf';
+    d.textContent=waehrungen[i%waehrungen.length];
+    d.setAttribute('aria-hidden','true');
     d.style.left=Math.random()*100+'vw';
     d.style.top=(-12-Math.random()*22)+'vh';
-    d.style.background=farben[i%farben.length];
+    d.style.color=farben[i%farben.length];
+    d.style.fontSize=(15+Math.random()*18)+'px';
     d.style.setProperty('--dx',(Math.random()*230-115)+'px');
     d.style.setProperty('--rot',(Math.random()*900-450)+'deg');
     d.style.animation=`kfall ${1.5+Math.random()*1.3}s cubic-bezier(.25,.6,.5,1) ${Math.random()*.35}s forwards`;
     box.appendChild(d);
     setTimeout(()=>d.remove(),3400);
   }
+  if(banknote) setTimeout(banknoteFlug,160);
 }
 function zaehlHoch(el,ziel,dauer=650){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=ziel;return}
@@ -521,7 +574,7 @@ function decke(){
   wiedervorlage(e,p);
   if(p>=1){
     sitzung.serie++; sitzung.besteSerie=Math.max(sitzung.besteSerie,sitzung.serie);
-    if(sitzung.serie>0&&sitzung.serie%5===0) toast('🔥 '+sitzung.serie+' in Folge');
+    if(sitzung.serie>0&&sitzung.serie%5===0) toast('Serie '+sitzung.serie+' · Markt überhitzt');
   }else sitzung.serie=0;
   if(sitzung.modus==='blitz'){zeichne();setTimeout(()=>{if(sitzung&&!sitzung.fertig)weiter()},680);return}
   zeichne();
@@ -568,11 +621,13 @@ function ergebnis(){
   sichern();
   zeichne();
   const quote=gesamt?pErst/gesamt:0;
-  if(sitzung.neu||sitzung.serieRekord||quote>=.9) setTimeout(()=>konfetti(sitzung.neu?110:70),260);
+  if(sitzung.neu||sitzung.serieRekord||quote>=.9){
+    setTimeout(()=>monetenregen(sitzung.neu?110:70,{banknote:quote>=1}),260);
+  }
 }
 
 /* ───────── Zeichnen ───────── */
-// Toast und Konfetti liegen in .app (damit die Stil-Selektoren greifen),
+// Toast und Monetenregen liegen in .app (damit die Stil-Selektoren greifen),
 // duerfen beim Neuzeichnen aber nicht mitgeloescht werden.
 const OVERLAY = ['konfetti','toast'].map(id=>document.getElementById(id));
 function setzeInhalt(html){
@@ -634,6 +689,7 @@ function ubenDaten(){
 }
 function viewUeben(){
   const D=ubenDaten();
+  const seriennummer=`BWL–${String(D.B.length).padStart(3,'0')}–2026`;
   const weiterText=D.offen
     ? '10 Fragen · '+D.offen+' neu'
     : D.luk
@@ -641,13 +697,18 @@ function viewUeben(){
       : '10 gemeisterte Fragen wiederholen';
   return `<div class="screen pad-top home">
     <header class="brandhead">
+      <span class="money-watermark" aria-hidden="true">€</span>
       <h1 class="brand">BWL für Designer</h1>
-      <span class="brand-sub">Klausurvorbereitung</span>
+      <div class="brand-meta">
+        <span class="brand-sub">Klausurvorbereitung</span>
+        <span class="brand-serial">${seriennummer}</span>
+      </div>
     </header>
 
     <section class="home-progress" aria-label="Lernstatus">
       ${statusTabelle(D.v)}
       ${statusBalken(D.v)}
+      <div class="market-note"><span>Lernrendite</span>${esc(marktMeldung())}</div>
     </section>
 
     <button class="primary-row" data-go="lernen">
@@ -691,7 +752,7 @@ function viewStatistik(){
 
   return `<div class="screen pad-top">
     <div class="shead"><div><div class="stitle">Statistik</div>
-      <div class="ssub">${gesehen}/${ges} bearbeitet · ${umfangName(einst.umfang)}</div></div></div>
+      <div class="ssub">Wissensbilanz · ${gesehen}/${ges} bearbeitet · ${umfangName(einst.umfang)}</div></div></div>
 
     <div class="chartcard">
       <div class="ringwrap">
@@ -898,6 +959,7 @@ function viewImpressum(){
 function zeichneWillkommen(){
   setzeInhalt(`<main class="view welcome-view">
     <div class="welcome-screen">
+      <span class="money-watermark" aria-hidden="true">€</span>
       <header>
         <h1>Hello.</h1>
       </header>
@@ -986,7 +1048,7 @@ function zeichneOnboardingRecht(){
 
 // Kurze Kernaussage; die vollstaendige Begruendung bleibt ueber den Info-Button erreichbar.
 function kernsatz(t){
-  const sauber=String(t).replace(/\s+/g,' ').trim();
+  const sauber=String(t).replace(/\*\*/g,'').replace(/\s+/g,' ').trim();
   const m=sauber.match(/^(.{0,120}?[.!?])(\s|$)/);
   if(m) return m[1];
   if(sauber.length<=120) return sauber;
@@ -1076,13 +1138,14 @@ function zeichneFrage(){
         aria-label="${sitzung.zeitGesamt?'Verbleibende Zeit':'Fortschritt'}"
         aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(prog)}">
         <div class="qprogfill" id="pf" style="width:${prog}%"></div></div>
-      ${sitzung.zeitGesamt?`<span class="qcount" id="uhr">${mmss(sitzung.zeitRest)}</span>`:
-        sitzung.endlos?`<span class="qcount">🔥 ${sitzung.serie}</span>`:`<span class="qcount">${sitzung.i+1}/${n}</span>`}
+      ${sitzung.zeitGesamt?`<span class="qcount market-clock" id="uhr">${mmss(sitzung.zeitRest)}</span>`:
+        sitzung.endlos?`<span class="qcount blitz-yield">€ ${sitzung.serie}</span>`:`<span class="qcount">${sitzung.i+1}/${n}</span>`}
     </div>
     <div class="qbody">
       <div class="qmeta">
         <span class="qtag">${esc(f.thema)}</span>
         <span class="qtag diff" data-d="${f.schwierigkeit}">${stufeName(f.schwierigkeit)}</span>
+        <span class="qtag qserial">BWL–${esc(f.id.toUpperCase())}–EUR</span>
         ${e.wdh?`<span class="qtag">nochmal</span>`:''}
         ${f.fachhinweis?`<button class="fact-flag" data-fact aria-label="Fachlichen Hinweis anzeigen"
           aria-controls="fact-note" aria-expanded="${sitzung.fachhinweisId===f.id}"
@@ -1118,6 +1181,7 @@ function zeichneFrage(){
     </div>
     ${zeig?`<div class="answer-feedback" role="status" data-r="${p>=1?'ok':p>0?'teil':'bad'}">
       <span class="fb-v">${p>=1?'Richtig':p>0?`Teilweise · ${Math.round(p*100)} %`:'Falsch'}</span>
+      <span class="satire-feedback">${esc(feedbackSatire(p,f))}</span>
       <span class="fb-p">${md(kernsatz(f.erklaerung))}</span>
       ${f.fachhinweis?`<div class="fact-feedback">
         <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
@@ -1182,6 +1246,16 @@ function zeichneErgebnis(){
   const pErst=erst.reduce((x,a)=>x+a.punkte,0);
   const pkt=Math.round(pErst*10)/10, pct=gesamt?Math.round(pErst/gesamt*100):0;
   const xpNeu=(stand.xp||0)-sitzung.xpVor;
+  const stempel=pct===100?'VOLL GEDECKT':pct>=60?'BESTANDEN':'NACHPRÜFUNG';
+  const abschluss=pct===100
+    ? 'Das Wissensportfolio ist vollständig gedeckt.'
+    : pct>=80
+      ? 'Die Lernrendite liegt deutlich über Plan.'
+      : pct>=60
+        ? 'Die Bilanz schließt im positiven Bereich.'
+        : pct>=30
+          ? 'Sanierungsplan für das Wissensportfolio empfohlen.'
+          : 'Kognitive Insolvenz vorläufig festgestellt.';
   let gross,unter;
   if(sitzung.modus==='blitz'){gross=voll;unter=`in 60 Sekunden${sitzung.neu?' · NEUER REKORD':' · Rekord '+stand.rekorde.blitz}`}
   else{gross=pkt+' / '+gesamt;unter=`${pct} % · ${voll} vollständig richtig${offen?' · '+offen+' offen':''}`}
@@ -1197,9 +1271,14 @@ function zeichneErgebnis(){
   setzeInhalt(`<div class="quiz">
     <div class="qbody" aria-live="polite" style="padding-top:calc(14px + env(safe-area-inset-top))">
       <div class="res-hero">
+        <span class="money-watermark" aria-hidden="true">€</span>
+        <div class="res-report">Ergebnis / Quartalsabschluss</div>
+        <div class="res-stamp" data-grade="${pct===100?'top':pct>=60?'ok':'bad'}"
+          title="Satirischer Prüfvermerk">${stempel}</div>
         <div class="res-num">${gross}</div>
         <div class="res-sub">${unter}</div>
-        <div class="res-sub">+${xpNeu} XP${sitzung.besteSerie>1?` · Serie ${sitzung.besteSerie}`:''}${sitzung.wdh?` · ${sitzung.wdh} Wiedervorlagen`:''}</div>
+        <div class="res-sub">Wissensdividende +${xpNeu} XP${sitzung.besteSerie>1?` · Serie ${sitzung.besteSerie}`:''}${sitzung.wdh?` · ${sitzung.wdh} Wiedervorlagen`:''}</div>
+        <div class="res-closing">${abschluss}</div>
       </div>
       <div class="chartcard">
         <span class="chart-t">Nach Thema</span>

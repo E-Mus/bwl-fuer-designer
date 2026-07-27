@@ -69,8 +69,27 @@
   gap:0;
 }
 [data-style="editorial"] .brandhead{
+  position:relative;
+  overflow:hidden;
   border-bottom:var(--rule) solid var(--line);
   padding-bottom:26px;
+}
+[data-style="editorial"] .brandhead .money-watermark{
+  position:absolute;
+  z-index:0;
+  top:-44px;
+  right:2px;
+  color:var(--ink);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:142px;
+  font-weight:900;
+  line-height:1;
+  opacity:.035;
+  pointer-events:none;
+}
+[data-style="editorial"] .brandhead > :not(.money-watermark){
+  position:relative;
+  z-index:1;
 }
 [data-style="editorial"] .brand{
   overflow:hidden;
@@ -82,11 +101,24 @@
 }
 [data-style="editorial"] .brand-sub{
   display:block;
-  margin-top:12px;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   font-size:11px;
   font-weight:900;
   text-transform:uppercase;
+}
+[data-style="editorial"] .brand-meta{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:12px;
+}
+[data-style="editorial"] .brand-serial{
+  flex:none;
+  color:var(--muted);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:9px;
+  font-weight:900;
 }
 [data-style="editorial"] .home-progress{
   padding:24px 0 26px;
@@ -100,6 +132,7 @@
   text-transform:uppercase;
 }
 [data-style="editorial"] .primary-row{
+  position:relative;
   width:100%;
   min-height:68px;
   display:flex;
@@ -110,6 +143,20 @@
   background:var(--ink);
   color:var(--white);
   border:var(--rule) solid var(--ink);
+  overflow:hidden;
+}
+[data-style="editorial"] .primary-row::before,
+[data-style="editorial"] .btn-primary::before{
+  content:'';
+  position:absolute;
+  inset:4px;
+  border:var(--rule) solid currentColor;
+  opacity:.32;
+  pointer-events:none;
+}
+[data-style="editorial"] .primary-row > *{
+  position:relative;
+  z-index:1;
 }
 [data-style="editorial"] .primary-copy,
 [data-style="editorial"] .primary-title,
@@ -188,6 +235,22 @@
 [data-style="editorial"] .mode-row:disabled{
   opacity:.35;
   cursor:not-allowed;
+}
+[data-style="editorial"] .market-note{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:10px;
+  margin-top:10px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.35;
+}
+[data-style="editorial"] .market-note span{
+  color:var(--ink);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:9px;
+  font-weight:900;
+  text-transform:uppercase;
 }
 [data-style="editorial"] .compact-modes{
   display:grid;
@@ -538,6 +601,32 @@
 [data-style="editorial"] .qcount.low{
   color:var(--bad);
 }
+[data-style="editorial"] .market-clock{
+  min-width:76px;
+  padding:7px 8px;
+  background:var(--ink);
+  color:var(--white);
+  text-align:center;
+}
+[data-style="editorial"] .market-clock::before{
+  content:'BÖRSE ';
+  color:#7bd9a9;
+  font-size:8px;
+}
+[data-style="editorial"] .market-clock.low{
+  background:var(--bad);
+  color:var(--white);
+}
+[data-style="editorial"] .market-clock.low::before{
+  color:var(--white);
+}
+[data-style="editorial"] .blitz-yield{
+  min-width:48px;
+  padding:6px 8px;
+  background:var(--ink);
+  color:var(--white);
+  text-align:center;
+}
 [data-style="editorial"] .qbody{
   gap:16px;
   padding:24px 34px 18px;
@@ -555,6 +644,10 @@
 [data-style="editorial"] .qtag:first-child{
   padding-left:0;
   border-left:0;
+}
+[data-style="editorial"] .qserial{
+  color:var(--muted);
+  font-size:9px;
 }
 [data-style="editorial"] .fact-flag{
   width:28px;
@@ -728,6 +821,22 @@
 [data-style="editorial"] .answer-feedback[data-r="bad"] .fb-v{
   color:var(--bad);
 }
+[data-style="editorial"] .satire-feedback{
+  display:block;
+  margin:4px 0 7px;
+  color:var(--muted);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;
+  font-weight:900;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .answer-feedback[data-r="ok"] .satire-feedback{
+  color:var(--ok);
+}
+[data-style="editorial"] .answer-feedback[data-r="bad"] .satire-feedback{
+  color:var(--bad);
+}
 [data-style="editorial"] .answer-detail{
   display:flex;
   flex-direction:column;
@@ -761,6 +870,8 @@
   text-transform:uppercase;
 }
 [data-style="editorial"] .btn-primary{
+  position:relative;
+  overflow:hidden;
   background:var(--ink);
   color:var(--white);
 }
@@ -800,8 +911,54 @@
 
 /* Ergebnis und Spickzettel */
 [data-style="editorial"] .res-hero{
+  position:relative;
+  overflow:hidden;
   padding:24px 0;
   border-bottom:var(--rule) solid var(--line);
+}
+[data-style="editorial"] .res-hero .money-watermark{
+  position:absolute;
+  z-index:0;
+  right:-2px;
+  bottom:-38px;
+  color:var(--ink);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:166px;
+  font-weight:900;
+  line-height:1;
+  opacity:.03;
+  pointer-events:none;
+}
+[data-style="editorial"] .res-hero > :not(.money-watermark){
+  position:relative;
+  z-index:1;
+}
+[data-style="editorial"] .res-report{
+  margin-bottom:12px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .res-stamp{
+  display:inline-block;
+  margin:0 auto 14px;
+  padding:6px 10px;
+  border:var(--rule) solid currentColor;
+  color:var(--ink);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;
+  font-weight:900;
+  line-height:1;
+  text-transform:uppercase;
+  transform:rotate(-3deg);
+}
+[data-style="editorial"] .res-stamp[data-grade="top"],
+[data-style="editorial"] .res-stamp[data-grade="ok"]{
+  color:var(--ok);
+}
+[data-style="editorial"] .res-stamp[data-grade="bad"]{
+  color:var(--bad);
 }
 [data-style="editorial"] .res-num{
   font-size:58px;
@@ -813,6 +970,13 @@
   font-size:12px;
   font-weight:800;
   text-transform:uppercase;
+}
+[data-style="editorial"] .res-closing{
+  max-width:330px;
+  margin:14px auto 0;
+  font-size:13px;
+  font-weight:800;
+  line-height:1.35;
 }
 [data-style="editorial"] .rev details{
   border-top:var(--rule) solid var(--line);
@@ -837,16 +1001,89 @@
   text-transform:uppercase;
 }
 
+/* Satirische Moneten-Effekte */
+[data-style="editorial"] .kf{
+  width:auto;
+  height:auto;
+  background:transparent;
+  font-family:Georgia,'Times New Roman',serif;
+  font-style:normal;
+  font-weight:900;
+  line-height:1;
+  text-shadow:0 0 0 var(--ink);
+}
+[data-style="editorial"] .flying-note{
+  position:absolute;
+  top:38vh;
+  left:0;
+  width:min(74vw,300px);
+  height:126px;
+  display:grid;
+  grid-template-columns:58px 1fr;
+  grid-template-rows:1fr auto;
+  align-items:center;
+  gap:0 12px;
+  padding:18px;
+  background:var(--paper);
+  color:var(--ink);
+  border:var(--rule) solid var(--line);
+  box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 7px var(--line);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  animation:bankfly 3s cubic-bezier(.3,.7,.35,1) forwards;
+}
+[data-style="editorial"] .flying-note span{
+  grid-row:1 / 3;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:40px;
+  font-weight:950;
+}
+[data-style="editorial"] .flying-note b{
+  align-self:end;
+  font-size:21px;
+  line-height:1;
+}
+[data-style="editorial"] .flying-note small{
+  align-self:start;
+  margin-top:7px;
+  font-size:8px;
+  font-weight:900;
+}
+@keyframes bankfly{
+  0%{transform:translate3d(-90vw,30px,0) rotate(-10deg);opacity:0}
+  12%{opacity:1}
+  55%{transform:translate3d(calc(50vw - 40px),-18px,0) rotate(3deg);opacity:1}
+  100%{transform:translate3d(130vw,20px,0) rotate(12deg);opacity:0}
+}
+
 /* Einmalige Startseite */
 [data-style="editorial"] .welcome-view{
   background:var(--paper);
 }
 [data-style="editorial"] .welcome-screen{
+  position:relative;
+  overflow:hidden;
   min-height:100%;
   padding:calc(28px + env(safe-area-inset-top)) 34px
     24px;
   font-family:Arial,Helvetica,sans-serif;
   font-size:13px;
+}
+[data-style="editorial"] .welcome-screen .money-watermark{
+  position:absolute;
+  z-index:0;
+  top:-50px;
+  right:-4px;
+  color:var(--ink);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:160px;
+  font-weight:900;
+  line-height:1;
+  opacity:.025;
+  pointer-events:none;
+}
+[data-style="editorial"] .welcome-screen > :not(.money-watermark){
+  position:relative;
+  z-index:1;
 }
 [data-style="editorial"] .welcome-screen header{
   padding-bottom:0;
