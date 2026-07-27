@@ -180,22 +180,6 @@ svg{display:block}
 
 const FRAGEN = JSON.parse(document.getElementById('fragen-data').textContent);
 const MEMES = JSON.parse(document.getElementById('meme-data').textContent);
-const MEME_NACH_TERM = new Map(MEMES.map(m=>[m.term,m]));
-const MEME_FALLBACK = {
-  'Grundlagen der BWL':'unternehmen',
-  'Rechtsformen':'unternehmen',
-  'Urheber- und Nutzungsrecht':'eigentum',
-  'Businessplan und Gründung':'investor',
-  'Steuern':'steuer',
-  'Rechnungen und E-Rechnung':'rechnung',
-  'Angebot, Vertrag und Briefing':'vertrag',
-  'Kalkulation und Liquidität':'kalkulation',
-  'Marketing':'marketing',
-  'Projektmanagement':'leistung',
-  'Personal, Motivation und Lob':'leistung',
-  'Geld, Finanzen und Altersvorsorge':'vermögen',
-  'Unternehmensrecherche und Jahresabschluss':'unternehmen'
-};
 const PRUEFUNGS_LAENGE = 40, PRUEFUNGS_ZEIT = 40*60, BLITZ_ZEIT = 60;
 const LS='bwl-v3', LS_SET='bwl-einstellungen';
 const LS_WILLKOMMEN='bwl-willkommen-v2';
@@ -713,25 +697,9 @@ function abschlussText(pct){
   const l=satireStufe('abschluss');
   return pct===100?l[0]:pct>=80?l[1]:pct>=60?l[2]:pct>=30?l[3]:l[4];
 }
-function memeImText(text){
-  const inhalt=String(text||'').toLocaleLowerCase('de');
-  let treffer=null;
-  MEMES.forEach((m,index)=>{
-    const pos=inhalt.indexOf(m.term);
-    if(pos<0) return;
-    if(!treffer||pos<treffer.pos||(pos===treffer.pos&&index<treffer.index)){
-      treffer={meme:m,pos,index};
-    }
-  });
-  return treffer&&treffer.meme;
-}
-function memeFuerFrage(f){
-  const richtige=[...f.richtigSet].map(i=>f.optionen[i]).join(' ');
-  return memeImText(f.frage)
-    || memeImText(richtige)
-    || memeImText(f.erklaerung)
-    || MEME_NACH_TERM.get(MEME_FALLBACK[f.thema])
-    || null;
+// Ein GIF aus dem Topf, ohne Bezug zur Frage - der Zufall ist der Witz.
+function memeZiehen(){
+  return zufallAus(MEMES,'meme');
 }
 function banknoteFlug(){
   const box=document.getElementById('konfetti');
@@ -912,8 +880,10 @@ function decke(){
   const p=bewerte(e.frage,echt);
   sitzung.aufgedeckt=true; sitzung.punkte+=p;
   sitzung.antworten.push({id:e.frage.id,punkte:p,gewaehlt:echt,wdh:!!e.wdh});
-  // Spruch und Zitat einmal beim Aufdecken ziehen, damit sie beim Neuzeichnen stehen bleiben.
+  // Spruch, GIF und Zitat einmal beim Aufdecken ziehen, damit sie beim
+  // Neuzeichnen stehen bleiben.
   sitzung.spruch=feedbackSatire(p);
+  sitzung.meme=p>=1?memeZiehen():null;
   sitzung.zitat=sitzung.antworten.length%ZITAT_ABSTAND===0?zitatZiehen():null;
   merkeAntwort(e.frage.id,p,e.frage.schwierigkeit);
   wiedervorlage(e,p);
@@ -1501,7 +1471,7 @@ function zeichneFrage(){
   const gew=[...sitzung.gewaehlt].map(p=>e.reihenfolge[p]);
   const p=sitzung.aufgedeckt?bewerte(f,gew):0;
   const zeig=sitzung.aufgedeckt&&sofort();
-  const meme=zeig&&p>=1?memeFuerFrage(f):null;
+  const meme=zeig?sitzung.meme:null;
   const spruch=zeig?(sitzung.spruch||''):'';
   const prog=sitzung.zeitGesamt?(sitzung.zeitRest/sitzung.zeitGesamt*100):(sitzung.endlos?100:sitzung.i/n*100);
   let btn=T('weiter');
