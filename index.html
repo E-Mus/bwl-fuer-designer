@@ -235,23 +235,6 @@ svg{display:block}
   border-bottom:var(--rule) solid var(--line);
   padding-bottom:26px;
 }
-[data-style="editorial"] .brandhead .money-watermark{
-  position:absolute;
-  z-index:0;
-  top:-44px;
-  right:2px;
-  color:var(--ink);
-  font-family:Georgia,'Times New Roman',serif;
-  font-size:142px;
-  font-weight:900;
-  line-height:1;
-  opacity:.035;
-  pointer-events:none;
-}
-[data-style="editorial"] .brandhead > :not(.money-watermark){
-  position:relative;
-  z-index:1;
-}
 [data-style="editorial"] .brand{
   overflow:hidden;
   font-size:38px;
@@ -305,15 +288,6 @@ svg{display:block}
   color:var(--white);
   border:var(--rule) solid var(--ink);
   overflow:hidden;
-}
-[data-style="editorial"] .primary-row::before,
-[data-style="editorial"] .btn-primary::before{
-  content:'';
-  position:absolute;
-  inset:4px;
-  border:var(--rule) solid currentColor;
-  opacity:.32;
-  pointer-events:none;
 }
 [data-style="editorial"] .primary-row > *{
   position:relative;
@@ -931,15 +905,19 @@ svg{display:block}
   font-weight:700;
 }
 [data-style="editorial"] .opt.is-sel,
-[data-style="editorial"] .opt.is-right{
+[data-style="editorial"] .opt.is-right,
+[data-style="editorial"] .opts.dense .opt.is-sel,
+[data-style="editorial"] .opts.dense .opt.is-right{
   background:var(--ink);
   color:var(--white);
 }
-[data-style="editorial"] .opt.is-wrong{
+[data-style="editorial"] .opt.is-wrong,
+[data-style="editorial"] .opts.dense .opt.is-wrong{
   background:#f7dfdc;
   color:var(--bad);
 }
-[data-style="editorial"] .opt.is-missed{
+[data-style="editorial"] .opt.is-missed,
+[data-style="editorial"] .opts.dense .opt.is-missed{
   background:#fff3cd;
   color:var(--warn);
 }
@@ -1077,23 +1055,6 @@ svg{display:block}
   padding:24px 0;
   border-bottom:var(--rule) solid var(--line);
 }
-[data-style="editorial"] .res-hero .money-watermark{
-  position:absolute;
-  z-index:0;
-  right:-2px;
-  bottom:-38px;
-  color:var(--ink);
-  font-family:Georgia,'Times New Roman',serif;
-  font-size:166px;
-  font-weight:900;
-  line-height:1;
-  opacity:.03;
-  pointer-events:none;
-}
-[data-style="editorial"] .res-hero > :not(.money-watermark){
-  position:relative;
-  z-index:1;
-}
 [data-style="editorial"] .res-report{
   margin-bottom:12px;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -1228,23 +1189,6 @@ svg{display:block}
     24px;
   font-family:Arial,Helvetica,sans-serif;
   font-size:13px;
-}
-[data-style="editorial"] .welcome-screen .money-watermark{
-  position:absolute;
-  z-index:0;
-  top:-50px;
-  right:-4px;
-  color:var(--ink);
-  font-family:Georgia,'Times New Roman',serif;
-  font-size:160px;
-  font-weight:900;
-  line-height:1;
-  opacity:.025;
-  pointer-events:none;
-}
-[data-style="editorial"] .welcome-screen > :not(.money-watermark){
-  position:relative;
-  z-index:1;
 }
 [data-style="editorial"] .welcome-screen header{
   padding-bottom:0;
@@ -1989,7 +1933,6 @@ function viewUeben(){
       : '10 gemeisterte Fragen wiederholen';
   return `<div class="screen pad-top home">
     <header class="brandhead">
-      <span class="money-watermark" aria-hidden="true">€</span>
       <h1 class="brand">BWL für Designer</h1>
       <div class="brand-meta">
         <span class="brand-sub">Klausurvorbereitung</span>
@@ -2251,7 +2194,6 @@ function viewImpressum(){
 function zeichneWillkommen(){
   setzeInhalt(`<main class="view welcome-view">
     <div class="welcome-screen">
-      <span class="money-watermark" aria-hidden="true">€</span>
       <header>
         <h1>Hello.</h1>
       </header>
@@ -2563,7 +2505,6 @@ function zeichneErgebnis(){
   setzeInhalt(`<div class="quiz">
     <div class="qbody" aria-live="polite" style="padding-top:calc(14px + env(safe-area-inset-top))">
       <div class="res-hero">
-        <span class="money-watermark" aria-hidden="true">€</span>
         <div class="res-report">Ergebnis / Quartalsabschluss</div>
         <div class="res-stamp" data-grade="${pct===100?'top':pct>=60?'ok':'bad'}"
           title="Satirischer Prüfvermerk">${stempel}</div>

@@ -697,7 +697,6 @@ function viewUeben(){
       : '10 gemeisterte Fragen wiederholen';
   return `<div class="screen pad-top home">
     <header class="brandhead">
-      <span class="money-watermark" aria-hidden="true">€</span>
       <h1 class="brand">BWL für Designer</h1>
       <div class="brand-meta">
         <span class="brand-sub">Klausurvorbereitung</span>
@@ -959,7 +958,6 @@ function viewImpressum(){
 function zeichneWillkommen(){
   setzeInhalt(`<main class="view welcome-view">
     <div class="welcome-screen">
-      <span class="money-watermark" aria-hidden="true">€</span>
       <header>
         <h1>Hello.</h1>
       </header>
@@ -1271,7 +1269,6 @@ function zeichneErgebnis(){
   setzeInhalt(`<div class="quiz">
     <div class="qbody" aria-live="polite" style="padding-top:calc(14px + env(safe-area-inset-top))">
       <div class="res-hero">
-        <span class="money-watermark" aria-hidden="true">€</span>
         <div class="res-report">Ergebnis / Quartalsabschluss</div>
         <div class="res-stamp" data-grade="${pct===100?'top':pct>=60?'ok':'bad'}"
           title="Satirischer Prüfvermerk">${stempel}</div>
