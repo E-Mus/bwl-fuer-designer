@@ -15,8 +15,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;touch-
   -webkit-user-select:none;user-select:none;text-align:left}
 svg{display:block}
 
-.app{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.app{height:100dvh;display:flex;flex-direction:column;overflow:hidden;position:relative}
 .view{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+/* Inhalt liegt ueber dem Geld-Hintergrund */
+.view,.quiz,.tabbar,.welcome-action{position:relative;z-index:1}
+#geldgrund{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;
+  transition:opacity .8s ease}
+.geld{position:absolute;line-height:1;will-change:transform}
 .screen{padding:14px 14px 18px;display:flex;flex-direction:column;gap:11px;min-height:100%}
 .screen.pad-top{padding-top:calc(14px + env(safe-area-inset-top))}
 /* Restplatz gleichmaessig zwischen die Bloecke - aber nur auf Telefonhoehe.
@@ -162,7 +167,8 @@ svg{display:block}
 <style id="stile">__STILE__</style>
 </head>
 <body>
-<div class="app" id="app" data-style="editorial">
+<div class="app" id="app" data-style="editorial" data-bwl="0">
+  <div id="geldgrund" aria-hidden="true"></div>
   <div id="konfetti" aria-hidden="true"></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </div>
@@ -204,6 +210,7 @@ const EINST_STD = {
   umfang:'essential',
   schwierigkeit:'gemischt',
   zeitlimit:true,
+  bwlTest:null,
   pruefung:'2026-07-29',
   version:EINST_VERSION
 };
@@ -371,43 +378,333 @@ function toast(txt){
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>el.classList.remove('show'),1100);
 }
+
+/* ───────── Verbwlerung ─────────
+   Ein einziger Wert (0 bis 1) steuert Sprache, Hintergrund und Extras.
+   Er waechst mit dem Anteil gemeisterter Fragen und der Menge richtiger Antworten. */
+const BWL_STUFEN=[
+  {rolle:'Mensch',            kurz:'Mensch'},
+  {rolle:'Praktikum, unbezahlt', kurz:'Praktikum'},
+  {rolle:'Junior Consultant', kurz:'Junior'},
+  {rolle:'Senior Consultant', kurz:'Senior'},
+  {rolle:'Head of Synergy',   kurz:'Head of'},
+  {rolle:'Chief Value Officer', kurz:'C-Level'}
+];
+const BWL_SCHWELLEN=[0,.06,.18,.36,.58,.82];
+const BWL_MAX=BWL_STUFEN.length-1;
+function bwlWert(){
+  const pool=basis();
+  const anteil=pool.length?pool.filter(f=>status(f)==='sitzt').length/pool.length:0;
+  let richtigGesamt=0;
+  for(const id in stand.stats) richtigGesamt+=stand.stats[id].richtig||0;
+  const menge=Math.min(1,richtigGesamt/150);
+  return Math.max(0,Math.min(1,anteil*.65+menge*.35));
+}
+function bwlStufeAuto(w=bwlWert()){
+  let s=0;
+  BWL_SCHWELLEN.forEach((g,i)=>{ if(w>=g) s=i });
+  return s;
+}
+// Der Testregler in den Einstellungen sticht die automatische Stufe.
+function bwlStufe(){
+  const t=einst.bwlTest;
+  return (typeof t==='number'&&t>=0&&t<=BWL_MAX)?t:bwlStufeAuto();
+}
+const BWL_TEXT={
+  markeSub:['Klausurvorbereitung','Klausurvorbereitung','Prüfungsvorbereitung',
+    'Exam Readiness','Exam-Readiness-Programm','Zertifizierungs-Roadmap Q3'],
+  marktLabel:['Hinweis','Hinweis','Marktlage','Lernrendite','Marktkommentar','Analystenkommentar'],
+  lernen:['Lernen','Lernen','Lernsprint','Knowledge Sprint','Learning-Journey-Sprint',
+    'Human-Capital-Upskilling-Journey'],
+  pruefung:['Prüfung','Prüfung','Assessment','Performance Review','Zertifizierungs-Audit',
+    'Compliance-Gate Q3'],
+  blitz:['Blitz','Blitz','Speedrun','Rapid Sprint','Momentum-Sprint','Agile Velocity-Burst'],
+  fehler:['Fehler','Fehler','Schwachstellen','Optimierungspotenziale','Growth Opportunities',
+    'Value-Creation-Hebel'],
+  zettel:['Spickzettel','Spickzettel','Kurzübersicht','Executive Summary','Strategic One-Pager',
+    'Executive Briefing'],
+  fragen:['Fragen','Fragen','Fragen','Items','Learning Units','Knowledge Assets'],
+  luecke:['Lücke','Lücke','Lücke','Gap','Knowledge Gap','Kompetenz-Gap'],
+  luecken:['Lücken','Lücken','Lücken','Gaps','Knowledge Gaps','Kompetenz-Gaps'],
+  statistik:['Statistik','Statistik','Auswertung','Reporting','KPI-Dashboard',
+    'Business-Intelligence-Cockpit'],
+  bilanz:['Lernstand','Lernstand','Wissensbilanz','Knowledge Balance Sheet','Human-Capital-Bilanz',
+    'Intellectual-Capital-Statement'],
+  themen:['Themen','Themen','Themenfelder','Handlungsfelder','Business Units',
+    'Strategische Geschäftsfelder'],
+  bloecke:['Blöcke','Blöcke','Blöcke','Streams','Business Units','Value Streams'],
+  einstellungen:['Einstellungen','Einstellungen','Einstellungen','Konfiguration','Governance',
+    'Corporate-Governance-Framework'],
+  lernstatus:['Lernstatus','Lernstatus','Lernstatus','Status-Report','Portfolio-Status',
+    'Asset-Allocation'],
+  durchgaenge:['Letzte Durchgänge','Letzte Durchgänge','Letzte Durchgänge','Letzte Zyklen',
+    'Performance-Historie','Historische Wertentwicklung'],
+  nachThema:['Nach Thema','Nach Thema','Nach Thema','Nach Handlungsfeld','Nach Business Unit',
+    'Segmentberichterstattung'],
+  weiter:['Weiter','Weiter','Weiter','Next Step','Next Action Item','Commitment bestätigen'],
+  auswerten:['Auswerten','Auswerten','Auswerten','Auswerten','Reporting','Quartalsabschluss'],
+  pruefen:['Prüfen','Prüfen','Prüfen','Validieren','Verifizieren','Plausibilisieren'],
+  istRichtig:['Richtig','Richtig','Korrekt','Zielerreichung','Value delivered',
+    'Vollumfängliche Zielerreichung'],
+  istTeilweise:['Fast','Teilweise','Teilweise','Teilzielerreichung','Partial Value',
+    'Anteilige Zielerreichung'],
+  istFalsch:['Falsch','Falsch','Nicht korrekt','Optimierungsbedarf','Underperformance',
+    'Signifikante Zielverfehlung'],
+  xp:['Punkte','Punkte','XP','Wissensdividende','Wissens-EBITDA','EBITDA vor Sondereffekten'],
+  serie:['Serie','Serie','Serie','Streak','Momentum','Value-Momentum'],
+  ergebnisKopf:['Ergebnis','Ergebnis','Ergebnis / Bilanz','Ergebnis / Quartalsabschluss',
+    'Quartalsbericht','Ad-hoc-Mitteilung, unbeauftragt'],
+  stempelTop:['ALLES RICHTIG','ALLES RICHTIG','VOLL GEDECKT','VOLL GEDECKT','TRIPLE-A',
+    'AAA · OUTLOOK STABLE'],
+  stempelOk:['BESTANDEN','BESTANDEN','BESTANDEN','IM PLAN','ON TRACK','GUIDANCE BESTÄTIGT'],
+  stempelBad:['NOCHMAL','NACHPRÜFUNG','NACHPRÜFUNG','UNTER PLAN','PROFIT WARNING',
+    'GEWINNWARNUNG · RESTRUKTURIERUNG']
+};
+const T=(k,stufe=bwlStufe())=>{
+  const a=BWL_TEXT[k];
+  return a[Math.min(stufe,a.length-1)];
+};
+
+// Deterministischer Zufall: der Hintergrund darf beim Neuzeichnen nicht springen.
+function rng(seed){
+  let s=seed>>>0;
+  return ()=>{ s=(s*1664525+1013904223)>>>0; return s/4294967296 };
+}
+const GELD_MAX=120;
+const GELD_ANZAHL=[0,14,30,52,80,120];
+const GELD_DECKUNG=[0,.05,.085,.13,.19,.27];
+function geldAufbauen(){
+  const box=document.getElementById('geldgrund');
+  if(!box||box.childElementCount) return;
+  const r=rng(20260729), zeichen=['€','$','£','¥','%','§','¢','₿'];
+  let html='';
+  for(let i=0;i<GELD_MAX;i++){
+    const z=zeichen[Math.floor(r()*zeichen.length)];
+    html+=`<span class="geld" style="left:${(r()*98).toFixed(2)}%;top:${(r()*98).toFixed(2)}%;`
+      +`font-size:${(13+r()*44).toFixed(0)}px;`
+      +`transform:rotate(${(r()*54-27).toFixed(1)}deg);`
+      +`opacity:${(.45+r()*.55).toFixed(2)}">${z}</span>`;
+  }
+  box.innerHTML=html;
+}
+function setzeBwl(){
+  const s=bwlStufe();
+  app.dataset.bwl=s;
+  geldAufbauen();
+  const box=document.getElementById('geldgrund');
+  if(!box) return;
+  box.style.opacity=GELD_DECKUNG[s];
+  const n=GELD_ANZAHL[s];
+  Array.prototype.forEach.call(box.children,(el,i)=>{ el.style.display=i<n?'':'none' });
+}
+
+/* Echte Zitate ueber Geld. Ab Stufe 3 streut die App sie zwischen die Fragen —
+   als einziger Teil der Satire, der ernst gemeint ist. */
+const ZITATE=[
+  {t:'Preis ist, was du zahlst. Wert ist, was du bekommst.',a:'Warren Buffett'},
+  {t:'Zeit ist Geld.',a:'Benjamin Franklin'},
+  {t:'Hüte dich vor kleinen Ausgaben: Ein kleines Leck versenkt ein großes Schiff.',a:'Benjamin Franklin'},
+  {t:'Heutzutage kennen die Leute von allem den Preis und von nichts den Wert.',a:'Oscar Wilde'},
+  {t:'Nicht wer wenig hat, sondern wer mehr will, ist arm.',a:'Seneca'},
+  {t:'Wer reich stirbt, stirbt in Schande.',a:'Andrew Carnegie'},
+  {t:'Auf lange Sicht sind wir alle tot.',a:'John Maynard Keynes'},
+  {t:'Was ist ein Einbruch in eine Bank gegen die Gründung einer Bank?',a:'Bertolt Brecht'},
+  {t:'Zeig mir den Anreiz, und ich zeige dir das Ergebnis.',a:'Charlie Munger'},
+  {t:'Es gibt kein kostenloses Mittagessen.',a:'Milton Friedman (popularisiert)'},
+  {t:'Regel Nummer eins: Verliere nie Geld. Regel Nummer zwei: Vergiss nie Regel Nummer eins.',a:'Warren Buffett'},
+  {t:'Es dauert zwanzig Jahre, sich einen Ruf aufzubauen, und fünf Minuten, ihn zu ruinieren.',a:'Warren Buffett'},
+  {t:'Nicht vom Wohlwollen des Metzgers, des Brauers oder des Bäckers erwarten wir unser Abendessen, sondern davon, dass sie ihre eigenen Interessen verfolgen.',a:'Adam Smith'},
+  {t:'Geld ist geprägte Freiheit.',a:'Fjodor Dostojewski'},
+  {t:'Solange du nicht erkennst, dass Geld die Wurzel alles Guten ist, verlangst du nach deinem eigenen Untergang.',a:'Ayn Rand, Atlas Shrugged'},
+  {t:'Gier, um es beim Namen zu nennen, ist gut. Gier funktioniert.',a:'Gordon Gekko, Wall Street 1987'},
+  {t:'Erst kommt das Fressen, dann kommt die Moral.',a:'Bertolt Brecht, Dreigroschenoper'},
+  {t:'Wir verdienen nach wie vor mehr Geld beim Schnarchen als beim Handeln.',a:'Warren Buffett, Aktionärsbrief 1996'},
+  {t:'Wenn es um Geld geht, sind alle von derselben Religion.',a:'Voltaire'},
+  {t:'Der Mangel an Geld ist die Wurzel allen Übels.',a:'Mark Twain'},
+  {t:'Es gibt nur eine Klasse, die mehr ans Geld denkt als die Reichen: die Armen.',a:'Oscar Wilde'},
+  {t:'Das Geheimnis großer Vermögen ohne erkennbare Ursache ist ein vergessenes Verbrechen.',a:'Honoré de Balzac'}
+];
+const ZITAT_AB=3;                     // vorher bleibt die App bei ihrer eigenen Sprache
+const ZITAT_ABSTAND=4;                // jede vierte beantwortete Frage
+function zitatZiehen(){
+  return bwlStufe()<ZITAT_AB ? null : zufallAus(ZITATE,'zitat');
+}
+function zitatHtml(z){
+  if(!z) return '';
+  return `<figure class="geldzitat">
+    <blockquote>${esc(z.t)}</blockquote>
+    <figcaption>${esc(z.a)}</figcaption>
+  </figure>`;
+}
+
+/* Wechselkurs fuer die Wissensdividende. Schwankt taeglich, bedeutet nichts. */
+function xpKurs(){
+  const tag=Number(heute().replace(/-/g,''));
+  return 0.6+rng(tag)()*0.8;
+}
+
+/* Satirischer Kursticker. Notiert werden erfundene Werte aus dem Studienalltag —
+   echte Unternehmen haetten hier nur falsche Kurse. */
+const TICKER=[
+  {k:'KAFFEE',basis:4.2},{k:'DEADLINE',basis:2.6},{k:'SYNERGIE',basis:88},
+  {k:'MEETING',basis:0.4},{k:'PPTX',basis:151},{k:'EXCEL',basis:404},
+  {k:'SCHLAF',basis:6.8}
+];
+let kursTimer=null;
+function stopKurse(){ if(kursTimer){clearInterval(kursTimer);kursTimer=null} }
+function kursDaten(schritt){
+  const r=rng(20260729+schritt*7919);
+  const zeilen=TICKER.map(t=>{
+    const d=(r()-.48)*4.2;
+    return {k:t.k, kurs:(t.basis*(1+d/100)).toFixed(2), d};
+  });
+  // Der eigene Lernstand notiert mit: das ist der Witz an der Sache.
+  const w=bwlWert();
+  zeilen.push({k:'DU', kurs:(8+w*92).toFixed(2), d:(w*100-42)/12});
+  return zeilen;
+}
+function kursBand(schritt=0){
+  const zeilen=kursDaten(schritt).map(z=>
+    `<span class="kurs"><b>${z.k}</b> ${z.kurs.replace('.',',')}`
+    +`<i data-t="${z.d>=0?'up':'down'}">${z.d>=0?'▲':'▼'} ${Math.abs(z.d).toFixed(2)} %</i></span>`
+  ).join('');
+  return zeilen+zeilen;
+}
+function tickerHtml(){
+  return `<section class="kursticker" aria-label="Satirischer Kursticker">
+    <div class="kurskopf"><span>Märkte</span></div>
+    <div class="kurslauf"><div class="kursband" id="kursband">${kursBand(0)}</div></div>
+  </section>`;
+}
+function bindeKurse(){
+  const band=document.getElementById('kursband');
+  if(!band) return;
+  let schritt=0;
+  kursTimer=setInterval(()=>{
+    const b=document.getElementById('kursband');
+    if(!b){ stopKurse(); return }
+    b.innerHTML=kursBand(++schritt);
+  },4000);
+}
+// Je besser der Lernstand, desto tiefer rutscht die App in die Beratersprache.
+// Stufe 0 und 1 bleiben stumm — Marktkommentar und Feedbackspruch tauchen erst
+// ab SPRUCH_AB auf, deshalb beginnen diese Listen bei Stufe 2.
+const SPRUCH_AB=2;
 const SATIRE={
   markt:[
-    'Halbwissen ist nicht durch die Zentralbank gedeckt.',
-    'Die Wissensmärkte reagieren weiterhin nervös.',
-    'Vergangene Lernerfolge sind kein verlässlicher Renditeindikator.',
-    'Kognitive Liquidität bleibt ein knappes Gut.',
-    'Wissensdividenden können im Wert steigen oder fallen.',
-    'Die Einlagensicherung greift bei Prüfungswissen ausdrücklich nicht.'
+    ['Der Wissensstand entwickelt sich planmäßig.',
+     'Kontinuität schlägt kurzfristige Kraftanstrengung.',
+     'Die Lernkurve zeigt nach oben.',
+     'Wer heute drei Fragen macht, muss morgen keine dreißig machen.',
+     'Der Stoff wird nicht mehr, du wirst nur schneller.',
+     'Die Wiederholung arbeitet für dich, nicht gegen dich.'],
+    ['Halbwissen ist nicht durch die Zentralbank gedeckt.',
+     'Die Wissensmärkte reagieren weiterhin nervös.',
+     'Vergangene Lernerfolge sind kein verlässlicher Renditeindikator.',
+     'Der Wissensbestand wird zu fortgeführten Anschaffungskosten bewertet.',
+     'Die Rückstellungen für Nichtwissen wurden angepasst.',
+     'Kurzfristige Verbindlichkeiten gegenüber der Klausur bestehen fort.'],
+    ['Kognitive Liquidität bleibt ein knappes Gut.',
+     'Wissensdividenden können im Wert steigen oder fallen.',
+     'Die Einlagensicherung greift bei Prüfungswissen ausdrücklich nicht.',
+     'Das Rating für dieses Semester steht unter Beobachtung.',
+     'Die Volatilität deiner Tagesform bleibt erhöht.',
+     'Ein Rückkaufprogramm für verlorene Lernzeit ist nicht vorgesehen.'],
+    ['Wir skalieren dein Humankapital entlang der gesamten Wertschöpfungskette.',
+     'Die Guidance für dein Prüfungsergebnis wird vorbehaltlich Sondereffekten bestätigt.',
+     'Synergien werden gehoben, sobald du aufhörst, diesen Satz zu lesen.',
+     'Das Zielbild ist ambitioniert, aber roadmap-seitig hinterlegt.',
+     'Die Lessons Learned wurden in einen Deep-Dive überführt.',
+     'Der Stakeholder-Dialog zu deinem Prüfungserfolg läuft ergebnisoffen.']
   ],
   richtig:[
-    'Wissensdividende gutgeschrieben.',
-    'Kognitives Eigenkapital gestärkt.',
-    'Die Lernrendite liegt über Plan.',
-    'Diese Position ist vollständig gedeckt.'
+    ['Sauber abgeliefert.','Das war planmäßig.','Sitzt und passt.'],
+    ['Wissensdividende gutgeschrieben.',
+     'Kognitives Eigenkapital gestärkt.',
+     'Diese Position ist vollständig gedeckt.'],
+    ['Die Lernrendite liegt über Plan.',
+     'Wertbeitrag realisiert, Guidance angehoben.',
+     'Diese Position wird mit AAA bewertet.'],
+    ['Value created, Stakeholder aligned, Synergien gehoben.',
+     'Best-in-class-Performance im Peer-Group-Vergleich.',
+     'Antwort erfolgreich in die Wertschöpfungskette integriert.']
   ],
   teilweise:[
-    'Das Portfolio ist nur teilweise gedeckt.',
-    'Die Bilanz enthält noch Restunsicherheit.',
-    'Teilrendite verbucht, Nachkauf empfohlen.'
+    ['Teilweise erreicht.','Da fehlt noch etwas.'],
+    ['Das Portfolio ist nur teilweise gedeckt.',
+     'Die Bilanz enthält noch Restunsicherheit.'],
+    ['Teilrendite verbucht, Nachkauf empfohlen.',
+     'Der Zielkorridor wurde nur anteilig erreicht.'],
+    ['Partieller Wertbeitrag bei erhöhtem Nachsteuerungsbedarf.',
+     'Das Deliverable erfüllt die Akzeptanzkriterien nur anteilig.']
   ],
   falsch:[
-    'Die Bilanz weist Klärungsbedarf auf.',
-    'Diese Position muss wertberichtigt werden.',
-    'Die Wissensreserve ist vorübergehend illiquide.',
-    'Keine Deckung durch vorhandenes Eigenwissen.'
+    ['Hier besteht Nachholbedarf.',
+     'Die Antwort hält der Prüfung nicht stand.',
+     'Das kommt auf die Wiedervorlage.'],
+    ['Die Bilanz weist Klärungsbedarf auf.',
+     'Diese Position muss wertberichtigt werden.',
+     'Keine Deckung durch vorhandenes Eigenwissen.'],
+    ['Die Wissensreserve ist vorübergehend illiquide.',
+     'Abschreibung auf den Buchwert dieser Antwort.',
+     'Gewinnwarnung für dieses Themenfeld.'],
+    ['Impairment-Test fehlgeschlagen, außerplanmäßige Abschreibung eingeleitet.',
+     'Das Learning wurde als Sondereffekt aus dem operativen Ergebnis herausgerechnet.',
+     'Restrukturierung dieses Wissensbereichs unter Beteiligung externer Berater empfohlen.']
+  ],
+  // je Stufe: 100 % · ab 80 % · ab 60 % · ab 30 % · darunter
+  abschluss:[
+    ['Alles richtig. Stark.','Das lief gut.','Passt soweit.','Da geht noch was.','Das üben wir nochmal.'],
+    ['Alles richtig. Sehr stark.','Das lief richtig gut.','Solide Runde.','Noch Luft nach oben.','Nochmal von vorne, ist okay.'],
+    ['Vollständige Zielerreichung.','Deutlich über dem Durchschnitt.','Im grünen Bereich.',
+     'Unter Plan, aber machbar.','Hier ist Nacharbeit nötig.'],
+    ['Das Wissensportfolio ist vollständig gedeckt.','Die Lernrendite liegt deutlich über Plan.',
+     'Die Bilanz schließt im positiven Bereich.','Sanierungsplan für das Wissensportfolio empfohlen.',
+     'Kognitive Insolvenz vorläufig festgestellt.'],
+    ['Vollumfängliche Zielerreichung, der Bonus wird ausgezahlt.',
+     'Guidance angehoben, die Analysten reagieren erfreut.','Ergebnis im Rahmen der Erwartungen.',
+     'Profit Warning, eine Restrukturierung wird geprüft.','Insolvenz in Eigenverwaltung angemeldet.'],
+    ['Rekordergebnis. Der Vorstand dankt sich selbst.',
+     'Übertreffen der Guidance bei gleichzeitiger Effizienzsteigerung.',
+     'Ergebnis im Rahmen der angepassten angepassten Erwartungen.',
+     'Turnaround-Programm „Fokus 2026“ wird aufgesetzt.',
+     'Der Aufsichtsrat hat das Vertrauen ausgesprochen. Zweimal.']
+  ],
+  serie:[
+    'Serie ${n}','Serie ${n}','Serie ${n} · läuft',
+    'Serie ${n} · Markt überhitzt','Momentum ${n} · Analysten jubeln',
+    'Value-Momentum ${n} · Sonderdividende avisiert'
   ]
 };
-function satireAuswahl(liste,schluessel=''){
-  const n=String(schluessel).split('').reduce((sum,c)=>sum+c.charCodeAt(0),0);
-  return liste[n%liste.length];
+// Jeder Aufruf zieht neu, wiederholt aber nie direkt denselben Eintrag.
+const zuletztGezogen=new Map();
+function zufallAus(liste,gruppe){
+  if(!liste||!liste.length) return null;
+  if(liste.length===1) return liste[0];
+  const vorher=zuletztGezogen.get(gruppe);
+  let wahl;
+  do{ wahl=liste[Math.floor(Math.random()*liste.length)] }while(wahl===vorher);
+  zuletztGezogen.set(gruppe,wahl);
+  return wahl;
+}
+// Marktkommentar und Feedbackspruch sind reine Zutat: unterhalb von SPRUCH_AB
+// gibt es sie gar nicht, ihre Listen beginnen deshalb erst bei dieser Stufe.
+const NUR_AB_STUFE=new Set(['markt','richtig','teilweise','falsch']);
+function satireStufe(gruppe){
+  const liste=SATIRE[gruppe], s=bwlStufe();
+  if(!NUR_AB_STUFE.has(gruppe)) return liste[Math.min(s,liste.length-1)];
+  return s<SPRUCH_AB ? null : liste[Math.min(s-SPRUCH_AB,liste.length-1)];
 }
 function marktMeldung(){
-  return satireAuswahl(SATIRE.markt,heute()+(stand.xp||0));
+  return zufallAus(satireStufe('markt'),'markt') || '';
 }
-function feedbackSatire(p,f){
-  const liste=p>=1?SATIRE.richtig:p>0?SATIRE.teilweise:SATIRE.falsch;
-  return satireAuswahl(liste,f.id);
+function feedbackSatire(p){
+  const gruppe=p>=1?'richtig':p>0?'teilweise':'falsch';
+  return zufallAus(satireStufe(gruppe),gruppe) || '';
+}
+function abschlussText(pct){
+  const l=satireStufe('abschluss');
+  return pct===100?l[0]:pct>=80?l[1]:pct>=60?l[2]:pct>=30?l[3]:l[4];
 }
 function memeImText(text){
   const inhalt=String(text||'').toLocaleLowerCase('de');
@@ -608,11 +905,15 @@ function decke(){
   const p=bewerte(e.frage,echt);
   sitzung.aufgedeckt=true; sitzung.punkte+=p;
   sitzung.antworten.push({id:e.frage.id,punkte:p,gewaehlt:echt,wdh:!!e.wdh});
+  // Spruch und Zitat einmal beim Aufdecken ziehen, damit sie beim Neuzeichnen stehen bleiben.
+  sitzung.spruch=feedbackSatire(p);
+  sitzung.zitat=sitzung.antworten.length%ZITAT_ABSTAND===0?zitatZiehen():null;
   merkeAntwort(e.frage.id,p,e.frage.schwierigkeit);
   wiedervorlage(e,p);
   if(p>=1){
     sitzung.serie++; sitzung.besteSerie=Math.max(sitzung.besteSerie,sitzung.serie);
-    if(sitzung.serie>0&&sitzung.serie%5===0) toast('Serie '+sitzung.serie+' · Markt überhitzt');
+    if(sitzung.serie>0&&sitzung.serie%5===0)
+      toast(satireStufe('serie').replace('${n}',sitzung.serie));
   }else sitzung.serie=0;
   if(sitzung.modus==='blitz'){zeichne();setTimeout(()=>{if(sitzung&&!sitzung.fertig)weiter()},680);return}
   zeichne();
@@ -646,7 +947,7 @@ function weiter(){
   zeichne();
 }
 function ergebnis(){
-  stopTicker(); sitzung.fertig=true;
+  stopTicker(); sitzung.fertig=true; sitzung.endzitat=zitatZiehen();
   // Gewertet wird der ERSTE Versuch je Frage - Wiedervorlagen wuerden die Quote sonst schoenrechnen
   const erst=sitzung.antworten.filter(a=>!a.wdh);
   const n=erst.length, gesamt=sitzung.modus==='pruefung'?sitzung.erstmalig:n;
@@ -667,17 +968,20 @@ function ergebnis(){
 /* ───────── Zeichnen ───────── */
 // Toast und Monetenregen liegen in .app (damit die Stil-Selektoren greifen),
 // duerfen beim Neuzeichnen aber nicht mitgeloescht werden.
-const OVERLAY = ['konfetti','toast'].map(id=>document.getElementById(id));
+const OVERLAY = ['geldgrund','konfetti','toast'].map(id=>document.getElementById(id));
 function setzeInhalt(html){
+  stopKurse();
   app.innerHTML=html;
   OVERLAY.forEach(el=>app.appendChild(el));
 }
 function zeichne(){
+  setzeBwl();
   if(willkommenOffen) return onboardingRecht?zeichneOnboardingRecht():zeichneWillkommen();
   if(sitzung) return sitzung.fertig?zeichneErgebnis():zeichneFrage();
   if(zettel) return zeichneZettel();
   setzeInhalt(`<main class="view" id="view">${ansicht()}</main>${tabbar()}`);
   bindeStart();
+  bindeKurse();
   animiereBalken();
 }
 function tabbar(){
@@ -728,16 +1032,17 @@ function ubenDaten(){
 function viewUeben(){
   const D=ubenDaten();
   const seriennummer=`BWL–${String(D.B.length).padStart(3,'0')}–2026`;
+  const wort=T('fragen'), markt=marktMeldung();
   const weiterText=D.offen
-    ? '10 Fragen · '+D.offen+' neu'
+    ? '10 '+wort+' · '+D.offen+' neu'
     : D.luk
-      ? '10 Fragen · '+D.luk+' wiederholen'
-      : '10 gemeisterte Fragen wiederholen';
+      ? '10 '+wort+' · '+D.luk+' wiederholen'
+      : '10 gemeisterte '+wort+' wiederholen';
   return `<div class="screen pad-top home">
     <header class="brandhead">
       <h1 class="brand">BWL für Designer</h1>
       <div class="brand-meta">
-        <span class="brand-sub">Klausurvorbereitung</span>
+        <span class="brand-sub">${esc(T('markeSub'))}</span>
         <span class="brand-serial">${seriennummer}</span>
       </div>
     </header>
@@ -745,23 +1050,24 @@ function viewUeben(){
     <section class="home-progress" aria-label="Lernstatus">
       ${statusTabelle(D.v)}
       ${statusBalken(D.v)}
-      <div class="market-note"><span>Lernrendite</span>${esc(marktMeldung())}</div>
+      ${bwlStufe()>=BWL_MAX?tickerHtml():''}
+      ${markt?`<div class="market-note"><span>${esc(T('marktLabel'))}</span>${esc(markt)}</div>`:''}
     </section>
 
     <button class="primary-row" data-go="lernen">
-      <span class="primary-copy"><span class="primary-title">Lernen</span>
+      <span class="primary-copy"><span class="primary-title">${esc(T('lernen'))}</span>
         <span class="primary-sub">${weiterText}</span></span>
       <span class="arrow" aria-hidden="true">→</span>
     </button>
 
     <div class="mode-list">
       <button class="mode-row" data-go="pruefung">
-        <span><span class="mode-title">Prüfung</span>
-          <span class="mode-sub">${Math.min(PRUEFUNGS_LAENGE,D.B.length)} Fragen · ${einst.zeitlimit?'40 Minuten':'ohne Zeitlimit'}</span></span>
+        <span><span class="mode-title">${esc(T('pruefung'))}</span>
+          <span class="mode-sub">${Math.min(PRUEFUNGS_LAENGE,D.B.length)} ${wort} · ${einst.zeitlimit?'40 Minuten':'ohne Zeitlimit'}</span></span>
         <span class="arrow" aria-hidden="true">→</span>
       </button>
       <button class="mode-row" data-go="blitz">
-        <span><span class="mode-title">Blitz</span>
+        <span><span class="mode-title">${esc(T('blitz'))}</span>
           <span class="mode-sub">60 Sekunden${D.r.blitz?' · Rekord '+D.r.blitz:''}</span></span>
         <span class="arrow" aria-hidden="true">→</span>
       </button>
@@ -769,14 +1075,30 @@ function viewUeben(){
 
     <div class="compact-modes">
       <button class="compact-mode" data-go="fehler" ${D.fehler?'':'disabled'}>
-        <span class="mode-title">Fehler</span>
-        <span class="mode-sub">${D.fehler?D.fehler+' offen':'keine offenen Fehler'}</span>
+        <span class="mode-title">${esc(T('fehler'))}</span>
+        <span class="mode-sub">${D.fehler?D.fehler+' offen':'nichts offen'}</span>
       </button>
       <button class="compact-mode" data-zettel ${D.luk?'':'disabled'}>
-        <span class="mode-title">Spickzettel</span>
-        <span class="mode-sub">${D.luk?(D.luk===1?'1 Lücke':D.luk+' Lücken'):'noch leer'}</span>
+        <span class="mode-title">${esc(T('zettel'))}</span>
+        <span class="mode-sub">${D.luk?(D.luk===1?'1 '+T('luecke'):D.luk+' '+T('luecken')):'noch leer'}</span>
       </button>
     </div>
+  </div>`;
+}
+
+// Der Index ist eine Anspielung, keine Bewertung: er zeigt nur, wie weit die
+// App die Sprache schon verdreht hat.
+function bwlIndexKarte(){
+  const w=bwlWert(), s=bwlStufe(), pct=Math.round(w*100);
+  return `<div class="chartcard bwlcard">
+    <div class="bwl-head">
+      <span class="bwl-rolle">${esc(BWL_STUFEN[s].rolle)}</span>
+      <span class="bwl-wert">${pct} %</span>
+    </div>
+    <div class="bartrack"><div class="barfill" data-w="${pct}"></div></div>
+    <div class="bwl-leiter">${BWL_STUFEN.map((st,i)=>
+      `<span class="bwl-stufe${i<=s?' is-on':''}"${i===s?' aria-current="true"':''}>${esc(st.kurz)}</span>`
+    ).join('')}</div>
   </div>`;
 }
 
@@ -788,8 +1110,8 @@ function viewStatistik(){
   const gesehen=gesehenZahl();
 
   return `<div class="screen pad-top">
-    <div class="shead"><div><div class="stitle">Statistik</div>
-      <div class="ssub">Wissensbilanz · ${gesehen}/${ges} bearbeitet · ${umfangName(einst.umfang)}</div></div></div>
+    <div class="shead"><div><div class="stitle">${esc(T('statistik'))}</div>
+      <div class="ssub">${esc(T('bilanz'))} · ${gesehen}/${ges} bearbeitet · ${umfangName(einst.umfang)}</div></div></div>
 
     <div class="chartcard">
       <div class="ringwrap">
@@ -801,14 +1123,16 @@ function viewStatistik(){
       </div>
     </div>
 
+    ${bwlIndexKarte()}
+
     <div class="chartcard">
-      <span class="chart-t">Lernstatus</span>
+      <span class="chart-t">${esc(T('lernstatus'))}</span>
       ${statusTabelle(v)}
       ${statusBalken(v)}
     </div>
 
     <div class="chartcard">
-      <span class="chart-t">Letzte Durchgänge</span>
+      <span class="chart-t">${esc(T('durchgaenge'))}</span>
       ${verlauf(letzte)}
     </div>
 
@@ -818,7 +1142,7 @@ function viewStatistik(){
     </div>
 
     <div class="chartcard">
-      <span class="chart-t">Nach Thema</span>
+      <span class="chart-t">${esc(T('nachThema'))}</span>
       ${themen(B).map(([t])=>{const pool=B.filter(f=>f.thema===t), q=themaQuote(t,B), tv=statusVerteilung(pool);return `<div class="topic-stat">
         <div class="topic-stat-head"><span class="barlab">${esc(t)}</span>
           <span class="barval">${tv.sitzt}/${q.n}</span></div>
@@ -830,11 +1154,11 @@ function viewStatistik(){
 
 function viewThemen(){
   const B=basis();
-  const T=themen(B);
+  const liste=themen(B);
   return `<div class="screen pad-top">
-    <div class="shead"><div><div class="stitle">Themen</div>
-      <div class="ssub">${T.length} Blöcke · ${umfangName(einst.umfang)}</div></div></div>
-    <div class="tlist">${T.map(([t,n])=>{
+    <div class="shead"><div><div class="stitle">${esc(T('themen'))}</div>
+      <div class="ssub">${liste.length} ${esc(T('bloecke'))} · ${umfangName(einst.umfang)}</div></div></div>
+    <div class="tlist">${liste.map(([t,n])=>{
       const q=themaQuote(t,B);
       return `<button class="trow tapp" data-thema="${esc(t)}">
         <span class="barlab">${esc(t)}</span>
@@ -851,8 +1175,10 @@ function viewEinstellungen(){
     const pool=umfangPool();
     return s==='gemischt' ? pool.length : pool.filter(f=>f.schwierigkeit===s).length;
   };
+  const manuell=typeof einst.bwlTest==='number';
+  const stufe=bwlStufe(), autoStufe=bwlStufeAuto();
   return `<div class="screen pad-top">
-    <div class="shead"><div><div class="stitle">Einstellungen</div><div class="ssub">gelten für alle Modi</div></div></div>
+    <div class="shead"><div><div class="stitle">${esc(T('einstellungen'))}</div><div class="ssub">gelten für alle Modi</div></div></div>
 
     <div class="chartcard">
       <span class="chart-t">Stoffumfang</span>
@@ -908,6 +1234,26 @@ function viewEinstellungen(){
       <div class="setting-note">${einst.zeitlimit
         ? '40 Fragen in 40 Minuten, wie in der Klausur.'
         : 'Die Prüfung läuft ohne Zeitdruck.'}</div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">BWL-Stufe (Test)</span>
+      <div class="chips">
+        <button class="chip${manuell?'':' is-on'}" data-bwl-auto
+          aria-pressed="${!manuell}">Automatisch</button>
+        <button class="chip${manuell?' is-on':''}" data-bwl-hand
+          aria-pressed="${manuell}">Von Hand</button>
+      </div>
+      <div class="bwl-regler">
+        <input type="range" min="0" max="${BWL_MAX}" step="1" value="${stufe}"
+          data-bwl-slider aria-label="BWL-Stufe"${manuell?'':' disabled'}>
+        <div class="bwl-reglerskala">${BWL_STUFEN.map((st,i)=>
+          `<span${i===stufe?' class="is-on"':''}>${i}</span>`).join('')}</div>
+      </div>
+      <div class="setting-note">Stufe ${stufe} · ${esc(BWL_STUFEN[stufe].rolle)}.
+        ${manuell
+          ? `Der Regler überschreibt den automatischen Wert (aktuell Stufe ${autoStufe}).`
+          : `Die Stufe wächst mit deinem Lernstand. Zum Ausprobieren auf „Von Hand“ stellen.`}</div>
     </div>
 
     <div class="chartcard">
@@ -1116,7 +1462,7 @@ function zeichneZettel(){
     <div class="qbody">
       <div class="res-hero" style="padding-top:0">
         <div class="res-num">${liste.length}</div>
-        <div class="res-sub">${liste.length===1?'Lücke':'Lücken'} · nur deine Fehler, nicht der ganze Stoff</div>
+        <div class="res-sub">${esc(liste.length===1?T('luecke'):T('luecken'))} · nur deine Fehler, nicht der ganze Stoff</div>
       </div>
       <div class="chips">
         <button class="chip${zettelOffen?' is-on':''}" data-zauf="1"
@@ -1167,11 +1513,12 @@ function zeichneFrage(){
   const p=sitzung.aufgedeckt?bewerte(f,gew):0;
   const zeig=sitzung.aufgedeckt&&sofort();
   const meme=zeig&&p>=1?memeFuerFrage(f):null;
+  const spruch=zeig?(sitzung.spruch||''):'';
   const prog=sitzung.zeitGesamt?(sitzung.zeitRest/sitzung.zeitGesamt*100):(sitzung.endlos?100:sitzung.i/n*100);
-  let btn='Weiter';
-  if(sitzung.aufgedeckt) btn=(!sitzung.endlos&&sitzung.i>=n-1)?'Auswerten':'Weiter';
-  else if(sofort()&&f.multi) btn='Prüfen';
-  else if(!sofort()&&sitzung.i>=n-1) btn='Auswerten';
+  let btn=T('weiter');
+  if(sitzung.aufgedeckt) btn=(!sitzung.endlos&&sitzung.i>=n-1)?T('auswerten'):T('weiter');
+  else if(sofort()&&f.multi) btn=T('pruefen');
+  else if(!sofort()&&sitzung.i>=n-1) btn=T('auswerten');
 
   setzeInhalt(`<div class="quiz">
     <div class="qtop">
@@ -1211,8 +1558,8 @@ function zeichneFrage(){
       </div>
     </div>
     ${zeig?`<div class="answer-feedback" role="status" data-r="${p>=1?'ok':p>0?'teil':'bad'}">
-      <span class="fb-v">${p>=1?'Richtig':p>0?`Teilweise · ${Math.round(p*100)} %`:'Falsch'}</span>
-      <span class="satire-feedback">${esc(feedbackSatire(p,f))}</span>
+      <span class="fb-v">${p>=1?esc(T('istRichtig')):p>0?`${esc(T('istTeilweise'))} · ${Math.round(p*100)} %`:esc(T('istFalsch'))}</span>
+      ${spruch?`<span class="satire-feedback">${esc(spruch)}</span>`:''}
       ${meme?`<figure class="meme-reaction">
         <div class="meme-media">
           <img src="${esc(meme.url)}" alt="Reaction-GIF zu ${esc(meme.title)}"
@@ -1221,6 +1568,7 @@ function zeichneFrage(){
         </div>
       </figure>`:''}
       <span class="fb-p">${md(kernsatz(f.erklaerung))}</span>
+      ${meme?'':zitatHtml(sitzung.zitat)}
       <div class="answer-detail" id="answer-detail" hidden>
         <span class="answer-detail-title">Erklärung</span>
         <span>${md(f.erklaerung)}</span>
@@ -1287,16 +1635,14 @@ function zeichneErgebnis(){
   const pErst=erst.reduce((x,a)=>x+a.punkte,0);
   const pkt=Math.round(pErst*10)/10, pct=gesamt?Math.round(pErst/gesamt*100):0;
   const xpNeu=(stand.xp||0)-sitzung.xpVor;
-  const stempel=pct===100?'VOLL GEDECKT':pct>=60?'BESTANDEN':'NACHPRÜFUNG';
-  const abschluss=pct===100
-    ? 'Das Wissensportfolio ist vollständig gedeckt.'
-    : pct>=80
-      ? 'Die Lernrendite liegt deutlich über Plan.'
-      : pct>=60
-        ? 'Die Bilanz schließt im positiven Bereich.'
-        : pct>=30
-          ? 'Sanierungsplan für das Wissensportfolio empfohlen.'
-          : 'Kognitive Insolvenz vorläufig festgestellt.';
+  // Ab Stufe 3 wird die Wissensdividende in eine erfundene Waehrung umgerechnet.
+  const k=xpKurs();
+  const kurs=bwlStufe()>=ZITAT_AB
+    ? ` ≙ ${(xpNeu*k).toFixed(2).replace('.',',')} Shareholder Value`
+      +(bwlStufe()>=BWL_MAX?` (Tageskurs ${k.toFixed(2).replace('.',',')})`:'')
+    : '';
+  const stempel=pct===100?T('stempelTop'):pct>=60?T('stempelOk'):T('stempelBad');
+  const abschluss=abschlussText(pct);
   let gross,unter;
   if(sitzung.modus==='blitz'){gross=voll;unter=`in 60 Sekunden${sitzung.neu?' · NEUER REKORD':' · Rekord '+stand.rekorde.blitz}`}
   else{gross=pkt+' / '+gesamt;unter=`${pct} % · ${voll} vollständig richtig${offen?' · '+offen+' offen':''}`}
@@ -1312,16 +1658,17 @@ function zeichneErgebnis(){
   setzeInhalt(`<div class="quiz">
     <div class="qbody" aria-live="polite" style="padding-top:calc(14px + env(safe-area-inset-top))">
       <div class="res-hero">
-        <div class="res-report">Ergebnis / Quartalsabschluss</div>
+        <div class="res-report">${esc(T('ergebnisKopf'))}</div>
         <div class="res-stamp" data-grade="${pct===100?'top':pct>=60?'ok':'bad'}"
-          title="Satirischer Prüfvermerk">${stempel}</div>
+          title="Satirischer Prüfvermerk">${esc(stempel)}</div>
         <div class="res-num">${gross}</div>
         <div class="res-sub">${unter}</div>
-        <div class="res-sub">Wissensdividende +${xpNeu} XP${sitzung.besteSerie>1?` · Serie ${sitzung.besteSerie}`:''}${sitzung.wdh?` · ${sitzung.wdh} Wiedervorlagen`:''}</div>
+        <div class="res-sub">${esc(T('xp'))} +${xpNeu} XP${kurs}${sitzung.besteSerie>1?` · ${esc(T('serie'))} ${sitzung.besteSerie}`:''}${sitzung.wdh?` · ${sitzung.wdh} Wiedervorlagen`:''}</div>
         <div class="res-closing">${abschluss}</div>
+        ${zitatHtml(sitzung.endzitat)}
       </div>
       <div class="chartcard">
-        <span class="chart-t">Nach Thema</span>
+        <span class="chart-t">${esc(T('nachThema'))}</span>
         ${Object.entries(proThema).sort((a,b)=>a[0].localeCompare(b[0],'de')).map(([t,v])=>{
           const q=Math.round(v.p/v.n*100);
           return `<div class="topic-stat">
@@ -1347,7 +1694,7 @@ function zeichneErgebnis(){
       </div>`:''}
     </div>
     <div class="qact">
-      ${falsch.length?`<button class="btn btn-ghost narrow" data-fehler>Fehler üben</button>`:''}
+      ${falsch.length?`<button class="btn btn-ghost narrow" data-fehler>${esc(T('fehler'))} üben</button>`:''}
       <button class="btn btn-primary" data-home>Fertig</button>
     </div>
   </div>`);
@@ -1376,6 +1723,24 @@ function bindeStart(){
   app.querySelectorAll('[data-zeit]').forEach(b=>b.onclick=()=>{
     setzeEinst('zeitlimit',b.dataset.zeit==='1'); zeichne();
   });
+  const bwlAuto=app.querySelector('[data-bwl-auto]');
+  if(bwlAuto) bwlAuto.onclick=()=>{ setzeEinst('bwlTest',null); zeichne(); };
+  const bwlHand=app.querySelector('[data-bwl-hand]');
+  if(bwlHand) bwlHand.onclick=()=>{ setzeEinst('bwlTest',bwlStufe()); zeichne(); };
+  const bwlRegler=app.querySelector('[data-bwl-slider]');
+  if(bwlRegler) bwlRegler.oninput=()=>{
+    setzeEinst('bwlTest',+bwlRegler.value);
+    setzeBwl();
+    // Nur die Beschriftung nachziehen: ein Neuzeichnen wuerde den Regler
+    // waehrend des Ziehens unter dem Finger wegreissen.
+    const note=bwlRegler.closest('.chartcard').querySelector('.setting-note');
+    const s=+bwlRegler.value;
+    if(note) note.textContent=`Stufe ${s} · ${BWL_STUFEN[s].rolle}. `
+      +`Der Regler überschreibt den automatischen Wert (aktuell Stufe ${bwlStufeAuto()}).`;
+    bwlRegler.parentElement.querySelectorAll('.bwl-reglerskala span')
+      .forEach((el,i)=>el.classList.toggle('is-on',i===s));
+  };
+  if(bwlRegler) bwlRegler.onchange=()=>zeichne();
   const tm=app.querySelector('[data-termin]');
   if(tm) tm.onclick=()=>{
     const v=prompt('Prüfungstermin (JJJJ-MM-TT)', einst.pruefung||'');

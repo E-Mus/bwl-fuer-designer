@@ -1231,3 +1231,218 @@
     min-height:60px;
   }
 }
+
+/* ═══ Verbwlerung ═══
+   Geldzeichen im Hintergrund, Index-Karte, Testregler und Kursticker.
+   Alles rein dekorativ; die Deckkraft steuert die App ueber die Stufe. */
+[data-style="editorial"] .geld{
+  color:var(--ink);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-weight:900;
+  user-select:none;
+}
+[data-style="editorial"][data-bwl="4"] .geld,
+[data-style="editorial"][data-bwl="5"] .geld{
+  color:var(--ok);
+}
+
+[data-style="editorial"] .bwl-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:8px;
+}
+[data-style="editorial"] .bwl-rolle{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+[data-style="editorial"] .bwl-wert{
+  font-size:22px;
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+}
+[data-style="editorial"] .bwl-leiter{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:3px;
+  margin-top:8px;
+}
+[data-style="editorial"] .bwl-stufe{
+  overflow:hidden;
+  padding:5px 2px;
+  border-top:var(--rule) solid var(--soft);
+  color:var(--muted);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:8px;
+  font-weight:800;
+  text-align:center;
+  text-overflow:ellipsis;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+[data-style="editorial"] .bwl-stufe.is-on{
+  border-top-color:var(--ink);
+  color:var(--ink);
+}
+
+[data-style="editorial"] .bwl-regler{
+  margin-top:12px;
+}
+[data-style="editorial"] .bwl-regler input[type="range"]{
+  display:block;
+  width:100%;
+  height:26px;
+  margin:0;
+  background:transparent;
+  accent-color:var(--ink);
+  cursor:pointer;
+}
+[data-style="editorial"] .bwl-regler input[type="range"]:disabled{
+  cursor:not-allowed;
+  opacity:.35;
+}
+[data-style="editorial"] .bwl-reglerskala{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  color:var(--muted);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;
+  font-weight:800;
+  text-align:center;
+}
+[data-style="editorial"] .bwl-reglerskala .is-on{
+  color:var(--ink);
+}
+
+[data-style="editorial"] .kursticker{
+  margin-top:12px;
+}
+[data-style="editorial"] .kurskopf{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:9px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .kurs-fiktiv{
+  padding:2px 6px;
+  background:var(--ink);
+  color:var(--white);
+}
+[data-style="editorial"] .kurslauf{
+  overflow:hidden;
+  margin-top:7px;
+  padding:6px 0;
+  border-top:1px solid var(--soft);
+  border-bottom:1px solid var(--soft);
+}
+[data-style="editorial"] .kursband{
+  display:flex;
+  width:max-content;
+  gap:18px;
+  animation:kurslauf 26s linear infinite;
+}
+@keyframes kurslauf{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+[data-style="editorial"] .kurs{
+  display:flex;
+  align-items:baseline;
+  gap:5px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11px;
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+[data-style="editorial"] .kurs i{
+  font-size:10px;
+  font-style:normal;
+}
+[data-style="editorial"] .kurs i[data-t="up"]{
+  color:var(--ok);
+}
+[data-style="editorial"] .kurs i[data-t="down"]{
+  color:var(--bad);
+}
+[data-style="editorial"] .kursfuss{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.35;
+}
+
+/* Auf der Endstufe schreit die Typografie mit. */
+[data-style="editorial"][data-bwl="5"] .mode-title,
+[data-style="editorial"][data-bwl="5"] .primary-title{
+  letter-spacing:.01em;
+  text-transform:uppercase;
+}
+/* Die langen Beratertitel brauchen in den kleinen Kacheln mehr Luft. */
+[data-style="editorial"][data-bwl="4"] .compact-mode,
+[data-style="editorial"][data-bwl="5"] .compact-mode{
+  height:auto;
+  min-height:78px;
+}
+[data-style="editorial"][data-bwl="4"] .compact-mode .mode-title,
+[data-style="editorial"][data-bwl="5"] .compact-mode .mode-title{
+  font-size:12px;
+  line-height:1.2;
+}
+
+@media (prefers-reduced-motion:reduce){
+  [data-style="editorial"] .kursband{
+    animation:none;
+  }
+  [data-style="editorial"] #geldgrund{
+    transition:none;
+  }
+}
+
+/* Ab Stufe 1 liegt das Geld auch hinter dem Quiz; die Papierfarbe kommt
+   dann von .app statt von .quiz. */
+[data-style="editorial"]:not([data-bwl="0"]) .quiz{
+  background:transparent;
+}
+
+/* Echte Geldzitate zwischen den Fragen */
+[data-style="editorial"] .geldzitat{
+  margin-top:14px;
+  padding:12px 0 0;
+  border-top:1px solid var(--soft);
+}
+[data-style="editorial"] .geldzitat blockquote{
+  font-size:14px;
+  font-style:italic;
+  font-weight:600;
+  line-height:1.4;
+}
+[data-style="editorial"] .geldzitat blockquote::before{
+  content:'„';
+}
+[data-style="editorial"] .geldzitat blockquote::after{
+  content:'“';
+}
+[data-style="editorial"] .geldzitat figcaption{
+  margin-top:5px;
+  color:var(--muted);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:9px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .geldzitat figcaption::before{
+  content:'— ';
+}
+[data-style="editorial"] .res-hero .geldzitat{
+  margin-top:18px;
+  text-align:center;
+}
