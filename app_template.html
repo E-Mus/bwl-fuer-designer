@@ -1131,11 +1131,10 @@ function zeichneZettel(){
           ${xs.map(x=>{
             const rt=[...x.f.richtigSet].map(i=>x.f.optionen[i]);
             return `<details${zettelOffen?' open':''}>
-              <summary><span class="mark" data-t="${x.status==='falsch'?'bad':'teil'}">${x.status==='falsch'?'✕':'~'}</span><span>${md(x.f.frage)}${x.f.fachhinweis?` <span class="fact-inline" title="Fachlicher Hinweis">*</span>`:''}</span></summary>
+              <summary><span class="mark" data-t="${x.status==='falsch'?'bad':'teil'}">${x.status==='falsch'?'✕':'~'}</span><span>${md(x.f.frage)}</span></summary>
               <div class="rev-b">
                 <span><b>${rt.map(md).join(' · ')}</b></span>
                 <span>${md(kernsatz(x.f.erklaerung))}</span>
-                ${x.f.fachhinweis?`<span class="fact-review"><b>* Fachlicher Hinweis:</b> ${md(x.f.fachhinweis.hinweis)}</span>`:''}
                 ${x.falsch>1?`<span class="fb-q">${x.falsch}× falsch</span>`:''}
               </div>
             </details>`;
@@ -1190,19 +1189,8 @@ function zeichneFrage(){
         <span class="qtag diff" data-d="${f.schwierigkeit}">${stufeName(f.schwierigkeit)}</span>
         <span class="qtag qserial">BWL–${esc(f.id.toUpperCase())}–EUR</span>
         ${e.wdh?`<span class="qtag">nochmal</span>`:''}
-        ${f.fachhinweis?`<button class="fact-flag" data-fact aria-label="Fachlichen Hinweis anzeigen"
-          aria-controls="fact-note" aria-expanded="${sitzung.fachhinweisId===f.id}"
-          title="Fachlicher Hinweis">*</button>`:''}
       </div>
       <div class="qtext">${md(f.frage)}</div>
-      ${f.fachhinweis?`<aside class="fact-note" id="fact-note"${sitzung.fachhinweisId===f.id?'':' hidden'}>
-        <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
-        <span>${md(f.fachhinweis.hinweis)}</span>
-        ${f.fachhinweis.quelle?f.fachhinweis.url
-          ? `<a href="${esc(f.fachhinweis.url)}" target="_blank" rel="noopener noreferrer">${esc(f.fachhinweis.quelle)} ↗</a>`
-          : `<span class="fact-source">${esc(f.fachhinweis.quelle)}</span>`
-        : ''}
-      </aside>`:''}
       <div class="qhint${f.multi?' multi':''}">${f.multi
         ? `${f.richtigSet.size} von ${f.optionen.length} ankreuzen · ${f.strikt?'alles oder nichts':'Teilpunkte'}`
         : 'Eine Antwort ist richtig'}</div>
@@ -1234,23 +1222,25 @@ function zeichneFrage(){
         </div>
       </figure>`:''}
       <span class="fb-p">${md(kernsatz(f.erklaerung))}</span>
-      ${f.fachhinweis?`<div class="fact-feedback">
-        <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
-        <span>${md(f.fachhinweis.hinweis)}</span>
-        ${f.fachhinweis.quelle?f.fachhinweis.url
-          ? `<a href="${esc(f.fachhinweis.url)}" target="_blank" rel="noopener noreferrer">${esc(f.fachhinweis.quelle)} ↗</a>`
-          : `<span class="fact-source">${esc(f.fachhinweis.quelle)}</span>`
-        : ''}
-      </div>`:''}
       <div class="answer-detail" id="answer-detail" hidden>
         <span class="answer-detail-title">Erklärung</span>
         <span>${md(f.erklaerung)}</span>
         ${f.quelle?`<span class="fb-q">Folie ${esc(f.quelle)}</span>`:''}
+        ${f.fachhinweis?`<div class="fact-feedback">
+          <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
+          <span>${md(f.fachhinweis.hinweis)}</span>
+          ${f.fachhinweis.quelle?f.fachhinweis.url
+            ? `<a href="${esc(f.fachhinweis.url)}" target="_blank" rel="noopener noreferrer">${esc(f.fachhinweis.quelle)} ↗</a>`
+            : `<span class="fact-source">${esc(f.fachhinweis.quelle)}</span>`
+          : ''}
+        </div>`:''}
       </div>
     </div>`:''}
     <div class="qact">
-      ${zeig?`<button class="btn btn-info" data-info aria-label="Vollständige Erklärung anzeigen"
-        aria-controls="answer-detail" aria-expanded="false" title="Vollständige Erklärung"><span aria-hidden="true">i</span></button>`:''}
+      ${zeig?`<button class="btn btn-info" data-info
+        aria-label="${f.fachhinweis?'Erklärung und fachlichen Hinweis':'Vollständige Erklärung'} anzeigen"
+        aria-controls="answer-detail" aria-expanded="false"
+        title="${f.fachhinweis?'Erklärung und fachlicher Hinweis':'Vollständige Erklärung'}"><span aria-hidden="true">i</span></button>`:''}
       <button class="btn btn-primary" data-weiter ${(!sitzung.aufgedeckt&&!sitzung.gewaehlt.size)?'disabled':''}>${btn}</button>
     </div>
   </div>`);
@@ -1261,7 +1251,9 @@ function zeichneFrage(){
   const info=app.querySelector('[data-info]');
   if(info) info.onclick=()=>{
     const detail=app.querySelector('#answer-detail'), offen=detail.hidden;
+    const meme=app.querySelector('.meme-reaction');
     detail.hidden=!offen;
+    if(meme) meme.hidden=offen;
     info.setAttribute('aria-expanded',String(offen));
     info.classList.toggle('is-on',offen);
   };
@@ -1271,13 +1263,6 @@ function zeichneFrage(){
     const ersatz=app.querySelector('.meme-fallback');
     if(ersatz) ersatz.hidden=false;
   },{once:true});
-  const fact=app.querySelector('[data-fact]');
-  if(fact) fact.onclick=()=>{
-    const note=app.querySelector('#fact-note'), offen=note.hidden;
-    note.hidden=!offen;
-    sitzung.fachhinweisId=offen?f.id:null;
-    fact.setAttribute('aria-expanded',String(offen));
-  };
   const body=app.querySelector('.qbody');
   body.scrollTop=gleicheAnzeige?scrollVorher:0;
   sitzung.anzeigeIndex=sitzung.i;
@@ -1353,12 +1338,11 @@ function zeichneErgebnis(){
           const f=FRAGEN.find(x=>x.id===a.id);
           const rt=[...f.richtigSet].map(i=>f.optionen[i]);
           const dein=a.gewaehlt.length?a.gewaehlt.map(i=>f.optionen[i]):['nichts gewählt'];
-          return `<details><summary><span class="mark" data-t="${a.punkte>0?'teil':'bad'}">${a.punkte>0?'~':'✕'}</span><span>${md(f.frage)}${f.fachhinweis?` <span class="fact-inline" title="Fachlicher Hinweis">*</span>`:''}</span></summary>
+          return `<details><summary><span class="mark" data-t="${a.punkte>0?'teil':'bad'}">${a.punkte>0?'~':'✕'}</span><span>${md(f.frage)}</span></summary>
             <div class="rev-b">
               <span>Deine Antwort: ${dein.map(md).join(' · ')}</span>
               <span>Richtig: <b>${rt.map(md).join(' · ')}</b></span>
               <span>${md(f.erklaerung)}</span>
-              ${f.fachhinweis?`<span class="fact-review"><b>* Fachlicher Hinweis:</b> ${md(f.fachhinweis.hinweis)}</span>`:''}
             </div></details>`;
         }).join('')}
       </div>`:''}

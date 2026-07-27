@@ -623,42 +623,14 @@
   color:var(--muted);
   font-size:9px;
 }
-[data-style="editorial"] .fact-flag{
-  width:28px;
-  min-height:24px;
-  margin-left:auto;
-  color:var(--bad);
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:25px;
-  font-weight:900;
-  line-height:1;
-  text-align:center;
-}
-[data-style="editorial"] .fact-flag:focus-visible{
-  outline-color:var(--bad);
-}
 [data-style="editorial"] .qtext{
   font-size:25px;
   font-weight:900;
   line-height:1.18;
 }
-[data-style="editorial"] .fact-note{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-  padding:12px 0 12px 14px;
-  border-left:var(--rule) solid var(--bad);
-  color:var(--ink);
-  font-size:13px;
-  font-weight:600;
-  line-height:1.4;
-}
-[data-style="editorial"] .fact-note[hidden]{
-  display:none;
-}
 [data-style="editorial"] .fact-note-title,
 [data-style="editorial"] .fact-source,
-[data-style="editorial"] .fact-note a{
+[data-style="editorial"] .fact-feedback a{
   color:var(--bad);
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   font-size:10px;
@@ -670,29 +642,11 @@
   font-size:17px;
   line-height:0;
 }
-[data-style="editorial"] .fact-note a{
-  align-self:flex-start;
-  text-decoration:underline;
-  text-decoration-thickness:var(--rule);
-  text-underline-offset:3px;
-}
-[data-style="editorial"] .fact-inline{
-  color:var(--bad);
-  font-size:18px;
-  font-weight:900;
-  line-height:0;
-}
-[data-style="editorial"] .fact-review{
-  margin-top:5px;
-  padding-left:10px;
-  border-left:var(--rule) solid var(--bad);
-  color:var(--bad);
-}
 [data-style="editorial"] .fact-feedback{
   display:flex;
   flex-direction:column;
   gap:6px;
-  margin-top:12px;
+  margin-top:6px;
   padding:10px 0 2px 12px;
   border-left:var(--rule) solid var(--bad);
   font-size:13px;
@@ -818,6 +772,9 @@
 [data-style="editorial"] .meme-reaction{
   width:min(100%,420px);
   margin:11px 0 13px;
+}
+[data-style="editorial"] .meme-reaction[hidden]{
+  display:none;
 }
 [data-style="editorial"] .meme-kicker{
   padding-bottom:7px;
