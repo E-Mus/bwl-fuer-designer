@@ -173,7 +173,7 @@ svg{display:block}
 const FRAGEN = JSON.parse(document.getElementById('fragen-data').textContent);
 const PRUEFUNGS_LAENGE = 40, PRUEFUNGS_ZEIT = 40*60, BLITZ_ZEIT = 60;
 const LS='bwl-v3', LS_SET='bwl-einstellungen';
-const LS_WILLKOMMEN='bwl-willkommen-v1';
+const LS_WILLKOMMEN='bwl-willkommen-v2';
 const TAG=86400000;
 // Sofort-Wiedervorlage: falsch beantwortete Fragen kommen im SELBEN Durchgang wieder.
 // Beim Pauken bringt das mehr als Tagesintervalle - die greifen vor der Pruefung nicht mehr.
@@ -181,9 +181,10 @@ const WV_ABSTAND=[6,12];              // erste Wiederholung nach 6, zweite nach 
 const WV_MODI=new Set(['fehler','thema','alle']);
 
 // Globale Einstellungen - gelten fuer ALLE Uebungsmodi
-const EINST_VERSION = 2;
+const EINST_VERSION = 3;
 const EINST_STD = {
-  schwierigkeit:'essential',
+  umfang:'essential',
+  schwierigkeit:'gemischt',
   zeitlimit:true,
   pruefung:'2026-07-29',
   version:EINST_VERSION
@@ -192,10 +193,18 @@ let einst = (()=>{
   let gespeichert={};
   try{ gespeichert=JSON.parse(localStorage.getItem(LS_SET))||{}; }catch(e){}
   if(gespeichert.version!==EINST_VERSION){
-    gespeichert.schwierigkeit='essential';
+    const alt=gespeichert.schwierigkeit;
+    gespeichert.umfang=(alt==='essential'||alt==='alle')
+      ? alt
+      : ['leicht','mittel','schwer'].includes(alt)
+        ? 'alle'
+        : 'essential';
+    gespeichert.schwierigkeit=['leicht','mittel','schwer'].includes(alt)?alt:'gemischt';
     gespeichert.version=EINST_VERSION;
   }
   const wert=Object.assign({}, EINST_STD, gespeichert);
+  if(!['essential','wiederholung','alle'].includes(wert.umfang)) wert.umfang='essential';
+  if(!['gemischt','leicht','mittel','schwer'].includes(wert.schwierigkeit)) wert.schwierigkeit='gemischt';
   try{localStorage.setItem(LS_SET,JSON.stringify(wert))}catch(e){}
   return wert;
 })();
@@ -417,18 +426,24 @@ let tab='ueben', sitzung=null, ticker=null, zettel=false, zettelOffen=true;
 const app=document.getElementById('app');
 function stopTicker(){if(ticker){clearInterval(ticker);ticker=null}}
 const istEssential = f => f.essential===true;
-// Die global eingestellte Schwierigkeit gilt fuer JEDEN Uebungsmodus.
-function basis(){
-  const u=einst.schwierigkeit;
-  if(u==='alle') return FRAGEN.slice();
-  if(u==='essential') return FRAGEN.filter(istEssential);
-  return FRAGEN.filter(f=>f.schwierigkeit===u);
+const istWiederholung = f => f.wiederholung===true;
+function umfangPool(umfang=einst.umfang){
+  if(umfang==='essential') return FRAGEN.filter(istEssential);
+  if(umfang==='wiederholung') return FRAGEN.filter(istWiederholung);
+  return FRAGEN.slice();
 }
-const stufeName = s => s==='alle'
-  ? 'Alles'
-  : s==='essential'
-    ? 'Essential'
-    : s[0].toUpperCase()+s.slice(1);
+// Stoffumfang und Schwierigkeit gelten global fuer jeden Uebungsmodus.
+function basis(){
+  const pool=umfangPool();
+  if(einst.schwierigkeit==='gemischt') return pool;
+  return pool.filter(f=>f.schwierigkeit===einst.schwierigkeit);
+}
+const umfangName = s => s==='wiederholung'
+  ? 'Wiederholung'
+  : s==='alle'
+    ? 'Alles'
+    : 'Essential';
+const stufeName = s => s==='gemischt' ? 'Gemischt' : s[0].toUpperCase()+s.slice(1);
 
 function starte(modus,opt={}){
   stopTicker();
@@ -676,7 +691,7 @@ function viewStatistik(){
 
   return `<div class="screen pad-top">
     <div class="shead"><div><div class="stitle">Statistik</div>
-      <div class="ssub">${gesehen}/${ges} bearbeitet · ${stufeName(einst.schwierigkeit)}</div></div></div>
+      <div class="ssub">${gesehen}/${ges} bearbeitet · ${umfangName(einst.umfang)}</div></div></div>
 
     <div class="chartcard">
       <div class="ringwrap">
@@ -720,7 +735,7 @@ function viewThemen(){
   const T=themen(B);
   return `<div class="screen pad-top">
     <div class="shead"><div><div class="stitle">Themen</div>
-      <div class="ssub">${T.length} Blöcke · ${stufeName(einst.schwierigkeit)}</div></div></div>
+      <div class="ssub">${T.length} Blöcke · ${umfangName(einst.umfang)}</div></div></div>
     <div class="tlist">${T.map(([t,n])=>{
       const q=themaQuote(t,B);
       return `<button class="trow tapp" data-thema="${esc(t)}">
@@ -733,25 +748,37 @@ function viewThemen(){
 }
 
 function viewEinstellungen(){
-  const zahl = s => s==='alle'
-    ? FRAGEN.length
-    : s==='essential'
-      ? FRAGEN.filter(istEssential).length
-      : FRAGEN.filter(f=>f.schwierigkeit===s).length;
+  const umfangZahl = s => umfangPool(s).length;
+  const schwierigkeitZahl = s => {
+    const pool=umfangPool();
+    return s==='gemischt' ? pool.length : pool.filter(f=>f.schwierigkeit===s).length;
+  };
   return `<div class="screen pad-top">
     <div class="shead"><div><div class="stitle">Einstellungen</div><div class="ssub">gelten für alle Modi</div></div></div>
 
     <div class="chartcard">
-      <span class="chart-t">Umfang</span>
-      <div class="chips scope-grid">${['alle','leicht','mittel','schwer','essential'].map(s=>
-        `<button class="chip${einst.schwierigkeit===s?' is-on':''}" data-schwer="${s}"
-          aria-pressed="${einst.schwierigkeit===s}">${stufeName(s)} ${zahl(s)}</button>`).join('')}</div>
+      <span class="chart-t">Stoffumfang</span>
+      <div class="chips scope-grid">${['essential','wiederholung','alle'].map(s=>
+        `<button class="chip${einst.umfang===s?' is-on':''}" data-umfang="${s}"
+          aria-pressed="${einst.umfang===s}">${umfangName(s)} ${umfangZahl(s)}</button>`).join('')}</div>
       <div class="setting-note">${
-        einst.schwierigkeit==='alle'
-          ? 'Der ganze Stoff. Ein Durchgang dauert rund zwei Stunden.'
-          : einst.schwierigkeit==='essential'
-            ? 'Die wichtigsten Fragen aus den elf Wiederholungsfolien, unabhängig von ihrer normalen Schwierigkeitsstufe.'
-            : 'Diese Auswahl deckt nicht den gesamten Stoff ab und eignet sich für gezieltes Training.'
+        einst.umfang==='essential'
+          ? '81 kuratierte Kernfragen zu den wichtigsten Punkten der elf Wiederholungsfolien.'
+          : einst.umfang==='wiederholung'
+            ? '230 Fragen, die den Stoff der elf Wiederholungsfolien direkt oder vertiefend abdecken.'
+            : 'Alle 306 Fragen aus dem gesamten Vorlesungsstoff.'
+      }</div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Schwierigkeit</span>
+      <div class="chips difficulty-grid">${['gemischt','leicht','mittel','schwer'].map(s=>
+        `<button class="chip${einst.schwierigkeit===s?' is-on':''}" data-schwer="${s}"
+          aria-pressed="${einst.schwierigkeit===s}">${stufeName(s)} ${schwierigkeitZahl(s)}</button>`).join('')}</div>
+      <div class="setting-note">${
+        einst.schwierigkeit==='gemischt'
+          ? 'Alle Schwierigkeitsstufen innerhalb des gewählten Stoffumfangs.'
+          : `Nur Fragen der Stufe ${stufeName(einst.schwierigkeit)} innerhalb des gewählten Stoffumfangs.`
       }</div>
     </div>
 
@@ -873,39 +900,65 @@ function zeichneWillkommen(){
     <div class="welcome-screen">
       <header>
         <h1>Hello.</h1>
-        <span>Kurz bevor es losgeht</span>
+        <span>BWL für Designer · Klausurvorbereitung</span>
       </header>
 
-      <div class="welcome-copy">
-        <p>Alle Fragen wurden aus den Vorlesungsfolien dieses Kurses mithilfe von KI
-          in Lernfragen umgewandelt und anschließend gegengecheckt.</p>
-        <p>Manche Lehrinhalte sind tatsächlich fachlich veraltet. Diese Stellen sind
-          in der App mit einem roten Sternchen gekennzeichnet.</p>
-        <p>KI und Gegencheck hin oder her: Es gibt logischerweise keine Gewähr für
-          Richtigkeit oder Vollständigkeit. In der App stecken sicherlich noch Fehler.</p>
+      <p class="welcome-lead">Die Fragen wurden mithilfe von KI aus den Vorlesungsfolien
+        erstellt und gegengecheckt. Fehler sind trotzdem möglich.</p>
+
+      <div class="welcome-sections">
+        <details>
+          <summary><span>Über die Fragen</span><span aria-hidden="true">+</span></summary>
+          <div>
+            <p>Alle Fragen basieren auf den Folien dieses Kurses. Manche Lehrinhalte
+              sind fachlich veraltet; solche Stellen tragen ein rotes Sternchen.</p>
+            <p>Es gibt keine Gewähr für Richtigkeit oder Vollständigkeit. In der App
+              stecken sicherlich noch Fehler.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span>Stoffumfang</span><span aria-hidden="true">+</span></summary>
+          <div>
+            <p><b>Essential:</b> 81 kuratierte Kernfragen aus den Wiederholungsfolien.</p>
+            <p><b>Wiederholung:</b> 230 direkte und vertiefende Fragen zu diesem Stoff.</p>
+            <p><b>Alles:</b> alle 306 Fragen aus den Vorlesungsfolien.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span>Schwierigkeit</span><span aria-hidden="true">+</span></summary>
+          <div>
+            <p><b>Gemischt</b> nutzt leichte, mittlere und schwere Fragen. Alternativ
+              kannst du eine Stufe gezielt auswählen.</p>
+            <p>Stoffumfang und Schwierigkeit sind unabhängig voneinander und lassen
+              sich nur in den Einstellungen ändern.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span>Speicherung</span><span aria-hidden="true">+</span></summary>
+          <div>
+            <p>Da ich kein krasses Backend gebaut habe, liegen Lernfortschritt und
+              Einstellungen nur lokal in diesem Browser. Es gibt keinen Sync und kein
+              Backup. Gelöschte Browserdaten bedeuten gelöschten Fortschritt.</p>
+          </div>
+        </details>
       </div>
 
-      <div class="welcome-storage">
-        <span>Nur lokal gespeichert</span>
-        <p>Da ich hier kein krasses Backend gebaut habe, werden dein Lernfortschritt
-          und deine Einstellungen nur lokal in diesem Browser gespeichert. Es gibt
-          keinen Sync und kein Backup. Löschst du die Browserdaten, ist der Fortschritt weg.</p>
-      </div>
-
-      <div class="welcome-copy welcome-last">
+      <div class="welcome-last">
         <p>Die App ist nicht perfekt und nur entstanden, weil ich Lust hatte, eine
           App zu bauen. lol</p>
+        <p>Bei Fragen einfach mich anschreiben.</p>
         <p class="welcome-signoff">Grüße<br>Erasmus</p>
       </div>
-
+    </div>
+  </main>
+  <div class="welcome-action">
       <button class="btn btn-primary welcome-close" type="button">App starten</button>
       <div class="legal-links" aria-label="Rechtliche Informationen">
         <button data-onboarding-legal="datenschutz">Datenschutz</button>
         <span aria-hidden="true">·</span>
         <button data-onboarding-legal="impressum">Impressum</button>
       </div>
-    </div>
-  </main>`);
+  </div>`);
 
   const button=app.querySelector('.welcome-close');
   button.onclick=()=>{
@@ -1195,6 +1248,9 @@ function bindeStart(){
   const z=app.querySelector('[data-zettel]');
   if(z) z.onclick=()=>{zettel=true;zeichne()};
   app.querySelectorAll('[data-thema]').forEach(b=>b.onclick=()=>starte('thema',{thema:b.dataset.thema}));
+  app.querySelectorAll('[data-umfang]').forEach(b=>b.onclick=()=>{
+    setzeEinst('umfang',b.dataset.umfang); zeichne(); toast(umfangName(einst.umfang));
+  });
   app.querySelectorAll('[data-schwer]').forEach(b=>b.onclick=()=>{
     setzeEinst('schwierigkeit',b.dataset.schwer); zeichne(); toast(stufeName(einst.schwierigkeit));
   });

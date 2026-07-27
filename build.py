@@ -39,6 +39,10 @@ for nr, gruppe in enumerate((g for g in textgruppen.values() if len(g) > 1), 1):
 fehler = []
 for i, q in enumerate(fragen, 1):
     q['id'] = 'q%03d' % i
+    # Die Auswahl wird zentral in auswahl.json gepflegt; alte Markierungen in
+    # den Quelldateien duerfen das Ergebnis nicht unbemerkt beeinflussen.
+    q.pop('essential', None)
+    q.pop('wiederholung', None)
     opts = q['optionen']
     if len(opts) != len(set(opts)):
         fehler.append((q['id'], 'doppelte Antwortoption'))
@@ -58,11 +62,51 @@ for i, q in enumerate(fragen, 1):
             fehler.append((q['id'], 'Index ausserhalb der Optionen'))
     if q['schwierigkeit'] not in ('leicht', 'mittel', 'schwer'):
         fehler.append((q['id'], 'unbekannte Schwierigkeit'))
-    if 'essential' in q and q['essential'] is not True:
-        fehler.append((q['id'], 'essential muss true sein oder fehlen'))
     for feld in ('frage', 'erklaerung', 'thema'):
         if not str(q.get(feld, '')).strip():
             fehler.append((q['id'], 'leeres Feld: ' + feld))
+
+# Kuratierter Kern und vollstaendiger Wiederholungsstoff. Bereiche halten die
+# deutlich groessere 230er-Auswahl lesbar; die App erhaelt konkrete Flags.
+auswahl_file = p('auswahl.json')
+if not os.path.exists(auswahl_file):
+    fehler.append(('Auswahl', 'auswahl.json fehlt'))
+else:
+    with open(auswahl_file, encoding='utf-8') as fh:
+        auswahl = json.load(fh)
+
+    def id_num(qid):
+        if not re.fullmatch(r'q\d{3}', str(qid)):
+            raise ValueError('ungueltige ID %r' % qid)
+        return int(qid[1:])
+
+    essential_ids = set(auswahl.get('essential', []))
+    wiederholung_ids = set()
+    try:
+        for start, ende in auswahl.get('wiederholung_bereiche', []):
+            start_num, ende_num = id_num(start), id_num(ende)
+            if start_num > ende_num:
+                raise ValueError('Bereich %s bis %s ist rueckwaerts' % (start, ende))
+            wiederholung_ids.update('q%03d' % nr for nr in range(start_num, ende_num + 1))
+    except (TypeError, ValueError) as exc:
+        fehler.append(('Auswahl', str(exc)))
+
+    bekannte_ids = {q['id'] for q in fragen}
+    unbekannt = (essential_ids | wiederholung_ids) - bekannte_ids
+    if unbekannt:
+        fehler.append(('Auswahl', 'unbekannte IDs: ' + ', '.join(sorted(unbekannt))))
+    if len(essential_ids) != 81:
+        fehler.append(('Auswahl', 'Essential muss 81 Fragen enthalten, gefunden: %d' % len(essential_ids)))
+    if len(wiederholung_ids) != 230:
+        fehler.append(('Auswahl', 'Wiederholung muss 230 Fragen enthalten, gefunden: %d' % len(wiederholung_ids)))
+    if not essential_ids <= wiederholung_ids:
+        fehler.append(('Auswahl', 'Essential muss vollstaendig in Wiederholung enthalten sein'))
+
+    for q in fragen:
+        if q['id'] in essential_ids:
+            q['essential'] = True
+        if q['id'] in wiederholung_ids:
+            q['wiederholung'] = True
 
 # Fachhinweise bleiben getrennt vom Vorlesungsinhalt. So kann die App die
 # Prüfungsantwort zeigen und fachliche Abweichungen sichtbar kennzeichnen.
@@ -132,6 +176,7 @@ einfach = sum(1 for q in fragen if not isinstance(q['richtig'], list))
 mehrfach = len(fragen) - einfach
 familien = sum(1 for q in fragen if q.get('familie'))
 essential = sum(1 for q in fragen if q.get('essential'))
+wiederholung = sum(1 for q in fragen if q.get('wiederholung'))
 fachhinweise = sum(1 for q in fragen if q.get('fachhinweis'))
 print('BWL-Trainer.html und index.html gebaut')
 print('  Fragen gesamt : %d  (%d einfach, %d mehrfach)' % (len(fragen), einfach, mehrfach))
@@ -140,6 +185,7 @@ print('  Text-Duplikate: %d Gruppen zusammengefuehrt' % duplikatgruppen)
 print('  Optionen      :', dict(sorted(Counter(len(q['optionen']) for q in fragen).items())))
 print('  Schwierigkeit :', dict(Counter(q['schwierigkeit'] for q in fragen)))
 print('  Essential     : %d' % essential)
+print('  Wiederholung  : %d' % wiederholung)
 print('  Fachhinweise  : %d' % fachhinweise)
 print('  Themen        : %d' % len(set(q['thema'] for q in fragen)))
 print('  Designsysteme : 1  (editorial)')
