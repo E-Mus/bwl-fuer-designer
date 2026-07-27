@@ -195,6 +195,7 @@ const EINST_STD = {
   umfang:'essential',
   schwierigkeit:'gemischt',
   zeitlimit:true,
+  kapitalismus:true,
   pruefung:'2026-07-29',
   version:EINST_VERSION
 };
@@ -398,8 +399,17 @@ function bwlStufeAuto(w=bwlWert()){
 // Nur zum Ausprobieren von der Konsole aus: bwlTest=5; zeichne()
 // Bewusst nicht gespeichert, damit ein Neuladen immer zum echten Stand zurueckfuehrt.
 let bwlTest=null;
-function bwlStufe(){
+// Was du dir erspielt hast. Daran haengen die Statistikkarte und der Schalter
+// selbst - sonst wuerde er sich beim Ausschalten aus der Ansicht nehmen.
+function bwlStufeEcht(){
   return (typeof bwlTest==='number'&&bwlTest>=0&&bwlTest<=BWL_MAX)?bwlTest:bwlStufeAuto();
+}
+// Ab dieser Stufe darf man den ganzen Aufzug abschalten.
+const KAPITALISMUS_AB=4;
+const kapitalismusAn = () => einst.kapitalismus!==false;
+// Was die App daraus tatsaechlich zeigt.
+function bwlStufe(){
+  return kapitalismusAn()?bwlStufeEcht():0;
 }
 // Beschriftungen kennen nur zwei Zustaende: normal, und auf der Endstufe absurd.
 // [ bis Stufe 4 , ab Stufe 5 ]
@@ -1075,7 +1085,8 @@ function viewUeben(){
 // Der Index ist eine Anspielung, keine Bewertung: er zeigt nur, wie weit die
 // App die Sprache schon verdreht hat.
 function bwlIndexKarte(){
-  const w=bwlWert(), s=bwlStufe(), pct=Math.round(w*100);
+  // Zeigt den erspielten Stand, auch wenn der Kapitalismus abgeschaltet ist.
+  const w=bwlWert(), s=bwlStufeEcht(), pct=Math.round(w*100);
   return `<div class="chartcard bwlcard">
     <div class="bwl-head">
       <span class="bwl-rolle">${esc(BWL_STUFEN[s].rolle)}</span>
@@ -1219,6 +1230,19 @@ function viewEinstellungen(){
         ? '40 Fragen in 40 Minuten, wie in der Klausur.'
         : 'Die Prüfung läuft ohne Zeitdruck.'}</div>
     </div>
+
+    ${bwlStufeEcht()>=KAPITALISMUS_AB?`<div class="chartcard">
+      <span class="chart-t">Kapitalismus</span>
+      <div class="chips">
+        <button class="chip${kapitalismusAn()?' is-on':''}" data-kapi="1"
+          aria-pressed="${kapitalismusAn()}">an</button>
+        <button class="chip${kapitalismusAn()?'':' is-on'}" data-kapi="0"
+          aria-pressed="${!kapitalismusAn()}">aus</button>
+      </div>
+      <div class="setting-note">${kapitalismusAn()
+        ? 'Sprache, Hintergrund und Kursband richten sich nach deinem Lernstand.'
+        : 'Nüchterne Ansicht. Dein Lernstand zählt im Hintergrund weiter.'}</div>
+    </div>`:''}
 
     <div class="chartcard">
       <span class="chart-t">Fortschritt</span>
@@ -1686,6 +1710,9 @@ function bindeStart(){
   });
   app.querySelectorAll('[data-zeit]').forEach(b=>b.onclick=()=>{
     setzeEinst('zeitlimit',b.dataset.zeit==='1'); zeichne();
+  });
+  app.querySelectorAll('[data-kapi]').forEach(b=>b.onclick=()=>{
+    setzeEinst('kapitalismus',b.dataset.kapi==='1'); zeichne();
   });
   const tm=app.querySelector('[data-termin]');
   if(tm) tm.onclick=()=>{
