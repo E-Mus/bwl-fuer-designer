@@ -145,9 +145,41 @@ daten = json.dumps(fragen, ensure_ascii=False, separators=(',', ':'))
 # </script> im Inhalt würde den JSON-Block vorzeitig schliessen
 daten = daten.replace('</', '<\\/')
 
+# Reaction-GIFs bleiben als eigene, leicht prüfbare Datenquelle getrennt vom
+# Fragenkatalog. Der Build akzeptiert nur direkte GIPHY-Mediendateien.
+meme_file = p('meme_daten.json')
+if not os.path.exists(meme_file):
+    print('ABBRUCH — meme_daten.json fehlt', file=sys.stderr)
+    sys.exit(1)
+with open(meme_file, encoding='utf-8') as fh:
+    memes = json.load(fh)
+meme_fehler = []
+meme_terms = set()
+meme_urls = set()
+for i, meme in enumerate(memes, 1):
+    for feld in ('term', 'url', 'title', 'caption'):
+        if not str(meme.get(feld, '')).strip():
+            meme_fehler.append(('Meme %d' % i, 'leeres Feld: ' + feld))
+    term = str(meme.get('term', '')).casefold()
+    url = str(meme.get('url', ''))
+    if term in meme_terms:
+        meme_fehler.append(('Meme %d' % i, 'doppelter Begriff: ' + term))
+    if url in meme_urls:
+        meme_fehler.append(('Meme %d' % i, 'doppelte URL'))
+    if not re.fullmatch(r'https://media\.giphy\.com/media/[A-Za-z0-9_-]+/giphy\.gif', url):
+        meme_fehler.append(('Meme %d' % i, 'keine direkte GIPHY-GIF-URL'))
+    meme_terms.add(term)
+    meme_urls.add(url)
+if meme_fehler:
+    print('ABBRUCH — Meme-Datenfehler:', file=sys.stderr)
+    for f in meme_fehler:
+        print('  ', f[0], f[1], file=sys.stderr)
+    sys.exit(1)
+meme_daten = json.dumps(memes, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+
 with open(p('app_template.html'), encoding='utf-8') as fh:
     tpl = fh.read()
-for ph in ('__FRAGEN__', '__STILE__'):
+for ph in ('__FRAGEN__', '__MEMES__', '__STILE__'):
     if ph not in tpl:
         print('ABBRUCH — Platzhalter %s fehlt in app_template.html' % ph, file=sys.stderr)
         sys.exit(1)
@@ -166,7 +198,10 @@ if '[data-style="editorial"]' not in stil_css:
     print('ABBRUCH — editorial.css ist nicht auf editorial gescopt', file=sys.stderr)
     sys.exit(1)
 
-seite = tpl.replace('__FRAGEN__', daten).replace('__STILE__', stil_css)
+seite = (tpl
+    .replace('__FRAGEN__', daten)
+    .replace('__MEMES__', meme_daten)
+    .replace('__STILE__', stil_css))
 for ausgabe in ('BWL-Trainer.html', 'index.html'):
     with open(p(ausgabe), 'w', encoding='utf-8') as fh:
         fh.write(seite)
@@ -187,6 +222,7 @@ print('  Schwierigkeit :', dict(Counter(q['schwierigkeit'] for q in fragen)))
 print('  Essential     : %d' % essential)
 print('  Wiederholung  : %d' % wiederholung)
 print('  Fachhinweise  : %d' % fachhinweise)
+print('  Reaction-GIFs : %d' % len(memes))
 print('  Themen        : %d' % len(set(q['thema'] for q in fragen)))
 print('  Designsysteme : 1  (editorial)')
 print('  Stil-CSS      : %.0f KB' % (len(stil_css) / 1024))

@@ -167,10 +167,28 @@ svg{display:block}
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </div>
 <script id="fragen-data" type="application/json">__FRAGEN__</script>
+<script id="meme-data" type="application/json">__MEMES__</script>
 <script>
 "use strict";
 
 const FRAGEN = JSON.parse(document.getElementById('fragen-data').textContent);
+const MEMES = JSON.parse(document.getElementById('meme-data').textContent);
+const MEME_NACH_TERM = new Map(MEMES.map(m=>[m.term,m]));
+const MEME_FALLBACK = {
+  'Grundlagen der BWL':'unternehmen',
+  'Rechtsformen':'unternehmen',
+  'Urheber- und Nutzungsrecht':'eigentum',
+  'Businessplan und Gründung':'investor',
+  'Steuern':'steuer',
+  'Rechnungen und E-Rechnung':'rechnung',
+  'Angebot, Vertrag und Briefing':'vertrag',
+  'Kalkulation und Liquidität':'kalkulation',
+  'Marketing':'marketing',
+  'Projektmanagement':'leistung',
+  'Personal, Motivation und Lob':'leistung',
+  'Geld, Finanzen und Altersvorsorge':'vermögen',
+  'Unternehmensrecherche und Jahresabschluss':'unternehmen'
+};
 const PRUEFUNGS_LAENGE = 40, PRUEFUNGS_ZEIT = 40*60, BLITZ_ZEIT = 60;
 const LS='bwl-v3', LS_SET='bwl-einstellungen';
 const LS_WILLKOMMEN='bwl-willkommen-v2';
@@ -390,6 +408,26 @@ function marktMeldung(){
 function feedbackSatire(p,f){
   const liste=p>=1?SATIRE.richtig:p>0?SATIRE.teilweise:SATIRE.falsch;
   return satireAuswahl(liste,f.id);
+}
+function memeImText(text){
+  const inhalt=String(text||'').toLocaleLowerCase('de');
+  let treffer=null;
+  MEMES.forEach((m,index)=>{
+    const pos=inhalt.indexOf(m.term);
+    if(pos<0) return;
+    if(!treffer||pos<treffer.pos||(pos===treffer.pos&&index<treffer.index)){
+      treffer={meme:m,pos,index};
+    }
+  });
+  return treffer&&treffer.meme;
+}
+function memeFuerFrage(f){
+  const richtige=[...f.richtigSet].map(i=>f.optionen[i]).join(' ');
+  return memeImText(f.frage)
+    || memeImText(richtige)
+    || memeImText(f.erklaerung)
+    || MEME_NACH_TERM.get(MEME_FALLBACK[f.thema])
+    || null;
 }
 function banknoteFlug(){
   const box=document.getElementById('konfetti');
@@ -910,10 +948,14 @@ function viewDatenschutz(){
     </section>
 
     <section>
-      <h2>Keine Analyse</h2>
-      <p>Die App verwendet keine Analyse-, Werbe- oder Trackingdienste und lädt keine
-        externen Inhalte automatisch. Externe Quellen werden erst aufgerufen, wenn ein
-        Quellenlink aktiv geöffnet wird.</p>
+      <h2>Externe Reaction-GIFs</h2>
+      <p>Die App selbst verwendet keine Analyse-, Werbe- oder Trackingdienste. Nach
+        einer vollständig richtigen Antwort lädt sie jedoch automatisch ein passendes
+        Reaction-GIF von GIPHY. Dabei baut der Browser eine direkte Verbindung zu
+        <code>media.giphy.com</code> auf; GIPHY kann dabei technische Zugriffsdaten wie
+        die IP-Adresse verarbeiten. Einzelheiten beschreibt die
+        <a href="https://support.giphy.com/hc/en-us/articles/360032872931-GIPHY-Privacy-Policy"
+          target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GIPHY ↗</a>.</p>
     </section>
 
     <section>
@@ -1000,6 +1042,8 @@ function zeichneWillkommen(){
             <p>Da ich kein krasses Backend gebaut habe, liegen Lernfortschritt und
               Einstellungen nur lokal in diesem Browser. Es gibt keinen Sync und kein
               Backup. Gelöschte Browserdaten bedeuten gelöschten Fortschritt.</p>
+            <p>Nach vollständig richtigen Antworten lädt die App passende
+              Reaction-GIFs von GIPHY. Mehr dazu steht im Datenschutz.</p>
           </div>
         </details>
       </div>
@@ -1123,6 +1167,7 @@ function zeichneFrage(){
   const gew=[...sitzung.gewaehlt].map(p=>e.reihenfolge[p]);
   const p=sitzung.aufgedeckt?bewerte(f,gew):0;
   const zeig=sitzung.aufgedeckt&&sofort();
+  const meme=zeig&&p>=1?memeFuerFrage(f):null;
   const prog=sitzung.zeitGesamt?(sitzung.zeitRest/sitzung.zeitGesamt*100):(sitzung.endlos?100:sitzung.i/n*100);
   let btn='Weiter';
   if(sitzung.aufgedeckt) btn=(!sitzung.endlos&&sitzung.i>=n-1)?'Auswerten':'Weiter';
@@ -1180,6 +1225,15 @@ function zeichneFrage(){
     ${zeig?`<div class="answer-feedback" role="status" data-r="${p>=1?'ok':p>0?'teil':'bad'}">
       <span class="fb-v">${p>=1?'Richtig':p>0?`Teilweise · ${Math.round(p*100)} %`:'Falsch'}</span>
       <span class="satire-feedback">${esc(feedbackSatire(p,f))}</span>
+      ${meme?`<figure class="meme-reaction">
+        <div class="meme-kicker">Marktreaktion: ${esc(meme.title)}</div>
+        <div class="meme-media">
+          <img src="${esc(meme.url)}" alt="Reaction-GIF zu ${esc(meme.title)}"
+            loading="eager" decoding="async">
+          <span class="meme-fallback" hidden>Marktreaktion derzeit nicht handelbar.</span>
+        </div>
+        <figcaption>${esc(meme.caption)}</figcaption>
+      </figure>`:''}
       <span class="fb-p">${md(kernsatz(f.erklaerung))}</span>
       ${f.fachhinweis?`<div class="fact-feedback">
         <span class="fact-note-title"><span aria-hidden="true">*</span> Fachlicher Hinweis</span>
@@ -1212,6 +1266,12 @@ function zeichneFrage(){
     info.setAttribute('aria-expanded',String(offen));
     info.classList.toggle('is-on',offen);
   };
+  const memeBild=app.querySelector('.meme-reaction img');
+  if(memeBild) memeBild.addEventListener('error',()=>{
+    memeBild.hidden=true;
+    const ersatz=app.querySelector('.meme-fallback');
+    if(ersatz) ersatz.hidden=false;
+  },{once:true});
   const fact=app.querySelector('[data-fact]');
   if(fact) fact.onclick=()=>{
     const note=app.querySelector('#fact-note'), offen=note.hidden;

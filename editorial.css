@@ -815,6 +815,58 @@
 [data-style="editorial"] .answer-feedback[data-r="bad"] .satire-feedback{
   color:var(--bad);
 }
+[data-style="editorial"] .meme-reaction{
+  width:min(100%,420px);
+  margin:11px 0 13px;
+}
+[data-style="editorial"] .meme-kicker{
+  padding-bottom:7px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;
+  font-weight:900;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .meme-media{
+  display:grid;
+  height:min(160px,20dvh);
+  min-height:112px;
+  overflow:hidden;
+  background:var(--ink);
+  border:var(--rule) solid var(--line);
+}
+[data-style="editorial"] .meme-media img,
+[data-style="editorial"] .meme-fallback{
+  width:100%;
+  height:100%;
+  grid-area:1 / 1;
+}
+[data-style="editorial"] .meme-media img{
+  display:block;
+  object-fit:cover;
+}
+[data-style="editorial"] .meme-reaction img[hidden],
+[data-style="editorial"] .meme-fallback[hidden]{
+  display:none;
+}
+[data-style="editorial"] .meme-fallback{
+  display:grid;
+  place-items:center;
+  padding:18px;
+  color:var(--white);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;
+  font-weight:900;
+  line-height:1.35;
+  text-align:center;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .meme-reaction figcaption{
+  padding-top:7px;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.35;
+}
 [data-style="editorial"] .answer-detail{
   display:flex;
   flex-direction:column;
