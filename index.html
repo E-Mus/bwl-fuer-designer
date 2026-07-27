@@ -1008,21 +1008,12 @@ svg{display:block}
     24px;
 }
 [data-style="editorial"] .welcome-screen header{
-  padding-bottom:20px;
-  border-bottom:var(--rule) solid var(--line);
+  padding-bottom:0;
 }
 [data-style="editorial"] .welcome-screen h1{
   font-size:38px;
   font-weight:900;
   line-height:1;
-  text-transform:uppercase;
-}
-[data-style="editorial"] .welcome-screen header span{
-  display:block;
-  margin-top:10px;
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-size:11px;
-  font-weight:900;
   text-transform:uppercase;
 }
 [data-style="editorial"] .welcome-lead{
@@ -1032,7 +1023,7 @@ svg{display:block}
   line-height:1.42;
 }
 [data-style="editorial"] .welcome-sections{
-  border-top:var(--rule) solid var(--line);
+  border-top:0;
 }
 [data-style="editorial"] .welcome-sections details{
   border-bottom:var(--rule) solid var(--line);
@@ -1960,11 +1951,11 @@ function zeichneWillkommen(){
     <div class="welcome-screen">
       <header>
         <h1>Hello.</h1>
-        <span>BWL für Designer · Klausurvorbereitung</span>
       </header>
 
-      <p class="welcome-lead">Die Fragen wurden mithilfe von KI aus den Vorlesungsfolien
-        erstellt und gegengecheckt. Fehler sind trotzdem möglich.</p>
+      <p class="welcome-lead">Diese App ist für den Kurs BWL für Designer und zur
+        Klausurvorbereitung gedacht. Die Fragen wurden mithilfe von KI aus den
+        Vorlesungsfolien erstellt und gegengecheckt. Fehler sind trotzdem möglich.</p>
 
       <div class="welcome-sections">
         <details>
