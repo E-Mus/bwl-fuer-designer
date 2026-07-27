@@ -211,7 +211,6 @@ const EINST_STD = {
   umfang:'essential',
   schwierigkeit:'gemischt',
   zeitlimit:true,
-  bwlTest:null,
   pruefung:'2026-07-29',
   version:EINST_VERSION
 };
@@ -229,6 +228,7 @@ let einst = (()=>{
     gespeichert.version=EINST_VERSION;
   }
   const wert=Object.assign({}, EINST_STD, gespeichert);
+  delete wert.bwlTest;                 // frueher gespeicherter Testwert
   if(!['essential','wiederholung','alle'].includes(wert.umfang)) wert.umfang='essential';
   if(!['gemischt','leicht','mittel','schwer'].includes(wert.schwierigkeit)) wert.schwierigkeit='gemischt';
   try{localStorage.setItem(LS_SET,JSON.stringify(wert))}catch(e){}
@@ -406,10 +406,11 @@ function bwlStufeAuto(w=bwlWert()){
   BWL_SCHWELLEN.forEach((g,i)=>{ if(w>=g) s=i });
   return s;
 }
-// Der Testregler in den Einstellungen sticht die automatische Stufe.
+// Nur zum Ausprobieren von der Konsole aus: bwlTest=5; zeichne()
+// Bewusst nicht gespeichert, damit ein Neuladen immer zum echten Stand zurueckfuehrt.
+let bwlTest=null;
 function bwlStufe(){
-  const t=einst.bwlTest;
-  return (typeof t==='number'&&t>=0&&t<=BWL_MAX)?t:bwlStufeAuto();
+  return (typeof bwlTest==='number'&&bwlTest>=0&&bwlTest<=BWL_MAX)?bwlTest:bwlStufeAuto();
 }
 // Beschriftungen kennen nur zwei Zustaende: normal, und auf der Endstufe absurd.
 // [ bis Stufe 4 , ab Stufe 5 ]
@@ -577,6 +578,10 @@ const TICKER=[
   {k:'SCHLAF',basis:6.8}
 ];
 const TICKER_AB=3;
+// Die alten Finanzscherze in der Oberflaeche, einer je Stufe.
+// Das Boersenpraefix der Uhr haengt in editorial.css an [data-bwl="3"] und hoeher.
+const SERIE_HOME_AB=1;    // Seriennummer auf dem Startbildschirm
+const SERIE_FRAGE_AB=2;   // Kennung neben jeder Frage
 let kursTimer=null;
 function stopKurse(){ if(kursTimer){clearInterval(kursTimer);kursTimer=null} }
 function kursDaten(schritt){
@@ -1050,7 +1055,7 @@ function viewUeben(){
       <h1 class="brand">BWL für Designer</h1>
       <div class="brand-meta">
         <span class="brand-sub">${esc(T('markeSub'))}</span>
-        <span class="brand-serial">${seriennummer}</span>
+        ${bwlStufe()>=SERIE_HOME_AB?`<span class="brand-serial">${seriennummer}</span>`:''}
       </div>
     </header>
 
@@ -1181,8 +1186,6 @@ function viewEinstellungen(){
     const pool=umfangPool();
     return s==='gemischt' ? pool.length : pool.filter(f=>f.schwierigkeit===s).length;
   };
-  const manuell=typeof einst.bwlTest==='number';
-  const stufe=bwlStufe(), autoStufe=bwlStufeAuto();
   return `<div class="screen pad-top">
     <div class="shead"><div><div class="stitle">${esc(T('einstellungen'))}</div><div class="ssub">gelten für alle Modi</div></div></div>
 
@@ -1240,26 +1243,6 @@ function viewEinstellungen(){
       <div class="setting-note">${einst.zeitlimit
         ? '40 Fragen in 40 Minuten, wie in der Klausur.'
         : 'Die Prüfung läuft ohne Zeitdruck.'}</div>
-    </div>
-
-    <div class="chartcard">
-      <span class="chart-t">BWL-Stufe (Test)</span>
-      <div class="chips">
-        <button class="chip${manuell?'':' is-on'}" data-bwl-auto
-          aria-pressed="${!manuell}">Automatisch</button>
-        <button class="chip${manuell?' is-on':''}" data-bwl-hand
-          aria-pressed="${manuell}">Von Hand</button>
-      </div>
-      <div class="bwl-regler">
-        <input type="range" min="0" max="${BWL_MAX}" step="1" value="${stufe}"
-          data-bwl-slider aria-label="BWL-Stufe"${manuell?'':' disabled'}>
-        <div class="bwl-reglerskala">${BWL_STUFEN.map((st,i)=>
-          `<span${i===stufe?' class="is-on"':''}>${i}</span>`).join('')}</div>
-      </div>
-      <div class="setting-note">Stufe ${stufe} · ${esc(BWL_STUFEN[stufe].rolle)}.
-        ${manuell
-          ? `Der Regler überschreibt den automatischen Wert (aktuell Stufe ${autoStufe}).`
-          : `Die Stufe wächst mit deinem Lernstand. Zum Ausprobieren auf „Von Hand“ stellen.`}</div>
     </div>
 
     <div class="chartcard">
@@ -1533,14 +1516,14 @@ function zeichneFrage(){
         aria-label="${sitzung.zeitGesamt?'Verbleibende Zeit':'Fortschritt'}"
         aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(prog)}">
         <div class="qprogfill" id="pf" style="width:${prog}%"></div></div>
-      ${sitzung.zeitGesamt?`<span class="qcount market-clock" id="uhr">${mmss(sitzung.zeitRest)}</span>`:
-        sitzung.endlos?`<span class="qcount blitz-yield">€ ${sitzung.serie}</span>`:`<span class="qcount">${sitzung.i+1}/${n}</span>`}
+      ${sitzung.zeitGesamt?`<span class="qcount market-clock" id="uhr">${mmss(sitzung.zeitRest)}</span>`
+        :`<span class="qcount">${sitzung.i+1}/${n}</span>`}
     </div>
     <div class="qbody">
       <div class="qmeta">
         <span class="qtag">${esc(f.thema)}</span>
         <span class="qtag diff" data-d="${f.schwierigkeit}">${stufeName(f.schwierigkeit)}</span>
-        <span class="qtag qserial">BWL–${esc(f.id.toUpperCase())}–EUR</span>
+        ${bwlStufe()>=SERIE_FRAGE_AB?`<span class="qtag qserial">BWL–${esc(f.id.toUpperCase())}–EUR</span>`:''}
         ${e.wdh?`<span class="qtag">nochmal</span>`:''}
       </div>
       <div class="qtext" data-lerninhalt>${md(f.frage)}</div>
@@ -1729,24 +1712,6 @@ function bindeStart(){
   app.querySelectorAll('[data-zeit]').forEach(b=>b.onclick=()=>{
     setzeEinst('zeitlimit',b.dataset.zeit==='1'); zeichne();
   });
-  const bwlAuto=app.querySelector('[data-bwl-auto]');
-  if(bwlAuto) bwlAuto.onclick=()=>{ setzeEinst('bwlTest',null); zeichne(); };
-  const bwlHand=app.querySelector('[data-bwl-hand]');
-  if(bwlHand) bwlHand.onclick=()=>{ setzeEinst('bwlTest',bwlStufe()); zeichne(); };
-  const bwlRegler=app.querySelector('[data-bwl-slider]');
-  if(bwlRegler) bwlRegler.oninput=()=>{
-    setzeEinst('bwlTest',+bwlRegler.value);
-    setzeBwl();
-    // Nur die Beschriftung nachziehen: ein Neuzeichnen wuerde den Regler
-    // waehrend des Ziehens unter dem Finger wegreissen.
-    const note=bwlRegler.closest('.chartcard').querySelector('.setting-note');
-    const s=+bwlRegler.value;
-    if(note) note.textContent=`Stufe ${s} · ${BWL_STUFEN[s].rolle}. `
-      +`Der Regler überschreibt den automatischen Wert (aktuell Stufe ${bwlStufeAuto()}).`;
-    bwlRegler.parentElement.querySelectorAll('.bwl-reglerskala span')
-      .forEach((el,i)=>el.classList.toggle('is-on',i===s));
-  };
-  if(bwlRegler) bwlRegler.onchange=()=>zeichne();
   const tm=app.querySelector('[data-termin]');
   if(tm) tm.onclick=()=>{
     const v=prompt('Prüfungstermin (JJJJ-MM-TT)', einst.pruefung||'');

@@ -582,7 +582,10 @@
   color:var(--white);
   text-align:center;
 }
-[data-style="editorial"] .market-clock::before{
+/* Das Boersenpraefix vor der Pruefungsuhr kommt erst ab Stufe 3 dazu. */
+[data-style="editorial"][data-bwl="3"] .market-clock::before,
+[data-style="editorial"][data-bwl="4"] .market-clock::before,
+[data-style="editorial"][data-bwl="5"] .market-clock::before{
   content:'BÖRSE ';
   color:#7bd9a9;
   font-size:8px;
@@ -593,13 +596,6 @@
 }
 [data-style="editorial"] .market-clock.low::before{
   color:var(--white);
-}
-[data-style="editorial"] .blitz-yield{
-  min-width:48px;
-  padding:6px 8px;
-  background:var(--ink);
-  color:var(--white);
-  text-align:center;
 }
 [data-style="editorial"] .qbody{
   gap:16px;
@@ -1289,34 +1285,6 @@
   color:var(--ink);
 }
 
-[data-style="editorial"] .bwl-regler{
-  margin-top:12px;
-}
-[data-style="editorial"] .bwl-regler input[type="range"]{
-  display:block;
-  width:100%;
-  height:26px;
-  margin:0;
-  background:transparent;
-  accent-color:var(--ink);
-  cursor:pointer;
-}
-[data-style="editorial"] .bwl-regler input[type="range"]:disabled{
-  cursor:not-allowed;
-  opacity:.35;
-}
-[data-style="editorial"] .bwl-reglerskala{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  color:var(--muted);
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-size:10px;
-  font-weight:800;
-  text-align:center;
-}
-[data-style="editorial"] .bwl-reglerskala .is-on{
-  color:var(--ink);
-}
 
 [data-style="editorial"] .tabbar-wrap{
   background:var(--ink);
