@@ -1408,3 +1408,107 @@
   font-size:12px;
   line-height:1.45;
 }
+
+/* ═══ Kommunismus ═══
+   Roter Grund, gelbe Tinte. Das Verhaeltnis 5,9:1 liegt ueber der Anforderung
+   fuer Fliesstext, damit der Scherz lesbar bleibt. */
+[data-style="editorial"][data-kommunismus="1"]{
+  --ink:#ffdd00;
+  --paper:#a4071e;
+  --white:#a4071e;
+  --muted:#ffb703;
+  --line:#ffdd00;
+  --soft:#7a0516;
+  --ok:#ffdd00;
+  --bad:#ffb703;
+  --kf1:#ffdd00;
+  --kf2:#ffb703;
+  --kf3:#a4071e;
+  --kf4:#ffdd00;
+}
+[data-style="editorial"][data-kommunismus="1"] .tab{
+  color:rgba(164,7,30,.5);
+}
+[data-style="editorial"][data-kommunismus="1"] .primary-sub{
+  color:#7a0516;
+}
+[data-style="editorial"][data-kommunismus="1"] .heatd{
+  background:var(--soft);
+}
+[data-style="editorial"][data-kommunismus="1"] .heatd[data-lv="1"]{background:#c9a24a}
+[data-style="editorial"][data-kommunismus="1"] .heatd[data-lv="2"]{background:#dcbb3a}
+[data-style="editorial"][data-kommunismus="1"] .heatd[data-lv="3"]{background:#eccd1f}
+[data-style="editorial"][data-kommunismus="1"] .heatd[data-lv="4"]{background:#ffdd00}
+
+/* Die Lektuere selbst bleibt Buchsatz: schwarz auf weiss, egal was drumherum
+   passiert. Deshalb feste Farben statt der Variablen. */
+[data-style="editorial"] .kapital-view{
+  background:#fff;
+  color:#111;
+}
+[data-style="editorial"] .kapital-view .qtop{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+}
+[data-style="editorial"] .kapital-view .qx,
+[data-style="editorial"] .kapital-view .qcount{
+  color:#111;
+}
+[data-style="editorial"] .kapital-view .qprog{
+  background:#fff;
+  border-color:#111;
+}
+[data-style="editorial"] .kapital-view .qprogfill{
+  background:#111;
+}
+[data-style="editorial"] .kapital-body{
+  gap:0;
+  padding:26px 34px 22px;
+}
+[data-style="editorial"] .kapital-body p{
+  margin:0 0 15px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:17px;
+  font-weight:400;
+  line-height:1.62;
+  text-align:justify;
+  hyphens:auto;
+}
+[data-style="editorial"] .kapital-kopf{
+  margin-bottom:26px;
+  padding-bottom:16px;
+  border-bottom:1px solid #ccc;
+  text-align:center;
+}
+[data-style="editorial"] .kapital-kopf span{
+  display:block;
+  color:#666;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+[data-style="editorial"] .kapital-kopf b{
+  display:block;
+  margin:7px 0;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:27px;
+  font-weight:400;
+  letter-spacing:.02em;
+}
+[data-style="editorial"] .kapital-ende{
+  margin-top:8px;
+  padding-top:14px;
+  border-top:1px solid #ccc;
+  color:#666;
+  font-size:12px;
+}
+[data-style="editorial"] .kapital-view .qact{
+  background:#fff;
+  border-top:1px solid #ddd;
+}
+[data-style="editorial"] .kapital-view .btn-primary{
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}

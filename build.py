@@ -177,9 +177,23 @@ if meme_fehler:
     sys.exit(1)
 meme_daten = json.dumps(memes, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
+# Pflichtlektuere im Kommunismus-Modus. Marx starb 1883, der Text ist gemeinfrei;
+# die Transkription der Erstausgabe stammt aus dem Deutschen Textarchiv.
+kapital_file = p('kapital.json')
+if not os.path.exists(kapital_file):
+    print('ABBRUCH — kapital.json fehlt', file=sys.stderr)
+    sys.exit(1)
+with open(kapital_file, encoding='utf-8') as fh:
+    kapital = json.load(fh)
+if not (isinstance(kapital, list) and len(kapital) >= 20
+        and all(isinstance(a, str) and a.strip() for a in kapital)):
+    print('ABBRUCH — kapital.json braucht mindestens 20 nichtleere Absaetze', file=sys.stderr)
+    sys.exit(1)
+kapital_daten = json.dumps(kapital, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+
 with open(p('app_template.html'), encoding='utf-8') as fh:
     tpl = fh.read()
-for ph in ('__FRAGEN__', '__MEMES__', '__STILE__'):
+for ph in ('__FRAGEN__', '__MEMES__', '__STILE__', '__KAPITAL__'):
     if ph not in tpl:
         print('ABBRUCH — Platzhalter %s fehlt in app_template.html' % ph, file=sys.stderr)
         sys.exit(1)
@@ -201,6 +215,7 @@ if '[data-style="editorial"]' not in stil_css:
 seite = (tpl
     .replace('__FRAGEN__', daten)
     .replace('__MEMES__', meme_daten)
+    .replace('__KAPITAL__', kapital_daten)
     .replace('__STILE__', stil_css))
 for ausgabe in ('BWL-Trainer.html', 'index.html'):
     with open(p(ausgabe), 'w', encoding='utf-8') as fh:
@@ -223,6 +238,7 @@ print('  Essential     : %d' % essential)
 print('  Wiederholung  : %d' % wiederholung)
 print('  Fachhinweise  : %d' % fachhinweise)
 print('  Reaction-GIFs : %d' % len(memes))
+print('  Kapital       : %d Absaetze, %.0f KB' % (len(kapital), len(kapital_daten) / 1024))
 print('  Themen        : %d' % len(set(q['thema'] for q in fragen)))
 print('  Designsysteme : 1  (editorial)')
 print('  Stil-CSS      : %.0f KB' % (len(stil_css) / 1024))

@@ -175,11 +175,13 @@ svg{display:block}
 </div>
 <script id="fragen-data" type="application/json">__FRAGEN__</script>
 <script id="meme-data" type="application/json">__MEMES__</script>
+<script id="kapital-data" type="application/json">__KAPITAL__</script>
 <script>
 "use strict";
 
 const FRAGEN = JSON.parse(document.getElementById('fragen-data').textContent);
 const MEMES = JSON.parse(document.getElementById('meme-data').textContent);
+const KAPITAL = JSON.parse(document.getElementById('kapital-data').textContent);
 const PRUEFUNGS_LAENGE = 40, PRUEFUNGS_ZEIT = 40*60, BLITZ_ZEIT = 60;
 const LS='bwl-v3', LS_SET='bwl-einstellungen';
 const LS_WILLKOMMEN='bwl-willkommen-v2';
@@ -196,6 +198,7 @@ const EINST_STD = {
   schwierigkeit:'gemischt',
   zeitlimit:true,
   kapitalismus:true,
+  kommunismus:false,
   pruefung:'2026-07-29',
   version:EINST_VERSION
 };
@@ -407,8 +410,12 @@ function bwlStufeEcht(){
 // Ab dieser Stufe darf man den ganzen Aufzug abschalten.
 const KAPITALISMUS_AB=4;
 const kapitalismusAn = () => einst.kapitalismus!==false;
+// Der Kommunismus ist von Anfang an schaltbar und sticht alles: kein Aufstieg,
+// keine Waehrungsschrift, dafuer Pflichtlektuere statt Uebung.
+const kommunismusAn = () => einst.kommunismus===true;
 // Was die App daraus tatsaechlich zeigt.
 function bwlStufe(){
+  if(kommunismusAn()) return 0;
   return kapitalismusAn()?bwlStufeEcht():0;
 }
 // Beschriftungen kennen nur zwei Zustaende: normal, und auf der Endstufe absurd.
@@ -515,6 +522,7 @@ function geldSchrift(){
 function setzeBwl(){
   const s=bwlStufe();
   app.dataset.bwl=s;
+  app.dataset.kommunismus=kommunismusAn()?'1':'0';
   geldAufbauen();
   const box=document.getElementById('geldgrund');
   if(!box) return;
@@ -800,7 +808,7 @@ function heatmap(){
 }
 
 /* ───────── Zustand ───────── */
-let tab='ueben', sitzung=null, ticker=null, zettel=false, zettelOffen=true;
+let tab='ueben', sitzung=null, ticker=null, zettel=false, zettelOffen=true, lesen=false;
 const app=document.getElementById('app');
 function stopTicker(){if(ticker){clearInterval(ticker);ticker=null}}
 const istEssential = f => f.essential===true;
@@ -970,6 +978,7 @@ function setzeInhalt(html){
 function zeichne(){
   setzeBwl();
   if(willkommenOffen) return onboardingRecht?zeichneOnboardingRecht():zeichneWillkommen();
+  if(lesen) return zeichneKapital();
   if(sitzung) return sitzung.fertig?zeichneErgebnis():zeichneFrage();
   if(zettel) return zeichneZettel();
   setzeInhalt(`<main class="view" id="view">${ansicht()}</main>${tabbar()}`);
@@ -1231,7 +1240,20 @@ function viewEinstellungen(){
         : 'Die Prüfung läuft ohne Zeitdruck.'}</div>
     </div>
 
-    ${bwlStufeEcht()>=KAPITALISMUS_AB?`<div class="chartcard">
+    <div class="chartcard">
+      <span class="chart-t">Kommunismus</span>
+      <div class="chips">
+        <button class="chip${kommunismusAn()?' is-on':''}" data-kommi="1"
+          aria-pressed="${kommunismusAn()}">an</button>
+        <button class="chip${kommunismusAn()?'':' is-on'}" data-kommi="0"
+          aria-pressed="${!kommunismusAn()}">aus</button>
+      </div>
+      <div class="setting-note">${kommunismusAn()
+        ? 'Geübt wird nicht mehr. Jeder Modus führt zur Pflichtlektüre.'
+        : 'Rot und gelb, und statt Übungen gibt es Marx zu lesen.'}</div>
+    </div>
+
+    ${(!kommunismusAn()&&bwlStufeEcht()>=KAPITALISMUS_AB)?`<div class="chartcard">
       <span class="chart-t">Kapitalismus</span>
       <div class="chips">
         <button class="chip${kapitalismusAn()?' is-on':''}" data-kapi="1"
@@ -1492,6 +1514,57 @@ function zeichneZettel(){
   if(u) u.onclick=()=>{zettel=false;starte('fehlerAlle')};
 }
 
+/* Pflichtlektuere. Wer im Kommunismus auf einen Uebungsmodus tippt, landet
+   hier: Marx statt Multiple Choice, und beim naechsten Mal genau da weiter,
+   wo er aufgehoert hat. */
+const LS_KAPITAL='bwl-kapital';
+const KAPITAL_PRO_SEITE=3;
+const kapitalSeiten=()=>Math.ceil(KAPITAL.length/KAPITAL_PRO_SEITE);
+let kapitalSeite=(()=>{
+  try{
+    const n=parseInt(localStorage.getItem(LS_KAPITAL),10);
+    return Number.isInteger(n)&&n>=0&&n<kapitalSeiten() ? n : 0;
+  }catch(e){ return 0 }
+})();
+function merkeKapitalSeite(){ try{localStorage.setItem(LS_KAPITAL,String(kapitalSeite))}catch(e){} }
+function zeichneKapital(){
+  const seiten=kapitalSeiten();
+  const von=kapitalSeite*KAPITAL_PRO_SEITE;
+  const absaetze=KAPITAL.slice(von,von+KAPITAL_PRO_SEITE);
+  const letzte=kapitalSeite>=seiten-1;
+  const anteil=Math.round((kapitalSeite+1)/seiten*100);
+  setzeInhalt(`<div class="quiz kapital-view">
+    <div class="qtop">
+      <button class="qx" data-ab aria-label="Lektüre unterbrechen">✕</button>
+      <div class="qprog" role="progressbar" aria-label="Lesefortschritt"
+        aria-valuemin="0" aria-valuemax="100" aria-valuenow="${anteil}">
+        <div class="qprogfill" style="width:${anteil}%"></div></div>
+      <span class="qcount">${kapitalSeite+1}/${seiten}</span>
+    </div>
+    <div class="qbody kapital-body">
+      ${kapitalSeite===0?`<div class="kapital-kopf">
+        <span>Karl Marx</span>
+        <b>Das Kapital</b>
+        <span>Erster Band · Erstes Kapitel: Die Waare</span>
+      </div>`:''}
+      ${absaetze.map(a=>`<p>${esc(a)}</p>`).join('')}
+      ${letzte?`<div class="kapital-ende">Hier endet der Auszug.
+        Der Band hat noch achthundert Seiten.</div>`:''}
+    </div>
+    <div class="qact">
+      <button class="btn btn-primary" data-weiterlesen>${letzte?'Wieder von vorn':'Weiterlesen'}</button>
+    </div>
+  </div>`);
+  const zu=()=>{ lesen=false; zeichne() };
+  app.querySelector('[data-ab]').onclick=zu;
+  app.querySelector('[data-weiterlesen]').onclick=()=>{
+    kapitalSeite=letzte?0:kapitalSeite+1;
+    merkeKapitalSeite();
+    zeichne();
+  };
+  app.querySelector('.qbody').scrollTop=0;
+}
+
 function zeichneFrage(){
   const e=aktuelle(), f=e.frage, n=sitzung.fragen.length;
   const bodyVorher=app.querySelector('.qbody');
@@ -1698,10 +1771,16 @@ function zeichneErgebnis(){
 function bindeStart(){
   app.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;zeichne()});
   app.querySelectorAll('[data-tab-jump]').forEach(b=>b.onclick=()=>{tab=b.dataset.tabJump;zeichne()});
-  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>starte(b.dataset.go));
+  // Im Kommunismus fuehrt jeder Weg ins Uebungsmaterial zuerst zur Lektuere.
+  const stattdessenLesen = tun => () => {
+    if(kommunismusAn()){ lesen=true; zeichne(); return }
+    tun();
+  };
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=stattdessenLesen(()=>starte(b.dataset.go)));
   const z=app.querySelector('[data-zettel]');
-  if(z) z.onclick=()=>{zettel=true;zeichne()};
-  app.querySelectorAll('[data-thema]').forEach(b=>b.onclick=()=>starte('thema',{thema:b.dataset.thema}));
+  if(z) z.onclick=stattdessenLesen(()=>{zettel=true;zeichne()});
+  app.querySelectorAll('[data-thema]').forEach(b=>
+    b.onclick=stattdessenLesen(()=>starte('thema',{thema:b.dataset.thema})));
   app.querySelectorAll('[data-umfang]').forEach(b=>b.onclick=()=>{
     setzeEinst('umfang',b.dataset.umfang); zeichne(); toast(umfangName(einst.umfang));
   });
@@ -1713,6 +1792,9 @@ function bindeStart(){
   });
   app.querySelectorAll('[data-kapi]').forEach(b=>b.onclick=()=>{
     setzeEinst('kapitalismus',b.dataset.kapi==='1'); zeichne();
+  });
+  app.querySelectorAll('[data-kommi]').forEach(b=>b.onclick=()=>{
+    setzeEinst('kommunismus',b.dataset.kommi==='1'); zeichne();
   });
   const tm=app.querySelector('[data-termin]');
   if(tm) tm.onclick=()=>{
