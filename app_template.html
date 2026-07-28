@@ -379,6 +379,16 @@ const BWL_STUFEN=[
   {rolle:'Head of Synergy',   kurz:'Head of'},
   {rolle:'Chief Value Officer', kurz:'C-Level'}
 ];
+// Dieselben sechs Stufen, im Kommunismus in der Sprache der Planerfuellung.
+const KOMM_STUFEN=[
+  {rolle:'Ohne Plansoll',    kurz:'Kein Soll'},
+  {rolle:'Plansoll erteilt', kurz:'Soll'},
+  {rolle:'Plan erfüllt',     kurz:'Erfüllt'},
+  {rolle:'Plan übererfüllt', kurz:'Über'},
+  {rolle:'Verdienstmedaille',kurz:'Medaille'},
+  {rolle:'Zentralkomitee',   kurz:'ZK'}
+];
+const stufenNamen = () => kommunismusAn()?KOMM_STUFEN:BWL_STUFEN;
 const BWL_SCHWELLEN=[0,.042,.142,.32,.551,.782];
 const BWL_MAX=BWL_STUFEN.length-1;
 // Der Aufstieg soll waehrend einer Lernsitzung spuerbar sein, nicht erst nach
@@ -1046,7 +1056,7 @@ function viewUeben(){
       : '10 gemeisterte '+wort+' wiederholen';
   return `<div class="screen pad-top home">
     <header class="brandhead">
-      <h1 class="brand">BWL für Designer</h1>
+      <h1 class="brand">${kommunismusAn()?'Kommunismus':'BWL'} für Designer</h1>
       <div class="brand-meta">
         <span class="brand-sub">${esc(T('markeSub'))}</span>
         ${bwlStufe()>=SERIE_HOME_AB?`<span class="brand-serial">${seriennummer}</span>`:''}
@@ -1098,11 +1108,11 @@ function bwlIndexKarte(){
   const w=bwlWert(), s=bwlStufeEcht(), pct=Math.round(w*100);
   return `<div class="chartcard bwlcard">
     <div class="bwl-head">
-      <span class="bwl-rolle">${esc(BWL_STUFEN[s].rolle)}</span>
+      <span class="bwl-rolle">${esc(stufenNamen()[s].rolle)}</span>
       <span class="bwl-wert">${pct} %</span>
     </div>
     <div class="bartrack"><div class="barfill" data-w="${pct}"></div></div>
-    <div class="bwl-leiter">${BWL_STUFEN.map((st,i)=>
+    <div class="bwl-leiter">${stufenNamen().map((st,i)=>
       `<span class="bwl-stufe${i<=s?' is-on':''}"${i===s?' aria-current="true"':''}>${esc(st.kurz)}</span>`
     ).join('')}</div>
   </div>`;
@@ -1159,6 +1169,17 @@ function viewStatistik(){
 }
 
 function viewThemen(){
+  // Im Kommunismus tritt das Inhaltsverzeichnis an die Stelle der Themen.
+  if(kommunismusAn()) return `<div class="screen pad-top">
+    <div class="shead"><div><div class="stitle">Inhalt</div>
+      <div class="ssub">${KAPITEL.length} Kapitel · ${kapitalSeiten()} Seiten</div></div></div>
+    <div class="tlist">${KAPITEL.map((k,i)=>`
+      <button class="trow kapitel-row tapp" data-kapitel="${k.seite}">
+        <span class="barlab">${esc(k.titel)}</span>
+        <span class="barval">S. ${k.seite+1}</span>
+      </button>`).join('')}</div>
+    <div class="setting-note">${esc(KAPITAL.quelle)}</div>
+  </div>`;
   const B=basis();
   const liste=themen(B);
   return `<div class="screen pad-top">
@@ -1518,8 +1539,14 @@ function zeichneZettel(){
    hier: Marx statt Multiple Choice, und beim naechsten Mal genau da weiter,
    wo er aufgehoert hat. */
 const LS_KAPITAL='bwl-kapital';
-const KAPITAL_PRO_SEITE=3;
-const kapitalSeiten=()=>Math.ceil(KAPITAL.length/KAPITAL_PRO_SEITE);
+const KAPITAL_PRO_SEITE=KAPITAL.proSeite||4;
+const KAPITAL_TEXT=KAPITAL.eintraege;
+// Die Kapitelueberschriften dienen zugleich als Inhaltsverzeichnis.
+const KAPITEL=KAPITAL_TEXT
+  .map((e,i)=>({e,i}))
+  .filter(x=>x.e.a==='k')
+  .map(x=>({titel:x.e.t, seite:Math.floor(x.i/KAPITAL_PRO_SEITE)}));
+const kapitalSeiten=()=>Math.ceil(KAPITAL_TEXT.length/KAPITAL_PRO_SEITE);
 let kapitalSeite=(()=>{
   try{
     const n=parseInt(localStorage.getItem(LS_KAPITAL),10);
@@ -1527,12 +1554,19 @@ let kapitalSeite=(()=>{
   }catch(e){ return 0 }
 })();
 function merkeKapitalSeite(){ try{localStorage.setItem(LS_KAPITAL,String(kapitalSeite))}catch(e){} }
+// In welchem Kapitel liegt eine Seite? Fuer die Kopfzeile der Lektuere.
+function kapitelZuSeite(seite){
+  let treffer=KAPITEL[0];
+  KAPITEL.forEach(k=>{ if(k.seite<=seite) treffer=k });
+  return treffer;
+}
 function zeichneKapital(){
   const seiten=kapitalSeiten();
   const von=kapitalSeite*KAPITAL_PRO_SEITE;
-  const absaetze=KAPITAL.slice(von,von+KAPITAL_PRO_SEITE);
+  const stueck=KAPITAL_TEXT.slice(von,von+KAPITAL_PRO_SEITE);
   const letzte=kapitalSeite>=seiten-1;
   const anteil=Math.round((kapitalSeite+1)/seiten*100);
+  const kap=kapitelZuSeite(kapitalSeite);
   setzeInhalt(`<div class="quiz kapital-view">
     <div class="qtop">
       <button class="qx" data-ab aria-label="Lektüre unterbrechen">✕</button>
@@ -1545,11 +1579,16 @@ function zeichneKapital(){
       ${kapitalSeite===0?`<div class="kapital-kopf">
         <span>Karl Marx</span>
         <b>Das Kapital</b>
-        <span>Erster Band · Erstes Kapitel: Die Waare</span>
-      </div>`:''}
-      ${absaetze.map(a=>`<p>${esc(a)}</p>`).join('')}
-      ${letzte?`<div class="kapital-ende">Hier endet der Auszug.
-        Der Band hat noch achthundert Seiten.</div>`:''}
+        <span>Kritik der politischen Oekonomie · Erster Band · Hamburg 1867</span>
+      </div>`
+      // Auf einer Kapitelseite steht der Titel ohnehin gross - dann keine Marginalie.
+      :stueck.some(e=>e.a==='k')?''
+      :`<div class="kapital-marginalie">${esc(kap.titel)}</div>`}
+      ${stueck.map(e=>e.a==='k'?`<h2 class="kapital-kapitel">${esc(e.t)}</h2>`
+        :e.a==='s'?`<h3 class="kapital-abschnitt">${esc(e.t)}</h3>`
+        :e.a==='p'?`<p>${esc(e.t)}</p>`:'').join('')}
+      ${letzte?`<div class="kapital-ende">Ende des ersten Bandes.
+        Es folgen noch zwei weitere.</div>`:''}
     </div>
     <div class="qact">
       <button class="btn btn-primary" data-weiterlesen>${letzte?'Wieder von vorn':'Weiterlesen'}</button>
@@ -1781,6 +1820,9 @@ function bindeStart(){
   if(z) z.onclick=stattdessenLesen(()=>{zettel=true;zeichne()});
   app.querySelectorAll('[data-thema]').forEach(b=>
     b.onclick=stattdessenLesen(()=>starte('thema',{thema:b.dataset.thema})));
+  app.querySelectorAll('[data-kapitel]').forEach(b=>b.onclick=()=>{
+    kapitalSeite=+b.dataset.kapitel; merkeKapitalSeite(); lesen=true; zeichne();
+  });
   app.querySelectorAll('[data-umfang]').forEach(b=>b.onclick=()=>{
     setzeEinst('umfang',b.dataset.umfang); zeichne(); toast(umfangName(einst.umfang));
   });

@@ -185,9 +185,23 @@ if not os.path.exists(kapital_file):
     sys.exit(1)
 with open(kapital_file, encoding='utf-8') as fh:
     kapital = json.load(fh)
-if not (isinstance(kapital, list) and len(kapital) >= 20
-        and all(isinstance(a, str) and a.strip() for a in kapital)):
-    print('ABBRUCH — kapital.json braucht mindestens 20 nichtleere Absaetze', file=sys.stderr)
+kapital_eintraege = kapital.get('eintraege') if isinstance(kapital, dict) else None
+kapital_fehler = []
+if not isinstance(kapital_eintraege, list) or len(kapital_eintraege) < 100:
+    kapital_fehler.append('braucht mindestens 100 Eintraege')
+else:
+    for nr, e in enumerate(kapital_eintraege, 1):
+        if not isinstance(e, dict) or e.get('a') not in ('k', 's', 'p', 'x'):
+            kapital_fehler.append('Eintrag %d: a muss k, s, p oder x sein' % nr)
+            break
+    if not any(e.get('a') == 'k' for e in kapital_eintraege):
+        kapital_fehler.append('keine Kapitelueberschrift gefunden')
+if not str(kapital.get('quelle', '')).strip():
+    kapital_fehler.append('Quellenangabe fehlt')
+if kapital_fehler:
+    print('ABBRUCH — kapital.json:', file=sys.stderr)
+    for f in kapital_fehler:
+        print('  ', f, file=sys.stderr)
     sys.exit(1)
 kapital_daten = json.dumps(kapital, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
@@ -238,7 +252,10 @@ print('  Essential     : %d' % essential)
 print('  Wiederholung  : %d' % wiederholung)
 print('  Fachhinweise  : %d' % fachhinweise)
 print('  Reaction-GIFs : %d' % len(memes))
-print('  Kapital       : %d Absaetze, %.0f KB' % (len(kapital), len(kapital_daten) / 1024))
+print('  Kapital       : %d Eintraege (%d Kapitel), %.0f KB' % (
+    len(kapital_eintraege),
+    sum(1 for e in kapital_eintraege if e['a'] == 'k'),
+    len(kapital_daten) / 1024))
 print('  Themen        : %d' % len(set(q['thema'] for q in fragen)))
 print('  Designsysteme : 1  (editorial)')
 print('  Stil-CSS      : %.0f KB' % (len(stil_css) / 1024))
