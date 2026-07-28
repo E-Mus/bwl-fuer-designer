@@ -409,16 +409,20 @@ const stufenNamen = () => kommunismusAn()?KOMM_STUFEN:BWL_STUFEN;
 const BWL_SCHWELLEN=[0,.042,.142,.32,.551,.782];
 const BWL_MAX=BWL_STUFEN.length-1;
 // Der Aufstieg soll waehrend einer Lernsitzung spuerbar sein, nicht erst nach
-// Tagen: die Menge richtiger Antworten traegt den Grossteil und ist schon bei
-// RICHTIG_VOLL ausgereizt. Der Anteil gemeisterter Fragen bleibt beigemischt,
-// damit die letzte Stufe nicht durch blosses Durchklicken faellt.
-const RICHTIG_VOLL=90;
+// Tagen: die Menge richtiger Antworten traegt den Grossteil und ist bei
+// RICHTIG_PRO_FRAGE je Frage ausgereizt. Der Anteil gemeisterter Fragen bleibt
+// beigemischt, damit die letzte Stufe nicht durch blosses Durchklicken faellt.
+// Beide Haelften messen denselben Stoff wie Ring und Lernstatus, naemlich
+// basis(). Sonst bliebe der Index beim Umschalten des Umfangs stehen, obwohl
+// der Berg gerade von 81 auf 306 Fragen gewachsen ist.
+const RICHTIG_PRO_FRAGE=90/81;   // wie bisher: 90 richtige Antworten fuellen Essential
 function bwlWert(){
   const pool=basis();
-  const anteil=pool.length?pool.filter(f=>status(f)==='sitzt').length/pool.length:0;
-  let richtigGesamt=0;
-  for(const id in stand.stats) richtigGesamt+=stand.stats[id].richtig||0;
-  const menge=Math.min(1,richtigGesamt/RICHTIG_VOLL);
+  if(!pool.length) return 0;
+  const anteil=pool.filter(f=>status(f)==='sitzt').length/pool.length;
+  let richtigImStoff=0;
+  for(const f of pool) richtigImStoff+=(stand.stats[f.id]||{}).richtig||0;
+  const menge=Math.min(1,richtigImStoff/(pool.length*RICHTIG_PRO_FRAGE));
   return Math.max(0,Math.min(1,menge*.55+anteil*.45));
 }
 function bwlStufeAuto(w=bwlWert()){
