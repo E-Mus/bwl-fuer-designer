@@ -1317,6 +1317,16 @@ function viewThemen(){
   </div>`;
 }
 
+// Ja-Nein-Einstellungen als Kippschalter statt als zwei Knoepfe.
+function schalter(beschriftung, an, marke){
+  return `<button class="schalter" role="switch" aria-checked="${an}" ${marke}>
+    <span class="schalter-text">${esc(beschriftung)}</span>
+    <span class="schalter-spur" aria-hidden="true">
+      <span class="schalter-marke">${an?'an':'aus'}</span>
+      <span class="schalter-knopf"></span>
+    </span>
+  </button>`;
+}
 function viewEinstellungen(){
   const umfangZahl = s => umfangPool(s).length;
   const schwierigkeitZahl = s => {
@@ -1370,38 +1380,20 @@ function viewEinstellungen(){
     </div>
 
     <div class="chartcard">
-      <span class="chart-t">Zeitlimit in der Prüfung</span>
-      <div class="chips">
-        <button class="chip${einst.zeitlimit?' is-on':''}" data-zeit="1"
-          aria-pressed="${einst.zeitlimit}">40 Minuten</button>
-        <button class="chip${einst.zeitlimit?'':' is-on'}" data-zeit="0"
-          aria-pressed="${!einst.zeitlimit}">ohne Uhr</button>
-      </div>
+      ${schalter('Zeitlimit in der Prüfung', einst.zeitlimit, 'data-zeit')}
       <div class="setting-note">${einst.zeitlimit
         ? '40 Fragen in 40 Minuten, wie in der Klausur.'
         : 'Die Prüfung läuft ohne Zeitdruck.'}</div>
     </div>
 
     <div class="chartcard">
-      <span class="chart-t">Kommunismus</span>
-      <div class="chips">
-        <button class="chip${kommunismusAn()?' is-on':''}" data-kommi="1"
-          aria-pressed="${kommunismusAn()}">an</button>
-        <button class="chip${kommunismusAn()?'':' is-on'}" data-kommi="0"
-          aria-pressed="${!kommunismusAn()}">aus</button>
-      </div>
+      ${schalter('Kommunismus', kommunismusAn(), 'data-kommi')}
       ${kommunismusAn()?`<div class="setting-note">Geübt wird nicht mehr.
         Jeder Modus führt zur Pflichtlektüre.</div>`:''}
     </div>
 
     ${(!kommunismusAn()&&bwlStufeEcht()>=KAPITALISMUS_AB)?`<div class="chartcard">
-      <span class="chart-t">Kapitalismus</span>
-      <div class="chips">
-        <button class="chip${kapitalismusAn()?' is-on':''}" data-kapi="1"
-          aria-pressed="${kapitalismusAn()}">an</button>
-        <button class="chip${kapitalismusAn()?'':' is-on'}" data-kapi="0"
-          aria-pressed="${!kapitalismusAn()}">aus</button>
-      </div>
+      ${schalter('Kapitalismus', kapitalismusAn(), 'data-kapi')}
       <div class="setting-note">${kapitalismusAn()
         ? 'Sprache, Hintergrund und Kursband richten sich nach deinem Lernstand.'
         : 'Nüchterne Ansicht. Dein Lernstand zählt im Hintergrund weiter.'}</div>
@@ -1969,15 +1961,13 @@ function bindeStart(){
   app.querySelectorAll('[data-schwer]').forEach(b=>b.onclick=()=>{
     setzeEinst('schwierigkeit',b.dataset.schwer); zeichne(); toast(stufeName(einst.schwierigkeit));
   });
-  app.querySelectorAll('[data-zeit]').forEach(b=>b.onclick=()=>{
-    setzeEinst('zeitlimit',b.dataset.zeit==='1'); zeichne();
-  });
-  app.querySelectorAll('[data-kapi]').forEach(b=>b.onclick=()=>{
-    setzeEinst('kapitalismus',b.dataset.kapi==='1'); zeichne();
-  });
-  app.querySelectorAll('[data-kommi]').forEach(b=>b.onclick=()=>{
-    setzeEinst('kommunismus',b.dataset.kommi==='1'); zeichne();
-  });
+  const kippe=(marke,feld,istAn)=>{
+    const b=app.querySelector('['+marke+']');
+    if(b) b.onclick=()=>{ setzeEinst(feld,!istAn()); zeichne(); };
+  };
+  kippe('data-zeit','zeitlimit',()=>einst.zeitlimit);
+  kippe('data-kapi','kapitalismus',kapitalismusAn);
+  kippe('data-kommi','kommunismus',kommunismusAn);
   const tm=app.querySelector('[data-termin]');
   if(tm) tm.onclick=()=>{
     const v=prompt('Prüfungstermin (JJJJ-MM-TT)', einst.pruefung||'');
