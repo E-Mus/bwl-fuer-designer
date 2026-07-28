@@ -153,10 +153,13 @@ svg{display:block}
   transition:opacity .18s, transform .18s cubic-bezier(.2,1.6,.4,1)}
 .toast.show{opacity:1;transform:translateX(-50%) scale(1)}
 #konfetti{position:fixed;inset:0;pointer-events:none;z-index:70;overflow:hidden}
-.kf{position:absolute;width:9px;height:14px;will-change:transform,opacity}
+.kf{position:absolute;line-height:1;font-weight:900;will-change:transform,opacity}
+/* Kurz eingeblendet, lange sichtbar, am Ende weich ausgeblendet */
 @keyframes kfall{
-  0%{transform:translate3d(0,0,0) rotate(0);opacity:1}
-  100%{transform:translate3d(var(--dx),105vh,0) rotate(var(--rot));opacity:.15}
+  0%{transform:translate3d(0,0,0) rotate(0) scale(.7);opacity:0}
+  8%{opacity:1;transform:translate3d(0,4vh,0) rotate(30deg) scale(1)}
+  70%{opacity:1}
+  100%{transform:translate3d(var(--dx),112vh,0) rotate(var(--rot)) scale(1);opacity:0}
 }
 @keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.22)}100%{transform:scale(1)}}
 .pulse{animation:pop .34s cubic-bezier(.2,1.4,.4,1)}
@@ -348,7 +351,15 @@ function themen(pool=FRAGEN){
   return [...m.entries()].sort((a,b)=>a[0].localeCompare(b[0],'de'));
 }
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+// Erst escapen, dann auszeichnen: **fett**, *kursiv*, Leerzeile als Absatz.
+// Die Reihenfolge zaehlt - nach dem Fettdruck sind nur noch einzelne Sterne uebrig.
+const md=s=>esc(s)
+  .replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')
+  .replace(/\*([^*\n]+)\*/g,'<i>$1</i>')
+  .replace(/\n\s*\n/g,'<br><br>')
+  // Ergaenzungen der KI bekommen eine eigene Auszeichnung, damit sie nicht mit
+  // dem Vorlesungsstoff verschwimmen.
+  .replace(/<br><br>(<b>Tipp von CashGPT:<\/b>[\s\S]*)$/,'<span class="ki-tipp">$1</span>');
 const mmss=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
 function bewerte(f,gew){
   const g=new Set(gew);
@@ -553,25 +564,22 @@ const ZITATE=[
   {t:'Preis ist, was du zahlst. Wert ist, was du bekommst.',a:'Warren Buffett'},
   {t:'Zeit ist Geld.',a:'Benjamin Franklin'},
   {t:'Hüte dich vor kleinen Ausgaben: Ein kleines Leck versenkt ein großes Schiff.',a:'Benjamin Franklin'},
-  {t:'Heutzutage kennen die Leute von allem den Preis und von nichts den Wert.',a:'Oscar Wilde'},
-  {t:'Nicht wer wenig hat, sondern wer mehr will, ist arm.',a:'Seneca'},
-  {t:'Wer reich stirbt, stirbt in Schande.',a:'Andrew Carnegie'},
-  {t:'Auf lange Sicht sind wir alle tot.',a:'John Maynard Keynes'},
-  {t:'Was ist ein Einbruch in eine Bank gegen die Gründung einer Bank?',a:'Bertolt Brecht'},
   {t:'Zeig mir den Anreiz, und ich zeige dir das Ergebnis.',a:'Charlie Munger'},
   {t:'Es gibt kein kostenloses Mittagessen.',a:'Milton Friedman (popularisiert)'},
   {t:'Regel Nummer eins: Verliere nie Geld. Regel Nummer zwei: Vergiss nie Regel Nummer eins.',a:'Warren Buffett'},
-  {t:'Es dauert zwanzig Jahre, sich einen Ruf aufzubauen, und fünf Minuten, ihn zu ruinieren.',a:'Warren Buffett'},
+  {t:'Wir verdienen nach wie vor mehr Geld beim Schnarchen als beim Handeln.',a:'Warren Buffett, Aktionärsbrief 1996'},
   {t:'Nicht vom Wohlwollen des Metzgers, des Brauers oder des Bäckers erwarten wir unser Abendessen, sondern davon, dass sie ihre eigenen Interessen verfolgen.',a:'Adam Smith'},
   {t:'Geld ist geprägte Freiheit.',a:'Fjodor Dostojewski'},
-  {t:'Solange du nicht erkennst, dass Geld die Wurzel alles Guten ist, verlangst du nach deinem eigenen Untergang.',a:'Ayn Rand, Atlas Shrugged'},
-  {t:'Gier, um es beim Namen zu nennen, ist gut. Gier funktioniert.',a:'Gordon Gekko, Wall Street 1987'},
-  {t:'Erst kommt das Fressen, dann kommt die Moral.',a:'Bertolt Brecht, Dreigroschenoper'},
-  {t:'Wir verdienen nach wie vor mehr Geld beim Schnarchen als beim Handeln.',a:'Warren Buffett, Aktionärsbrief 1996'},
-  {t:'Wenn es um Geld geht, sind alle von derselben Religion.',a:'Voltaire'},
   {t:'Der Mangel an Geld ist die Wurzel allen Übels.',a:'Mark Twain'},
-  {t:'Es gibt nur eine Klasse, die mehr ans Geld denkt als die Reichen: die Armen.',a:'Oscar Wilde'},
-  {t:'Das Geheimnis großer Vermögen ohne erkennbare Ursache ist ein vergessenes Verbrechen.',a:'Honoré de Balzac'}
+  {t:'Wenn es um Geld geht, sind alle von derselben Religion.',a:'Voltaire'},
+  {t:'Gier, um es beim Namen zu nennen, ist gut. Gier funktioniert.',a:'Gordon Gekko, Wall Street 1987'},
+  {t:'Solange du nicht erkennst, dass Geld die Wurzel alles Guten ist, verlangst du nach deinem eigenen Untergang.',a:'Ayn Rand, Atlas Shrugged'},
+  {t:'Reichtum ist das Produkt der Denkfähigkeit des Menschen.',a:'Ayn Rand, Atlas Shrugged'},
+  {t:'Geld ist das Barometer für die Tugend einer Gesellschaft.',a:'Ayn Rand, Atlas Shrugged'},
+  {t:'Geld ist wie ein sechster Sinn, ohne den man die anderen fünf nicht voll nutzen kann.',a:'W. Somerset Maugham'},
+  {t:'Ich habe nichts als Verachtung für die Leute, die das Geld verachten. Sie sind Heuchler oder Narren.',a:'W. Somerset Maugham'},
+  {t:'Leg alle Eier in einen Korb — und dann pass auf den Korb auf.',a:'Andrew Carnegie, 1885'},
+  {t:'Ich war arm und ich war reich. Reich ist besser.',a:'Beatrice Kaufman, 1937'}
 ];
 const ZITAT_AB=3;                     // im Quiz und im Ergebnis
 const ZITAT_HOME_AB=2;                // auf der Startseite eine Stufe frueher
@@ -740,38 +748,45 @@ function abschlussText(pct){
 function memeZiehen(){
   return zufallAus(MEMES,'meme');
 }
-function banknoteFlug(){
-  const box=document.getElementById('konfetti');
-  if(!box) return;
-  const note=document.createElement('div');
-  note.className='flying-note';
-  note.setAttribute('aria-hidden','true');
-  note.innerHTML='<span>100</span><b>WISSEN</b><small>NICHT ÜBERTRAGBAR</small>';
-  box.appendChild(note);
-  setTimeout(()=>note.remove(),3300);
+/* Wie viel Geld faellt? Ab der Haelfte richtig faengt es an und waechst bis
+   zum vollen Durchgang. Ein Rekord legt noch etwas drauf. */
+const REGEN_AB=.5, REGEN_MIN=25, REGEN_MAX=200, REGEN_REKORD=50;
+function regenMenge(quote,rekord){
+  let n=0;
+  if(quote>=REGEN_AB){
+    const anteil=(quote-REGEN_AB)/(1-REGEN_AB);
+    n=Math.round(REGEN_MIN+anteil*(REGEN_MAX-REGEN_MIN));
+  }
+  if(rekord) n=Math.max(n,40)+REGEN_REKORD;
+  return Math.min(n,REGEN_MAX+REGEN_REKORD);
 }
-function monetenregen(n=70,{banknote=false}={}){
+
+/* Geldregen. Die Menge waechst mit der Quote, die Teilchen blenden am Ende
+   langsam aus statt einfach zu verschwinden. */
+const GELD_ZEICHEN=['€','$','£','¥','₣','₹','₩','₺','¢'];
+function monetenregen(n=80){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
   const box=document.getElementById('konfetti');
   const cs=getComputedStyle(document.getElementById('app'));
   const farben=['--kf1','--kf2','--kf3','--kf4'].map(v=>cs.getPropertyValue(v).trim()||'#888');
-  const waehrungen=['€','$','£','¥','₹','₩','₺'];
   for(let i=0;i<n;i++){
     const d=document.createElement('i');
     d.className='kf';
-    d.textContent=waehrungen[i%waehrungen.length];
+    d.textContent=GELD_ZEICHEN[i%GELD_ZEICHEN.length];
     d.setAttribute('aria-hidden','true');
     d.style.left=Math.random()*100+'vw';
-    d.style.top=(-12-Math.random()*22)+'vh';
+    d.style.top=(-14-Math.random()*26)+'vh';
     d.style.color=farben[i%farben.length];
-    d.style.fontSize=(15+Math.random()*18)+'px';
-    d.style.setProperty('--dx',(Math.random()*230-115)+'px');
+    d.style.fontSize=(20+Math.random()*30)+'px';
+    d.style.setProperty('--dx',(Math.random()*260-130)+'px');
     d.style.setProperty('--rot',(Math.random()*900-450)+'deg');
-    d.style.animation=`kfall ${1.5+Math.random()*1.3}s cubic-bezier(.25,.6,.5,1) ${Math.random()*.35}s forwards`;
+    const dauer=2.2+Math.random()*1.6, verzoegerung=Math.random()*.6;
+    d.style.animation=`kfall ${dauer}s cubic-bezier(.25,.6,.5,1) ${verzoegerung}s forwards`;
+    // Aufraeumen erst, wenn das Teilchen ausgeblendet ist
+    d.addEventListener('animationend',()=>d.remove(),{once:true});
+    setTimeout(()=>d.remove(),(dauer+verzoegerung)*1000+600);
     box.appendChild(d);
-    setTimeout(()=>d.remove(),3400);
   }
-  if(banknote) setTimeout(banknoteFlug,160);
 }
 function zaehlHoch(el,ziel,dauer=650){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=ziel;return}
@@ -974,10 +989,9 @@ function ergebnis(){
   if(stand.versuche.length>80) stand.versuche=stand.versuche.slice(-80);
   sichern();
   zeichne();
-  const quote=gesamt?pErst/gesamt:0;
-  if(sitzung.neu||sitzung.serieRekord||quote>=.9){
-    setTimeout(()=>monetenregen(sitzung.neu?110:70,{banknote:quote>=1}),260);
-  }
+  const quote=gesamt?pErst/gesamt:0, rekordDabei=!!(sitzung.neu||sitzung.serieRekord);
+  const menge=regenMenge(quote,rekordDabei);
+  if(menge) setTimeout(()=>monetenregen(menge),260);
 }
 
 /* ───────── Zeichnen ───────── */
@@ -1578,13 +1592,20 @@ function zeichneOnboardingRecht(){
 }
 
 // Kurze Kernaussage; die vollstaendige Begruendung bleibt ueber den Info-Button erreichbar.
+// Der erste Satz wird immer ganz gezeigt. Nur wenn er selbst die Grenze reisst,
+// wird gekuerzt - dann aber am letzten Komma, nie mitten im Satzbau.
+const KERN_MAX=260;
+const kernRoh=t=>String(t).split('\n\n')[0].replace(/\*\*/g,'').replace(/\s+/g,' ').trim();
 function kernsatz(t){
-  const sauber=String(t).replace(/\*\*/g,'').replace(/\s+/g,' ').trim();
-  const m=sauber.match(/^(.{0,120}?[.!?])(\s|$)/);
-  if(m) return m[1];
-  if(sauber.length<=120) return sauber;
-  return sauber.slice(0,117).replace(/\s+\S*$/,'').trim()+'…';
+  const sauber=kernRoh(t);
+  const satz=(sauber.match(/^(.+?[.!?])(\s|$)/)||[,sauber])[1];
+  if(satz.length<=KERN_MAX) return satz;
+  const stueck=satz.slice(0,KERN_MAX);
+  const komma=stueck.lastIndexOf(', ');
+  return (komma>100?stueck.slice(0,komma):stueck.replace(/\s+\S*$/,''))+' …';
 }
+// Bleibt nach dem Kernsatz noch etwas uebrig? Dann lohnt der Hinweis auf "mehr".
+const hatMehr=t=>kernRoh(t).length>kernsatz(t).replace(/ …$/,'').length;
 function zeichneZettel(){
   const liste=luecken().map(f=>{
     const st=stand.stats[f.id]||{};
@@ -1798,7 +1819,9 @@ function zeichneFrage(){
           <span class="meme-fallback" hidden>Marktreaktion derzeit nicht handelbar.</span>
         </div>
       </figure>`:''}
-      <span class="fb-p" data-lerninhalt>${md(kernsatz(f.erklaerung))}</span>
+      <span class="fb-p" data-lerninhalt>${md(kernsatz(f.erklaerung))}${
+        hatMehr(f.erklaerung)?` <button class="mehr" data-mehr
+          aria-controls="answer-detail">weiterlesen</button>`:''}</span>
       ${meme?'':zitatHtml(sitzung.zitat)}
       <div class="answer-detail" id="answer-detail" data-lerninhalt hidden>
         <span class="answer-detail-title">Erklärung</span>
@@ -1826,15 +1849,24 @@ function zeichneFrage(){
   app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>waehle(+b.dataset.pos));
   app.querySelector('[data-weiter]').onclick=weiter;
   app.querySelector('[data-ab]').onclick=()=>{stopTicker();sitzung=null;zeichne()};
+  // Ein Umschalter, zwei Auslöser: der Knopf unten und "weiterlesen" im Text.
   const info=app.querySelector('[data-info]');
-  if(info) info.onclick=()=>{
+  const umschalten=()=>{
     const detail=app.querySelector('#answer-detail'), offen=detail.hidden;
     const meme=app.querySelector('.meme-reaction');
     detail.hidden=!offen;
     if(meme) meme.hidden=offen;
-    info.setAttribute('aria-expanded',String(offen));
-    info.classList.toggle('is-on',offen);
+    if(info){
+      info.setAttribute('aria-expanded',String(offen));
+      info.classList.toggle('is-on',offen);
+    }
+    const mehr=app.querySelector('[data-mehr]');
+    if(mehr) mehr.hidden=offen;
+    if(offen) detail.scrollIntoView({block:'nearest'});
   };
+  if(info) info.onclick=umschalten;
+  const mehr=app.querySelector('[data-mehr]');
+  if(mehr) mehr.onclick=umschalten;
   const memeBild=app.querySelector('.meme-reaction img');
   if(memeBild) memeBild.addEventListener('error',()=>{
     memeBild.hidden=true;

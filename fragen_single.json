@@ -160,7 +160,7 @@
    "Verwaltungskosten, gemeinsame Personalkosten und Haftung"
   ],
   "richtig": 0,
-  "erklaerung": "Für die UG (haftungsbeschränkt) werden **Verwaltungskosten, geringe Kreditwürdigkeit und Steuer** als Nachteile genannt. Geringe Gründungskosten zählen bei der UG dagegen zu den Vorteilen.",
+  "erklaerung": "Für die UG (haftungsbeschränkt) werden **Verwaltungskosten, geringe Kreditwürdigkeit und Steuer** als Nachteile genannt. Geringe Gründungskosten zählen bei der UG dagegen zu den Vorteilen.\n\n**Tipp von CashGPT:** Die UG ist billig zu gründen und teuer zu haben: geringe Gründungskosten auf der Habenseite, laufende Verwaltung und magerer Ruf bei der Bank auf der anderen.",
   "quelle": "f44",
   "schwierigkeit": "leicht"
  },
@@ -175,7 +175,7 @@
    "Freelancer"
   ],
   "richtig": 2,
-  "erklaerung": "Die **gemeinsame Haftung für Büro- und Personalkosten** ist der Nachteil, der der Partnerschaftsgesellschaft zugeordnet wird. Beim Einzelunternehmen steht dagegen die gesamtschuldnerische unbeschränkte Haftung.",
+  "erklaerung": "Die **gemeinsame Haftung für Büro- und Personalkosten** ist der Nachteil, der der Partnerschaftsgesellschaft zugeordnet wird. Beim Einzelunternehmen steht dagegen die gesamtschuldnerische unbeschränkte Haftung.\n\n**Tipp von CashGPT:** Die Haftung ist hier zweigeteilt: Für **Berufsfehler** haftet, wer sie gemacht hat. Für **Büro und Personal** haften alle gemeinsam — genau das ist der genannte Nachteil.",
   "quelle": "f44",
   "schwierigkeit": "mittel"
  },
@@ -190,7 +190,7 @@
    "Gründungs- und Verwaltungskosten sowie Steuerproblematik"
   ],
   "richtig": 3,
-  "erklaerung": "Als Nachteil der GmbH werden **Gründungs- und Verwaltungskosten sowie die Steuerproblematik** genannt. Geringe Kreditwürdigkeit ist dagegen ein Nachteil der UG (haftungsbeschränkt).",
+  "erklaerung": "Als Nachteil der GmbH werden **Gründungs- und Verwaltungskosten sowie die Steuerproblematik** genannt. Geringe Kreditwürdigkeit ist dagegen ein Nachteil der UG (haftungsbeschränkt).\n\n**Tipp von CashGPT:** Die GmbH kauft Seriosität mit Aufwand: Notar, Stammkapital, Buchführung. Was sie der UG voraushat, ist genau die Kreditwürdigkeit.",
   "quelle": "f44",
   "schwierigkeit": "mittel"
  },
@@ -220,7 +220,7 @@
    "Geringe Gründungskosten und eigene Anstellung"
   ],
   "richtig": 0,
-  "erklaerung": "Der Freelancer gilt als **relativ risikolos** und mit **wenig Akquiseaufwand** verbunden. Eine Haftungsbeschränkung oder eigene Anstellung wird ihm nicht zugeschrieben.",
+  "erklaerung": "Der Freelancer gilt als **relativ risikolos** und mit **wenig Akquiseaufwand** verbunden. Eine Haftungsbeschränkung oder eigene Anstellung wird ihm nicht zugeschrieben.\n\n**Tipp von CashGPT:** Wenig Risiko, wenig Akquise — aber eben auch **keine** Haftungsbeschränkung. Wer als Freelancer Mist baut, haftet privat.",
   "quelle": "f45",
   "schwierigkeit": "leicht"
  },
@@ -235,7 +235,7 @@
    "Eigene Anstellung und flexible Gestaltung"
   ],
   "richtig": 1,
-  "erklaerung": "Die UG (haftungsbeschränkt) bietet **geringe Gründungskosten und eine Haftungsbeschränkung**. Verwaltungskosten und geringe Kreditwürdigkeit stehen bei ihr umgekehrt auf der Nachteilsseite.",
+  "erklaerung": "Die UG (haftungsbeschränkt) bietet **geringe Gründungskosten und eine Haftungsbeschränkung**. Verwaltungskosten und geringe Kreditwürdigkeit stehen bei ihr umgekehrt auf der Nachteilsseite.\n\n**Tipp von CashGPT:** Denk an die UG als Einstiegs-GmbH: Haftungsbeschränkung schon ab einem Euro Stammkapital, dafür Rücklagenpflicht und wenig Ansehen bei Banken.",
   "quelle": "f45",
   "schwierigkeit": "leicht"
  },
@@ -250,7 +250,7 @@
    "Sofortiger Start bei geringen Kosten"
   ],
   "richtig": 2,
-  "erklaerung": "Der GbR wird als Vorteil die **flexible Gestaltung im Team** zugeschrieben. Eine Haftungsbeschränkung gibt es bei ihr nicht, denn ihr Nachteil ist die gesamtschuldnerische unbeschränkte Haftung.",
+  "erklaerung": "Der GbR wird als Vorteil die **flexible Gestaltung im Team** zugeschrieben. Eine Haftungsbeschränkung gibt es bei ihr nicht, denn ihr Nachteil ist die gesamtschuldnerische unbeschränkte Haftung.\n\n**Tipp von CashGPT:** Die GbR entsteht fast von selbst, sobald zwei zusammen arbeiten — daher die Flexibilität. Der Preis: Jeder haftet für alles, auch für die Fehler der anderen.",
   "quelle": "f45",
   "schwierigkeit": "mittel"
  },
@@ -265,7 +265,7 @@
    "Haftungsbeschränkung und flexible Gestaltung"
   ],
   "richtig": 3,
-  "erklaerung": "Die Partnerschaftsgesellschaft verbindet **Haftungsbeschränkung und flexible Gestaltung**. Der solide kreditwürdige Auftritt und die eigene Anstellung werden dagegen der GmbH zugeordnet.",
+  "erklaerung": "Die Partnerschaftsgesellschaft verbindet **Haftungsbeschränkung und flexible Gestaltung**. Der solide kreditwürdige Auftritt und die eigene Anstellung werden dagegen der GmbH zugeordnet.\n\n**Tipp von CashGPT:** Merke sie als **GbR für Freie Berufe** — genauso flexibel, aber mit Haftungsschutz für Berufsfehler.",
   "quelle": "f45",
   "schwierigkeit": "mittel"
  },
@@ -340,7 +340,7 @@
    "Das Recht, ein fremdes Werk nach Belieben zu verändern"
   ],
   "richtig": 0,
-  "erklaerung": "Das **Nutzungsrecht** ist das Recht, **ein Werk zu nutzen oder zu verwenden, das einem anderen gehört**. Es verschafft keinen Besitz am Werk, sondern nur eine Nutzungsbefugnis.",
+  "erklaerung": "Das **Nutzungsrecht** ist das Recht, **ein Werk zu nutzen oder zu verwenden, das einem anderen gehört**. Es verschafft keinen Besitz am Werk, sondern nur eine Nutzungsbefugnis.\n\n**Tipp von CashGPT:** Denk an eine Mietwohnung: Du darfst darin wohnen, gehören tut sie dir nicht. Endet der Vertrag, endet das Recht.",
   "quelle": "f30",
   "schwierigkeit": "leicht",
   "essential": true
@@ -356,7 +356,7 @@
    "Zwischen dem Auftraggeber des Werks und dem Käufer des Werkstücks"
   ],
   "richtig": 0,
-  "erklaerung": "Das Nutzungsrecht ist eine **Vereinbarung zwischen dem Inhaber des Urheberrechts und dem Nutzer des Werks**. Es entsteht also vertraglich zwischen diesen beiden Seiten.",
+  "erklaerung": "Das Nutzungsrecht ist eine **Vereinbarung zwischen dem Inhaber des Urheberrechts und dem Nutzer des Werks**. Es entsteht also vertraglich zwischen diesen beiden Seiten.\n\n**Tipp von CashGPT:** Immer genau zwei Seiten: wem es gehört und wer es nutzen will. Agenturen oder Bildportale dazwischen handeln nur im Auftrag einer der beiden.",
   "quelle": "f30",
   "schwierigkeit": "leicht",
   "essential": true
@@ -372,7 +372,7 @@
    "Ort der Veröffentlichung, Anzahl der Abnehmer und Höhe des Gewinns"
   ],
   "richtig": 0,
-  "erklaerung": "Ein Nutzungsrecht wird in der Regel unter bestimmten Bedingungen eingeräumt, nämlich **Art und Weise der Nutzung, Dauer der Nutzung und Höhe der Vergütung**.",
+  "erklaerung": "Ein Nutzungsrecht wird in der Regel unter bestimmten Bedingungen eingeräumt, nämlich **Art und Weise der Nutzung, Dauer der Nutzung und Höhe der Vergütung**.\n\n**Tipp von CashGPT:** Drei Stellschrauben, die im Vertrag zusammengehören: **wie** genutzt wird, **wie lange**, und **wofür** bezahlt wird. Fehlt eine, ist der Vertrag lückenhaft.",
   "quelle": "f30",
   "schwierigkeit": "leicht",
   "essential": true
@@ -418,7 +418,7 @@
    "Das Kapitaleigentum eines Auftraggebers, Kunden oder Investors"
   ],
   "richtig": 0,
-  "erklaerung": "Das Urheberrecht schützt das **geistige Eigentum eines Autors, Komponisten oder Künstlers** und gibt dem Urheber das Recht zu entscheiden, wer sein Werk nutzen darf und wer dafür bezahlen muss.",
+  "erklaerung": "Das Urheberrecht schützt das **geistige Eigentum eines Autors, Komponisten oder Künstlers** und gibt dem Urheber das Recht zu entscheiden, wer sein Werk nutzen darf und wer dafür bezahlen muss.\n\n**Tipp von CashGPT:** Geschützt wird die **Form**, nicht die Idee. Zwei Leute dürfen denselben Einfall haben — nur nicht dieselbe Ausführung übernehmen.",
   "quelle": "f31",
   "schwierigkeit": "leicht",
   "essential": true
@@ -434,7 +434,7 @@
    "Drehbuch, Gedicht und Song"
   ],
   "richtig": 0,
-  "erklaerung": "Zum **Eigentum** zählen **Haus, Auto und Patent** – Sachen, die man besitzen und kontrollieren kann. Die übrigen Aufzählungen bestehen aus kreativen Arbeiten und gehören damit zur **Urheberschaft**.",
+  "erklaerung": "Zum **Eigentum** zählen **Haus, Auto und Patent** – Sachen, die man besitzen und kontrollieren kann. Die übrigen Aufzählungen bestehen aus kreativen Arbeiten und gehören damit zur **Urheberschaft**.\n\n**Tipp von CashGPT:** Eigentum kann man weitergeben, Urheberschaft nicht. Deshalb steht das Patent bei den Sachen: Es ist übertragbar wie ein Auto.",
   "quelle": "f31",
   "schwierigkeit": "mittel"
  },
@@ -481,7 +481,7 @@
    "Räumlich, finanziell und inhaltlich"
   ],
   "richtig": 0,
-  "erklaerung": "Nutzungsrechte können **räumlich, zeitlich und inhaltlich** beschränkt übertragen werden. Diese drei Dimensionen bestimmen den Umfang der Rechteübertragung.",
+  "erklaerung": "Nutzungsrechte können **räumlich, zeitlich und inhaltlich** beschränkt übertragen werden. Diese drei Dimensionen bestimmen den Umfang der Rechteübertragung.\n\n**Tipp von CashGPT:** Denk an drei Achsen: **wo** (räumlich), **wie lange** (zeitlich), **wofür** (inhaltlich).",
   "quelle": "f33, f34",
   "schwierigkeit": "leicht",
   "essential": true
@@ -497,7 +497,7 @@
    "Für ein Medium, zwei Medien, mehrere Medien oder alle"
   ],
   "richtig": 0,
-  "erklaerung": "Die **räumliche Nutzung** wird mit Angaben wie **international, weltweit, europaweit oder nur regional** festgelegt. Jahresangaben betreffen die zeitliche, Medienangaben die inhaltliche Beschränkung.",
+  "erklaerung": "Die **räumliche Nutzung** wird mit Angaben wie **international, weltweit, europaweit oder nur regional** festgelegt. Jahresangaben betreffen die zeitliche, Medienangaben die inhaltliche Beschränkung.\n\n**Tipp von CashGPT:** Landkarte gegen Kalender gegen Medienliste: Länder sind **räumlich**, Jahre **zeitlich**, Kanäle **inhaltlich**.",
   "quelle": "f33",
   "schwierigkeit": "mittel"
  },
@@ -512,7 +512,7 @@
    "Von wie vielen Kunden das Werk genutzt werden darf"
   ],
   "richtig": 0,
-  "erklaerung": "Die **inhaltliche Nutzung** beschreibt, **für wie viele Medien das Werk genutzt wird**, und definiert damit das Ausmaß der Vervielfältigung.",
+  "erklaerung": "Die **inhaltliche Nutzung** beschreibt, **für wie viele Medien das Werk genutzt wird**, und definiert damit das Ausmaß der Vervielfältigung.\n\n**Tipp von CashGPT:** Praxisfall: Ein Foto fürs Plakat ist nicht automatisch auch fürs Web freigegeben. Jedes Medium ist eine eigene Nutzung und kostet eigenes Honorar.",
   "quelle": "f33",
   "schwierigkeit": "mittel"
  },
@@ -542,7 +542,7 @@
    "Nach 100 Jahren"
   ],
   "richtig": 0,
-  "erklaerung": "Als Ausnahme vom Schutz gilt die **Gemeinfreiheit nach 70 Jahren**. Erst danach ist eine Nutzung ohne Rechteeinräumung möglich.",
+  "erklaerung": "Als Ausnahme vom Schutz gilt die **Gemeinfreiheit nach 70 Jahren**. Erst danach ist eine Nutzung ohne Rechteeinräumung möglich.\n\n**Tipp von CashGPT:** Die Frist läuft ab dem **Tod** des Urhebers, nicht ab der Veröffentlichung. Deshalb darf diese App „Das Kapital“ von 1867 im Volltext mitliefern: Marx starb 1883.",
   "quelle": "f34",
   "schwierigkeit": "leicht"
  },
@@ -557,7 +557,7 @@
    "Die nachträgliche Vergütung an den bekannten Rechteinhaber"
   ],
   "richtig": 0,
-  "erklaerung": "Vor der Nutzung von Bildern braucht es die **schriftliche Zustimmung sämtlicher Rechteinhaber**. Eine mündliche oder nur teilweise Zustimmung reicht nicht aus.",
+  "erklaerung": "Vor der Nutzung von Bildern braucht es die **schriftliche Zustimmung sämtlicher Rechteinhaber**. Eine mündliche oder nur teilweise Zustimmung reicht nicht aus.\n\n**Tipp von CashGPT:** Bei einem Foto treffen oft mehrere Rechte aufeinander: die fotografierende Person, abgebildete Personen, manchmal Marken oder Bauwerke im Bild. Jede Zustimmung fehlt einzeln.",
   "quelle": "f34",
   "schwierigkeit": "leicht",
   "essential": true
@@ -573,7 +573,7 @@
    "Urheberschaft"
   ],
   "richtig": 0,
-  "erklaerung": "Es gilt: **Nutzungsrecht = Verwertungsrecht**, und dieses ist ausdrücklich **nicht** mit dem Eigentumsrecht bzw. Urheberrecht gleichzusetzen.",
+  "erklaerung": "Es gilt: **Nutzungsrecht = Verwertungsrecht**, und dieses ist ausdrücklich **nicht** mit dem Eigentumsrecht bzw. Urheberrecht gleichzusetzen.\n\n**Tipp von CashGPT:** Das Urheberrecht bleibt immer bei dem Menschen, der das Werk geschaffen hat. Übertragbar ist nur das Recht, es zu *nutzen* — „sein Urheberrecht verkaufen“ geht in Deutschland nicht.",
   "quelle": "f34",
   "schwierigkeit": "mittel"
  },
@@ -603,7 +603,7 @@
    "Eingeschränkte Übertragung bedeutet umfassende Honorierung"
   ],
   "richtig": 0,
-  "erklaerung": "Für die Kalkulation gilt: **eingeschränkte Honorierung = eingeschränkte Übertragung**. Umfang des Honorars und Umfang der eingeräumten Rechte entsprechen sich.",
+  "erklaerung": "Für die Kalkulation gilt: **eingeschränkte Honorierung = eingeschränkte Übertragung**. Umfang des Honorars und Umfang der eingeräumten Rechte entsprechen sich.\n\n**Tipp von CashGPT:** Andersherum gedacht: Wer alle Rechte will, muss alle Rechte bezahlen. „Alles, überall, für immer“ ist deshalb nie der günstige Tarif.",
   "quelle": "f34",
   "schwierigkeit": "mittel",
   "essential": true
@@ -695,7 +695,7 @@
    "Wer, was, warum und wie oft"
   ],
   "richtig": 0,
-  "erklaerung": "Die vier Säulen des Geschäftsmodells lauten **wer, was, wie und wie viel**. Fragen nach Zeitpunkt, Ort oder Häufigkeit gehören nicht zu diesen vier Säulen.",
+  "erklaerung": "Die vier Säulen des Geschäftsmodells lauten **wer, was, wie und wie viel**. Fragen nach Zeitpunkt, Ort oder Häufigkeit gehören nicht zu diesen vier Säulen.\n\n**Tipp von CashGPT:** Vier Fragewörter, die aufeinander aufbauen: **wer** ist der Kunde, **was** bekommt er, **wie** stellst du es her, **wie viel** bleibt übrig.",
   "quelle": "f17",
   "schwierigkeit": "leicht",
   "essential": true
@@ -853,7 +853,7 @@
    "Steuer-ID 11, Steuer-Nr. 9, Umsatzsteuer-ID 10"
   ],
   "richtig": 0,
-  "erklaerung": "Die Ziffernzahlen lauten **Steuer-ID 11**, **Steuer-Nr. 10** und **Umsatzsteuer-ID 9**. Die längste Nummer ist damit die persönliche Steuer-ID, die kürzeste die Umsatzsteuer-ID.",
+  "erklaerung": "Die Ziffernzahlen lauten **Steuer-ID 11**, **Steuer-Nr. 10** und **Umsatzsteuer-ID 9**. Die längste Nummer ist damit die persönliche Steuer-ID, die kürzeste die Umsatzsteuer-ID.\n\n**Tipp von CashGPT:** Absteigend in dieser Reihenfolge: Steuer-**ID** 11 · Steuer-**Nr.** 10 · **USt-ID** 9. Die persönlichste Nummer ist die längste.",
   "quelle": "f24",
   "schwierigkeit": "mittel",
   "essential": true
@@ -917,7 +917,7 @@
    "Als Einkommensteuer auf Zinsen und Erträge aus Wertpapieren"
   ],
   "richtig": 0,
-  "erklaerung": "Die Körperschaftsteuer ist eine **Einkommensteuer auf die Gewinne von Unternehmen**. Die Einkommensteuer im engeren Sinn betrifft dagegen das Einkommen von Einzelpersonen.",
+  "erklaerung": "Die Körperschaftsteuer ist eine **Einkommensteuer auf die Gewinne von Unternehmen**. Die Einkommensteuer im engeren Sinn betrifft dagegen das Einkommen von Einzelpersonen.\n\n**Tipp von CashGPT:** Gleiches Prinzip, anderer Steuerpflichtiger: Was für dich die Einkommensteuer ist, ist für die GmbH die Körperschaftsteuer. Eine Körperschaft ist eine juristische Person.",
   "quelle": "f23",
   "schwierigkeit": "leicht"
  },
@@ -932,7 +932,7 @@
    "Auf den Wert von Immobilien und Grundstücken"
   ],
   "richtig": 0,
-  "erklaerung": "Die Kapitalertragsteuer ist eine Einkommensteuer auf **Zinsen und Erträge aus Wertpapieren**. Auf den Wert von Immobilien und Grundstücken wird dagegen die Grundsteuer erhoben.",
+  "erklaerung": "Die Kapitalertragsteuer ist eine Einkommensteuer auf **Zinsen und Erträge aus Wertpapieren**. Auf den Wert von Immobilien und Grundstücken wird dagegen die Grundsteuer erhoben.\n\n**Tipp von CashGPT:** Kapital**ertrag** heißt: Das Geld hat gearbeitet, nicht du. Zinsen, Dividenden, Kursgewinne. Was du selbst erarbeitest, fällt unter die Lohn- und Einkommensteuer.",
   "quelle": "f23",
   "schwierigkeit": "leicht"
  },
@@ -962,7 +962,7 @@
    "Einkommen-, Gewerbe-, Grund- und Umsatzsteuer"
   ],
   "richtig": 0,
-  "erklaerung": "Zu den Verbrauchssteuern zählen **Strom-, Tabak-, Branntwein- und Mineralölsteuer**. Umsatz- und Mehrwertsteuer gehören zu den Verkehrsteuern, Einkommen- und Gewerbesteuer zu den Gewinnsteuern.",
+  "erklaerung": "Zu den Verbrauchssteuern zählen **Strom-, Tabak-, Branntwein- und Mineralölsteuer**. Umsatz- und Mehrwertsteuer gehören zu den Verkehrsteuern, Einkommen- und Gewerbesteuer zu den Gewinnsteuern.\n\n**Tipp von CashGPT:** Der Staat besteuert hier, was **raucht, brennt oder fließt**: Tabak, Branntwein, Mineralöl, Strom. Alles Dinge, die beim Gebrauch verschwinden.",
   "quelle": "f25",
   "schwierigkeit": "leicht"
  },
@@ -1007,7 +1007,7 @@
    "Grundsteuer und Vermögensteuer"
   ],
   "richtig": 0,
-  "erklaerung": "Als Gewinnsteuern werden **Einkommensteuer und Gewerbesteuer** genannt. Grund-, Vermögen- und Erbschaftsteuer bilden dagegen die Substanzsteuern.",
+  "erklaerung": "Als Gewinnsteuern werden **Einkommensteuer und Gewerbesteuer** genannt. Grund-, Vermögen- und Erbschaftsteuer bilden dagegen die Substanzsteuern.\n\n**Tipp von CashGPT:** Gewinnsteuern setzen am Ertrag an: Erst wenn etwas übrig bleibt, wird gezahlt. Substanzsteuern kommen auch dann, wenn du nichts verdient hast.",
   "quelle": "f25",
   "schwierigkeit": "mittel"
  },
@@ -1022,7 +1022,7 @@
    "Verkehrs-, Vermögens-, Gewinn- und Erbschaftsteuern"
   ],
   "richtig": 0,
-  "erklaerung": "Die vier Steuer-Gruppen sind **Verkehrs-, Verbrauchs-, Gewinn- und Substanzsteuern**. Einkommen-, Vermögen- oder Erbschaftsteuer sind dagegen einzelne Steuerarten innerhalb dieser Gruppen.",
+  "erklaerung": "Die vier Steuer-Gruppen sind **Verkehrs-, Verbrauchs-, Gewinn- und Substanzsteuern**. Einkommen-, Vermögen- oder Erbschaftsteuer sind dagegen einzelne Steuerarten innerhalb dieser Gruppen.\n\n**Tipp von CashGPT:** Vier Gruppen, vier Anlässe: etwas wechselt den Besitzer (**Verkehr**), etwas wird aufgebraucht (**Verbrauch**), etwas bleibt übrig (**Gewinn**), etwas ist einfach da (**Substanz**).",
   "quelle": "f24",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1102,7 +1102,7 @@
    "125.000 €"
   ],
   "richtig": 0,
-  "erklaerung": "Der Umsatz im laufenden Geschäftsjahr darf voraussichtlich **100.000 €** nicht überschreiten. Diese Grenze gilt zusätzlich zur Umsatzgrenze des Vorjahres.",
+  "erklaerung": "Der Umsatz im laufenden Geschäftsjahr darf voraussichtlich **100.000 €** nicht überschreiten. Diese Grenze gilt zusätzlich zur Umsatzgrenze des Vorjahres.\n\n**Tipp von CashGPT:** Zwei Grenzen, zwei Blickrichtungen: Das Vorjahr wird rückblickend geprüft, das laufende Jahr vorausschauend.",
   "quelle": "f26",
   "schwierigkeit": "leicht"
  },
@@ -1147,7 +1147,7 @@
    "Ab 2028"
   ],
   "richtig": 0,
-  "erklaerung": "Die Empfangspflicht für E-Rechnungen im Geschäftsverkehr gilt **ab 2025**. Die späteren Jahreszahlen betreffen ausschließlich die Übergangsfristen für den **Versand**.",
+  "erklaerung": "Die Empfangspflicht für E-Rechnungen im Geschäftsverkehr gilt **ab 2025**. Die späteren Jahreszahlen betreffen ausschließlich die Übergangsfristen für den **Versand**.\n\n**Tipp von CashGPT:** Empfangen kommt vor Senden: Ab 2025 muss jeder E-Rechnungen **annehmen** können, die Pflicht zum **Ausstellen** folgt gestaffelt später.",
   "quelle": "f27",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1178,7 +1178,7 @@
    "Bis Ende 2028"
   ],
   "richtig": 0,
-  "erklaerung": "Die allgemeine Übergangsfrist für den Versand von Papierrechnungen oder anderen Formaten läuft **bis Ende 2026**. Nur für kleine Unternehmen verlängert sie sich darüber hinaus.",
+  "erklaerung": "Die allgemeine Übergangsfrist für den Versand von Papierrechnungen oder anderen Formaten läuft **bis Ende 2026**. Nur für kleine Unternehmen verlängert sie sich darüber hinaus.\n\n**Tipp von CashGPT:** Die Treppe der Fristen: 2025 empfangen können · **2026** Ende für alle beim Versand · 2027 Ende für kleine Unternehmen · 2028 ohne jede Ausnahme.",
   "quelle": "f27",
   "schwierigkeit": "leicht"
  },
@@ -1193,7 +1193,7 @@
    "Unter 22.000 Euro"
   ],
   "richtig": 0,
-  "erklaerung": "Die verlängerte Übergangsfrist bis Ende 2027 gilt für kleine Unternehmen mit geringem Umsatz **unter 800.000 Euro**. Andere Umsatzgrenzen spielen für diese Frist keine Rolle.",
+  "erklaerung": "Die verlängerte Übergangsfrist bis Ende 2027 gilt für kleine Unternehmen mit geringem Umsatz **unter 800.000 Euro**. Andere Umsatzgrenzen spielen für diese Frist keine Rolle.\n\n**Tipp von CashGPT:** Nicht mit der Kleinunternehmergrenze verwechseln: Die 800.000 Euro betreffen nur die verlängerte Frist für Papier- und PDF-Rechnungen, nicht die Umsatzsteuer.",
   "quelle": "f27",
   "schwierigkeit": "leicht"
  },
@@ -1208,7 +1208,7 @@
    "Ab dem 1.7.2028"
   ],
   "richtig": 0,
-  "erklaerung": "Ohne Ausnahmen gilt die Pflicht zur Ausstellung und Versendung von E-Rechnungen **ab dem 1.1.2028**. Bis dahin greifen die gestaffelten Übergangsfristen.",
+  "erklaerung": "Ohne Ausnahmen gilt die Pflicht zur Ausstellung und Versendung von E-Rechnungen **ab dem 1.1.2028**. Bis dahin greifen die gestaffelten Übergangsfristen.\n\n**Tipp von CashGPT:** Die letzte Stufe der Treppe: 2025 empfangen · 2026 endet die Frist für den Versand auf Papier · 2027 für kleine Unternehmen · **2028** gilt es für alle.",
   "quelle": "f27",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1254,7 +1254,7 @@
    "Die Höhe des steuerpflichtigen Vorjahresumsatzes"
   ],
   "richtig": 0,
-  "erklaerung": "Der Mehrwertsteuervermerk nennt den **anzuwendenden Steuersatz**. Nur wenn eine Steuerbefreiung vorliegt, tritt an dessen Stelle ein entsprechender Hinweis.",
+  "erklaerung": "Der Mehrwertsteuervermerk nennt den **anzuwendenden Steuersatz**. Nur wenn eine Steuerbefreiung vorliegt, tritt an dessen Stelle ein entsprechender Hinweis.\n\n**Tipp von CashGPT:** Der Vermerk beantwortet die Frage „mit welchem Satz?“ — 19 oder 7 Prozent. Ohne diese Angabe kann der Kunde die Vorsteuer nicht ziehen.",
   "quelle": "f28",
   "schwierigkeit": "leicht"
  },
@@ -1269,7 +1269,7 @@
    "Eine Aufstellung der abziehbaren Vorsteuerbeträge des Auftrags"
   ],
   "richtig": 0,
-  "erklaerung": "Der **Mehrwertsteuervermerk** nennt normalerweise den anzuwendenden Steuersatz; bei einer Steuerbefreiung tritt an dessen Stelle ein **Hinweis darauf, dass für die Lieferung eine Steuerbefreiung gilt**. Eine behördliche Bestätigung oder Angaben zu Vorsteuer und Vorjahresumsatzsteuer gehören nicht zu den Pflichtangaben.",
+  "erklaerung": "Der **Mehrwertsteuervermerk** nennt normalerweise den anzuwendenden Steuersatz; bei einer Steuerbefreiung tritt an dessen Stelle ein **Hinweis darauf, dass für die Lieferung eine Steuerbefreiung gilt**. Eine behördliche Bestätigung oder Angaben zu Vorsteuer und Vorjahresumsatzsteuer gehören nicht zu den Pflichtangaben.\n\n**Tipp von CashGPT:** Zwei Fälle, ein Feld: Im Normalfall steht dort der Steuersatz, bei einer Befreiung stattdessen der Grund dafür. Leer bleiben darf es nie.",
   "quelle": "f28",
   "schwierigkeit": "leicht"
  },
@@ -1284,7 +1284,7 @@
    "Die Summe der offenen Forderungen der Kundschaft"
   ],
   "richtig": 0,
-  "erklaerung": "Zu den Pflichtangaben zählt die **Nettosumme**. Interne Kalkulations- oder Umsatzgrößen gehören nicht auf die Rechnung.",
+  "erklaerung": "Zu den Pflichtangaben zählt die **Nettosumme**. Interne Kalkulations- oder Umsatzgrößen gehören nicht auf die Rechnung.\n\n**Tipp von CashGPT:** Auf die Rechnung gehört, was der Kunde zum Prüfen braucht: netto, Steuersatz, Steuerbetrag, brutto. Was du daran verdienst, geht ihn nichts an.",
   "quelle": "f28",
   "schwierigkeit": "leicht"
  },
@@ -1299,7 +1299,7 @@
    "Ein Dokument zur Bestätigung eines bereits eingegangenen Zahlbetrags"
   ],
   "richtig": 0,
-  "erklaerung": "Eine Rechnung ist ein **Dokument zur Abrechnung einer Leistung oder Lieferung** und benötigt **keine Unterschrift**. Die Zahlungsaufforderung nach Ablauf der Frist ist dagegen eine **Mahnung**.",
+  "erklaerung": "Eine Rechnung ist ein **Dokument zur Abrechnung einer Leistung oder Lieferung** und benötigt **keine Unterschrift**. Die Zahlungsaufforderung nach Ablauf der Frist ist dagegen eine **Mahnung**.\n\n**Tipp von CashGPT:** Rechnung und Mahnung sauber trennen: Die Rechnung sagt, **was** geschuldet ist. Die Mahnung erinnert daran, **dass** nicht gezahlt wurde.",
   "quelle": "f29",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1315,7 +1315,7 @@
    "Eine Rechnung wird erst mit der Unterschrift der Kundschaft wirksam."
   ],
   "richtig": 0,
-  "erklaerung": "Für eine Rechnung ist **keine Unterschrift** erforderlich. Sie ist ein Abrechnungsdokument und kein zu unterzeichnender Vertrag.",
+  "erklaerung": "Für eine Rechnung ist **keine Unterschrift** erforderlich. Sie ist ein Abrechnungsdokument und kein zu unterzeichnender Vertrag.\n\n**Tipp von CashGPT:** Eine Rechnung **stellt fest**, was geschuldet ist — sie vereinbart nichts. Vereinbart wurde vorher im Vertrag, und deshalb muss niemand unterschreiben.",
   "quelle": "f29",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1362,7 +1362,7 @@
    "Durch die Zahlung eines Akontos an den Auftragnehmer"
   ],
   "richtig": 0,
-  "erklaerung": "Ein Vertrag entsteht nach dem BGB durch **zwei Willenserklärungen: Angebot + Annahme**. Weder Unterschrift noch Zahlung sind für das Zustandekommen erforderlich.",
+  "erklaerung": "Ein Vertrag entsteht nach dem BGB durch **zwei Willenserklärungen: Angebot + Annahme**. Weder Unterschrift noch Zahlung sind für das Zustandekommen erforderlich.\n\n**Tipp von CashGPT:** Zwei Willenserklärungen genügen. Deshalb ist auch das Brötchen beim Bäcker ein vollwertiger Kaufvertrag, ganz ohne Papier.",
   "quelle": "f37",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1410,7 +1410,7 @@
    "Essentialia Negotii"
   ],
   "richtig": 0,
-  "erklaerung": "Einigung (+) bedeutet **Konsens**; bei Unklarheiten kann zusätzlich eine Auslegung nötig sein. Dissens bezeichnet dagegen die fehlende Einigung.",
+  "erklaerung": "Einigung (+) bedeutet **Konsens**; bei Unklarheiten kann zusätzlich eine Auslegung nötig sein. Dissens bezeichnet dagegen die fehlende Einigung.\n\n**Tipp von CashGPT:** *Con-* heißt zusammen, *dis-* auseinander. Konsens ist ein Sinn, Dissens sind zwei.",
   "quelle": "f37",
   "schwierigkeit": "leicht"
  },
@@ -1440,7 +1440,7 @@
    "Verträge können jederzeit einseitig geändert werden"
   ],
   "richtig": 0,
-  "erklaerung": "„Pacta sunt servanda“ heißt **Verträge sind einzuhalten** und begründet die Verlässlichkeit. Die freie inhaltliche Gestaltung ist dagegen die Vertragsfreiheit.",
+  "erklaerung": "„Pacta sunt servanda“ heißt **Verträge sind einzuhalten** und begründet die Verlässlichkeit. Die freie inhaltliche Gestaltung ist dagegen die Vertragsfreiheit.\n\n**Tipp von CashGPT:** Wörtlich: „Verträge sind zu halten.“ Das Gegenstück ist die Vertragsfreiheit — die sagt, *ob* und *was* du vereinbarst, pacta sunt servanda sagt, dass es danach bindet.",
   "quelle": "f36",
   "schwierigkeit": "leicht"
  },
@@ -1455,7 +1455,7 @@
    "Wer entscheidet was mit wem?"
   ],
   "richtig": 0,
-  "erklaerung": "Der Vertragsinhalt wird über die Frage **„Wer will was von wem?“** bestimmt – sie klärt Parteien und geschuldete Leistung.",
+  "erklaerung": "Der Vertragsinhalt wird über die Frage **„Wer will was von wem?“** bestimmt – sie klärt Parteien und geschuldete Leistung.\n\n**Tipp von CashGPT:** Drei Fragewörter, drei Bestandteile: **wer** und **von wem** sind die Parteien, **was** ist die geschuldete Leistung.",
   "quelle": "f37, f38",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1471,7 +1471,7 @@
    "50 %"
   ],
   "richtig": 0,
-  "erklaerung": "Zu den Zahlungsbedingungen eines Angebots gehört ein Akonto von **30 %**.",
+  "erklaerung": "Zu den Zahlungsbedingungen eines Angebots gehört ein Akonto von **30 %**.\n\n**Tipp von CashGPT:** Akonto kommt vom italienischen *a conto*, „auf Rechnung“ — eine Anzahlung, die später mit der Schlussrechnung verrechnet wird. Knapp ein Drittel vorab.",
   "quelle": "f39",
   "schwierigkeit": "leicht"
  },
@@ -1516,7 +1516,7 @@
    "Als erstes Angebot mit einer detaillierten Leistungsübersicht"
   ],
   "richtig": 0,
-  "erklaerung": "Ein Rebriefing ist **keine Wiederholung** des Briefings, sondern eine **Zusammenfassung, Interpretation und Ergänzung** dessen, was der Kunde wünscht.",
+  "erklaerung": "Ein Rebriefing ist **keine Wiederholung** des Briefings, sondern eine **Zusammenfassung, Interpretation und Ergänzung** dessen, was der Kunde wünscht.\n\n**Tipp von CashGPT:** Lies das *Re-* nicht als „nochmal“, sondern als „zurück“: Du spielst dem Kunden zurück, was du verstanden hast — in deinen Worten und ergänzt um das, was er vergessen hat.",
   "quelle": "f42",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1532,7 +1532,7 @@
    "Den Vertrag allein durch eine Willenserklärung zu schließen"
   ],
   "richtig": 0,
-  "erklaerung": "Das Rebriefing ist eine Chance, **Missverständnisse auszuräumen**, **Lücken zu erweitern und zu ergänzen**, Verständnis zu zeigen und sich zu profilieren. Entscheidend ist die Abgrenzung: Es ist **keine Wiederholung** des Briefings, sondern Zusammenfassung, Interpretation und Ergänzung dessen, was der Kunde wünscht.",
+  "erklaerung": "Das Rebriefing ist eine Chance, **Missverständnisse auszuräumen**, **Lücken zu erweitern und zu ergänzen**, Verständnis zu zeigen und sich zu profilieren. Entscheidend ist die Abgrenzung: Es ist **keine Wiederholung** des Briefings, sondern Zusammenfassung, Interpretation und Ergänzung dessen, was der Kunde wünscht.\n\n**Tipp von CashGPT:** Der Nutzen folgt aus der Richtung: Weil du zurückspielst, fallen Missverständnisse auf, solange sie noch nichts kosten.",
   "quelle": "f42",
   "schwierigkeit": "mittel",
   "essential": true
@@ -1548,7 +1548,7 @@
    "Dass jede Erstberatung unentgeltlich angeboten wird"
   ],
   "richtig": 0,
-  "erklaerung": "Der Merksatz steht für das Prinzip **Leistung – Gegenleistung**: Keine Leistung wird ohne Gegenwert erbracht.",
+  "erklaerung": "Der Merksatz steht für das Prinzip **Leistung – Gegenleistung**: Keine Leistung wird ohne Gegenwert erbracht.\n\n**Tipp von CashGPT:** Die Redewendung stammt aus US-Saloons des 19. Jahrhunderts: Das Mittagessen war „gratis“, wer es aß, kaufte aber Getränke. Bekannt gemacht hat sie der Ökonom Milton Friedman.",
   "quelle": "f38",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1579,7 +1579,7 @@
    "Ob es seine Fremdkosten unterhalb der eigenen Honorare halten kann"
   ],
   "richtig": 0,
-  "erklaerung": "Die Liquidität eines Unternehmens bestimmt, ob es seinen **Zahlungsverpflichtungen** nachkommen kann. Sie sagt nichts über Gewinn oder die Art der Kalkulation aus.",
+  "erklaerung": "Die Liquidität eines Unternehmens bestimmt, ob es seinen **Zahlungsverpflichtungen** nachkommen kann. Sie sagt nichts über Gewinn oder die Art der Kalkulation aus.\n\n**Tipp von CashGPT:** *Liquid* heißt flüssig. Gemeint ist Geld, das gerade fließen kann — nicht der Gewinn auf dem Papier. Ein Unternehmen kann Gewinn ausweisen und trotzdem zahlungsunfähig sein.",
   "quelle": "f40",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1625,7 +1625,7 @@
    "Honorare betreffen Leistungen für Bestandskunden, Fremdkosten Leistungen für neu gewonnene Auftraggeber."
   ],
   "richtig": 0,
-  "erklaerung": "Honorare betreffen die **eigene Dienstleistung**, während Fremdkosten für den **Kauf von Waren oder Dienstleistungen Dritter** anfallen. Beide Positionen sind im Angebot **separat auszuweisen**.",
+  "erklaerung": "Honorare betreffen die **eigene Dienstleistung**, während Fremdkosten für den **Kauf von Waren oder Dienstleistungen Dritter** anfallen. Beide Positionen sind im Angebot **separat auszuweisen**.\n\n**Tipp von CashGPT:** Faustregel: Honorar ist **deine Zeit**, Fremdkosten sind **fremde Rechnungen**, die du weiterreichst — Druckerei, Fotograf, Lizenz.",
   "quelle": "f41",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1747,7 +1747,7 @@
    "\"calculatio\" bedeutet so viel wie Bewertung"
   ],
   "richtig": 0,
-  "erklaerung": "**calculatio** wird mit **Berechnung** übersetzt, darauf geht der Begriff Kalkulation zurück. Schätzung, Vereinbarung oder Bewertung geben die Wortbedeutung nicht korrekt wieder.",
+  "erklaerung": "**calculatio** wird mit **Berechnung** übersetzt, darauf geht der Begriff Kalkulation zurück. Schätzung, Vereinbarung oder Bewertung geben die Wortbedeutung nicht korrekt wieder.\n\n**Tipp von CashGPT:** Dieselbe Wurzel steckt in *Kalkül* und im englischen *calculus*. Ein *calculus* war im Lateinischen ein Rechenstein — gerechnet wurde mit Kieseln.",
   "quelle": "f46",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1779,7 +1779,7 @@
    "Die schnelle Vergrößerung der Produktpalette"
   ],
   "richtig": 1,
-  "erklaerung": "Marketing beschäftigt sich nicht nur mit dem bestmöglichen Absatz, sondern besonders mit der **langfristigen Kundenzufriedenheit**. Kosten- und Sortimentsfragen sind nicht als Marketingziel genannt.",
+  "erklaerung": "Marketing beschäftigt sich nicht nur mit dem bestmöglichen Absatz, sondern besonders mit der **langfristigen Kundenzufriedenheit**. Kosten- und Sortimentsfragen sind nicht als Marketingziel genannt.\n\n**Tipp von CashGPT:** Absatz ist kurzfristig, Zufriedenheit langfristig: Ein verkauftes Produkt bringt einmal Umsatz, eine zufriedene Kundschaft bringt ihn wieder.",
   "quelle": "f13, f14",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1810,7 +1810,7 @@
    "Eventmarketing"
   ],
   "richtig": 0,
-  "erklaerung": "Die **Marktforschung** analysiert Bedürfnisse, Einstellungen und Verhaltensweisen der Kunden, um darauf passende Produkte und Dienstleistungen zu entwickeln.",
+  "erklaerung": "Die **Marktforschung** analysiert Bedürfnisse, Einstellungen und Verhaltensweisen der Kunden, um darauf passende Produkte und Dienstleistungen zu entwickeln.\n\n**Tipp von CashGPT:** Marktforschung schaut **hin**, Marketing schaut **hinaus**. Erst herausfinden, was die Leute brauchen, dann bewerben.",
   "quelle": "f12",
   "schwierigkeit": "leicht"
  },
@@ -1855,7 +1855,7 @@
    "Sponsoring, Rabattaktionen, Gewinnspiele und Empfehlungen von Bestandskunden"
   ],
   "richtig": 1,
-  "erklaerung": "Online-Marketing ist die Nutzung **digitaler Kanäle wie Social Media, E-Mail-Marketing, SEO und SEM**, um das Bewusstsein für Produkte und Dienstleistungen zu steigern.",
+  "erklaerung": "Online-Marketing ist die Nutzung **digitaler Kanäle wie Social Media, E-Mail-Marketing, SEO und SEM**, um das Bewusstsein für Produkte und Dienstleistungen zu steigern.\n\n**Tipp von CashGPT:** Alle vier laufen über einen Bildschirm. Sobald ein Kanal auch ohne Netz funktioniert — Anzeige, Event, Messe —, gehört er nicht mehr hierher.",
   "quelle": "f10",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1871,7 +1871,7 @@
    "Suchmaschinenanalyse"
   ],
   "richtig": 2,
-  "erklaerung": "**SEO steht für Suchmaschinenoptimierung**. Davon zu unterscheiden ist SEM, das für Suchmaschinenmarketing steht.",
+  "erklaerung": "**SEO steht für Suchmaschinenoptimierung**. Davon zu unterscheiden ist SEM, das für Suchmaschinenmarketing steht.\n\n**Tipp von CashGPT:** Das **O** steht fürs Optimieren der eigenen Seite, das **M** in SEM fürs Marketing mit bezahlten Anzeigen. Rang verdienen gegen Rang kaufen.",
   "quelle": "f10, f14",
   "schwierigkeit": "leicht"
  },
@@ -1917,7 +1917,7 @@
    "Quantitative und qualitative Marktforschung"
   ],
   "richtig": 3,
-  "erklaerung": "Unterschieden werden die **quantitative und die qualitative Marktforschung**, etwa in Form von Interviews.",
+  "erklaerung": "Unterschieden werden die **quantitative und die qualitative Marktforschung**, etwa in Form von Interviews.\n\n**Tipp von CashGPT:** Quantitativ fragt **wie viele**, qualitativ fragt **warum**. Zahlen gegen Gründe.",
   "quelle": "f14",
   "schwierigkeit": "leicht",
   "essential": true
@@ -1963,7 +1963,7 @@
    "Vorrangig interne Kanäle wie Intranet, Meetings oder Rundschreiben"
   ],
   "richtig": 1,
-  "erklaerung": "Bei der Positionierung werden passende **Online- und Offline-Kanäle wie Social Media, Anzeigen oder Events** festgelegt. Eine Beschränkung auf nur digitale oder nur klassische Kanäle ist nicht vorgesehen.",
+  "erklaerung": "Bei der Positionierung werden passende **Online- und Offline-Kanäle wie Social Media, Anzeigen oder Events** festgelegt. Eine Beschränkung auf nur digitale oder nur klassische Kanäle ist nicht vorgesehen.\n\n**Tipp von CashGPT:** Die Positionierung legt erst die Botschaft fest und sucht sich dann die Wege dorthin. Beide Welten sind erlaubt — wer nur „digital“ ankreuzt, tappt in die Falle.",
   "quelle": "f09",
   "schwierigkeit": "mittel"
  },
@@ -1978,7 +1978,7 @@
    "Analyse, Markenstrategie, Markenkommunikation, Markendesign und Markenmanagement"
   ],
   "richtig": 3,
-  "erklaerung": "Zum Branding zählen **Analyse, Markenstrategie, Markenkommunikation, Markendesign und Markenmanagement**. Empfehlung und Partnerschaft gehören dagegen zur Akquise.",
+  "erklaerung": "Zum Branding zählen **Analyse, Markenstrategie, Markenkommunikation, Markendesign und Markenmanagement**. Empfehlung und Partnerschaft gehören dagegen zur Akquise.\n\n**Tipp von CashGPT:** Vier der fünf beginnen mit **Marke**. Davor steht die Analyse, denn erst verstehen, dann gestalten.",
   "quelle": "f14",
   "schwierigkeit": "mittel",
   "essential": true
@@ -1994,7 +1994,7 @@
    "Rahmenbedingungen, Ausschreibungen und Beratung durch Pitchagenturen"
   ],
   "richtig": 2,
-  "erklaerung": "Zur Akquise gehören **direkte Ansprache, Networking, Empfehlung, Partnerschaften und Online-Marketing**. Die anderen Aufzählungen beschreiben Branding, Marktforschung und den Pitch.",
+  "erklaerung": "Zur Akquise gehören **direkte Ansprache, Networking, Empfehlung, Partnerschaften und Online-Marketing**. Die anderen Aufzählungen beschreiben Branding, Marktforschung und den Pitch.\n\n**Tipp von CashGPT:** Akquise heißt Kunden **holen**: ansprechen, vernetzen, empfohlen werden, sich zusammentun. Branding macht dich dagegen auffindbar, ohne jemanden direkt anzusprechen.",
   "quelle": "f14",
   "schwierigkeit": "mittel",
   "essential": true
@@ -2010,7 +2010,7 @@
    "Vertrieb"
   ],
   "richtig": 1,
-  "erklaerung": "**Kundenbindung** umfasst Strategien zur Bindung von Kunden an das Unternehmen und seine Produkte oder Dienstleistungen. Entscheidend ist hier die dauerhafte Bindung bestehender Kunden, nicht die Werbung oder der Verkaufsvorgang.",
+  "erklaerung": "**Kundenbindung** umfasst Strategien zur Bindung von Kunden an das Unternehmen und seine Produkte oder Dienstleistungen. Entscheidend ist hier die dauerhafte Bindung bestehender Kunden, nicht die Werbung oder der Verkaufsvorgang.\n\n**Tipp von CashGPT:** Kundenbindung erkennt man daran, dass es um **bestehende** Auftraggeber geht. Sobald im Fall neue Kunden gewonnen werden sollen, ist es Akquise oder Eventmarketing.",
   "quelle": "f11",
   "schwierigkeit": "mittel"
  },
@@ -2025,7 +2025,7 @@
    "Eventmarketing"
   ],
   "richtig": 3,
-  "erklaerung": "**Eventmarketing** ist die Organisation und Durchführung von Events, um das Interesse an Produkten und Dienstleistungen zu wecken und Kunden zu gewinnen. Online-Marketing nutzt dagegen digitale Kanäle.",
+  "erklaerung": "**Eventmarketing** ist die Organisation und Durchführung von Events, um das Interesse an Produkten und Dienstleistungen zu wecken und Kunden zu gewinnen. Online-Marketing nutzt dagegen digitale Kanäle.\n\n**Tipp von CashGPT:** Erkennungszeichen im Fallbeispiel: ein **Termin an einem Ort** mit Publikum. Showroom, Messe, Vorführung — sobald Leute hinkommen müssen, ist es Eventmarketing.",
   "quelle": "f10",
   "schwierigkeit": "mittel"
  },
@@ -2056,7 +2056,7 @@
    "Kosten, Personal und Qualität"
   ],
   "richtig": 0,
-  "erklaerung": "Die Definition nennt als Vorgaben ausdrücklich **Zeit, Ressourcen und Qualität**. Kosten und Personal sind keine eigenständigen Vorgaben, sondern Bestandteile der Ressourcen.",
+  "erklaerung": "Die Definition nennt als Vorgaben ausdrücklich **Zeit, Ressourcen und Qualität**. Kosten und Personal sind keine eigenständigen Vorgaben, sondern Bestandteile der Ressourcen.\n\n**Tipp von CashGPT:** Nicht mit dem magischen Dreieck verwechseln: Dort heißt die dritte Ecke **Kosten**, in der Projektdefinition heißt sie **Ressourcen** — und die Kosten stecken darin.",
   "quelle": "f05",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2072,7 +2072,7 @@
    "Rechtsform bzw. Haftung, Steuer- und Bilanzbedingungen, Eigen- und Fremdkapital"
   ],
   "richtig": 0,
-  "erklaerung": "Als Ressourcen werden **Finanzierung bzw. Kosten, Produktions- und Arbeitsbedingungen sowie Personal und Betriebsmittel** genannt. Kosten sind also ein Unterpunkt der Ressourcen und keine eigene Vorgabe.",
+  "erklaerung": "Als Ressourcen werden **Finanzierung bzw. Kosten, Produktions- und Arbeitsbedingungen sowie Personal und Betriebsmittel** genannt. Kosten sind also ein Unterpunkt der Ressourcen und keine eigene Vorgabe.\n\n**Tipp von CashGPT:** Merke vier Sorten: Geld, Bedingungen, Menschen, Maschinen. Alles, was ein Projekt verbraucht, ohne die Uhr oder die Qualität zu sein.",
   "quelle": "f05",
   "schwierigkeit": "mittel"
  },
@@ -2087,7 +2087,7 @@
    "Das Delegieren von Projekten"
   ],
   "richtig": 0,
-  "erklaerung": "Zum Projektmanagement zählen das Initiieren, Planen, Steuern, Kontrollieren, Abschließen und das **Auswerten** von Projekten. Kalkulieren, Zertifizieren und Delegieren gehören nicht zu diesen sechs Tätigkeiten.",
+  "erklaerung": "Zum Projektmanagement zählen das Initiieren, Planen, Steuern, Kontrollieren, Abschließen und das **Auswerten** von Projekten. Kalkulieren, Zertifizieren und Delegieren gehören nicht zu diesen sechs Tätigkeiten.\n\n**Tipp von CashGPT:** Die sechs Tätigkeiten spannen den ganzen Bogen: anfangen, planen, lenken, prüfen, beenden — und danach **auswerten**. Das Auswerten kommt nach dem Abschluss und wird deshalb gern vergessen.",
   "quelle": "f07",
   "schwierigkeit": "leicht"
  },
@@ -2118,7 +2118,7 @@
    "Kosten, Qualität und Personal"
   ],
   "richtig": 0,
-  "erklaerung": "Das magische Dreieck besteht aus **Zeit, Kosten und Qualität**. Ressourcen, Risiko und Personal sind keine Ecken dieses Dreiecks.",
+  "erklaerung": "Das magische Dreieck besteht aus **Zeit, Kosten und Qualität**. Ressourcen, Risiko und Personal sind keine Ecken dieses Dreiecks.\n\n**Tipp von CashGPT:** Merke die Regel dahinter: Zieh an einer Ecke, und mindestens eine andere gibt nach. Schneller und billiger heißt schlechter.",
   "quelle": "f08",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2134,7 +2134,7 @@
    "Nutzen"
   ],
   "richtig": 0,
-  "erklaerung": "Das magische Dreieck wird als Zeit – Kosten – Qualität ergänzt um den **Inhalt**. Risiko, Aufwand und Nutzen erscheinen dort nicht.",
+  "erklaerung": "Das magische Dreieck wird als Zeit – Kosten – Qualität ergänzt um den **Inhalt**. Risiko, Aufwand und Nutzen erscheinen dort nicht.\n\n**Tipp von CashGPT:** Die drei klassischen Ecken sind das *Wie*, der Inhalt ist das *Was*. Ohne ihn weiß niemand, worauf sich Zeit, Kosten und Qualität überhaupt beziehen.",
   "quelle": "f08",
   "schwierigkeit": "mittel"
  },
@@ -2149,7 +2149,7 @@
    "Beauftragen, organisieren, umsetzen und bilanzieren"
   ],
   "richtig": 0,
-  "erklaerung": "Auf die Frage nach dem Zweck des Projektmanagements lautet die Antwort **planen, organisieren, umsetzen und kontrollieren**. Kaufmännische Tätigkeiten wie Abrechnen oder Bilanzieren gehören nicht dazu.",
+  "erklaerung": "Auf die Frage nach dem Zweck des Projektmanagements lautet die Antwort **planen, organisieren, umsetzen und kontrollieren**. Kaufmännische Tätigkeiten wie Abrechnen oder Bilanzieren gehören nicht dazu.\n\n**Tipp von CashGPT:** Vier Verben, die den Kreis schließen: planen, organisieren, umsetzen, kontrollieren. Rechnen kommt darin nicht vor.",
   "quelle": "f08",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2305,7 +2305,7 @@
    "Eine Geste ohne Worte, die eine bestimmte Leistung würdigt"
   ],
   "richtig": 1,
-  "erklaerung": "**Direktes Lob** ist eine direkte und klare Aussage, die eine bestimmte Leistung anerkennt. Die beiläufige und subtile Form ist dagegen das **indirekte Lob**; beide gehören zum verbalen Lob.",
+  "erklaerung": "**Direktes Lob** ist eine direkte und klare Aussage, die eine bestimmte Leistung anerkennt. Die beiläufige und subtile Form ist dagegen das **indirekte Lob**; beide gehören zum verbalen Lob.\n\n**Tipp von CashGPT:** Der Unterschied liegt im Weg, nicht im Inhalt: **Direktes** Lob sagst du der Person ins Gesicht, **indirektes** erreicht sie über Dritte oder beiläufig zwischen den Zeilen.",
   "quelle": "f02",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2321,7 +2321,7 @@
    "„Vielen Dank für deine klar strukturierte Präsentation von heute früh.“"
   ],
   "richtig": 1,
-  "erklaerung": "Die Formulierung „Ich habe gehört, dass …“ ist eine **beiläufige, subtile Anerkennung** und damit **indirektes Lob**. Die übrigen Aussagen wenden sich unmittelbar an die gelobte Person und benennen deren Leistung klar – das ist **direktes Lob**.",
+  "erklaerung": "Die Formulierung „Ich habe gehört, dass …“ ist eine **beiläufige, subtile Anerkennung** und damit **indirektes Lob**. Die übrigen Aussagen wenden sich unmittelbar an die gelobte Person und benennen deren Leistung klar – das ist **direktes Lob**.\n\n**Tipp von CashGPT:** Gegenstück merken: Direktes Lob geht geradewegs an die Person, indirektes kommt auf Umwegen an — über Dritte weitergetragen oder nebenbei erwähnt.",
   "quelle": "f02",
   "schwierigkeit": "mittel",
   "essential": true
@@ -2353,7 +2353,7 @@
    "Professionelle Anerkennung"
   ],
   "richtig": 0,
-  "erklaerung": "Lob, das in Team- oder Abteilungsmeetings vor anderen ausgesprochen wird, ist **öffentliches Lob**. Kennzeichnend ist das anwesende Publikum, nicht die Wortwahl oder eine berufliche Weiterentwicklung.",
+  "erklaerung": "Lob, das in Team- oder Abteilungsmeetings vor anderen ausgesprochen wird, ist **öffentliches Lob**. Kennzeichnend ist das anwesende Publikum, nicht die Wortwahl oder eine berufliche Weiterentwicklung.\n\n**Tipp von CashGPT:** Entscheidend ist das **Publikum**, nicht der Wortlaut. Dieselben Sätze unter vier Augen wären kein öffentliches Lob mehr.",
   "quelle": "f03",
   "schwierigkeit": "mittel",
   "essential": true
@@ -2475,7 +2475,7 @@
    "Wertberichtigungsmittel"
   ],
   "richtig": 2,
-  "erklaerung": "Zu den Funktionen des Geldes zählen Zahlungsmittel, Wertmesser, Wertaufbewahrungsmittel, **Wertübertragungsmittel** und Freiheit. Die übrigen Begriffe gehören nicht zu dieser Aufzählung.",
+  "erklaerung": "Zu den Funktionen des Geldes zählen Zahlungsmittel, Wertmesser, Wertaufbewahrungsmittel, **Wertübertragungsmittel** und Freiheit. Die übrigen Begriffe gehören nicht zu dieser Aufzählung.\n\n**Tipp von CashGPT:** Drei der fünf beginnen mit **Wert**: Wertmesser, Wertaufbewahrungsmittel, Wertübertragungsmittel. Dazu Zahlungsmittel und Freiheit — fertig ist die Liste.",
   "quelle": "f20",
   "schwierigkeit": "mittel"
  },
@@ -2490,7 +2490,7 @@
    "Die Verteilung des Vermögens auf mehrere Anlagen"
   ],
   "richtig": 0,
-  "erklaerung": "Money Mindset bezeichnet die **Denkweise** \"Ich bin finanziell erfolgreich!\". Es geht also um die innere Haltung zum Geld, nicht um eine konkrete Spar- oder Anlagetechnik.",
+  "erklaerung": "Money Mindset bezeichnet die **Denkweise** \"Ich bin finanziell erfolgreich!\". Es geht also um die innere Haltung zum Geld, nicht um eine konkrete Spar- oder Anlagetechnik.\n\n**Tipp von CashGPT:** *Mindset* heißt Haltung, nicht Methode. Die richtige Antwort ist deshalb ein Satz übers **Denken**, nicht übers Sparen oder Anlegen.",
   "quelle": "f20",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2506,7 +2506,7 @@
    "Mit Beteiligungen und jährlichen Gewinnanteilen"
   ],
   "richtig": 0,
-  "erklaerung": "Liquidität steht für **Planbarkeit** und **verfügbares Vermögen**, also für Geld, über das man tatsächlich verfügen kann. Rendite und Zinserträge beschreiben dagegen den Ertrag einer Anlage.",
+  "erklaerung": "Liquidität steht für **Planbarkeit** und **verfügbares Vermögen**, also für Geld, über das man tatsächlich verfügen kann. Rendite und Zinserträge beschreiben dagegen den Ertrag einer Anlage.\n\n**Tipp von CashGPT:** Merke den Wortsinn: *liquid* = flüssig, also verfügbares Geld. Rendite und Zinsen beschreiben dagegen, was das Geld **abwirft**, nicht ob es greifbar ist.",
   "quelle": "f20",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2538,7 +2538,7 @@
    "50 % sparen, 30 % Fixkosten, 20 % Freizeit/Konsum"
   ],
   "richtig": 0,
-  "erklaerung": "Die 50-30-20-Regel sieht **50 % für Fixkosten**, **30 % für Freizeit und Konsum** und **20 % zum Sparen** vor. Entscheidend ist die Reihenfolge der drei Kategorien.",
+  "erklaerung": "Die 50-30-20-Regel sieht **50 % für Fixkosten**, **30 % für Freizeit und Konsum** und **20 % zum Sparen** vor. Entscheidend ist die Reihenfolge der drei Kategorien.\n\n**Tipp von CashGPT:** Die Reihenfolge ist absteigend und folgt der Dringlichkeit: erst das Nötige (50), dann das Schöne (30), dann der Rest fürs Später (20).",
   "quelle": "f20",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2554,7 +2554,7 @@
    "800 Euro Fixkosten, 700 Euro Freizeit/Konsum, 500 Euro sparen"
   ],
   "richtig": 0,
-  "erklaerung": "50 % von 2.000 Euro sind **1.000 Euro Fixkosten**, 30 % sind **600 Euro für Freizeit und Konsum**, 20 % sind **400 Euro zum Sparen**.",
+  "erklaerung": "50 % von 2.000 Euro sind **1.000 Euro Fixkosten**, 30 % sind **600 Euro für Freizeit und Konsum**, 20 % sind **400 Euro zum Sparen**.\n\n**Tipp von CashGPT:** Rechne in Zehnteln: 10 % sind 200 Euro. Fünf davon Fixkosten, drei Konsum, zwei sparen.",
   "quelle": "f20",
   "schwierigkeit": "schwer"
  },
@@ -2569,7 +2569,7 @@
    "Ein verzinstes Darlehen an ein Unternehmen"
   ],
   "richtig": 0,
-  "erklaerung": "Aktien sind eine **Beteiligung an Unternehmen**. Der jährliche Gewinnanteil je Aktie heißt dagegen Dividende, und ein börsengehandelter Indexfonds ist ein ETF.",
+  "erklaerung": "Aktien sind eine **Beteiligung an Unternehmen**. Der jährliche Gewinnanteil je Aktie heißt dagegen Dividende, und ein börsengehandelter Indexfonds ist ein ETF.\n\n**Tipp von CashGPT:** Drei Begriffe, eine Kette: Die **Aktie** ist der Anteil am Unternehmen, die **Dividende** das, was dieser Anteil jährlich abwirft, der **ETF** ein ganzer Korb solcher Anteile.",
   "quelle": "f20",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2585,7 +2585,7 @@
    "Den jährlich auf ein Sparguthaben gezahlten Zinsbetrag"
   ],
   "richtig": 0,
-  "erklaerung": "Die Dividende ist der **jährlich auf eine Aktie entfallende Anteil vom Reingewinn**. Die Beteiligung am Unternehmen selbst ist die Aktie, nicht die Dividende.",
+  "erklaerung": "Die Dividende ist der **jährlich auf eine Aktie entfallende Anteil vom Reingewinn**. Die Beteiligung am Unternehmen selbst ist die Aktie, nicht die Dividende.\n\n**Tipp von CashGPT:** In der Kette gedacht: Aktie = Anteil am Unternehmen · Dividende = jährlicher Ertrag daraus · ETF = viele Anteile in einem Korb. Die Dividende ist der **Ertrag**, nicht der Besitz.",
   "quelle": "f20",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2601,7 +2601,7 @@
    "Exchange Transfer Fund – ein börsengehandelter Mischfonds"
   ],
   "richtig": 0,
-  "erklaerung": "ETF steht für **Exchange Traded Fund** und bezeichnet einen **börsengehandelten Indexfonds**. Die anderen Auflösungen der Abkürzung gibt es in dieser Form nicht.",
+  "erklaerung": "ETF steht für **Exchange Traded Fund** und bezeichnet einen **börsengehandelten Indexfonds**. Die anderen Auflösungen der Abkürzung gibt es in dieser Form nicht.\n\n**Tipp von CashGPT:** Am Ende der Kette: Eine **Aktie** ist ein einzelner Anteil, ein **ETF** bündelt hunderte davon. Wer streuen will, kauft den Korb statt einzelner Aktien.",
   "quelle": "f20",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2632,7 +2632,7 @@
    "Zum 1.1.2028"
   ],
   "richtig": 0,
-  "erklaerung": "Der Start des Altersvorsorge-Depots ist für den **1.1.2027** vorgesehen.",
+  "erklaerung": "Der Start des Altersvorsorge-Depots ist für den **1.1.2027** vorgesehen.\n\n**Tipp von CashGPT:** Als Merkkette mit den anderen Jahreszahlen: 2025 E-Rechnung empfangen, **2027** Altersvorsorge-Depot, 2028 E-Rechnung ohne Ausnahmen.",
   "quelle": "f19",
   "schwierigkeit": "leicht"
  },
@@ -2677,7 +2677,7 @@
    "900 Euro"
   ],
   "richtig": 0,
-  "erklaerung": "Für die ersten 360 Euro gibt es 50 Cent je Euro (**180 Euro**), für die weiteren 1.440 Euro je 25 Cent (**360 Euro**). Zusammen ergeben sich **540 Euro** Zulage.",
+  "erklaerung": "Für die ersten 360 Euro gibt es 50 Cent je Euro (**180 Euro**), für die weiteren 1.440 Euro je 25 Cent (**360 Euro**). Zusammen ergeben sich **540 Euro** Zulage.\n\n**Tipp von CashGPT:** Zwei Stufen, und die erste ist doppelt so viel wert: 50 Cent je Euro bis 360 Euro, danach nur noch 25 Cent.",
   "quelle": "f19",
   "schwierigkeit": "schwer"
  },
@@ -2692,7 +2692,7 @@
    "Unternehmenseigene Indexfonds und jährliche Dividendenzahlungen"
   ],
   "richtig": 0,
-  "erklaerung": "Viele Unternehmen bieten **betriebliche Altersvorsorgepläne oder betriebliche Rentenbeiträge** an, die zum Aufbau zusätzlicher Ersparnisse genutzt werden sollten.",
+  "erklaerung": "Viele Unternehmen bieten **betriebliche Altersvorsorgepläne oder betriebliche Rentenbeiträge** an, die zum Aufbau zusätzlicher Ersparnisse genutzt werden sollten.\n\n**Tipp von CashGPT:** Der Reiz liegt im Zuschuss: Was die Firma beisteuert, ist Geld, das du ohne diesen Weg nie zu sehen bekommst.",
   "quelle": "f16, f18",
   "schwierigkeit": "mittel"
  },
@@ -2738,7 +2738,7 @@
    "Kapitalflussrechnung, Lagebericht und Anhang"
   ],
   "richtig": 0,
-  "erklaerung": "Zum Jahresabschluss werden **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang** genannt. Inventurliste, Pruefbericht und Kapitalflussrechnung zaehlen nicht zu den aufgefuehrten Bestandteilen.",
+  "erklaerung": "Zum Jahresabschluss werden **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang** genannt. Inventurliste, Pruefbericht und Kapitalflussrechnung zaehlen nicht zu den aufgefuehrten Bestandteilen.\n\n**Tipp von CashGPT:** Vier Blickwinkel auf dasselbe Jahr: Die Bilanz zeigt den **Zustand**, die GuV den **Verlauf**, der Anhang erklärt die Zahlen, der Lagebericht ordnet sie ein.",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2802,7 +2802,7 @@
    "Kununu"
   ],
   "richtig": 0,
-  "erklaerung": "Fuer eingetragene Marken ist das **Markenregister** der vorgesehene Rechercheort. Handelsregister, Bundesanzeiger und Kununu werden als eigenstaendige Anlaufstellen mit anderem Gegenstand genannt.",
+  "erklaerung": "Fuer eingetragene Marken ist das **Markenregister** der vorgesehene Rechercheort. Handelsregister, Bundesanzeiger und Kununu werden als eigenstaendige Anlaufstellen mit anderem Gegenstand genannt.\n\n**Tipp von CashGPT:** Vier Orte, vier Fragen: Handelsregister — wer ist die Firma? Markenregister — wem gehört der Name? Bundesanzeiger — was sagen die Zahlen? Kununu — wie ist es dort zu arbeiten?",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true

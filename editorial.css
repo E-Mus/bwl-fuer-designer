@@ -12,7 +12,7 @@
   --rule:2px;
   --kf1:#050505;
   --kf2:#676762;
-  --kf3:#fff;
+  --kf3:#c8a200;
   --kf4:#087d46;
   width:min(100%,520px);
   background:var(--paper);
@@ -965,45 +965,6 @@
   line-height:1;
   text-shadow:0 0 0 var(--ink);
 }
-[data-style="editorial"] .flying-note{
-  position:absolute;
-  top:38vh;
-  left:0;
-  width:min(74vw,300px);
-  height:126px;
-  display:grid;
-  grid-template-columns:58px 1fr;
-  grid-template-rows:1fr auto;
-  align-items:center;
-  gap:0 12px;
-  padding:18px;
-  background:var(--paper);
-  color:var(--ink);
-  border:var(--rule) solid var(--line);
-  box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 7px var(--line);
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  animation:bankfly 3s cubic-bezier(.3,.7,.35,1) forwards;
-}
-[data-style="editorial"] .flying-note span{
-  grid-row:1 / 3;
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:40px;
-  font-weight:950;
-}
-[data-style="editorial"] .flying-note b{
-  align-self:end;
-  font-size:21px;
-  line-height:1;
-}
-[data-style="editorial"] .flying-note small{
-  align-self:start;
-  margin-top:7px;
-  font-size:8px;
-  font-weight:900;
-}
-@keyframes bankfly{
-  0%{transform:translate3d(-90vw,30px,0) rotate(-10deg);opacity:0}
-  12%{opacity:1}
   55%{transform:translate3d(calc(50vw - 40px),-18px,0) rotate(3deg);opacity:1}
   100%{transform:translate3d(130vw,20px,0) rotate(12deg);opacity:0}
 }
@@ -1690,4 +1651,32 @@
   [data-style="editorial"] .schalter-knopf{
     transition:none;
   }
+}
+
+/* Ergaenzungen der KI, abgesetzt vom Vorlesungsstoff. */
+[data-style="editorial"] .ki-tipp{
+  display:block;
+  margin-top:14px;
+  padding:10px 0 0 12px;
+  border-top:1px solid var(--soft);
+  border-left:var(--rule) solid var(--soft);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+}
+[data-style="editorial"] .ki-tipp b:first-child{
+  color:var(--ink);
+}
+
+/* "weiterlesen" sitzt im Textfluss und klappt dieselbe Erklärung auf wie der i-Knopf. */
+[data-style="editorial"] .mehr{
+  padding:0;
+  color:var(--ink);
+  font:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  white-space:nowrap;
+}
+[data-style="editorial"] .mehr[hidden]{
+  display:none;
 }
