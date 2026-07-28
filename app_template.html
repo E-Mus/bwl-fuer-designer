@@ -1050,7 +1050,66 @@ function ubenDaten(){
     countdown: tage===null?'LVL '+LVL(stand.xp||0)
       : tage>1?'NOCH '+tage+' TAGE' : tage===1?'MORGEN' : tage===0?'HEUTE' : 'LVL '+LVL(stand.xp||0)};
 }
+// Startseite im Kommunismus: dieselben Knoepfe, aber alles zaehlt Seiten.
+// Die Modusnamen bleiben stehen - dass hinter "Lernen" Marx wartet, ist der Witz.
+function viewUebenKommunismus(){
+  const seiten=kapitalSeiten(), erreicht=Math.min(seiten,stand.gelesen.max+1);
+  const kap=kapitelFortschritt();
+  const anteil=gelesenAnteil()*100;
+  const aktuell=kapitelZuSeite(kapitalSeite);
+  return `<div class="screen pad-top home">
+    <header class="brandhead">
+      <h1 class="brand">Kommunismus für Designer</h1>
+      <div class="brand-meta"><span class="brand-sub">Pflichtlektüre</span></div>
+    </header>
+
+    <section class="home-progress" aria-label="Lesestand">
+      <div class="boxes" style="grid-template-columns:repeat(4,1fr)">
+        <div class="boxcol"><span class="boxn">${erreicht}</span><span class="boxl">Gelesen</span></div>
+        <div class="boxcol"><span class="boxn">${seiten-erreicht}</span><span class="boxl">Offen</span></div>
+        <div class="boxcol"><span class="boxn">${kap.filter(k=>k.gelesen>0).length}</span><span class="boxl">Kapitel</span></div>
+        <div class="boxcol"><span class="boxn">${kap.filter(k=>k.gelesen>=k.laenge).length}</span><span class="boxl">Fertig</span></div>
+      </div>
+      <div class="status-progress" role="img" aria-label="${Math.round(anteil)} Prozent gelesen">
+        <span class="status-segment" data-state="sitzt" style="width:${anteil.toFixed(2)}%"></span>
+        <span class="status-segment" data-state="neu" style="width:${(100-anteil).toFixed(2)}%"></span>
+      </div>
+    </section>
+
+    <button class="primary-row" data-go="lernen">
+      <span class="primary-copy"><span class="primary-title">Lernen</span>
+        <span class="primary-sub">${esc(aktuell.titel)} · Seite ${kapitalSeite+1}</span></span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+
+    <div class="mode-list">
+      <button class="mode-row" data-go="pruefung">
+        <span><span class="mode-title">Prüfung</span>
+          <span class="mode-sub">Erster Band · ${KAPITEL.length} Kapitel</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+      <button class="mode-row" data-go="blitz">
+        <span><span class="mode-title">Blitz</span>
+          <span class="mode-sub">${seiten} Seiten, ohne Zeitlimit</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+
+    <div class="compact-modes">
+      <button class="compact-mode" data-go="fehler">
+        <span class="mode-title">Fehler</span>
+        <span class="mode-sub">Selbstkritik</span>
+      </button>
+      <button class="compact-mode" data-zettel>
+        <span class="mode-title">Spickzettel</span>
+        <span class="mode-sub">nicht vorgesehen</span>
+      </button>
+    </div>
+  </div>`;
+}
+
 function viewUeben(){
+  if(kommunismusAn()) return viewUebenKommunismus();
   const D=ubenDaten();
   const seriennummer=`BWL–${String(D.B.length).padStart(3,'0')}–2026`;
   const wort=T('fragen'), zitat=zitatZiehen(ZITAT_HOME_AB);
