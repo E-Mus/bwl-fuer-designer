@@ -1390,9 +1390,8 @@ function viewEinstellungen(){
         <button class="chip${kommunismusAn()?'':' is-on'}" data-kommi="0"
           aria-pressed="${!kommunismusAn()}">aus</button>
       </div>
-      <div class="setting-note">${kommunismusAn()
-        ? 'Geübt wird nicht mehr. Jeder Modus führt zur Pflichtlektüre.'
-        : 'Rot und gelb, und statt Übungen gibt es Marx zu lesen.'}</div>
+      ${kommunismusAn()?`<div class="setting-note">Geübt wird nicht mehr.
+        Jeder Modus führt zur Pflichtlektüre.</div>`:''}
     </div>
 
     ${(!kommunismusAn()&&bwlStufeEcht()>=KAPITALISMUS_AB)?`<div class="chartcard">
