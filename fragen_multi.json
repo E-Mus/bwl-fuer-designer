@@ -266,7 +266,7 @@
   "schwierigkeit": "mittel"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "An welche der folgenden Adressaten richtet sich ein Businessplan?",
   "optionen": [
    "Das Finanzamt",
@@ -285,7 +285,7 @@
   "schwierigkeit": "leicht"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche der folgenden Punkte gehören inhaltlich in einen Businessplan?",
   "optionen": [
    "Das Marketing",
@@ -299,13 +299,13 @@
    2,
    4
   ],
-  "erklaerung": "Unter **\"Was gehoert rein?\"** listet die Folie: **Executive Summary, Idee, Motivation, Team/Netzwerk, Finanzen, Marketing**. **Planung** und **Kontrolle** stehen dagegen in der Zeile **\"Warum?\"** (Klaerung, Planung, Kontrolle > Wirtschaftlichkeit) – sie sind Gruende fuer das Schreiben eines Businessplans, keine Gliederungspunkte darin.",
+  "erklaerung": "Unter **\"Was gehört rein?\"** listet die Folie: **Executive Summary, Idee, Motivation, Team/Netzwerk, Finanzen, Marketing**. **Planung** und **Kontrolle** stehen dagegen in der Zeile **\"Warum?\"** (Klärung, Planung, Kontrolle > Wirtschaftlichkeit) – sie sind Gründe für das Schreiben eines Businessplans, keine Gliederungspunkte darin.",
   "quelle": "f17",
   "schwierigkeit": "mittel"
  },
  {
-  "thema": "Businessplan und Gruendung",
-  "frage": "Welche drei der folgenden Fragen gehoeren zu den Saeulen des Geschaeftsmodells?",
+  "thema": "Businessplan und Gründung",
+  "frage": "Welche drei der folgenden Fragen gehören zu den Säulen des Geschäftsmodells?",
   "optionen": [
    "Die Frage \"Warum?\"",
    "Die Frage \"Was?\"",
@@ -318,16 +318,16 @@
    2,
    4
   ],
-  "erklaerung": "Die Folie nennt als **Saeulen des Geschaeftsmodells: wer, was, wie, wie viel**. Die Frage **\"Warum?\"** gehoert zu einem anderen Abschnitt derselben Folie, naemlich zu den Gruenden fuer den Businessplan (**Klaerung, Planung, Kontrolle > Wirtschaftlichkeit**). Die Frage **\"Wann?\"** kommt auf der Folie ueberhaupt nicht vor.",
+  "erklaerung": "Die Folie nennt als **Säulen des Geschäftsmodells: wer, was, wie, wie viel**. Die Frage **\"Warum?\"** gehört zu einem anderen Abschnitt derselben Folie, nämlich zu den Gründen für den Businessplan (**Klärung, Planung, Kontrolle > Wirtschaftlichkeit**). Die Frage **\"Wann?\"** kommt auf der Folie überhaupt nicht vor.",
   "quelle": "f17",
   "schwierigkeit": "leicht"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche der folgenden Stichworte zählen zu den Gründen für einen Businessplan?",
   "optionen": [
    "Die Finanzen",
-   "Die Klaerung",
+   "Die Klärung",
    "Die Kontrolle",
    "Die Executive Summary",
    "Die Planung"
@@ -337,7 +337,7 @@
    2,
    4
   ],
-  "erklaerung": "Zur Frage **\"Warum?\"** nennt die Wiederholungsfolie **Klaerung, Planung, Kontrolle > Wirtschaftlichkeit**. Die Folie WER? bestaetigt das: Ein Businessplan hilft, **Strategien zu planen und Ziele zu definieren und nachzuhalten bzw. zu kontrollieren**. **Executive Summary** und **Finanzen** stammen aus der anderen Aufzaehlung derselben Folie, naemlich **\"Was gehoert rein?\"**.",
+  "erklaerung": "Zur Frage **\"Warum?\"** nennt die Wiederholungsfolie **Klärung, Planung, Kontrolle > Wirtschaftlichkeit**. Die Folie WER? bestätigt das: Ein Businessplan hilft, **Strategien zu planen und Ziele zu definieren und nachzuhalten bzw. zu kontrollieren**. **Executive Summary** und **Finanzen** stammen aus der anderen Aufzählung derselben Folie, nämlich **\"Was gehört rein?\"**.",
   "quelle": "f17, f21",
   "schwierigkeit": "mittel"
  },
@@ -653,7 +653,7 @@
   "essential": true
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche der folgenden Zwecke erfüllt eine Kalkulation im Design?",
   "optionen": [
    "Den Preis gegenüber dem Kunden nachvollziehbar zu rechtfertigen",
@@ -673,7 +673,7 @@
   "essential": true
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche Aussagen zu Honoraren und Fremdkosten treffen laut Vorlesung zu?",
   "optionen": [
    "Honorare betreffen die eigene Dienstleistung, Fremdkosten den Einkauf bei Dritten",
@@ -692,7 +692,7 @@
   "schwierigkeit": "mittel"
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche der folgenden Stichworte gehören zum Thema Kalkulation?",
   "optionen": [
    "Fixkosten – variable Kosten – Gewinnmarge",
@@ -712,7 +712,7 @@
   "essential": true
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche Aussagen zur Liquidität eines Unternehmens treffen laut Vorlesung zu?",
   "optionen": [
    "Die Liquidität bestimmt, ob ein Unternehmen seinen Zahlungsverpflichtungen nachkommen kann",

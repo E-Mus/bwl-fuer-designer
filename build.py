@@ -13,14 +13,6 @@ for extra in ('fragen_multi.json', 'fragen_schwer.json'):
         with open(p(extra), encoding='utf-8') as fh:
             fragen += json.load(fh)
 
-# Themennamen für die Anzeige glätten
-UMLAUT = {
-    'Businessplan und Gruendung': 'Businessplan und Gründung',
-    'Kalkulation und Liquiditaet': 'Kalkulation und Liquidität',
-}
-for q in fragen:
-    q['thema'] = UMLAUT.get(q['thema'], q['thema'])
-
 # Identische Fragetexte gehoeren zu einer Familie, auch wenn Antwortsets und
 # Schwierigkeit variieren. So erscheint dieselbe Frage nie doppelt in einer Runde.
 textgruppen = {}

@@ -280,7 +280,7 @@
    "Freelancer und Partnerschaftsgesellschaft"
   ],
   "richtig": 2,
-  "erklaerung": "Als Kapitalgesellschaften und damit als juristische Personen gelten die **GmbH** und die **Aktiengesellschaft (AG)**. Einzelunternehmen, GbR, Freelancer und Partnerschaftsgesellschaft zaehlen nicht zu dieser Gruppe.",
+  "erklaerung": "Als Kapitalgesellschaften und damit als juristische Personen gelten die **GmbH** und die **Aktiengesellschaft (AG)**. Einzelunternehmen, GbR, Freelancer und Partnerschaftsgesellschaft zählen nicht zu dieser Gruppe.",
   "quelle": "f48",
   "schwierigkeit": "leicht"
  },
@@ -384,7 +384,7 @@
   "optionen": [
    "Auf das Recht, eine Sache zu besitzen und zu kontrollieren",
    "Auf das Recht, eine kreative Arbeit zu schaffen und zu gestalten",
-   "Auf das Recht, ein fremdes Werk fuer begrenzte Zeit zu nutzen",
+   "Auf das Recht, ein fremdes Werk für begrenzte Zeit zu nutzen",
    "Auf das Recht, ein geschütztes Werk öffentlich wiederzugeben"
   ],
   "richtig": 0,
@@ -670,7 +670,7 @@
  },
  {
   "id": "q045",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Mit welchem Bestandteil beginnt ein Businessplan?",
   "optionen": [
    "Mit der Executive Summary, einer kurzen Zusammenfassung der Geschäftsidee",
@@ -686,7 +686,7 @@
  },
  {
   "id": "q046",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche vier Säulen des Geschäftsmodells werden unterschieden?",
   "optionen": [
    "Wer, was, wie und wie viel",
@@ -702,7 +702,7 @@
  },
  {
   "id": "q047",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche Bestandteile gehören in einen Businessplan?",
   "optionen": [
    "Executive Summary, Idee, Motivation, Team/Netzwerk, Finanzen, Marketing",
@@ -718,7 +718,7 @@
  },
  {
   "id": "q048",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Wozu benötigen Investoren und Kreditgeber häufig einen Businessplan?",
   "optionen": [
    "Um die Tragfähigkeit und Rentabilität des Geschäftsvorhabens zu beurteilen",
@@ -734,7 +734,7 @@
  },
  {
   "id": "q049",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Aus welchem Grund wird ein Businessplan erstellt?",
   "optionen": [
    "Zur Klärung, Planung und Kontrolle des Vorhabens",
@@ -750,7 +750,7 @@
  },
  {
   "id": "q050",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche Stelle gehört zu den möglichen Adressaten eines Businessplans?",
   "optionen": [
    "Das Arbeitsamt",
@@ -766,7 +766,7 @@
  },
  {
   "id": "q051",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Für wen ist ein Businessplan in erster Linie gedacht?",
   "optionen": [
    "In erster Linie für die Gründerin oder den Gründer selbst",
@@ -781,7 +781,7 @@
  },
  {
   "id": "q052",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Was verlangt der Businessplan im Kapitel zur Geschäftsidee?",
   "optionen": [
    "Den Markt und die Konkurrenz analysieren und die Abgrenzung erläutern",
@@ -797,7 +797,7 @@
  },
  {
   "id": "q053",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche Aufgabe hat das Kapitel Zielgruppe in einem Businessplan?",
   "optionen": [
    "Die Zielgruppe identifizieren, ihre Bedürfnisse beschreiben und deren Erfüllung erklären",
@@ -813,7 +813,7 @@
  },
  {
   "id": "q054",
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Ein seit Jahren bestehendes Designbüro möchte zusätzlich einen Bereich für Fotografie aufbauen. Wie ist ein Businessplan hier einzuordnen?",
   "optionen": [
    "Er ist sinnvoll, weil auch etablierte Unternehmen bei neuen Geschäftsbereichen profitieren",
@@ -1570,7 +1570,7 @@
  },
  {
   "id": "q103",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Was sagt die Liquidität über ein Unternehmen aus?",
   "optionen": [
    "Ob es in der Lage ist, seinen Zahlungsverpflichtungen nachzukommen",
@@ -1586,7 +1586,7 @@
  },
  {
   "id": "q104",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche Aussage beschreibt ein illiquides Unternehmen zutreffend?",
   "optionen": [
    "Es kann seinen Zahlungsverpflichtungen nicht mehr nachkommen, und es droht eine Insolvenz.",
@@ -1601,7 +1601,7 @@
  },
  {
   "id": "q105",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Woran zeigt sich, dass ein Unternehmen liquide ist?",
   "optionen": [
    "Es kann fällige Zahlungen wie offene Rechnungen begleichen.",
@@ -1616,7 +1616,7 @@
  },
  {
   "id": "q106",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Worin besteht der Hauptunterschied zwischen Honoraren und Fremdkosten?",
   "optionen": [
    "Honorare betreffen die eigene Dienstleistung, Fremdkosten den Kauf von Waren oder Dienstleistungen Dritter.",
@@ -1632,7 +1632,7 @@
  },
  {
   "id": "q107",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Wie sind Honorare in der Regel ausgestaltet?",
   "optionen": [
    "Sie sind variabel und hängen von Art und Dauer der erbrachten Dienstleistung ab.",
@@ -1647,7 +1647,7 @@
  },
  {
   "id": "q108",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche Aussage über Fremdkosten trifft zu?",
   "optionen": [
    "Sie sind feste oder variable Kosten und fallen unabhängig von der eingekauften Menge an.",
@@ -1662,7 +1662,7 @@
  },
  {
   "id": "q109",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Wie sollten Honorare und Fremdkosten in einem Angebot für Designleistungen dargestellt werden?",
   "optionen": [
    "Als zwei getrennt voneinander ausgewiesene Positionen",
@@ -1678,7 +1678,7 @@
  },
  {
   "id": "q110",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Ein Designbüro kauft für ein Projekt Bildlizenzen bei einer Fotoagentur ein und stellt zusätzlich die eigene Gestaltungsarbeit in Rechnung. Wie sind die beiden Positionen im Angebot einzuordnen?",
   "optionen": [
    "Die Bildlizenzen zählen zu den Fremdkosten, die Gestaltungsarbeit zählt zum Honorar.",
@@ -1693,7 +1693,7 @@
  },
  {
   "id": "q111",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welchen Nutzen hat eine Kalkulation im Umgang mit der Kundschaft?",
   "optionen": [
    "Sie informiert transparent und hilft dabei, den geforderten Preis zu rechtfertigen.",
@@ -1708,7 +1708,7 @@
  },
  {
   "id": "q112",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche Wirkung hat eine Kalkulation auf das Verhältnis zwischen Designer und Kunde?",
   "optionen": [
    "Sie vermeidet Missverständnisse und schafft eine klare Grundlage für die Zusammenarbeit.",
@@ -1723,7 +1723,7 @@
  },
  {
   "id": "q113",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welchen Nutzen hat eine Kalkulation für die eigenen Abläufe im Betrieb?",
   "optionen": [
    "Arbeitsprozesse werden optimiert, Ressourcen besser geplant und Kosten gesenkt.",
@@ -1738,7 +1738,7 @@
  },
  {
   "id": "q114",
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Das Wort Kalkulation geht auf den Begriff \"calculatio\" zurück. Welche Bedeutung hat dieser Begriff?",
   "optionen": [
    "\"calculatio\" bedeutet so viel wie Berechnung",
@@ -2714,15 +2714,15 @@
  {
   "id": "q177",
   "thema": "Unternehmensrecherche und Jahresabschluss",
-  "frage": "Welche beiden Varianten werden beim Jahresabschluss einander gegenuebergestellt?",
+  "frage": "Welche beiden Varianten werden beim Jahresabschluss einander gegenübergestellt?",
   "optionen": [
-   "Einnahmen-Ueberschuss-Rechnung und Bilanz",
-   "Einnahmen-Ueberschuss-Rechnung und Inventur",
+   "Einnahmen-Überschuss-Rechnung und Bilanz",
+   "Einnahmen-Überschuss-Rechnung und Inventur",
    "Kostenrechnung und Bilanz",
    "Kostenrechnung und Inventur"
   ],
   "richtig": 0,
-  "erklaerung": "Beim Jahresabschluss stehen sich **E/Ue-Rechnung** (Einnahmen-Ueberschuss-Rechnung) und **Bilanz** als die beiden Varianten gegenueber. **Inventur** und **Kostenrechnung** gehoeren nicht zu diesem Gegensatzpaar.",
+  "erklaerung": "Beim Jahresabschluss stehen sich **E/Ü-Rechnung** (Einnahmen-Überschuss-Rechnung) und **Bilanz** als die beiden Varianten gegenüber. **Inventur** und **Kostenrechnung** gehören nicht zu diesem Gegensatzpaar.",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2730,15 +2730,15 @@
  {
   "id": "q178",
   "thema": "Unternehmensrecherche und Jahresabschluss",
-  "frage": "Welche Bestandteile werden neben der Bilanz als Teile des Jahresabschlusses aufgefuehrt?",
+  "frage": "Welche Bestandteile werden neben der Bilanz als Teile des Jahresabschlusses aufgeführt?",
   "optionen": [
    "Gewinn- und Verlustrechnung, Lagebericht und Anhang",
    "Gewinn- und Verlustrechnung, Lagebericht und Inventurliste",
-   "Gewinn- und Verlustrechnung, Pruefbericht und Anhang",
+   "Gewinn- und Verlustrechnung, Prüfbericht und Anhang",
    "Kapitalflussrechnung, Lagebericht und Anhang"
   ],
   "richtig": 0,
-  "erklaerung": "Zum Jahresabschluss werden **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang** genannt. Inventurliste, Pruefbericht und Kapitalflussrechnung zaehlen nicht zu den aufgefuehrten Bestandteilen.\n\n**Tipp von CashGPT:** Vier Blickwinkel auf dasselbe Jahr: Die Bilanz zeigt den **Zustand**, die GuV den **Verlauf**, der Anhang erklärt die Zahlen, der Lagebericht ordnet sie ein.",
+  "erklaerung": "Zum Jahresabschluss werden **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang** genannt. Inventurliste, Prüfbericht und Kapitalflussrechnung zählen nicht zu den aufgeführten Bestandteilen.\n\n**Tipp von CashGPT:** Vier Blickwinkel auf dasselbe Jahr: Die Bilanz zeigt den **Zustand**, die GuV den **Verlauf**, der Anhang erklärt die Zahlen, der Lagebericht ordnet sie ein.",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2746,15 +2746,15 @@
  {
   "id": "q179",
   "thema": "Unternehmensrecherche und Jahresabschluss",
-  "frage": "Welche drei inhaltlichen Schwerpunkte werden fuer die Unternehmensrecherche genannt?",
+  "frage": "Welche drei inhaltlichen Schwerpunkte werden für die Unternehmensrecherche genannt?",
   "optionen": [
    "Unternehmensaufbau, Unternehmensform und Jahresabschluss",
    "Unternehmensaufbau, Unternehmensform und Marktanteil",
    "Unternehmensleitbild, Unternehmensform und Jahresabschluss",
-   "Unternehmensaufbau, Unternehmensgroesse und Jahresabschluss"
+   "Unternehmensaufbau, Unternehmensgröße und Jahresabschluss"
   ],
   "richtig": 0,
-  "erklaerung": "Die Unternehmensrecherche gliedert sich in **Unternehmensaufbau**, **Unternehmensform** und **Jahresabschluss**. Marktanteil, Unternehmensleitbild und Unternehmensgroesse werden als eigene Schwerpunkte nicht aufgefuehrt.",
+  "erklaerung": "Die Unternehmensrecherche gliedert sich in **Unternehmensaufbau**, **Unternehmensform** und **Jahresabschluss**. Marktanteil, Unternehmensleitbild und Unternehmensgröße werden als eigene Schwerpunkte nicht aufgeführt.",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2764,13 +2764,13 @@
   "thema": "Unternehmensrecherche und Jahresabschluss",
   "frage": "Welches Stichwort wird bei der Unternehmensrecherche unmittelbar dem Punkt Unternehmensform zugeordnet?",
   "optionen": [
-   "Selbststaendigkeit",
+   "Selbstständigkeit",
    "Haftungssumme",
    "Mitarbeiterzahl",
    "Betriebsergebnis"
   ],
   "richtig": 0,
-  "erklaerung": "Der Punkt Unternehmensform wird direkt mit dem Stichwort **Selbststaendigkeit** verknuepft. Haftungssumme, Mitarbeiterzahl und Betriebsergebnis gehoeren nicht zu den genannten Stichworten der Unternehmensrecherche.",
+  "erklaerung": "Der Punkt Unternehmensform wird direkt mit dem Stichwort **Selbstständigkeit** verknüpft. Haftungssumme, Mitarbeiterzahl und Betriebsergebnis gehören nicht zu den genannten Stichworten der Unternehmensrecherche.",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true
@@ -2786,7 +2786,7 @@
    "Handelsregister, Bundesanzeiger und Schufa"
   ],
   "richtig": 0,
-  "erklaerung": "Zur Unternehmensrecherche dienen **Handelsregister**, **Bundesanzeiger**, **Kununu**, soziale Netze und Markenregister. **Grundbuch**, **Vereinsregister** und **Schufa** zaehlen nicht zu diesen Anlaufstellen und machen die uebrigen Zusammenstellungen falsch.",
+  "erklaerung": "Zur Unternehmensrecherche dienen **Handelsregister**, **Bundesanzeiger**, **Kununu**, soziale Netze und Markenregister. **Grundbuch**, **Vereinsregister** und **Schufa** zählen nicht zu diesen Anlaufstellen und machen die übrigen Zusammenstellungen falsch.",
   "quelle": "f47",
   "schwierigkeit": "mittel",
   "essential": true
@@ -2794,7 +2794,7 @@
  {
   "id": "q182",
   "thema": "Unternehmensrecherche und Jahresabschluss",
-  "frage": "Fuer ein neues Unternehmen soll geprueft werden, ob ein geplanter Name bereits als Marke eingetragen ist. Welcher der genannten Rechercheorte ist dafuer vorgesehen?",
+  "frage": "Für ein neues Unternehmen soll geprüft werden, ob ein geplanter Name bereits als Marke eingetragen ist. Welcher der genannten Rechercheorte ist dafür vorgesehen?",
   "optionen": [
    "Markenregister",
    "Handelsregister",
@@ -2802,7 +2802,7 @@
    "Kununu"
   ],
   "richtig": 0,
-  "erklaerung": "Fuer eingetragene Marken ist das **Markenregister** der vorgesehene Rechercheort. Handelsregister, Bundesanzeiger und Kununu werden als eigenstaendige Anlaufstellen mit anderem Gegenstand genannt.\n\n**Tipp von CashGPT:** Vier Orte, vier Fragen: Handelsregister — wer ist die Firma? Markenregister — wem gehört der Name? Bundesanzeiger — was sagen die Zahlen? Kununu — wie ist es dort zu arbeiten?",
+  "erklaerung": "Für eingetragene Marken ist das **Markenregister** der vorgesehene Rechercheort. Handelsregister, Bundesanzeiger und Kununu werden als eigenständige Anlaufstellen mit anderem Gegenstand genannt.\n\n**Tipp von CashGPT:** Vier Orte, vier Fragen: Handelsregister — wer ist die Firma? Markenregister — wem gehört der Name? Bundesanzeiger — was sagen die Zahlen? Kununu — wie ist es dort zu arbeiten?",
   "quelle": "f47",
   "schwierigkeit": "leicht",
   "essential": true

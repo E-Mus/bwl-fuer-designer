@@ -1207,7 +1207,7 @@
   "familie": "kapitalgesellschaft-ag"
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche der folgenden Punkte gehören zum Nutzen einer Kalkulation im Design?",
   "optionen": [
    "Den Kunden transparent informieren",
@@ -1233,7 +1233,7 @@
   "familie": "kalkulation-nutzen"
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche der folgenden Stichworte gehören zum Themenbereich Kalkulation?",
   "optionen": [
    "Gewinnmarge",
@@ -1261,7 +1261,7 @@
   "essential": true
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche der folgenden Merkmale treffen auf Honorare zu?",
   "optionen": [
    "Betreffen die eigene Dienstleistung",
@@ -1286,7 +1286,7 @@
   "familie": "honorare-fremdkosten"
  },
  {
-  "thema": "Kalkulation und Liquiditaet",
+  "thema": "Kalkulation und Liquidität",
   "frage": "Welche der folgenden Begriffe und Aussagen hängen mit der Liquidität eines Unternehmens zusammen?",
   "optionen": [
    "Erfüllen der Zahlungsverpflichtungen",
@@ -1313,7 +1313,7 @@
   "familie": "liquiditaet-definition"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche der folgenden Punkte gehören zum Inhalt eines Businessplans?",
   "optionen": [
    "Executive Summary",
@@ -1339,7 +1339,7 @@
   "familie": "businessplan-bestandteile"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "An welche der folgenden Adressaten richtet sich ein Businessplan?",
   "optionen": [
    "Bank",
@@ -1365,7 +1365,7 @@
   "familie": "businessplan-adressaten"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche der folgenden Begriffe beschreiben den Zweck eines Businessplans bzw. das, was Kapitalgeber mit ihm beurteilen?",
   "optionen": [
    "Klärung",
@@ -1392,7 +1392,7 @@
   "familie": "businessplan-zweck"
  },
  {
-  "thema": "Businessplan und Gruendung",
+  "thema": "Businessplan und Gründung",
   "frage": "Welche der folgenden Begriffe gehören zum Inhalt eines Businessplans?",
   "optionen": [
    "Marketing",
@@ -1511,7 +1511,7 @@
    6,
    8
   ],
-  "erklaerung": "Die Wiederholungsfolie **Unternehmensrecherche** listet als Rechercheorte auf: **Handelsregister**, **Bundesanzeiger**, **Kununu**, **Soziale Netze** und **Markenregister**.\n\nDie uebrigen Begriffe stehen an anderer Stelle:\n- **elster.de** gehoert zur Wiederholungsfolie **Steuern** (dort mit dem Hinweis auf das ELSTER Forum).\n- **KSK** steht ebenfalls auf der Steuern-Folie: Sozialversicherungseinrichtung fuer Kuenstler zur Absicherung ihrer sozialen Risiken.\n- **Arbeitsamt** und **Banken** gehoeren zur Aufzaehlung bei der **Steuer-ID** (Banken, Arbeitsamt, Arbeitgeber, Aktien, Kindergeld, BAfoeG-Antrag etc.) – das sind Stellen, die die Steuer-ID verlangen, keine Rechercheorte.",
+  "erklaerung": "Die Wiederholungsfolie **Unternehmensrecherche** listet als Rechercheorte auf: **Handelsregister**, **Bundesanzeiger**, **Kununu**, **Soziale Netze** und **Markenregister**.\n\nDie übrigen Begriffe stehen an anderer Stelle:\n- **elster.de** gehört zur Wiederholungsfolie **Steuern** (dort mit dem Hinweis auf das ELSTER Forum).\n- **KSK** steht ebenfalls auf der Steuern-Folie: Sozialversicherungseinrichtung für Künstler zur Absicherung ihrer sozialen Risiken.\n- **Arbeitsamt** und **Banken** gehören zur Aufzählung bei der **Steuer-ID** (Banken, Arbeitsamt, Arbeitgeber, Aktien, Kindergeld, BAföG-Antrag etc.) – das sind Stellen, die die Steuer-ID verlangen, keine Rechercheorte.",
   "quelle": "f47, f22, f24",
   "schwierigkeit": "schwer",
   "familie": "rechercheorte-unternehmen"
@@ -1523,7 +1523,7 @@
    "Lagebericht",
    "Gutschrift",
    "Anhang",
-   "E/UE-Rechnung",
+   "E/Ü-Rechnung",
    "Gewinn- und Verlustrechnung",
    "Mahnung",
    "Dividende",
@@ -1534,7 +1534,7 @@
    2,
    4
   ],
-  "erklaerung": "Beim **Jahresabschluss** stellt die Folie **E/UE-Rechnung vs. Bilanz** gegenueber. Unter der **Bilanz** stehen buendig: **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang**.\n\nDie uebrigen Begriffe gehoeren woanders hin:\n- Die **E/UE-Rechnung** ist gerade die Gegenseite des Vergleichs und damit kein Bestandteil der Bilanz-Seite.\n- **Gutschrift**, **Mahnung** und **Vorsteuerabzug** stehen auf der Wiederholungsfolie **Rechnungen**.\n- **Dividende** gehoert zur Wiederholungsfolie **Geld**: jaehrlich auf eine Aktie entfallender Anteil vom Reingewinn.",
+  "erklaerung": "Beim **Jahresabschluss** stellt die Folie **E/Ü-Rechnung vs. Bilanz** gegenüber. Unter der **Bilanz** stehen bündig: **Gewinn- und Verlustrechnung**, **Lagebericht** und **Anhang**.\n\nDie übrigen Begriffe gehören woanders hin:\n- Die **E/Ü-Rechnung** ist gerade die Gegenseite des Vergleichs und damit kein Bestandteil der Bilanz-Seite.\n- **Gutschrift**, **Mahnung** und **Vorsteuerabzug** stehen auf der Wiederholungsfolie **Rechnungen**.\n- **Dividende** gehört zur Wiederholungsfolie **Geld**: jährlich auf eine Aktie entfallender Anteil vom Reingewinn.",
   "quelle": "f47, f29, f20",
   "schwierigkeit": "schwer",
   "familie": "bilanz-bestandteile"
@@ -1549,7 +1549,7 @@
    "Zinses-Zins-Effekt",
    "Unternehmensform",
    "Steuer-Gruppen",
-   "Selbststaendigkeit",
+   "Selbstständigkeit",
    "Kleinunternehmerregelung",
    "50-30-20-Regel"
   ],
@@ -1559,7 +1559,7 @@
    4,
    6
   ],
-  "erklaerung": "Die Wiederholungsfolie **Unternehmensrecherche** nennt als inhaltliche Stichpunkte **Unternehmensaufbau**, **Unternehmensform** (mit dem Verweis **> Selbststaendigkeit**) und **Jahresabschluss** (Einnahmen-Ueberschuss-Rechnung vs. Bilanz, Gewinn- & Verlustrechnung, Lagebericht, Anhang). Dazu kommen als Rechercheorte **Handelsregister**, **Bundesanzeiger**, **Kununu**, **Soziale Netze** und **Markenregister**.\n\nDie Ablenker stammen aus anderen Wiederholungsfolien:\n- **Money Mindset** (\"Ich bin finanziell erfolgreich!\"), **Zinses-Zins-Effekt** und die **50-30-20-Regel** (50 % Fixkosten, 30 % Freizeit | Konsum, 20 % sparen) gehoeren zur Folie **Geld**.\n- **Steuer-Gruppen** (Verkehrs-, Verbrauchs-, Gewinn-, Substanzsteuern) gehoert zur Folie **Steuern**.\n- **Kleinunternehmerregelung** (§19 UStG, bis max. 22 TEUR, keine Umsatzsteuerpflicht) gehoert zur Folie **Rechnungen**.",
+  "erklaerung": "Die Wiederholungsfolie **Unternehmensrecherche** nennt als inhaltliche Stichpunkte **Unternehmensaufbau**, **Unternehmensform** (mit dem Verweis **> Selbstständigkeit**) und **Jahresabschluss** (Einnahmen-Überschuss-Rechnung vs. Bilanz, Gewinn- & Verlustrechnung, Lagebericht, Anhang). Dazu kommen als Rechercheorte **Handelsregister**, **Bundesanzeiger**, **Kununu**, **Soziale Netze** und **Markenregister**.\n\nDie Ablenker stammen aus anderen Wiederholungsfolien:\n- **Money Mindset** (\"Ich bin finanziell erfolgreich!\"), **Zinses-Zins-Effekt** und die **50-30-20-Regel** (50 % Fixkosten, 30 % Freizeit | Konsum, 20 % sparen) gehören zur Folie **Geld**.\n- **Steuer-Gruppen** (Verkehrs-, Verbrauchs-, Gewinn-, Substanzsteuern) gehört zur Folie **Steuern**.\n- **Kleinunternehmerregelung** (§19 UStG, bis max. 22 TEUR, keine Umsatzsteuerpflicht) gehört zur Folie **Rechnungen**.",
   "quelle": "f47, f20, f24, f29",
   "schwierigkeit": "schwer",
   "familie": "unternehmensrecherche-stichpunkte"
