@@ -449,6 +449,13 @@ function bwlStufe(){
   if(kommunismusAn()) return 0;
   return kapitalismusAn()?bwlStufeEcht():0;
 }
+// Waehrend einer Runde zaehlt Lesbarkeit mehr als die Pointe: Hintergrund,
+// Waehrungsschrift, Beschriftungen, Zitate und Geldregen fallen auf null
+// zurueck, damit der Lernstoff nuechtern dasteht. Der Feedbackspruch, das
+// Reaction-GIF, der Serien-Toast und die Seriennummer haengen weiter an
+// bwlStufe() und bleiben deshalb.
+const ruhigeAnsicht = () => !!sitzung;
+const optikStufe = () => ruhigeAnsicht()?0:bwlStufe();
 // Beschriftungen kennen nur zwei Zustaende: normal, und auf der Endstufe absurd.
 // [ bis Stufe 4 , ab Stufe 5 ]
 const BWL_TEXT={
@@ -481,12 +488,12 @@ const BWL_TEXT={
   stempelOk:['BESTANDEN','GUIDANCE BESTÄTIGT'],
   stempelBad:['NOCHMAL','GEWINNWARNUNG · RESTRUKTURIERUNG']
 };
-const T=(k,stufe=bwlStufe())=>BWL_TEXT[k][stufe>=BWL_MAX?1:0];
+const T=(k,stufe=optikStufe())=>BWL_TEXT[k][stufe>=BWL_MAX?1:0];
 // Einzige Beschriftung mit drei Stufen: sie wechselt mit der Umrechnung in
 // Shareholder Value, also schon eine Stufe vor der uebrigen Umbenennung.
 const XP_WORT=['Punkte','Wissensdividende','EBITDA vor Sondereffekten'];
 const xpWort=()=>{
-  const s=bwlStufe();
+  const s=optikStufe();
   return XP_WORT[s>=BWL_MAX?2:s>=ZITAT_AB?1:0];
 };
 
@@ -524,7 +531,8 @@ const OHNE_GELD='.legal-page,.legal-links,.welcome-screen';
 const GELD_ANTEIL=[0,0,.12,.3,.6,1];
 // Welche Buchstaben getroffen werden, haengt am Textinhalt - derselbe Satz wird
 // also immer gleich verzerrt und flackert beim Neuzeichnen nicht.
-function geldText(text,anteil=GELD_ANTEIL[bwlStufe()]){
+const geldAnteil = () => GELD_ANTEIL[optikStufe()];
+function geldText(text,anteil=geldAnteil()){
   const t=String(text);
   if(!anteil) return t;
   let h=0;
@@ -536,7 +544,7 @@ function geldText(text,anteil=GELD_ANTEIL[bwlStufe()]){
   });
 }
 function geldSchrift(){
-  const stufe=bwlStufe(), anteil=GELD_ANTEIL[stufe];
+  const stufe=optikStufe(), anteil=GELD_ANTEIL[stufe];
   if(!anteil) return;
   const auchLerninhalt=stufe>=BWL_MAX;
   const lauf=document.createTreeWalker(app,NodeFilter.SHOW_TEXT);
@@ -551,7 +559,7 @@ function geldSchrift(){
   });
 }
 function setzeBwl(){
-  const s=bwlStufe();
+  const s=optikStufe();
   app.dataset.bwl=s;
   app.dataset.kommunismus=kommunismusAn()?'1':'0';
   geldAufbauen();
@@ -589,7 +597,7 @@ const ZITAT_AB=3;                     // im Quiz und im Ergebnis
 const ZITAT_HOME_AB=2;                // auf der Startseite eine Stufe frueher
 const ZITAT_ABSTAND=4;                // jede vierte beantwortete Frage
 function zitatZiehen(ab=ZITAT_AB){
-  return bwlStufe()<ab ? null : zufallAus(ZITATE,'zitat');
+  return optikStufe()<ab ? null : zufallAus(ZITATE,'zitat');
 }
 function zitatHtml(z,extra=''){
   if(!z) return '';
@@ -994,7 +1002,8 @@ function ergebnis(){
   sichern();
   zeichne();
   const quote=gesamt?pErst/gesamt:0, rekordDabei=!!(sitzung.neu||sitzung.serieRekord);
-  const menge=regenMenge(quote,rekordDabei);
+  // Der Geldregen gehoert zur Optik und faellt im Quiz damit weg.
+  const menge=optikStufe()?regenMenge(quote,rekordDabei):0;
   if(menge) setTimeout(()=>monetenregen(menge),260);
 }
 
@@ -1904,9 +1913,9 @@ function zeichneErgebnis(){
   const xpNeu=(stand.xp||0)-sitzung.xpVor;
   // Ab Stufe 3 wird die Wissensdividende in eine erfundene Waehrung umgerechnet.
   const k=xpKurs();
-  const kurs=bwlStufe()>=ZITAT_AB
+  const kurs=optikStufe()>=ZITAT_AB
     ? ` ≙ ${(xpNeu*k).toFixed(2).replace('.',',')} Shareholder Value`
-      +(bwlStufe()>=BWL_MAX?` (Tageskurs ${k.toFixed(2).replace('.',',')})`:'')
+      +(optikStufe()>=BWL_MAX?` (Tageskurs ${k.toFixed(2).replace('.',',')})`:'')
     : '';
   const stempel=pct===100?T('stempelTop'):pct>=60?T('stempelOk'):T('stempelBad');
   const abschluss=abschlussText(pct);
