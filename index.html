@@ -1868,11 +1868,17 @@ FRAGEN.forEach(f=>{
 });
 
 /* ───────── Speicher ───────── */
+const LEER_STAND=()=>({stats:{},versuche:[],rekorde:{},tage:{},xp:0,
+  gelesen:{max:0,tage:{}}});
 function laden(){
   try{const s=JSON.parse(localStorage.getItem(LS));
-    if(s&&s.stats) return Object.assign({stats:{},versuche:[],rekorde:{},tage:{},xp:0},s);
+    if(s&&s.stats){
+      const w=Object.assign(LEER_STAND(),s);
+      w.gelesen=Object.assign({max:0,tage:{}},w.gelesen);
+      return w;
+    }
   }catch(e){}
-  return {stats:{},versuche:[],rekorde:{},tage:{},xp:0};
+  return LEER_STAND();
 }
 function sichern(){try{localStorage.setItem(LS,JSON.stringify(stand))}catch(e){}}
 let stand=laden();
@@ -2428,17 +2434,16 @@ function verlauf(werte,w=280,h=54){
     ${pts.slice(-1).map(p=>`<circle class="linedot" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4"/>`).join('')}
   </svg>`;
 }
-function heatmap(){
+function heatmap(quelle=stand.tage, einheit='Fragen', wert=e=>e?e.n:0){
   const tage=[];
   for(let i=13;i>=0;i--){
     const d=datumLokal(new Date(Date.now()-i*TAG));
-    const e=stand.tage[d];
-    tage.push({d,n:e?e.n:0});
+    tage.push({d,n:wert(quelle[d])});
   }
   const max=Math.max(1,...tage.map(t=>t.n));
   return `<div class="heat">${tage.map(t=>{
     const lv=t.n===0?0:Math.min(4,Math.ceil(t.n/max*4));
-    return `<div class="heatd" data-lv="${lv}" title="${t.d}: ${t.n} Fragen"></div>`;
+    return `<div class="heatd" data-lv="${lv}" title="${t.d}: ${t.n} ${einheit}"></div>`;
   }).join('')}</div>`;
 }
 
@@ -2730,7 +2735,10 @@ function viewUeben(){
 // App die Sprache schon verdreht hat.
 function bwlIndexKarte(){
   // Zeigt den erspielten Stand, auch wenn der Kapitalismus abgeschaltet ist.
-  const w=bwlWert(), s=bwlStufeEcht(), pct=Math.round(w*100);
+  // Im Kommunismus bemisst sich das Plansoll am Gelesenen statt am Geuebten.
+  const w=kommunismusAn()?gelesenAnteil():bwlWert();
+  const s=kommunismusAn()?bwlStufeAuto(w):bwlStufeEcht();
+  const pct=Math.round(w*100);
   return `<div class="chartcard bwlcard">
     <div class="bwl-head">
       <span class="bwl-rolle">${esc(stufenNamen()[s].rolle)}</span>
@@ -2743,7 +2751,61 @@ function bwlIndexKarte(){
   </div>`;
 }
 
+// Im Kommunismus zaehlt nicht, was du kannst, sondern was du gelesen hast.
+function viewStatistikKommunismus(){
+  const seiten=kapitalSeiten(), erreicht=Math.min(seiten,stand.gelesen.max+1);
+  const pct=Math.round(gelesenAnteil()*100);
+  const kap=kapitelFortschritt();
+  const begonnen=kap.filter(k=>k.gelesen>0).length;
+  const fertig=kap.filter(k=>k.gelesen>=k.laenge).length;
+  const heuteSeiten=stand.gelesen.tage[heute()]||0;
+  return `<div class="screen pad-top">
+    <div class="shead"><div><div class="stitle">Planerfüllung</div>
+      <div class="ssub">${erreicht} von ${seiten} Seiten · Erster Band</div></div></div>
+
+    <div class="chartcard">
+      <div class="ringwrap">
+        ${ring(pct)}
+        <div class="ringtxt">
+          <span class="ringnum" data-count="${pct}">0</span>
+          <span class="statlab">des Bandes gelesen<br>(gemessen an der weitesten Seite)</span>
+        </div>
+      </div>
+    </div>
+
+    ${bwlIndexKarte()}
+
+    <div class="chartcard">
+      <span class="chart-t">Leseleistung</span>
+      <div class="boxes" style="grid-template-columns:repeat(4,1fr)">
+        <div class="boxcol"><span class="boxn">${erreicht}</span><span class="boxl">Gelesen</span></div>
+        <div class="boxcol"><span class="boxn">${seiten-erreicht}</span><span class="boxl">Offen</span></div>
+        <div class="boxcol"><span class="boxn">${begonnen}</span><span class="boxl">Kapitel</span></div>
+        <div class="boxcol"><span class="boxn">${fertig}</span><span class="boxl">Fertig</span></div>
+      </div>
+      <div class="setting-note">${heuteSeiten
+        ? `Heute ${heuteSeiten} Seite${heuteSeiten===1?'':'n'} umgeblättert.`
+        : 'Heute noch keine Seite umgeblättert.'}</div>
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Letzte 14 Tage</span>
+      ${heatmap(stand.gelesen.tage,'Seiten',e=>e||0)}
+    </div>
+
+    <div class="chartcard">
+      <span class="chart-t">Nach Kapitel</span>
+      ${kap.map(k=>`<div class="topic-stat">
+        <div class="topic-stat-head"><span class="barlab">${esc(k.titel)}</span>
+          <span class="barval">${k.gelesen}/${k.laenge}</span></div>
+        <div class="bartrack"><div class="barfill" data-w="${k.pct}"></div></div>
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
 function viewStatistik(){
+  if(kommunismusAn()) return viewStatistikKommunismus();
   const B=basis(), ges=B.length, sitzt=beherrscht();
   const pct=ges?Math.round(sitzt/ges*100):0;
   const v=statusVerteilung();
@@ -3179,6 +3241,25 @@ let kapitalSeite=(()=>{
   }catch(e){ return 0 }
 })();
 function merkeKapitalSeite(){ try{localStorage.setItem(LS_KAPITAL,String(kapitalSeite))}catch(e){} }
+// Fuer die Statistik: die weiteste erreichte Seite und die Seiten pro Tag.
+function merkeGelesen(){
+  const g=stand.gelesen;
+  g.max=Math.max(g.max||0,kapitalSeite);
+  const d=heute();
+  g.tage[d]=(g.tage[d]||0)+1;
+  sichern();
+}
+const gelesenAnteil=()=>kapitalSeiten()?Math.min(1,(stand.gelesen.max+1)/kapitalSeiten()):0;
+// Wie weit steckst du in jedem Kapitel? Ende = Anfang des naechsten Kapitels.
+function kapitelFortschritt(){
+  return KAPITEL.map((k,i)=>{
+    const bis=i+1<KAPITEL.length?KAPITEL[i+1].seite:kapitalSeiten();
+    const laenge=Math.max(1,bis-k.seite);
+    const gelesen=Math.max(0,Math.min(laenge,stand.gelesen.max+1-k.seite));
+    return {titel:k.titel, seite:k.seite, laenge, gelesen,
+            pct:Math.round(gelesen/laenge*100)};
+  });
+}
 // In welchem Kapitel liegt eine Seite? Fuer die Kopfzeile der Lektuere.
 function kapitelZuSeite(seite){
   let treffer=KAPITEL[0];
@@ -3223,7 +3304,7 @@ function zeichneKapital(){
   app.querySelector('[data-ab]').onclick=zu;
   app.querySelector('[data-weiterlesen]').onclick=()=>{
     kapitalSeite=letzte?0:kapitalSeite+1;
-    merkeKapitalSeite();
+    merkeKapitalSeite(); merkeGelesen();
     zeichne();
   };
   app.querySelector('.qbody').scrollTop=0;
@@ -3446,7 +3527,8 @@ function bindeStart(){
   app.querySelectorAll('[data-thema]').forEach(b=>
     b.onclick=stattdessenLesen(()=>starte('thema',{thema:b.dataset.thema})));
   app.querySelectorAll('[data-kapitel]').forEach(b=>b.onclick=()=>{
-    kapitalSeite=+b.dataset.kapitel; merkeKapitalSeite(); lesen=true; zeichne();
+    kapitalSeite=+b.dataset.kapitel; merkeKapitalSeite(); merkeGelesen();
+    lesen=true; zeichne();
   });
   app.querySelectorAll('[data-umfang]').forEach(b=>b.onclick=()=>{
     setzeEinst('umfang',b.dataset.umfang); zeichne(); toast(umfangName(einst.umfang));
@@ -3477,7 +3559,7 @@ function bindeStart(){
   const r=app.querySelector('[data-reset]');
   if(r) r.onclick=()=>{
     if(confirm('Allen Fortschritt löschen? Auch Rekorde, XP und Karteikasten.')){
-      stand={stats:{},versuche:[],rekorde:{},tage:{},xp:0}; sichern(); zeichne();
+      stand=LEER_STAND(); kapitalSeite=0; merkeKapitalSeite(); sichern(); zeichne();
     }
   };
   const rn=app.querySelector('[data-count]');
