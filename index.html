@@ -2139,28 +2139,31 @@ function bwlStufe(){
 const ruhigeAnsicht = () => !!sitzung && !sitzung.fertig;
 const optikStufe = () => ruhigeAnsicht()?0:bwlStufe();
 // Beschriftungen kennen nur zwei Zustaende: normal, und auf der Endstufe absurd.
+// Absurd heisst aber nicht raetselhaft: in jedem Namen muss ein Wort stecken,
+// das die Sache noch verraet - Audit, Sprint, Backlog, Summary. Sonst weiss auf
+// Stufe 5 niemand mehr, welche Kachel die Pruefung startet.
 // [ bis Stufe 4 , ab Stufe 5 ]
 const BWL_TEXT={
   markeSub:['Klausurvorbereitung','Zertifizierungs-Roadmap Q3'],
-  lernen:['Lernen','Human-Capital-Upskilling-Journey'],
-  pruefung:['Prüfung','Compliance-Gate Q3'],
-  blitz:['Blitz','Agile Velocity-Burst'],
-  fehler:['Fehler','Value-Creation-Hebel'],
-  zettel:['Spickzettel','Executive Briefing'],
+  lernen:['Lernen','Upskilling-Sprint'],
+  pruefung:['Prüfung','Compliance-Audit'],
+  blitz:['Blitz','Quick-Win-Runde'],
+  fehler:['Fehler','Fehler-Backlog'],
+  zettel:['Spickzettel','Executive Summary'],
   fragen:['Fragen','Knowledge Assets'],
   luecke:['Lücke','Kompetenz-Gap'],
   luecken:['Lücken','Kompetenz-Gaps'],
   statistik:['Statistik','Business-Intelligence-Cockpit'],
-  bilanz:['Lernstand','Intellectual-Capital-Statement'],
+  bilanz:['Lernstand','Wissensbilanz'],
   themen:['Themen','Strategische Geschäftsfelder'],
   bloecke:['Blöcke','Value Streams'],
   einstellungen:['Einstellungen','Corporate-Governance-Framework'],
   lernstatus:['Lernstatus','Asset-Allocation'],
   durchgaenge:['Letzte Durchgänge','Historische Wertentwicklung'],
   nachThema:['Nach Thema','Segmentberichterstattung'],
-  weiter:['Weiter','Commitment bestätigen'],
-  auswerten:['Auswerten','Quartalsabschluss'],
-  pruefen:['Prüfen','Plausibilisieren'],
+  weiter:['Weiter','Fortschreiben'],
+  auswerten:['Auswerten','Bilanzieren'],
+  pruefen:['Prüfen','Validieren'],
   istRichtig:['Richtig','Vollumfängliche Zielerreichung'],
   istTeilweise:['Teilweise','Anteilige Zielerreichung'],
   istFalsch:['Falsch','Signifikante Zielverfehlung'],
@@ -2171,13 +2174,6 @@ const BWL_TEXT={
   stempelBad:['NOCHMAL','GEWINNWARNUNG · RESTRUKTURIERUNG']
 };
 const T=(k,stufe=bwlStufe())=>BWL_TEXT[k][stufe>=BWL_MAX?1:0];
-// Auf der Endstufe sagt kein Kachelname mehr, was der Knopf startet: zwischen
-// Compliance-Gate und Velocity-Burst ist nicht mehr zu erkennen, was davon die
-// Pruefung ist. Das normale Wort steht deshalb vorne in der Unterzeile und
-// bleibt als einziges von der Waehrungsschrift verschont.
-const klartext = k => bwlStufe()>=BWL_MAX
-  ? `<span data-klartext>${esc(BWL_TEXT[k][0])}</span> · `
-  : '';
 // Einzige Beschriftung mit drei Stufen: sie wechselt mit der Umrechnung in
 // Shareholder Value, also schon eine Stufe vor der uebrigen Umbenennung.
 const XP_WORT=['Punkte','Wissensdividende','EBITDA vor Sondereffekten'];
@@ -2215,8 +2211,8 @@ function geldAufbauen(){
    Ausgenommen bleibt alles Rechtliche: die beiden Seiten, ihre Verweise (die
    muessen als "Datenschutz" und "Impressum" lesbar bleiben) und der
    Willkommenstext, der die Speicherung erklaert. Dazu der Lerninhalt bis
-   Stufe 4 und die Klartextwoerter in den Menuekacheln. */
-const OHNE_GELD='.legal-page,.legal-links,.welcome-screen,[data-klartext]';
+   Stufe 4. */
+const OHNE_GELD='.legal-page,.legal-links,.welcome-screen';
 const GELD_ANTEIL=[0,0,.12,.3,.6,1];
 // Welche Buchstaben getroffen werden, haengt am Textinhalt - derselbe Satz wird
 // also immer gleich verzerrt und flackert beim Neuzeichnen nicht.
@@ -2850,19 +2846,19 @@ function viewUeben(){
 
     <button class="primary-row" data-go="lernen">
       <span class="primary-copy"><span class="primary-title">${esc(T('lernen'))}</span>
-        <span class="primary-sub">${klartext('lernen')}${weiterText}</span></span>
+        <span class="primary-sub">${weiterText}</span></span>
       <span class="arrow" aria-hidden="true">→</span>
     </button>
 
     <div class="mode-list">
       <button class="mode-row" data-go="pruefung">
         <span><span class="mode-title">${esc(T('pruefung'))}</span>
-          <span class="mode-sub">${klartext('pruefung')}${Math.min(PRUEFUNGS_LAENGE,D.B.length)} ${wort} · ${einst.zeitlimit?'40 Minuten':'ohne Zeitlimit'}</span></span>
+          <span class="mode-sub">${Math.min(PRUEFUNGS_LAENGE,D.B.length)} ${wort} · ${einst.zeitlimit?'40 Minuten':'ohne Zeitlimit'}</span></span>
         <span class="arrow" aria-hidden="true">→</span>
       </button>
       <button class="mode-row" data-go="blitz">
         <span><span class="mode-title">${esc(T('blitz'))}</span>
-          <span class="mode-sub">${klartext('blitz')}60 Sekunden${D.r.blitz?' · Rekord '+D.r.blitz:''}</span></span>
+          <span class="mode-sub">60 Sekunden${D.r.blitz?' · Rekord '+D.r.blitz:''}</span></span>
         <span class="arrow" aria-hidden="true">→</span>
       </button>
     </div>
@@ -2870,11 +2866,11 @@ function viewUeben(){
     <div class="compact-modes">
       <button class="compact-mode" data-go="fehler" ${D.fehler?'':'disabled'}>
         <span class="mode-title">${esc(T('fehler'))}</span>
-        <span class="mode-sub">${klartext('fehler')}${D.fehler?D.fehler+' offen':'nichts offen'}</span>
+        <span class="mode-sub">${D.fehler?D.fehler+' offen':'nichts offen'}</span>
       </button>
       <button class="compact-mode" data-zettel ${D.luk?'':'disabled'}>
         <span class="mode-title">${esc(T('zettel'))}</span>
-        <span class="mode-sub">${klartext('zettel')}${D.luk?(D.luk===1?'1 '+T('luecke'):D.luk+' '+T('luecken')):'noch leer'}</span>
+        <span class="mode-sub">${D.luk?(D.luk===1?'1 '+T('luecke'):D.luk+' '+T('luecken')):'noch leer'}</span>
       </button>
     </div>
   </div>`;
