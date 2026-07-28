@@ -1777,6 +1777,19 @@ svg{display:block}
 }
 [data-style="editorial"][data-kommunismus="1"] .ringfg{
   stroke:#ffdd00;
+}
+
+/* "Kommunismus für Designer" ist zu lang fuer eine Zeile - hier darf der
+   Titel umbrechen und wird kleiner gesetzt. */
+[data-style="editorial"][data-kommunismus="1"] .brand{
+  font-size:31px;
+  line-height:1.04;
+  white-space:normal;
+}
+@media (max-width:340px){
+  [data-style="editorial"][data-kommunismus="1"] .brand{
+    font-size:26px;
+  }
 }</style>
 </head>
 <body>
